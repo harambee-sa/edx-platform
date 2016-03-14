@@ -1125,11 +1125,19 @@ WIKI_LINK_DEFAULT_LEVEL = 2
 ##### Feedback submission mechanism #####
 FEEDBACK_SUBMISSION_EMAIL = None
 
+<<<<<<< HEAD
 ##### Zendesk #####
 ZENDESK_URL = None
 ZENDESK_USER = None
 ZENDESK_API_KEY = None
 ZENDESK_OAUTH_ACCESS_TOKEN = None
+=======
+##### Helpdesk #####
+HELPDESK = None
+HELPDESK_URL = None
+HELPDESK_USER = None
+HELPDESK_API_KEY = None
+>>>>>>> Freshdesk support in production
 ZENDESK_CUSTOM_FIELDS = {}
 
 ##### EMBARGO #####
