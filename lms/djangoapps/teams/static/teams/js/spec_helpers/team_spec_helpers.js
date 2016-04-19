@@ -168,6 +168,7 @@ define([
             },
             annotated_content_info: {
             },
+<<<<<<< HEAD
             roles: {Moderator: [], Administrator: [], 'Community TA': []},
             course_settings: {
                 is_cohorted: false,
@@ -175,6 +176,16 @@ define([
                 allow_anonymous: true,
                 category_map: {subcategories: {}, children: [], entries: {}},
                 cohorts: []
+=======
+            'roles': {'Moderator': [], 'Administrator': [], 'Community TA': []},
+            'course_settings': {
+                'is_cohorted': false,
+                'allow_anonymous_to_peers': false,
+                'allow_anonymous': true,
+                'allow_private_to_peers': false,
+                'category_map': {'subcategories': {}, 'children': [], 'entries': {}},
+                'cohorts': []
+>>>>>>> add support for private to staff forum posts
             }
         };
     };
