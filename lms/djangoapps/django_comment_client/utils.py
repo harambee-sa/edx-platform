@@ -13,7 +13,15 @@ from opaque_keys.edx.keys import CourseKey
 from opaque_keys.edx.locations import i4xEncoder
 from six import text_type
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import pystache_custom as pystache
+>>>>>>> respect visibility status of discussion panel
 from courseware import courses
+=======
+from courseware import courses, tabs
+>>>>>>> respect visibility status of discussion panel
 from courseware.access import has_access
 from django_comment_client.constants import TYPE_ENTRY, TYPE_SUBCATEGORY
 from django_comment_client.permissions import check_permissions_by_view, get_team, has_permission
@@ -1020,6 +1028,9 @@ def is_discussion_enabled(course_id):
     """
     Return True if discussions are enabled; else False
     """
+    course = courses.get_course_by_id(course_id)
+    if not tabs.ExternalDiscussionCourseTab.is_enabled(course):
+        return False
     return settings.FEATURES.get('ENABLE_DISCUSSION_SERVICE')
 
 
