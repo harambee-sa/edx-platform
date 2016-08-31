@@ -80,7 +80,7 @@ class CourseModeModelTest(TestCase):
         """
         # shouldn't be able to find a corresponding course
         modes = CourseMode.modes_for_course(self.course_key)
-        self.assertEqual([CourseMode.DEFAULT_MODE], modes)
+        self.assertEqual([CourseMode.get_default_course_mode()], modes)
 
     def test_nodes_for_course_single(self):
         """
@@ -136,7 +136,7 @@ class CourseModeModelTest(TestCase):
         expired_mode.expiration_datetime = datetime.now(pytz.UTC) + timedelta(days=-1)
         expired_mode.save()
         modes = CourseMode.modes_for_course(self.course_key)
-        self.assertEqual([CourseMode.DEFAULT_MODE], modes)
+        self.assertEqual([CourseMode.get_default_course_mode()], modes)
 
         mode1 = Mode(u'honor', u'Honor Code Certificate', 0, '', 'usd', None, None, None, None)
         self.create_mode(mode1.slug, mode1.name, mode1.min_price, mode1.suggested_prices)
@@ -160,8 +160,13 @@ class CourseModeModelTest(TestCase):
         modes = CourseMode.modes_for_course(self.course_key)
         self.assertEqual([expired_mode_value, mode1], modes)
 
+<<<<<<< HEAD
         modes = CourseMode.modes_for_course(CourseLocator('TestOrg', 'TestCourse', 'TestRun'))
         self.assertEqual([CourseMode.DEFAULT_MODE], modes)
+=======
+        modes = CourseMode.modes_for_course(SlashSeparatedCourseKey('TestOrg', 'TestCourse', 'TestRun'))
+        self.assertEqual([CourseMode.get_default_course_mode()], modes)
+>>>>>>> display default checkout currency correctly
 
     def test_verified_mode_for_course(self):
         self.create_mode('verified', 'Verified Certificate', 10)
@@ -271,7 +276,7 @@ class CourseModeModelTest(TestCase):
 
         # Check that we get a default mode for when no course mode is available
         self.assertEqual(len(all_modes[other_course_key]), 1)
-        self.assertEqual(all_modes[other_course_key][0], CourseMode.DEFAULT_MODE)
+        self.assertEqual(all_modes[other_course_key][0], CourseMode.get_default_course_mode())
 
     @ddt.data('', 'no-id-professional', 'professional', 'verified')
     def test_course_has_professional_mode(self, mode):
