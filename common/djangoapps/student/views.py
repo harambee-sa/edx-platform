@@ -2116,9 +2116,37 @@ def create_account_with_params(request, params):
 
     create_comments_service_user(user)
 
+<<<<<<< HEAD
     # Check if we system is configured to skip activation email for the current user.
     skip_email = skip_activation_email(
         user, do_external_auth, running_pipeline, third_party_provider,
+=======
+    is_user_api_registration = False
+    if 'is_user_api_registration' in request.session:
+        is_user_api_registration = request.session['is_user_api_registration']
+
+    # Don't send email if we are:
+    #
+    # 1. Doing load testing.
+    # 2. Random user generation for other forms of testing.
+    # 3. External auth bypassing activation.
+    # 4. Have the platform configured to not require e-mail activation.
+    # 5. Registering a new user using a trusted third party provider (with skip_email_verification=True)
+    #
+    # Note that this feature is only tested as a flag set one way or
+    # the other for *new* systems. we need to be careful about
+    # changing settings on a running system to make sure no users are
+    # left in an inconsistent state (or doing a migration if they are).
+    send_email = (
+        not settings.FEATURES.get('SKIP_EMAIL_VALIDATION', None) and
+        not settings.FEATURES.get('AUTOMATIC_AUTH_FOR_TESTING') and
+        not (do_external_auth and settings.FEATURES.get('BYPASS_ACTIVATION_EMAIL_FOR_EXTAUTH')) and
+        not (is_user_api_registration and settings.FEATURES.get('BYPASS_ACTIVATION_FOR_USER_API')) and
+        not (
+            third_party_provider and third_party_provider.skip_email_verification and
+            user.email == running_pipeline['kwargs'].get('details', {}).get('email')
+        )
+>>>>>>> bypass activation for user api registration feature
     )
 
     if skip_email:
