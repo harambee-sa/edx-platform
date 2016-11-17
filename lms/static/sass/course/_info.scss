@@ -421,12 +421,12 @@ div.info-wrapper {
     }
 
     @media print {
-      background: transparent !important;
+      background: transparent;
     }
   }
 
   @media print {
-    background: transparent !important;
+    background: transparent;
     border: 0;
   }
 }

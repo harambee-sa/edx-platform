@@ -316,9 +316,14 @@
           border-bottom: 4px solid $courseware-border-bottom-color;
         }
       }
+<<<<<<< HEAD
 
       .active {
         border-bottom: 4px solid $black-t3 !important;
+=======
+      .active{
+        border-bottom: 4px solid $black-t3;
+>>>>>>> remove all the css importants
       }
     }
 
@@ -328,7 +333,12 @@
       margin: 0 $baseline+1 0 0;
       font-size: em(14);
       font-weight: 600;
+<<<<<<< HEAD
       letter-spacing: 0 !important;
+=======
+      text-transform: uppercase;
+      letter-spacing: 0;
+>>>>>>> remove all the css importants
 
       &:last-child {
         margin-right: 0;
@@ -389,7 +399,7 @@
 .view-register .nav-global-04 {
   a {
     text-decoration: none;
-    color: $link-color !important;
+    color: $link-color;
   }
 }
 
@@ -457,9 +467,14 @@
           border-bottom: 4px solid $courseware-border-bottom-color;
         }
       }
+<<<<<<< HEAD
 
       .active {
         border-bottom: 4px solid $black-t3 !important;
+=======
+      .active{
+        border-bottom: 4px solid $black-t3;
+>>>>>>> remove all the css importants
       }
     }
   }
@@ -705,6 +720,44 @@
     }
   }
 
+<<<<<<< HEAD
+=======
+  %default-header-nav {
+    margin-top: ($baseline/4);
+    list-style: none;
+
+    @include float(left);
+
+    li,
+    div {
+      display: inline-block;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0;
+
+      a {
+        display:block;
+        padding: 3px 10px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 600;
+        font-family: $header-sans-serif;
+        color: $courseware-navigation-color;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $courseware-hover-color;
+        }
+      }
+    }
+  }
+
+  .nav-global {
+    @extend %default-header-nav;
+  }
+
+>>>>>>> remove all the css importants
   .nav-courseware {
     @include float(right);
 
@@ -914,7 +967,7 @@
 .view-register .nav-global-04 {
   a {
     text-decoration: none;
-    color: $link-color !important;
+    color: $link-color;
   }
 }
 

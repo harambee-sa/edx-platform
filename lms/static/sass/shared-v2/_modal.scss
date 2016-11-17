@@ -188,6 +188,7 @@
         }
       }
 
+<<<<<<< HEAD
       input[type="checkbox"] {
         @include margin-right($baseline/4);
       }
@@ -221,6 +222,41 @@
           margin: 0 auto;
           width: 100%;
           white-space: normal;
+=======
+        .close-modal {
+            @include transition(all 0.15s ease-out 0s);
+            border-radius: 2px;
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px;
+            position: absolute;
+            right: 2px;
+            top: 0;
+            z-index: z-index(front);
+            color: $lighter-base-font-color;
+            font: {
+                size: font-size(large);
+                family: $font-family-sans-serif;
+            }
+            line-height: 1;
+            text-align: center;
+            border: none;
+            background: transparent;
+            text-shadow: none;
+            letter-spacing: 0;
+            text-transform: none;
+
+            &:hover,
+            &:focus {
+                color: $base-font-color;
+                text-decoration: none;
+                opacity: 0.8;
+            }
+
+            &:focus {
+                border: none;
+            }
+>>>>>>> remove all the css importants
         }
       }
     }

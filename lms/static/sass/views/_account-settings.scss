@@ -72,6 +72,7 @@
         background: transparent none;
       }
 
+<<<<<<< HEAD
       button {
         @extend %ui-clear-button;
         @extend %btn-no-style;
@@ -88,6 +89,7 @@
         }
 
         &.active {
+<<<<<<< HEAD
           border-bottom-color: theme-color("dark");
         }
       }
@@ -102,6 +104,27 @@
 
         .account-nav-link {
           border-bottom: 4px solid theme-color("light");
+=======
+          border-bottom: 4px solid $black-t3 !important;
+=======
+            button {
+                @extend %ui-clear-button;
+                @extend %btn-no-style;
+                @include appearance(none);
+                display:block;
+                padding: ($baseline/4);
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    border-bottom: 4px solid $courseware-border-bottom-color;
+                }
+                &.active{
+                    border-bottom: 4px solid $black-t3;
+                }
+            }
+>>>>>>> remove all the css importants
+>>>>>>> remove all the css importants
         }
       }
     }

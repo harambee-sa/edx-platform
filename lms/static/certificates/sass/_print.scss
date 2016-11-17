@@ -20,6 +20,7 @@
 
 @media print {
 
+<<<<<<< HEAD
   // helpers
   %print-no-background {
     background: none !important;
@@ -42,6 +43,30 @@
     margin-bottom: spacing-vertical(small);
     border-bottom: none !important;
     padding-bottom: 0 !important;
+=======
+    // helpers
+    %print-no-background {
+        background: none;
+    }
+
+    %print-hide {
+        display: none;
+    }
+
+    %print-black-on-white {
+        background: $white;
+        color: $black;
+    }
+
+    %print-layout-wrapper {
+        padding: 0;
+    }
+
+    %print-rendering-section {
+        margin-bottom: spacing-vertical(small);
+        border-bottom: none;
+        padding-bottom: 0;
+>>>>>>> remove all the css importants
 
     &:last-child {
       border: none;
@@ -55,10 +80,17 @@
 // ------------------------------
 @media print {
 
+<<<<<<< HEAD
   // prevent images from bleeding over the edge of the printed page
   img {
     max-width: 100% !important;
   }
+=======
+    // prevent images from bleeding over the edge of the printed page
+    img {
+       max-width: 100%;
+    }
+>>>>>>> remove all the css importants
 
   // prevent large elements from being split across multiple pages
   ul, img {
@@ -71,6 +103,7 @@
     @extend %print-black-on-white;
   }
 
+<<<<<<< HEAD
   body {
     height: auto;
     margin: spacing-vertical(mid-large) spacing-vertical(mid-small) 0 spacing-vertical(mid-small) !important;
@@ -79,6 +112,16 @@
 
   .wrapper-view {
     margin-bottom: 0 !important;
+=======
+    body {
+        height: auto;
+        margin: spacing-vertical(mid-large) spacing-vertical(mid-small) 0 spacing-vertical(mid-small);
+        padding: 0;
+    }
+
+    .wrapper-view {
+        margin-bottom: 0;
+>>>>>>> remove all the css importants
 
   }
 }
@@ -255,6 +298,7 @@
         line-height: 1.3;
       }
 
+<<<<<<< HEAD
       .signatory-signature {
         height: spacing-vertical(small);
         max-width: 100%;
@@ -262,6 +306,14 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
       }
+=======
+    .accomplishment-rendering {
+        top: 0;
+        border: rem(1) solid palette(grayscale, back);
+        border-top: rem(2) solid $cert-base-color;
+        box-shadow: none;
+        padding: spacing-vertical(small) spacing-horizontal(mid-large);
+>>>>>>> remove all the css importants
 
       .signatory-name {
         font-size: font-size(x-small);
@@ -271,10 +323,16 @@
         margin-bottom: 0 !important;
       }
 
+<<<<<<< HEAD
       // CASE: > 4 signatures
       &.has-many {
         .signatory {
           @include span(2);
+=======
+        .accomplishment-type-symbol {
+            @include size(rem(75));
+            border: none;
+>>>>>>> remove all the css importants
         }
       }
     }
@@ -292,6 +350,7 @@
 
       margin-bottom: 0;
 
+<<<<<<< HEAD
       .metadata {
         margin-bottom: 0;
         border-bottom: none !important;
@@ -302,6 +361,57 @@
           vertical-align: baseline;
           font-size: font-size(x-small);
           line-height: line-height(small);
+=======
+        .accomplishment-orgs {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+
+            .wrapper-organization {
+                height: rem(48);
+                margin-top: spacing-vertical(mid-small);
+                margin-bottom: spacing-vertical(mid-small);
+            }
+
+            .organization-logo {
+                max-width: 100%;
+                max-height: 80%;
+            }
+        }
+
+        .accomplishment-signatories {
+            @extend %print-rendering-section;
+            @include span(12, before);
+
+            .signatory-credentials {
+                font-size: 8pt;
+                line-height: 1.3;
+            }
+
+            .signatory-signature {
+                height: spacing-vertical(small);
+                max-width: 100%;
+                margin-top: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .signatory-name {
+                font-size: font-size(x-small);
+            }
+
+            .signatory-credentials {
+                margin-bottom: 0;
+            }
+
+            // CASE: > 4 signatures
+            &.has-many {
+
+                .signatory {
+                    @include span(2);
+                }
+            }
+>>>>>>> remove all the css importants
         }
 
         .label {
@@ -315,6 +425,7 @@
       width: 65% !important;
       margin: 0 !important;
 
+<<<<<<< HEAD
       @include text-align(left);
     }
 
@@ -322,6 +433,42 @@
       float: right;
       width: 35% !important;
       margin: 0 !important;
+=======
+        .wrapper-metadata {
+            @include clearfix();
+            margin-bottom: 0;
+
+            .metadata {
+                margin-bottom: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+
+                .label, .value {
+                    display: inline-block;
+                    vertical-align: baseline;
+                    font-size: font-size(x-small);
+                    line-height: line-height(small);
+                }
+
+                .label {
+                    @include margin-right(spacing-horizontal(small));
+                }
+            }
+        }
+        .accomplishment-id {
+            float: left;
+            width: 65%;
+            margin: 0;
+            @include text-align(left);
+        }
+
+        .accomplishment-date {
+            float: right;
+            width: 35%;
+            margin: 0;
+            @include text-align(right);
+        }
+>>>>>>> remove all the css importants
 
       @include text-align(right);
     }

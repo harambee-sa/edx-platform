@@ -464,8 +464,39 @@
     .tip, .label-optional {
       @extend %t-copy-sub1;
 
+<<<<<<< HEAD
       color: $uxpl-gray-base;
     }
+=======
+        label {
+            display: block;
+            margin: 0;
+            color: $black;
+
+            &.inline {
+                display: inline;
+            }
+
+<<<<<<< HEAD
+=======
+            &.error {
+                color: $red;
+            }
+
+>>>>>>> remove all the css importants
+            &[for="register-data_sharing_consent"],
+            &[for="register-honor_code"],
+            &[for="register-terms_of_service"] {
+                display: inline-block;
+                margin: 5px 5px 0 0;
+                vertical-align: top;
+            }
+
+            &[for="login-remember"] {
+                display: inline-block;
+            }
+        }
+>>>>>>> remove all the css importants
 
     .tip {
       display: block;
@@ -662,11 +693,20 @@
         padding: 0 1em !important;
       }
 
+<<<<<<< HEAD
       &.info {
         background-color: $palette-info-back;
         border: $palette-info-border 1px solid;
         color: $palette-info-text;
       }
+=======
+        .message-copy,
+        .message-copy p {
+            @extend %t-copy-base;
+            font-family: $sans-serif;
+            margin: 0;
+            padding: 0;
+>>>>>>> remove all the css importants
 
       &.success {
         background-color: $palette-success-back;
@@ -687,9 +727,15 @@
     border-bottom: 3px solid shade($red, 10%);
     background: tint($red,95%);
 
+<<<<<<< HEAD
     .message-title {
       color: shade($red, 10%) !important;
     }
+=======
+        .message-title {
+            color: shade($red, 10%);
+        }
+>>>>>>> remove all the css importants
 
     .message-copy {
 
@@ -701,9 +747,15 @@
     border-bottom: 3px solid shade($green, 10%);
     background: tint($green, 95%);
 
+<<<<<<< HEAD
     .message-title {
       color: shade($green, 10%) !important;
     }
+=======
+        .message-title {
+            color: shade($green, 10%);
+        }
+>>>>>>> remove all the css importants
 
     .message-copy {
 

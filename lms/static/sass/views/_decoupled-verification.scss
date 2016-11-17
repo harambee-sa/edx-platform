@@ -82,6 +82,7 @@
           }
         }
 
+<<<<<<< HEAD
         &.account-not-activated {
           width: 300px;
 
@@ -89,6 +90,12 @@
             height: 290px;
             min-height: 290px;
           }
+=======
+        .placeholder-cam {
+            .copy {
+                font-weight: bold;
+            }
+>>>>>>> remove all the css importants
         }
       }
     }
@@ -149,6 +156,7 @@
       }
     }
 
+<<<<<<< HEAD
     .retake-photos {
       color: $blue;
       background:none!important;
@@ -166,9 +174,23 @@
       .is-expandable {
         .title-expand {
           color: $blue !important;
+=======
+        .tip {
+            .is-expandable {
+                .title-expand {
+                    color: $blue;
+                }
+            }
+
+            .expandable-area {
+                margin-top: 5px;
+                padding-bottom: 20px;
+            }
+>>>>>>> remove all the css importants
         }
       }
 
+<<<<<<< HEAD
       .expandable-area {
         margin-top: 5px;
         padding-bottom: 20px;
@@ -177,6 +199,14 @@
 
     .help-tips {
       margin-left: 0 !important;
+=======
+        .help-tips {
+            margin-left: 0;
+
+            .title {
+                font-size: 16px;
+            }
+>>>>>>> remove all the css importants
 
       .title {
         font-size: 16px !important;
@@ -200,8 +230,15 @@
     .list-help {
       list-style: disc;
 
+<<<<<<< HEAD
       @include padding-left($baseline);
     }
+=======
+            .wrapper-photos {
+                margin-bottom: 0;
+            }
+        }
+>>>>>>> remove all the css importants
 
     .list-faq {
       dd {

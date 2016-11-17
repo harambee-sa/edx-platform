@@ -508,11 +508,20 @@
 
   background-image: none;
 
+<<<<<<< HEAD
   &:focus,
   &:hover {
     background-image: none !important;
     background-color: transparent !important;
     color: $link-color;
+=======
+    &:focus,
+    &:hover {
+      background-image: none;
+      background-color: transparent;
+      color: $link-color;
+    }
+>>>>>>> remove all the css importants
   }
 }
 
@@ -532,12 +541,21 @@
   @extend %t-action3;
   @extend %t-strong;
 
+<<<<<<< HEAD
   &:focus,
   &:hover {
     background-image: none !important;
     background-color: $transparent !important;
     box-shadow: none !important;
   }
+=======
+    &:focus,
+    &:hover {
+        background-image: none;
+        background-color: $transparent;
+        box-shadow: none;
+    }
+>>>>>>> remove all the css importants
 }
 
 // enlarge the clickable area of a control.

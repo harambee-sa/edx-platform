@@ -13,10 +13,14 @@
   }
 }
 
+<<<<<<< HEAD
 #ui-datepicker-div {
   z-index: 12000 !important;
   width: 16.5em !important;
 }
+=======
+#ui-datepicker-div{z-index: 12000; width: 16.5em}
+>>>>>>> remove all the css importants
 
 
 .instructor-dashboard-wrapper-2 {
@@ -145,6 +149,7 @@
     }
   }
 
+<<<<<<< HEAD
   .btn-blue {
     @extend %btn-primary-blue;
 
@@ -174,6 +179,13 @@
       background: $white;
       cursor: not-allowed;
       z-index: 2;
+=======
+    .btn-blue {
+        @extend %btn-primary-blue;
+        margin-bottom: 0;
+        padding: ($baseline/2.5) ($baseline/2);
+        text-shadow: none;
+>>>>>>> remove all the css importants
     }
 
     .file-browse {
@@ -284,6 +296,11 @@
   .instructor-nav {
     @extend %ui-no-list;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    border-top: 1px solid $gray-l3;
+>>>>>>> remove all the css importants
     border-bottom: 1px solid $gray-l3;
 
     .nav-item {
@@ -306,6 +323,29 @@
         &.active-section {
           border-bottom: 3px solid theme-color("primary");
           color: $black;
+=======
+        .nav-item {
+            @extend %t-copy-base;
+            display: inline-block;
+
+            .btn-link {
+                display: inline-block;
+                padding: ($baseline/2) $baseline;
+                border: 0;
+                box-shadow: none;
+                text-shadow: none;
+
+                &:hover,
+                &:focus {
+                    background: $gray-l5;
+                }
+
+                &.active-section {
+                    background: $gray-l5;
+                    color: $black;
+                }
+            }
+>>>>>>> remove all the css importants
         }
       }
     }
@@ -681,7 +721,11 @@
      * Ideally we want to handle functionality with JS.
      * This functionality should eventually be moved into CS/JS, and out of here. */
     .has-hint:hover > .hint {
+<<<<<<< HEAD
       @include left($baseline*10);
+=======
+        @include left($baseline*10);
+>>>>>>> remove all the css importants
     }
 
     .has-hint input:focus ~ .hint {
@@ -1092,6 +1136,7 @@
 
   // CSV-based file upload for auto cohort assigning and
   // cohort the discussion topics.
+<<<<<<< HEAD
   .toggle-cohort-management-secondary,
   .toggle-cohort-management-discussions {
     @extend %t-copy-sub1;
@@ -1106,6 +1151,22 @@
     &:hover,
     &:focus {
       text-decoration: underline;
+=======
+    .toggle-cohort-management-secondary,
+    .toggle-cohort-management-discussions {
+        @extend %t-copy-sub1;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        text-shadow: none;
+        padding: 0;
+        color: $uxpl-blue-base;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+>>>>>>> remove all the css importants
     }
   }
 
@@ -1477,7 +1538,7 @@
       }
       // Disable horizontal scroll bar when grid only has 1 column. Remove this CSS class when more columns added.
       .slick-viewport {
-        overflow-x: hidden !important;
+        overflow-x: hidden;
       }
     }
   }
@@ -1734,7 +1795,7 @@ input[name="subject"] {
       }
       // Disable horizontal scroll bar when grid only has 1 column. Remove this CSS class when more columns added.
       .slick-viewport {
-        overflow-x: hidden !important;
+        overflow-x: hidden;
       }
     }
   }
@@ -1762,9 +1823,14 @@ input[name="subject"] {
     margin-bottom: $baseline;
     display: none;
   }
+<<<<<<< HEAD
 
   .content {
     padding: 0 !important;
+=======
+  .content{
+    padding: 0;
+>>>>>>> remove all the css importants
   }
 
   input[name="download_company_name"],
@@ -1780,7 +1846,12 @@ input[name="subject"] {
   .coupons-table {
     width: 100%;
 
+<<<<<<< HEAD
     tr:nth-child(even) {
+=======
+    tr:nth-child(even){
+<<<<<<< HEAD
+>>>>>>> remove all the css importants
       background-color: $gray-l6;
       border-bottom: 1px solid #f3f3f3;
     }
@@ -1794,6 +1865,18 @@ input[name="subject"] {
       background: #fff !important;
 
       td {
+=======
+        background-color: $gray-l6;
+        border-bottom: 1px solid #f3f3f3;
+      }
+    tr.always-gray{
+      background: #eee;
+      border-top: 2px solid $white;
+    }
+    tr.always-white{
+      background: #fff;
+      td{
+>>>>>>> remove all the css importants
         padding: ($baseline*1.5) 0 ($baseline/2);
       }
     }
@@ -1849,8 +1932,17 @@ input[name="subject"] {
     }
 
     // in_active coupon rows style
+<<<<<<< HEAD
     .inactive_coupon {
+<<<<<<< HEAD
       background: #fff0f0 !important;
+=======
+      background:  #fff0f0 !important;
+=======
+    .inactive_coupon{
+      background:  #FFF0F0;
+>>>>>>> remove all the css importants
+>>>>>>> remove all the css importants
       text-decoration: line-through;
       color: rgba(51, 51, 51, 0.2);
       border-bottom: 1px solid #fff;
@@ -1862,9 +1954,16 @@ input[name="subject"] {
       }
     }
     // in_active coupon rows style
+<<<<<<< HEAD
     .expired_coupon {
       background: #feefb3 !important;
       color: rgba(51, 51, 51, 0.2);
+=======
+    .expired_coupon{
+      background:  #FEEFB3;
+
+      color: rgba(51,51,51,0.2);
+>>>>>>> remove all the css importants
       border-bottom: 1px solid #fff;
 
       td:nth-child(3) {
@@ -1994,27 +2093,49 @@ input[name="subject"] {
         }
       }
 
+<<<<<<< HEAD
       li:nth-child(even) {
         @include margin-left(30px !important);
+=======
+      li:nth-child(even){
+        @include margin-left(30px);
+>>>>>>> remove all the css importants
       }
 
       li:nth-child(3),
       li:nth-child(4) {
         width: 100%;
+<<<<<<< HEAD
 
+<<<<<<< HEAD
         @include margin-left(0 !important);
+=======
+        @include margin-left(0px !important);
+=======
+        @include margin-left(0px);
+>>>>>>> remove all the css importants
+>>>>>>> remove all the css importants
       }
 
       li:nth-child(3) {
+<<<<<<< HEAD
         margin-bottom: 0 !important;
 
+=======
+        margin-bottom: 0px;
+>>>>>>> remove all the css importants
         textarea {
           min-height: 100px;
         }
       }
+<<<<<<< HEAD
 
       li:last-child {
         margin-bottom: 0 !important;
+=======
+      li:last-child{
+        margin-bottom: 0px;
+>>>>>>> remove all the css importants
       }
     }
 
@@ -2059,7 +2180,7 @@ input[name="subject"] {
       }
 
       li.address_fields {
-        min-height: 45px !important;
+        min-height: 45px;
       }
 
       li#generate-registration-modal-field-city, li#generate-registration-modal-field-state,
@@ -2069,24 +2190,33 @@ input[name="subject"] {
 
       li#generate-registration-modal-field-country {
         width: 204px;
+<<<<<<< HEAD
 
         @include margin-left(15px !important);
 
+=======
+        @include margin-left(15px);
+>>>>>>> remove all the css importants
         margin-bottom: $baseline;
       }
 
+<<<<<<< HEAD
       li:nth-child(even) {
         @include margin-left(0 !important);
+=======
+      li:nth-child(even){
+        @include margin-left(0px);
+>>>>>>> remove all the css importants
       }
 
       li:nth-child(3n) {
-        @include margin-left(15px !important);
+        @include margin-left(15px);
       }
 
       li#generate-registration-modal-field-company-contact-name,
       li#generate-registration-modal-field-address-line-3,
       li#generate-registration-modal-field-zipcode {
-        @include margin-left(15px !important);
+        @include margin-left(15px);
       }
 
       li:last-child {
@@ -2098,19 +2228,30 @@ input[name="subject"] {
         }
 
         min-height: 5px;
+<<<<<<< HEAD
 
         @include margin-left(0 !important);
 
+=======
+        @include margin-left(0px);
+>>>>>>> remove all the css importants
         input[type='checkbox'] {
           width: auto;
           height: auto;
         }
       }
 
+<<<<<<< HEAD
       li#generate-registration-modal-field-country ~ li#generate-registration-modal-field-unit-price,
       li#generate-registration-modal-field-country ~ li#generate-registration-modal-field-internal-reference {
         @include margin-left(0 !important);
         @include margin-right(15px !important);
+=======
+      li#generate-registration-modal-field-country ~  li#generate-registration-modal-field-unit-price,
+      li#generate-registration-modal-field-country ~  li#generate-registration-modal-field-internal-reference {
+        @include margin-left(0px);
+        @include margin-right(15px);
+>>>>>>> remove all the css importants
       }
 
       li#generate-registration-modal-field-custom-reference-number {
@@ -2126,10 +2267,15 @@ input[name="subject"] {
         margin-left: ($baseline/4);
       }
     }
+<<<<<<< HEAD
 
     li#set-course-mode-modal-field-currency {
       @include margin-left(0 !important);
 
+=======
+    li#set-course-mode-modal-field-currency{
+      @include margin-left(0px);
+>>>>>>> remove all the css importants
       select {
         width: 100%;
       }
@@ -2186,7 +2332,7 @@ input[name="subject"] {
         }
 
         .readonly {
-          background-color: #eee !important;
+          background-color: #eee;
           color: #aaa;
         }
 

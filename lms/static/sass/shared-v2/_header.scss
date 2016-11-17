@@ -105,6 +105,7 @@
       margin: 0;
       justify-content: center;
 
+<<<<<<< HEAD
       .tab-nav-link {
         font-size: font-size(base);
         font-weight: font-weight(semi-bold);
@@ -115,7 +116,36 @@
         &:active,
         &:focus,
         &:hover {
+<<<<<<< HEAD
           border-bottom: 4px solid $border-color;
+=======
+          border-bottom: 4px solid $lms-border-color;
+=======
+        .tab-nav-item{
+            @include float(left);
+            display: flex;
+            margin: 0;
+            justify-content: center;
+
+            .tab-nav-link{
+                font-size: font-size(base);
+                font-weight: font-weight(semi-bold);
+                color: palette(grayscale, dark);
+                padding: 5px 25px 23px;
+                display: inline-block;
+
+                &:active,
+                &:focus,
+                &:hover {
+                    border-bottom: 4px solid $lms-border-color;
+                }
+            }
+
+            .active{
+                border-bottom: 4px solid $black-t3;
+            }
+>>>>>>> remove all the css importants
+>>>>>>> remove all the css importants
         }
       }
 

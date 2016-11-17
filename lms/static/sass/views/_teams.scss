@@ -716,9 +716,14 @@
         border-color: $error-color;
       }
 
+<<<<<<< HEAD
       .u-field-message-help,
       .u-field-description-message {
         color: $error-color !important;
+=======
+      .u-field-message-help, .u-field-description-message {
+        color: $error-color;
+>>>>>>> remove all the css importants
       }
     }
 

@@ -4,7 +4,14 @@
  */
 
 .CodeMirror {
+<<<<<<< HEAD
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     color: $gray-d3 !important;
   }
+=======
+
+    .CodeMirror-linenumber.CodeMirror-gutter-elt {
+        color: $gray-d3;
+    }
+>>>>>>> remove all the css importants
 }

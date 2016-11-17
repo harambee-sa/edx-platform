@@ -40,28 +40,34 @@ $notes-annotator-background-med: rgb(214, 214, 214); // taken from annotatorJS b
 $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotatorJS base colors
 
 %notes-reset-background {
-  background-image: none !important;
-  background-repeat: none !important;
-  background-position: 0 0 !important;
+  background-image: none;
+  background-repeat: none;
+  background-position: 0 0;
 }
 
 %notes-reset-font {
+<<<<<<< HEAD
   font-family: $font-family-sans-serif !important;
   font-style: normal !important;
   font-weight: $font-regular !important;
+=======
+  font-family: $f-sans-serif;
+  font-style: normal;
+  font-weight: $font-regular;
+>>>>>>> remove all the css importants
 }
 
 %notes-reset-icon {
-  font-family: FontAwesome !important;
-  font-style: normal !important;
-  text-indent: 0 !important;
+  font-family: FontAwesome;
+  font-style: normal;
+  text-indent: 0;
 }
 
 %notes-bubble {
-  border: ($baseline/20) solid $notes-annotator-background-dark !important;
+  border: ($baseline/20) solid $notes-annotator-background-dark;
   border-radius: ($baseline/10);
-  box-shadow: 0 ($baseline/10) 0 ($baseline/20) $shadow-l2 !important;
-  background: $notes-annotator-background-light !important; // syncing to vendor triangle color
+  box-shadow: 0 ($baseline/10) 0 ($baseline/20) $shadow-l2;
+  background: $notes-annotator-background-light; // syncing to vendor triangle color
 }
 
 // +toggling notes
@@ -140,8 +146,8 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
   }
 
   .annotator-listing {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
 
     .annotator-widget {
       &::after {
@@ -161,8 +167,8 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
   }
 
   .annotator-item {
-    padding: ($baseline/2) !important;
-    margin-bottom: 0 !important;
+    padding: ($baseline/2);
+    margin-bottom: 0;
   }
 
   // +creating/editing notes (overrides for vendor styling)
@@ -213,25 +219,47 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
 
       position: relative;
       padding: 8px;
+<<<<<<< HEAD
       border: none !important;
       border-radius: 0 !important;
       background: $gray-l5 !important;
       font-family: $font-family-sans-serif !important;
+=======
+      border: none;
+      border-radius: 0;
+      background: $gray-l5;
+      font-family: $f-sans-serif;
+>>>>>>> remove all the css importants
 
       // actions
       .annotator-save, .annotator-cancel {
         @extend %notes-reset-background;
+<<<<<<< HEAD
 
         padding: ($baseline/4) ($baseline/2) !important;
+=======
+        padding: ($baseline/4) ($baseline/2);
+>>>>>>> remove all the css importants
         border: none;
         box-shadow: none;
+<<<<<<< HEAD
         font-family: $font-family-sans-serif !important;
         font-size: 14px !important;
         text-shadow: none !important;
+=======
+        font-family: $f-sans-serif;
+        font-size: 14px;
+        text-shadow: none;
+>>>>>>> remove all the css importants
 
         // removing vendor icons
+<<<<<<< HEAD
         &::after {
           display: none !important;
+=======
+        &:after {
+          display: none;
+>>>>>>> remove all the css importants
         }
       }
 
@@ -240,7 +268,7 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
       }
 
       .annotator-cancel {
-        background-color: $transparent !important;
+        background-color: $transparent;
       }
     }
 
@@ -248,12 +276,20 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
       textarea {
         @extend %notes-reset-font;
         @extend %t-demi-strong;
+<<<<<<< HEAD
 
         padding: ($baseline/5) !important;
         font-size: 14px !important;
         line-height: 22px !important;
         color: $gray-d3 !important;
         background: $notes-annotator-background-light !important; //matches annotator JS editing bubble triangle color
+=======
+        padding: ($baseline/5);
+        font-size: 14px;
+        line-height: 22px;
+        color: $gray-d3;
+        background: $notes-annotator-background-light; //matches annotator JS editing bubble triangle color
+>>>>>>> remove all the css importants
 
         // STATE: hover/focus
         &:hover, &:focus {
@@ -308,11 +344,18 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
     // poorly scoped selector for content of a note's comment
     div:first-of-type {
       @extend %notes-reset-font;
+<<<<<<< HEAD
 
       padding: ($baseline/4) !important;
       font-size: 14px !important;
       line-height: 22px !important;
       color: $gray-d2 !important;
+=======
+      padding: ($baseline/4);
+      font-size: 14px;
+      line-height: 22px;
+      color: $gray-d2;
+>>>>>>> remove all the css importants
     }
 
     // controls

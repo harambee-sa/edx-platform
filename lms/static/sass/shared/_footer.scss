@@ -33,7 +33,7 @@
 
       border-bottom: none;
       color: $link-color;
-      text-decoration: none !important;
+      text-decoration: none;
 
       &:hover, &:focus, &:active {
         border-bottom: 1px dotted $link-color;

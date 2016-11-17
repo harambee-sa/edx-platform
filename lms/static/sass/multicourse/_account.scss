@@ -44,7 +44,12 @@
   %heading-4 {
     font-size: 14px;
     font-weight: 600;
+<<<<<<< HEAD
     letter-spacing: 0 !important;
+=======
+    text-transform: uppercase;
+    letter-spacing: 0;
+>>>>>>> remove all the css importants
     color: $m-gray-d2;
   }
 
@@ -79,10 +84,16 @@
     font-weight: 500;
     cursor: pointer;
     text-align: center;
-    border: none !important;
+    border: none;
     text-shadow: none;
+<<<<<<< HEAD
     font-size: $font-size-base;
     box-shadow: none !important;
+=======
+    letter-spacing: 0;
+    font-size: 16px;
+    box-shadow: none;
+>>>>>>> remove all the css importants
   }
 
   %button-secondary {
@@ -95,11 +106,11 @@
     font-weight: 600;
     cursor: pointer;
     text-align: center;
-    border: none !important;
+    border: none;
     text-shadow: none;
     letter-spacing: 0;
     font-size: 16px;
-    box-shadow: 0 !important;
+    box-shadow: 0;
   }
 
   // layout
@@ -212,6 +223,7 @@
     &:focus {
       color: $link-color;
       font-weight: 400;
+<<<<<<< HEAD
       text-decoration: none !important; // needed but nasty
       font-family: $font-family-sans-serif;
     }
@@ -221,6 +233,15 @@
     &:focus {
       text-decoration: none !important; // needed but nasty
       border-bottom: 1px dotted $link-color;
+=======
+      text-decoration: none; // needed but nasty
+      font-family: $sans-serif;
+    }
+
+    &:hover, &:active, &:focus {
+      text-decoration: none; // needed but nasty
+      border-bottom: 1px dotted $link-color-d1;
+>>>>>>> remove all the css importants
     }
   }
 
@@ -248,10 +269,15 @@
 
     width: 280px;
 
+<<<<<<< HEAD
     p,
     ol,
     ul {
       font-size: $font-size-sm !important;
+=======
+    p, ol, ul {
+      font-size: 14px;
+>>>>>>> remove all the css importants
     }
   }
 
@@ -489,7 +515,7 @@
           font-weight: 600;
 
           a {
-            font-weight: 600 !important;
+            font-weight: 600;
           }
         }
 
@@ -513,7 +539,7 @@
       &:disabled,
       &.is-disabled {
         opacity: 0.3;
-        cursor: default !important;
+        cursor: default;
       }
     }
 
@@ -642,8 +668,12 @@
 
     .message-copy {
       @extend %body-text;
+<<<<<<< HEAD
 
       margin: 0 !important;
+=======
+      margin: 0;
+>>>>>>> remove all the css importants
       padding: 0;
       list-style: none;
 
@@ -660,7 +690,11 @@
     background: tint($danger, 95%);
 
     .message-title {
+<<<<<<< HEAD
       color: shade($danger, 10%) !important;
+=======
+      color: shade($red, 10%);
+>>>>>>> remove all the css importants
     }
   }
 
@@ -744,7 +778,7 @@
   .inner-wrapper {
     border-radius: 2px;
     background: $body-bg;
-    padding-bottom: 0 !important;
+    padding-bottom: 0;
   }
 
   #password-reset {
@@ -797,11 +831,11 @@
       }
 
       .form-actions {
-        padding: 0 !important;
+        padding: 0;
 
         .action-primary {
           float: none;
-          display: block !important;
+          display: block;
           width: 100%;
         }
       }
@@ -814,8 +848,12 @@
     box-shadow: inset 0 -1px 2px 0 tint($red, 85%);
 
     @include box-sizing(border-box);
+<<<<<<< HEAD
 
     margin: $baseline 0 ($baseline/2) 0 !important;
+=======
+    margin: $baseline 0 ($baseline/2) 0;
+>>>>>>> remove all the css importants
     padding: $baseline;
     border: none;
     border-bottom: 3px solid shade($red, 10%);
