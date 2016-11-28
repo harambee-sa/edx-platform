@@ -7,6 +7,11 @@ from opaque_keys.edx.keys import CourseKey
 from pytz import UTC, timezone
 
 from course_modes.models import CourseMode, CourseModeExpirationConfig
+<<<<<<< HEAD
+=======
+from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
+
+>>>>>>> Feature course mode selectable
 # Technically, we shouldn't be doing this, since verify_student is defined
 # in LMS, and course_modes is defined in common.
 #
@@ -34,6 +39,7 @@ class CourseModeForm(forms.ModelForm):
         fields = '__all__'
 
     mode_slug = forms.ChoiceField(choices=COURSE_MODE_SLUG_CHOICES, label=_("Mode"))
+    course_id = forms.ChoiceField(choices=[(course.id, course.display_name) for course in CourseOverview.objects.all()], label=_("Course"))
 
     # The verification deadline is stored outside the course mode in the verify_student app.
     # (we used to use the course mode expiration_datetime as both an upgrade and verification deadline).
