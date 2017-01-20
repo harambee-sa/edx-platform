@@ -37,6 +37,12 @@ from openedx.core.djangolib.markup import HTML, Text
 from openedx.features.course_experience import COURSE_OUTLINE_PAGE_FLAG, default_course_url_name
 from openedx.features.course_experience.views.course_sock import CourseSockFragmentView
 from openedx.features.enterprise_support.api import data_sharing_consent_required
+<<<<<<< HEAD
+=======
+from openedx.features.course_experience import UNIFIED_COURSE_VIEW_FLAG
+from request_cache.middleware import RequestCache
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+>>>>>>> get LANGUAGE_CODE from configuration helper
 from shoppingcart.models import CourseRegistrationCode
 from student.views import is_course_blocked
 from util.views import ensure_valid_course_key
@@ -253,11 +259,17 @@ class CoursewareIndex(View):
         """
         Returns the preferred language for the actual user making the request.
         """
+<<<<<<< HEAD
         language_preference = settings.LANGUAGE_CODE
 
         if self.request.user.is_authenticated():
             language_preference = get_user_preference(self.real_user, LANGUAGE_KEY)
 
+=======
+        language_preference = get_user_preference(self.real_user, LANGUAGE_KEY)
+        if not language_preference:
+            language_preference = configuration_helpers.get_value('LANGUAGE_CODE')
+>>>>>>> get LANGUAGE_CODE from configuration helper
         return language_preference
 
     def _is_masquerading_as_student(self):
