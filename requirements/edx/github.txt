@@ -114,4 +114,8 @@ git+https://github.com/proversity-org/edx-xblock-bibblio#egg=edx-xblock-bibblio
 >>>>>>> update private xblock dependencies
 =======
 -e git+https://github.com/Stanford-Online/xblock-free-text-response#egg=xblock-free-text-response
+<<<<<<< HEAD
 >>>>>>> install freetext response xblock
+=======
+git+https://github.com/proversity-org/recap-xblock.git#egg=recap-xblock
+>>>>>>> add recap xblock to requirements
