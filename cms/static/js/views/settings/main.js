@@ -1,8 +1,8 @@
-define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui', 'js/utils/date_utils',
+define(['js/views/validation', 'codemirror', 'tinymce', 'underscore', 'jquery', 'jquery.ui', 'js/utils/date_utils',
     'js/models/uploads', 'js/views/uploads', 'js/views/license', 'js/models/license',
     'common/js/components/views/feedback_notification', 'jquery.timepicker', 'date', 'gettext',
-    'js/views/learning_info', 'js/views/instructor_info', 'edx-ui-toolkit/js/utils/string-utils'],
-       function(ValidatingView, CodeMirror, _, $, ui, DateUtils, FileUploadModel,
+    'js/views/learning_info', 'js/views/instructor_info', 'edx-ui-toolkit/js/utils/string-utils', 'tinymce', 'jquery.tinymce'],
+       function(ValidatingView, CodeMirror, tinymce, _, $, ui, DateUtils, FileUploadModel,
                 FileUploadDialog, LicenseView, LicenseModel, NotificationView,
                 timepicker, date, gettext, LearningInfoView, InstructorInfoView, StringUtils) {
            var DetailsView = ValidatingView.extend({
@@ -15,7 +15,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    'change textarea': 'updateModel',
                    'change select': 'updateModel',
                    'click .remove-course-introduction-video': 'removeVideo',
-                   'focus #course-overview': 'codeMirrorize',
+                   'focus #course-overview': 'initialiseTinyMCE',
                    'mouseover .timezone': 'updateTime',
         // would love to move to a general superclass, but event hashes don't inherit in backbone :-(
                    'focus :input': 'inputFocus',
@@ -45,6 +45,12 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    this.listenTo(this.model, 'invalid', this.handleValidationError);
                    this.listenTo(this.model, 'change', this.showNotificationBar);
                    this.selectorToField = _.invert(this.fieldToSelectorMap);
+                   // initialise tinymce
+
+
+
+                    this.initialiseTinyMCE(this)
+
         // handle license separately, to avoid reimplementing view logic
                    this.licenseModel = new LicenseModel({asString: this.model.get('license')});
                    this.licenseView = new LicenseView({
@@ -73,6 +79,84 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    });
                },
 
+                initialiseTinyMCE: function(self) {
+                  tinyMCE.baseURL = "" + baseUrl + "/js/vendor/tinymce/js/tinymce";
+                  console.log("heyyy", tinyMCE.baseURL);
+
+                  this.tiny_mce_textarea = $(".tinymce", this.element).tinymce({
+                    script_url: "" + baseUrl + "/js/vendor/tinymce/js/tinymce/tinymce.full.min.js",
+                    theme: "modern",
+                    skin: 'studio-tmce4',
+                    schema: "html5",
+                    convert_urls: false,
+                    formats: {
+                      code: {
+                        inline: 'code'
+                      }
+                    },
+                    visual: false,
+                    plugins: "textcolor, link, image, codemirror",
+                    codemirror: {
+                      path: "" + baseUrl + "/js/vendor"
+                    },
+                    image_advtab: true,
+                    toolbar: "formatselect | fontselect | bold italic underline forecolor wrapAsCode | bullist numlist outdent indent blockquote | link unlink image | code",
+                    block_formats: interpolate("%(paragraph)s=p;%(preformatted)s=pre;%(heading3)s=h3;%(heading4)s=h4;%(heading5)s=h5;%(heading6)s=h6", {
+                      paragraph: gettext("Paragraph"),
+                      preformatted: gettext("Preformatted"),
+                      heading3: gettext("Heading 3"),
+                      heading4: gettext("Heading 4"),
+                      heading5: gettext("Heading 5"),
+                      heading6: gettext("Heading 6")
+                    }, true),
+                    width: '100%',
+                    height: '400px',
+                    menubar: false,
+                    statusbar: false,
+                    valid_children: "+body[style]",
+                    valid_elements: "*[*]",
+                    extended_valid_elements: "*[*]",
+                    invalid_elements: "",
+                    setup: function(ed) {
+                        var thisTarget = ed;
+                        ed.on('change', function(e) {
+                            
+                            var cachethis = this;
+                            var field = self.selectorToField[thisTarget.id];
+
+                            self.clearValidationErrors();
+                            var newVal = ed.getContent();
+                            if (self.model.get(field) != newVal) {
+                                self.setAndValidate(field, newVal);
+                            }
+                        });
+                      },
+                    init_instance_callback: this.initInstanceCallback,
+                    browser_spellcheck: true
+                  });
+
+                  // tinymce.init({
+                  //     selector: "textarea#course-overview",
+                  //     themes: 'modern',
+                  //     setup:function(ed) {
+                  //       var thisTarget = ed;
+                  //       ed.on('change', function(e) {
+                            
+                  //           var cachethis = this;
+                  //           var field = self.selectorToField[thisTarget.id];
+
+                  //           self.clearValidationErrors();
+                  //           var newVal = ed.getContent();
+                  //           if (self.model.get(field) != newVal) {
+                  //               self.setAndValidate(field, newVal);
+                  //           }
+                  //       });
+                  //     }
+                                         
+                  //  });
+                  tinymce.activeEditor.setContent(this.model.get('overview'));
+                },
+
                render: function() {
         // Clear any image preview timeouts set in this.updateImagePreview
                    clearTimeout(this.imageTimer);
@@ -83,8 +167,12 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    DateUtils.setupDatePicker('enrollment_start', this);
                    DateUtils.setupDatePicker('enrollment_end', this);
 
+<<<<<<< HEAD
                    this.$el.find('#' + this.fieldToSelectorMap.overview).val(this.model.get('overview'));
                    this.codeMirrorize(null, $('#course-overview')[0]);
+=======
+                   this.$el.find('#' + this.fieldToSelectorMap['overview']).val(this.model.get('overview'));
+>>>>>>> adding wysiwyg, need to clean code
 
                    if (this.model.get('title') !== '') {
                        this.$el.find('#' + this.fieldToSelectorMap.title).val(this.model.get('title'));
@@ -332,6 +420,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        this.$el.find('.remove-course-introduction-video').hide();
                    }
                },
+<<<<<<< HEAD
                codeMirrors: {},
                codeMirrorize: function(e, forcedTarget) {
                    var thisTarget, cachethis, field, cmTextArea;
@@ -385,6 +474,9 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        reset: true,
                        silent: true});
                },
+=======
+               
+>>>>>>> adding wysiwyg, need to clean code
                setAndValidate: function(attr, value) {
         // If we call model.set() with {validate: true}, model fields
         // will not be set if validation fails. This puts the UI and
@@ -401,8 +493,9 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
         // delegate to superclass
                    ValidatingView.prototype.showNotificationBar.call(this,
                                                           this.save_message,
-                                                          _.bind(this.saveView, this),
-                                                          _.bind(this.revertView, this));
+                                                          _.bind(this.saveView, this)
+                                                          //_.bind(this.revertView, this)
+                                                          );
                },
 
                uploadImage: function(event) {
