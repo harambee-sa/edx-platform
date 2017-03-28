@@ -61,6 +61,29 @@ from courseware.model_data import FieldDataCache
 from courseware.models import BaseStudentModuleHistory, StudentModule
 from courseware.url_helpers import get_redirect_url
 from courseware.user_state_client import DjangoXBlockUserStateClient
+<<<<<<< HEAD
+=======
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import AnonymousUser, User
+from django.template.context_processors import csrf
+from django.core.exceptions import PermissionDenied
+from django.core.urlresolvers import reverse
+from django.db import transaction
+from django.db.models import Q
+from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden, QueryDict
+from django.shortcuts import redirect
+
+from django.utils.decorators import method_decorator
+from django.utils.http import urlquote_plus
+from django.utils.text import slugify
+from pytz import UTC
+from django.utils.translation import ugettext as _
+from django.views.decorators.cache import cache_control
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.http import require_GET, require_http_methods, require_POST
+from django.views.generic import View
+>>>>>>> add age verification pop up
 from edxmako.shortcuts import marketing_link, render_to_response, render_to_string
 from enrollment.api import add_enrollment
 from lms.djangoapps.ccx.custom_exception import CCXLocatorValidationException
@@ -95,6 +118,7 @@ from shoppingcart.utils import is_shopping_cart_enabled
 from student.models import CourseEnrollment, UserTestGroup
 from util.cache import cache, cache_if_anonymous
 from util.db import outer_atomic
+from util.json_request import JsonResponse, JsonResponseBadRequest
 from util.milestones_helpers import get_prerequisite_courses_display
 from util.views import _record_feedback_in_zendesk, ensure_valid_course_key, ensure_valid_usage_key
 from xmodule.modulestore.django import modulestore
@@ -792,6 +816,9 @@ def course_about(request, course_id):
         is_old_enough = bool(not course.minimum_age or not hasattr(request.user, 'profile') or not request.user.profile.age) or \
             bool(request.user.profile.age >= course.minimum_age)
 
+        # The user was born in the year where they might be old enough, but we need to verify that they have turned the course.minimum age
+        needs_to_verify_age = bool(course.minimum_age - request.user.profile.age == 1)
+
         # Register button should be disabled if one of the following is true:
         # - Student is already registered for course
         # - Course is already full
@@ -801,8 +828,12 @@ def course_about(request, course_id):
 =======
         # - Student is not old enough to register
         active_reg_button = not(registered or is_course_full or not can_enroll or not is_old_enough)
+<<<<<<< HEAD
 >>>>>>> course enrollment age minimum
 
+=======
+        
+>>>>>>> add age verification pop up
         is_shib_course = uses_shib(course)
 
         # get prerequisite courses display names
@@ -840,6 +871,7 @@ def course_about(request, course_id):
             'can_enroll': can_enroll,
             'invitation_only': invitation_only,
             'is_old_enough': is_old_enough,
+            'needs_to_verify_age': needs_to_verify_age,
             'active_reg_button': active_reg_button,
             'is_shib_course': is_shib_course,
             # We do not want to display the internal courseware header, which is used when the course is found in the
