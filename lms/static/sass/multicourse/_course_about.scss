@@ -124,7 +124,7 @@
 
           width: flex-grid(12);
 
-          > a.find-courses, a.register, a.add-to-cart {
+          > a.find-courses, a.register, a.add-to-cart, button.verifyAge {
             @include button(shiny, $button-color);
             @include box-sizing(border-box);
 
