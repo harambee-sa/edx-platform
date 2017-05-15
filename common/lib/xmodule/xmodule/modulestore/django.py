@@ -27,8 +27,12 @@ from django.utils.translation import get_language, to_locale
 <<<<<<< HEAD
 =======
 from pymongo import ReadPreference
+<<<<<<< HEAD
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 >>>>>>> get LANGUAGE_CODE from configuration helper
+=======
+#from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+>>>>>>> FIX: comenting out broken import To be fixed later
 from xmodule.contentstore.django import contentstore
 from xmodule.modulestore.draft_and_published import BranchSettingMixin
 from xmodule.modulestore.mixed import MixedModuleStore
