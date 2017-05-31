@@ -115,7 +115,11 @@ git+https://github.com/edx-solutions/xblock-drag-and-drop-v2@2.1.5#egg=xblock-dr
 git+https://github.com/edx-solutions/xblock-drag-and-drop-v2@v2.0.18#egg=xblock-drag-and-drop-v2==2.0.18
 =======
 git+https://github.com/open-craft/xblock-poll@v1.2.6#egg=xblock-poll==1.2.6
+<<<<<<< HEAD
 git+https://github.com/proversity-org/xblock-drag-and-drop-v2#egg=xblock-drag-and-drop-v2==2.0.18
+>>>>>>> UPD: requirement update to proversity fork
+=======
+git+https://github.com/proversity-org/xblock-drag-and-drop-v2@2.0.18#egg=xblock-drag-and-drop-v2==2.0.18
 >>>>>>> UPD: requirement update to proversity fork
 git+https://github.com/proversity-org/edx-xblock-bibblio#egg=edx-xblock-bibblio
 <<<<<<< HEAD
