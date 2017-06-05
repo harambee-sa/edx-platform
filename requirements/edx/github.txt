@@ -144,6 +144,10 @@ git+https://github.com/proversity-org/edx-xblock-bibblio#egg=edx-xblock-bibblio
 =======
 =======
 -e git+https://github.com/proversity-org/xblock-free-text-response#egg=xblock-free-text-response
+<<<<<<< HEAD
 >>>>>>> ENH: changing free text responce from stanford to proversity-org, adding libssl to package requirements
 git+https://github.com/proversity-org/recap-xblock.git#egg=recap-xblock
 >>>>>>> add recap xblock to requirements
+=======
+git+https://github.com/proversity-org/recap-xblock.git@0.1.1#egg=recap-xblock==0.1.1
+>>>>>>> UPD: recap xblock update to taged version
