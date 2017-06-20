@@ -89,5 +89,17 @@ urlpatterns = [
         name='generate_certificate_exceptions'),
     url(r'^generate_bulk_certificate_exceptions', api.generate_bulk_certificate_exceptions,
         name='generate_bulk_certificate_exceptions'),
+<<<<<<< HEAD
     url(r'^certificate_invalidation_view/$', api.certificate_invalidation_view, name='certificate_invalidation_view'),
 ]
+=======
+
+    url(r'^certificate_invalidation_view/$',
+        'lms.djangoapps.instructor.views.api.certificate_invalidation_view',
+        name='certificate_invalidation_view'),
+
+    url(r'^generate_pdf/$',
+        'lms.djangoapps.instructor.views.api.generate_pdf', 
+        name='generate_pdf'),
+)
+>>>>>>> xhtml2pdf working, need to show pdf in view, successfully created though
