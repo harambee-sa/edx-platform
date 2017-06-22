@@ -97,6 +97,5 @@ urlpatterns = [
     url(r'^certificate_invalidation_view/$',
         'lms.djangoapps.instructor.views.api.certificate_invalidation_view',
         name='certificate_invalidation_view'),
-
 )
 >>>>>>> xhtml2pdf working, need to show pdf in view, successfully created though
