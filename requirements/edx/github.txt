@@ -171,6 +171,7 @@ git+https://github.com/proversity-org/recap-xblock.git#egg=recap-xblock
 git+https://github.com/proversity-org/xblock-free-text-response#egg=xblock-free-text-response==0.1.3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> remove editable flag from freetextresponse req
 git+https://github.com/proversity-org/recap-xblock.git@0.1.1#egg=recap-xblock==0.1.1
 >>>>>>> UPD: recap xblock update to taged version
@@ -180,3 +181,6 @@ git+https://github.com/proversity-org/recap-xblock.git@0.1.1#egg=recap-xblock==0
 =======
 git+https://github.com/proversity-org/recap-xblock.git@0.1.2#egg=recap-xblock==0.1.2
 >>>>>>> update recap to version 0.1.2
+=======
+git+https://github.com/proversity-org/recap-xblock.git@0.1.3#egg=recap-xblock==0.1.3
+>>>>>>> UPD: updating requirements for recap exblock
