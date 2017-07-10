@@ -1,13 +1,22 @@
 from django.conf import settings
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.conf.urls import url
 =======
+=======
+>>>>>>> Proversity/staging (#411)
 <<<<<<< HEAD
 from django.conf.urls import patterns, url
 =======
 from .views import RecoverPasswordView
 >>>>>>> add recover password endpoint
+<<<<<<< HEAD
 >>>>>>> add recover password endpoint
+=======
+=======
+from .views import RecoverPasswordView
+>>>>>>> Proversity/staging (#411)
+>>>>>>> Proversity/staging (#411)
 
 from student_account import views
 
