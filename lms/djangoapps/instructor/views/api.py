@@ -2552,8 +2552,6 @@ def list_forum_members(request, course_id):
     return JsonResponse(response_payload)
 
 def send_email_to_specific_learners(course, learners, template_name, from_addr, subject, message):
-    log.info(u'send_email_to_specific_learners')
-    log.info(learners)
     connection = get_connection()
     connection.open()
 
@@ -2632,7 +2630,7 @@ def send_email(request, course_id):
     - 'subject' specifies email's subject
     - 'message' specifies email's content
     """
-    log.info(u'send_email')
+    
     course_id = CourseKey.from_string(course_id)
 
     if not BulkEmailFlag.feature_enabled(course_id):
@@ -2643,8 +2641,6 @@ def send_email(request, course_id):
     subject = request.POST.get("subject")
     message = request.POST.get("message")
     specific_learners = _split_input_list(request.POST.get("specific_learners"))
-    log.info(u'specific_learners')
-    log.info(specific_learners)
 
     # allow two branding points to come from Site Configuration: which CourseEmailTemplate should be used
     # and what the 'from' field in the email should be
@@ -2689,7 +2685,6 @@ def send_email(request, course_id):
         return HttpResponseBadRequest(repr(err))
 =======
     if len(targets) > 0 and targets[0] == 'specific_learners':
-        log.info(u'entering the if, everything is cool')
         send_email_to_specific_learners(course, specific_learners, template_name, from_addr, subject, message)
         response_payload = {
             'course_id': course_id.to_deprecated_string(),
