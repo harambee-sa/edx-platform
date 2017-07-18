@@ -94,7 +94,11 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.theming import helpers as theming_helpers
 from openedx.core.djangoapps.user_api import accounts as accounts_settings
 from openedx.core.djangoapps.user_api.preferences import api as preferences_api
+<<<<<<< HEAD
 from openedx.core.djangoapps.waffle_utils import WaffleFlagNamespace, WaffleFlag
+=======
+<<<<<<< HEAD
+>>>>>>> Added logic for new microsite themes (#417)
 from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_url_name
 from openedx.features.enterprise_support.api import get_dashboard_consent_notification
@@ -141,6 +145,8 @@ from util.json_request import JsonResponse
 from util.milestones_helpers import get_pre_requisite_courses_not_completed
 from util.password_policy_validators import validate_password_length, validate_password_strength
 from xmodule.modulestore.django import modulestore
+=======
+>>>>>>> Added logic for new microsite themes (#417)
 
 log = logging.getLogger("edx.student")
 AUDIT_LOG = logging.getLogger("audit")
@@ -235,6 +241,21 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
     # Add marketable programs to the context.
     context['programs_list'] = get_programs_with_type(request.site, include_hidden=False)
+
+    carousel_courses = []
+    carousel_courses.append([])
+    current_index = 0
+    limit = 4
+
+    for course in courses:
+        if len(carousel_courses[current_index]) < limit:
+            carousel_courses[current_index].append(course)
+        else:
+            carousel_courses.append([])
+            current_index += 1
+            carousel_courses[current_index].append(course)
+
+    context["carousel_courses"] = carousel_courses
 
     return render_to_response('index.html', context)
 
@@ -480,9 +501,8 @@ def _cert_info(user, course_overview, cert_status, course_mode):  # pylint: disa
 
     return status_dict
 
-
 @ensure_csrf_cookie
-def signin_user(request):
+def signin_user(request, user=AnonymousUser()):
     """Deprecated. To be replaced by :class:`student_account.views.login_and_registration_form`."""
     external_auth_response = external_auth_login(request)
     if external_auth_response is not None:
@@ -499,6 +519,9 @@ def signin_user(request):
             third_party_auth_error = _(unicode(msg))  # pylint: disable=translation-of-non-string
             break
 
+    courses = get_courses(user)
+    context = {'courses': courses}
+
     context = {
         'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
         # Bool injected into JS to submit form if we're inside a running third-
@@ -510,14 +533,14 @@ def signin_user(request):
             'platform_name',
             settings.PLATFORM_NAME
         ),
-        'third_party_auth_error': third_party_auth_error
+        'third_party_auth_error': third_party_auth_error,
+        'courses': courses
     }
 
     return render_to_response('login.html', context)
 
-
 @ensure_csrf_cookie
-def register_user(request, extra_context=None):
+def register_user(request, extra_context=None, user=AnonymousUser()):
     """Deprecated. To be replaced by :class:`student_account.views.login_and_registration_form`."""
     # Determine the URL to redirect to following login:
     redirect_to = get_next_url_for_login_page(request)
@@ -527,6 +550,9 @@ def register_user(request, extra_context=None):
     external_auth_response = external_auth_register(request)
     if external_auth_response is not None:
         return external_auth_response
+
+    courses = get_courses(user)
+    context = {'courses': courses}
 
     context = {
         'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
@@ -540,6 +566,7 @@ def register_user(request, extra_context=None):
         ),
         'selected_provider': '',
         'username': '',
+        'courses': courses
     }
 
     if extra_context is not None:
