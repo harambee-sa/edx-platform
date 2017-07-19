@@ -157,6 +157,7 @@
                         $el.val($el.val().trim());
                     }
 
+<<<<<<< HEAD
                     if (key) {
                         validation = this.validate(elements[i]);
                         if (validation.isValid) {
@@ -167,6 +168,24 @@
                             errors.push(validation.message);
                             $el.addClass('error');
                             $label.addClass('error');
+=======
+                        if (key) {
+<<<<<<< HEAD
+                            validation = this.validate(elements[i]);
+                            if (validation.isValid) {
+=======
+                            test = this.validate(elements[i]);
+                            if (test.isValid || $el.attr('id') == 'login-email') {
+>>>>>>> Login with username (#420)
+                                obj[key] = $el.attr('type') === 'checkbox' ? $el.is(':checked') : $el.val();
+                                $el.removeClass('error');
+                                $label.removeClass('error');
+                            } else {
+                                errors.push(validation.message);
+                                $el.addClass('error');
+                                $label.addClass('error');
+                            }
+>>>>>>> Login with username (#420)
                         }
                     }
                 }
