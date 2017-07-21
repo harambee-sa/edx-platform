@@ -172,6 +172,7 @@ git+https://github.com/proversity-org/xblock-free-text-response#egg=xblock-free-
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> remove editable flag from freetextresponse req
 git+https://github.com/proversity-org/recap-xblock.git@0.1.1#egg=recap-xblock==0.1.1
 >>>>>>> UPD: recap xblock update to taged version
@@ -184,3 +185,6 @@ git+https://github.com/proversity-org/recap-xblock.git@0.1.2#egg=recap-xblock==0
 =======
 git+https://github.com/proversity-org/recap-xblock.git@0.1.3#egg=recap-xblock==0.1.3
 >>>>>>> UPD: updating requirements for recap exblock
+=======
+git+https://github.com/proversity-org/recap-xblock.git@0.1.4#egg=recap-xblock==0.1.4
+>>>>>>> Proversity/make async recap instructor dash (#415)
