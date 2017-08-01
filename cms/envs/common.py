@@ -131,10 +131,21 @@ from lms.envs.common import (
 =======
 =======
     # Setting for PAID_COURSE_REGISTRATION, DOES NOT AFFECT VERIFIED STUDENTS
+<<<<<<< HEAD
     PAID_COURSE_REGISTRATION_CURRENCY
 >>>>>>> display default checkout currency correctly
+<<<<<<< HEAD
 >>>>>>> display default checkout currency correctly
+<<<<<<< HEAD
 >>>>>>> display default checkout currency correctly
+=======
+=======
+=======
+    PAID_COURSE_REGISTRATION_CURRENCY,
+	ENABLE_DOG
+>>>>>>> ENH: adding setting for datadog and removing log suppresion
+>>>>>>> ENH: adding setting for datadog and removing log suppresion
+>>>>>>> ENH: adding setting for datadog and removing log suppresion
 )
 from path import Path as path
 from warnings import simplefilter
