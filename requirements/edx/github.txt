@@ -205,4 +205,8 @@ git+https://github.com/proversity-org/recap-xblock.git@0.1.4#egg=recap-xblock==0
 >>>>>>> Proversity/make async recap instructor dash (#415)
 =======
 git+https://github.com/proversity-org/recap-xblock.git@0.1.5#egg=recap-xblock==0.1.5
+<<<<<<< HEAD
 >>>>>>> ENH: new recap version update
+=======
+git+https://github.com/proversity-org/badger-xblock.git#egg=badger-xblock
+>>>>>>> Proversity/add new events for badges (#444)
