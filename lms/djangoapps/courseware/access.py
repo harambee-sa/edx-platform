@@ -18,6 +18,7 @@ from django.contrib.auth.models import AnonymousUser
 from pytz import UTC
 from opaque_keys.edx.keys import CourseKey, UsageKey
 <<<<<<< HEAD
+<<<<<<< HEAD
 from six import text_type
 =======
 <<<<<<< HEAD
@@ -27,6 +28,12 @@ from organizations.models import OrganizationUser
 from util import milestones_helpers as milestones_helpers
 >>>>>>> fix organizational course mapping for insights
 >>>>>>> fix organizational course mapping for insights
+=======
+from organizations.models import OrganizationUser
+
+from util import milestones_helpers as milestones_helpers
+
+>>>>>>> merge fixes
 from xblock.core import XBlock
 
 from courseware.access_response import (

@@ -14,14 +14,17 @@ from opaque_keys.edx.locations import i4xEncoder
 from six import text_type
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import pystache_custom as pystache
 >>>>>>> respect visibility status of discussion panel
 from courseware import courses
 =======
+=======
+import pystache_custom as pystache
+>>>>>>> merge fixes
 from courseware import courses, tabs
->>>>>>> respect visibility status of discussion panel
 from courseware.access import has_access
 from django_comment_client.constants import TYPE_ENTRY, TYPE_SUBCATEGORY
 from django_comment_client.permissions import check_permissions_by_view, get_team, has_permission

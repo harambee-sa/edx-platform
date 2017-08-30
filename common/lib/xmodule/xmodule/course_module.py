@@ -440,11 +440,8 @@ class CourseFields(object):
             "Enter the heading that you want students to see above your course handouts on the Course Home page. "
             "Your course handouts appear in the right panel of the page."
         ),
-<<<<<<< HEAD
-        deprecated=True,
-        scope=Scope.settings, default=_('Course Handouts'))
-=======
-        scope=Scope.settings, default=_('Course Home Sidebar'))
+
+    scope=Scope.settings, default=_('Course Home Sidebar'))
     course_home_sidebar_enabled = Boolean(
         display_name=_("Enable the Course Home Sidebar"),
         help=_(
@@ -453,7 +450,7 @@ class CourseFields(object):
         ),
         scope=Scope.settings, default=True
     )
->>>>>>> respect visibility status of course home sidebar
+
     show_timezone = Boolean(
         help=_(
             "True if timezones should be shown on dates in the course. "

@@ -11,7 +11,11 @@
 =======
 -e git+https://github.com/gsehub/xblock-mentoring.git@4d1cce78dc232d5da6ffd73817b5c490e87a6eee#egg=xblock-mentoring
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> add cookie consent popup banner feature
+=======
+<<<<<<< HEAD
+>>>>>>> merge fixes
 git+https://github.com/open-craft/problem-builder.git@v2.7.7#egg=xblock-problem-builder==2.7.7
 =======
 <<<<<<< HEAD
@@ -20,6 +24,10 @@ git+https://github.com/open-craft/problem-builder.git@v2.6.5patch2#egg=xblock-pr
 git+https://github.com/proversity-org/problem-builder.git#egg=xblock-problem-builder
 >>>>>>> add cookie consent popup banner feature
 >>>>>>> add cookie consent popup banner feature
+=======
+git+https://github.com/proversity-org/problem-builder.git#egg=xblock-problem-builder
+
+>>>>>>> merge fixes
 
 # Oppia XBlock
 -e git+https://github.com/oppia/xblock.git@9f6b95b7eb7dbabb96b77198a3202604f96adf65#egg=oppia-xblock

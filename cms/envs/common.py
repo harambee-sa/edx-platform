@@ -116,10 +116,10 @@ from lms.envs.common import (
 
     CONTACT_EMAIL,
 
-<<<<<<< HEAD
     DISABLE_ACCOUNT_ACTIVATION_REQUIREMENT_SWITCH,
     # Video Image settings
     VIDEO_IMAGE_SETTINGS,
+<<<<<<< HEAD
 <<<<<<< HEAD
     VIDEO_TRANSCRIPTS_SETTINGS,
 <<<<<<< HEAD
@@ -145,7 +145,19 @@ from lms.envs.common import (
 	ENABLE_DOG
 >>>>>>> ENH: adding setting for datadog and removing log suppresion
 >>>>>>> ENH: adding setting for datadog and removing log suppresion
+<<<<<<< HEAD
 >>>>>>> ENH: adding setting for datadog and removing log suppresion
+=======
+=======
+
+    # Setting for PAID_COURSE_REGISTRATION, DOES NOT AFFECT VERIFIED STUDENTS
+    PAID_COURSE_REGISTRATION_CURRENCY,
+    
+    # Setting fro ENABLE_DOG, turns on the log sync to datadog
+	  ENABLE_DOG
+
+>>>>>>> merge fixes
+>>>>>>> merge fixes
 )
 from path import Path as path
 from warnings import simplefilter

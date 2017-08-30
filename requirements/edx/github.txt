@@ -104,6 +104,7 @@ xblock-review==1.1.2
 =======
 git+https://github.com/edx/edx-user-state-client.git@1.0.1#egg=edx-user-state-client==1.0.1
 <<<<<<< HEAD
+<<<<<<< HEAD
 git+https://github.com/edx/xblock-lti-consumer.git@v1.1.6#egg=lti_consumer-xblock==1.1.6
 git+https://github.com/edx/edx-proctoring.git@1.2.3#egg=edx-proctoring==1.2.3
 =======
@@ -116,6 +117,7 @@ git+https://github.com/proversity-org/edx-proctoring.git#egg=edx-proctoring
 git+https://github.com/edx/help-tokens.git@v1.0.0#egg=help-tokens==1.0.0
 >>>>>>> install edx-proctoring from proversity fork
 >>>>>>> install edx-proctoring from proversity fork
+<<<<<<< HEAD
 >>>>>>> install edx-proctoring from proversity fork
 
 # Third Party XBlocks
@@ -149,21 +151,18 @@ git+https://github.com/open-craft/xblock-poll@v1.2.6#egg=xblock-poll==1.2.6
 git+https://github.com/proversity-org/xblock-drag-and-drop-v2#egg=xblock-drag-and-drop-v2==2.0.18
 >>>>>>> UPD: requirement update to proversity fork
 =======
+=======
+=======
+git+https://github.com/edx/xblock-lti-consumer.git@v1.1.3#egg=lti_consumer-xblock==1.1.3
+git+https://github.com/proversity-org/edx-proctoring.git#egg=edx-proctoring
+git+https://github.com/edx/help-tokens.git@v1.0.0#egg=help-tokens==1.0.0
+>>>>>>> merge fixes
+
+# Third Party XBlocks
+
+>>>>>>> merge fixes
 git+https://github.com/proversity-org/xblock-drag-and-drop-v2@2.0.18#egg=xblock-drag-and-drop-v2==2.0.18
->>>>>>> UPD: requirement update to proversity fork
-=======
-git+https://github.com/proversity-org/xblock-drag-and-drop-v2#egg=xblock-drag-and-drop-v2==2.0.18
->>>>>>> UPD: requirement update to proversity fork
-=======
-git+https://github.com/open-craft/xblock-poll@v1.2.6#egg=xblock-poll==1.2.6
-=======
-git+https://github.com/proversity-org/xblock-poll@v1.2.8#egg=xblock-poll==1.2.8
->>>>>>> update requirements for poll xblock
-=======
 git+https://github.com/proversity-org/xblock-poll@v1.3.0#egg=xblock-poll==1.3.0
->>>>>>> UPD: upgrading of xblock-poll
-git+https://github.com/proversity-org/xblock-drag-and-drop-v2#egg=xblock-drag-and-drop-v2==2.0.18
->>>>>>> Proversity/staging (#380)
 git+https://github.com/proversity-org/edx-xblock-bibblio#egg=edx-xblock-bibblio
 <<<<<<< HEAD
 <<<<<<< HEAD

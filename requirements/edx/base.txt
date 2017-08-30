@@ -61,6 +61,7 @@ edx-organizations==0.4.9
 =======
 edx-opaque-keys==0.4.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 edx-organizations==0.4.7
 =======
 <<<<<<< HEAD
@@ -69,7 +70,13 @@ edx-organizations==0.4.6
 git+https://github.com/proversity-org/edx-organizations.git#egg=edx-organizations
 >>>>>>> force and lock organization for org users in studio
 >>>>>>> force and lock organization for org users in studio
+<<<<<<< HEAD
 >>>>>>> force and lock organization for org users in studio
+=======
+=======
+git+https://github.com/proversity-org/edx-organizations.git#egg=edx-organizations
+>>>>>>> merge fixes
+>>>>>>> merge fixes
 edx-rest-api-client==1.7.1
 edx-search==1.1.0
 edx-submissions==2.0.12

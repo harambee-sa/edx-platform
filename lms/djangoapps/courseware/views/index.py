@@ -37,12 +37,10 @@ from openedx.core.djangolib.markup import HTML, Text
 from openedx.features.course_experience import COURSE_OUTLINE_PAGE_FLAG, default_course_url_name
 from openedx.features.course_experience.views.course_sock import CourseSockFragmentView
 from openedx.features.enterprise_support.api import data_sharing_consent_required
-<<<<<<< HEAD
-=======
+
 from openedx.features.course_experience import UNIFIED_COURSE_VIEW_FLAG
 from request_cache.middleware import RequestCache
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
->>>>>>> get LANGUAGE_CODE from configuration helper
 from shoppingcart.models import CourseRegistrationCode
 from student.views import is_course_blocked
 from util.views import ensure_valid_course_key

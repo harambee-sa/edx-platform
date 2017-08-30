@@ -66,15 +66,7 @@ urlpatterns = [
 	# Submissions api
     url(r'^api/submissions/', include('submissions.urls')),
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> Proversity/staging (#380)
     # Event tracking endpoints
-=======
-	# Event tracking endpoints
->>>>>>> UPD: adding submissions endoint url
     url(r'', include('track.urls')),
 
     # Performance endpoints
