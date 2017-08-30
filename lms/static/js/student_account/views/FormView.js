@@ -170,7 +170,7 @@
                             $label.addClass('error');
 =======
                         if (key) {
-                            test = this.validate(elements[i]);
+                            var test = this.validate(elements[i]);
                             if (test.isValid || $el.attr('id') == 'login-email') {
                                 obj[key] = $el.attr('type') === 'checkbox' ? $el.is(':checked') : $el.val();
                                 $el.removeClass('error');
@@ -227,8 +227,16 @@
                 return data;
             },
 
+<<<<<<< HEAD
             submitForm: function(event) {
                 var data = this.getFormData();
+=======
+                submitForm: function(event) {
+                    console.log("jakjasjkaskjas")
+                    var data = this.getFormData();
+                    
+                    console.log(data)
+>>>>>>> Finale fixes
 
                 if (!_.isUndefined(event)) {
                     event.preventDefault();
