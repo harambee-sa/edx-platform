@@ -167,6 +167,7 @@ git+https://github.com/proversity-org/edx-xblock-bibblio#egg=edx-xblock-bibblio
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> update private xblock dependencies
 =======
 -e git+https://github.com/Stanford-Online/xblock-free-text-response#egg=xblock-free-text-response
@@ -207,5 +208,9 @@ git+https://github.com/proversity-org/recap-xblock.git@0.1.5#egg=recap-xblock==0
 <<<<<<< HEAD
 >>>>>>> ENH: new recap version update
 =======
+=======
+git+https://github.com/proversity-org/xblock-free-text-response.git@0.2.0#egg=xblock-free-text-response==0.2.0
+git+https://github.com/proversity-org/recap-xblock.git@0.2.0#egg=recap-xblock==0.2.0
+>>>>>>> ENH: new recap and freetext xblock
 git+https://github.com/proversity-org/badger-xblock.git#egg=badger-xblock
 >>>>>>> Proversity/add new events for badges (#444)
