@@ -213,4 +213,8 @@ git+https://github.com/proversity-org/xblock-free-text-response.git@0.2.0#egg=xb
 git+https://github.com/proversity-org/recap-xblock.git@0.2.0#egg=recap-xblock==0.2.0
 >>>>>>> ENH: new recap and freetext xblock
 git+https://github.com/proversity-org/badger-xblock.git#egg=badger-xblock
+<<<<<<< HEAD
 >>>>>>> Proversity/add new events for badges (#444)
+=======
+git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
+>>>>>>> ADD: staff graded assignment
