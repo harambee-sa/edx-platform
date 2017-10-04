@@ -36,6 +36,7 @@ from .course_outline import CourseOutlineFragmentView
 from .course_sock import CourseSockFragmentView
 from .latest_update import LatestUpdateFragmentView
 from .welcome_message import WelcomeMessageFragmentView
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 
 EMPTY_HANDOUTS_HTML = u'<ol></ol>'
 
@@ -212,5 +213,10 @@ class CourseHomeFragmentView(EdxFragmentView):
             'upgrade_price': upgrade_price,
             'upgrade_url': upgrade_url,
         }
-        html = render_to_string('course_experience/course-home-fragment.html', context)
+        
+        if configuration_helpers.get_value('custom_fragments', False):
+            html = render_to_string('course_experience/course-home-fragment-proversity.html', context)
+        else:  
+            html = render_to_string('course_experience/course-home-fragment.html', context)
+
         return Fragment(html)

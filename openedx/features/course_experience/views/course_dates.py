@@ -9,6 +9,7 @@ from web_fragments.fragment import Fragment
 
 from courseware.courses import get_course_date_blocks, get_course_with_access
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 
 
 class CourseDatesFragmentView(EdxFragmentView):
@@ -28,11 +29,21 @@ class CourseDatesFragmentView(EdxFragmentView):
         context = {
             'course_date_blocks': course_date_blocks
         }
+<<<<<<< HEAD
         html = render_to_string(self.template_name, context)
         dates_fragment = Fragment(html)
         self.add_fragment_resource_urls(dates_fragment)
 
         return dates_fragment
+=======
+        
+        if configuration_helpers.get_value('custom_fragments', False):
+            html = render_to_string('course_experience/course-dates-fragment-proversity.html', context)
+        else:        
+            html = render_to_string('course_experience/course-dates-fragment.html', context)
+
+        return Fragment(html)
+>>>>>>> ENH: template setting switch and badgr xblock update
 
 
 class CourseDatesFragmentMobileView(CourseDatesFragmentView):

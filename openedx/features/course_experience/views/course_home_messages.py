@@ -21,7 +21,11 @@ from lms.djangoapps.course_goals.models import GOAL_KEY_CHOICES
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 from openedx.core.djangolib.markup import HTML, Text
 from openedx.features.course_experience import CourseHomeMessages
+<<<<<<< HEAD
 from student.models import CourseEnrollment
+=======
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+>>>>>>> ENH: template setting switch and badgr xblock update
 
 
 class CourseHomeMessageFragmentView(EdxFragmentView):
@@ -92,7 +96,11 @@ class CourseHomeMessageFragmentView(EdxFragmentView):
             'username': request.user.username,
         }
 
-        html = render_to_string('course_experience/course-messages-fragment.html', context)
+        if configuration_helpers.get_value('custom_fragments', False):
+            html = render_to_string('course_experience/course-messages-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/course-messages-fragment.html', context)
+
         return Fragment(html)
 
 
