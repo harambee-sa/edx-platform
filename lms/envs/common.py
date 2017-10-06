@@ -3031,9 +3031,15 @@ COURSE_CATALOG_VISIBILITY_PERMISSION = 'see_in_catalog'
 COURSE_ABOUT_VISIBILITY_PERMISSION = 'see_about_page'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 DEFAULT_MOBILE_AVAILABLE = True
 =======
 DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "none"
+=======
+DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "none"
+=======
+DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
+>>>>>>> change catalog visibility default to none
 >>>>>>> change catalog visibility default to none
 
 # Enrollment API Cache Timeout
