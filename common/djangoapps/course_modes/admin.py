@@ -28,9 +28,6 @@ from xmodule.modulestore.django import modulestore
 
 COURSE_MODE_SLUG_CHOICES = [(mode_slug, mode_slug) for mode_slug in settings.COURSE_ENROLLMENT_MODES]
 
-import logging
-log = logging.getLogger(__name__)
-
 
 class CourseModeForm(forms.ModelForm):
     """
@@ -224,6 +221,5 @@ class CourseModeExpirationConfigAdmin(admin.ModelAdmin):
         model = CourseModeExpirationConfig
 
 admin.site.register(CourseMode, CourseModeAdmin)
-# admin.site.register(CourseMode)
 admin.site.register(CourseModeExpirationConfig, CourseModeExpirationConfigAdmin)
 >>>>>>> remove overwrite of course id
