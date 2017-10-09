@@ -211,6 +211,7 @@ git+https://github.com/proversity-org/recap-xblock.git@0.1.5#egg=recap-xblock==0
 =======
 git+https://github.com/proversity-org/xblock-free-text-response.git@0.2.0#egg=xblock-free-text-response==0.2.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 git+https://github.com/proversity-org/recap-xblock.git@0.2.0#egg=recap-xblock==0.2.0
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,4 +234,12 @@ git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
 git+https://github.com/proversity-org/recap-xblock.git@0.2.1#egg=recap-xblock==0.2.1
 git+https://github.com/proversity-org/badger-xblock.git#egg=badger-xblock
 >>>>>>> UPD: new badgr version
+<<<<<<< HEAD
 >>>>>>> UPD: new badgr version
+=======
+=======
+git+https://github.com/proversity-org/recap-xblock.git@0.2.0#egg=recap-xblock==0.2.0
+git+https://github.com/proversity-org/badger-xblock.git@0.2.1#egg=badger-xblock==0.2.1
+git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
+>>>>>>> Correct xblock update
+>>>>>>> Correct xblock update
