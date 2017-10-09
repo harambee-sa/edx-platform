@@ -210,6 +210,7 @@ git+https://github.com/proversity-org/recap-xblock.git@0.1.5#egg=recap-xblock==0
 =======
 =======
 git+https://github.com/proversity-org/xblock-free-text-response.git@0.2.0#egg=xblock-free-text-response==0.2.0
+<<<<<<< HEAD
 git+https://github.com/proversity-org/recap-xblock.git@0.2.0#egg=recap-xblock==0.2.0
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -225,4 +226,11 @@ git+https://github.com/proversity-org/badger-xblock.git@0.2.0#egg=badger-xblock=
 git+https://github.com/proversity-org/badger-xblock.git@0.2.0#egg=badger-xblock==0.2.0
 >>>>>>> ENH: template setting switch and badgr xblock update
 git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
+<<<<<<< HEAD
 >>>>>>> ADD: staff graded assignment
+=======
+=======
+git+https://github.com/proversity-org/recap-xblock.git@0.2.1#egg=recap-xblock==0.2.1
+git+https://github.com/proversity-org/badger-xblock.git#egg=badger-xblock
+>>>>>>> UPD: new badgr version
+>>>>>>> UPD: new badgr version
