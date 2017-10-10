@@ -106,11 +106,21 @@ class VerticalBlock(SequenceFields, XModuleFields, StudioEditableBlock, XmlParse
         # pylint: disable=no-member
         for child in self.get_display_items():
             rendered_child = child.render(STUDENT_VIEW, child_context)
+<<<<<<< HEAD
             fragment.add_fragment_resources(rendered_child)
 
+=======
+            fragment.add_frag_resources(rendered_child)
+>>>>>>> add display name to html components
             contents.append({
+<<<<<<< HEAD
                 'id': six.text_type(child.location),
                 'content': rendered_child.content
+=======
+                'id': child.location.to_deprecated_string(),
+                'content': rendered_child.content,
+                'display_name': child.display_name if "html+block" in child.location.to_deprecated_string() else None
+>>>>>>> add display name to html components
             })
 
         fragment.add_content(self.system.render_template('vert_module.html', {
