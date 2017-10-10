@@ -8,10 +8,13 @@ from course_modes.models import get_cosmetic_verified_display_price
 from courseware.date_summary import verified_upgrade_deadline_link, verified_upgrade_link_is_valid
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 <<<<<<< HEAD
+<<<<<<< HEAD
 from student.models import CourseEnrollment
 =======
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 >>>>>>> ENH: template setting switch and badgr xblock update
+=======
+>>>>>>> Removing this code we do not want it on master yet
 
 
 class CourseSockFragmentView(EdxFragmentView):
@@ -24,10 +27,7 @@ class CourseSockFragmentView(EdxFragmentView):
         """
         context = self.get_verification_context(request, course)
         
-        if configuration_helpers.get_value('custom_fragments', False):
-            html = render_to_string('course_experience/course-sock-fragment-proversity.html', context)
-        else:
-            html = render_to_string('course_experience/course-sock-fragment.html', context)
+        html = render_to_string('course_experience/course-sock-fragment.html', context)
 
         return Fragment(html)
 

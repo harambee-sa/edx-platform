@@ -22,10 +22,13 @@ from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 from openedx.core.djangolib.markup import HTML, Text
 from openedx.features.course_experience import CourseHomeMessages
 <<<<<<< HEAD
+<<<<<<< HEAD
 from student.models import CourseEnrollment
 =======
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 >>>>>>> ENH: template setting switch and badgr xblock update
+=======
+>>>>>>> Removing this code we do not want it on master yet
 
 
 class CourseHomeMessageFragmentView(EdxFragmentView):
@@ -96,10 +99,7 @@ class CourseHomeMessageFragmentView(EdxFragmentView):
             'username': request.user.username,
         }
 
-        if configuration_helpers.get_value('custom_fragments', False):
-            html = render_to_string('course_experience/course-messages-fragment-proversity.html', context)
-        else:
-            html = render_to_string('course_experience/course-messages-fragment.html', context)
+        html = render_to_string('course_experience/course-messages-fragment.html', context)
 
         return Fragment(html)
 
