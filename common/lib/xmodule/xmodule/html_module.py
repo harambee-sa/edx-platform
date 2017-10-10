@@ -46,6 +46,12 @@ class HtmlBlock(object):
         # use display_name_with_default for those
         default=_("Text")
     )
+    inject_display_name = Boolean(
+        display_name=_("Inject Display Name"),
+        help=_("Inject display name on html"),
+        default=False,
+        scope=Scope.settings
+    )
     data = String(help=_("Html contents to display for this module"), default=u"", scope=Scope.content)
     source_code = String(
         help=_("Source code for LaTeX documents. This feature is not well-supported."),
@@ -97,9 +103,20 @@ class HtmlBlock(object):
         # When we switch this to an XBlock, we can merge this with student_view,
         # but for now the XModule mixin requires that this method be defined.
         # pylint: disable=no-member
+<<<<<<< HEAD
         if self.data is not None and getattr(self.system, 'anonymous_student_id', None) is not None:
             return self.data.replace("%%USER_ID%%", self.system.anonymous_student_id)
         return self.data
+=======
+        data = self.data
+        display_name = self.display_name
+        if self.inject_display_name:
+            data = "<h3> %s </h3> %s" % (display_name, data)
+
+        if self.system.anonymous_student_id:
+            return data.replace("%%USER_ID%%", self.system.anonymous_student_id)
+        return data
+>>>>>>> add html module setting to inject display name
 
 
 class HtmlModuleMixin(HtmlBlock, XModule):

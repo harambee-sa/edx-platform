@@ -118,9 +118,13 @@ class VerticalBlock(SequenceFields, XModuleFields, StudioEditableBlock, XmlParse
                 'content': rendered_child.content
 =======
                 'id': child.location.to_deprecated_string(),
+<<<<<<< HEAD
                 'content': rendered_child.content,
                 'display_name': child.display_name if "html+block" in child.location.to_deprecated_string() else None
 >>>>>>> add display name to html components
+=======
+                'content': rendered_child.content
+>>>>>>> add html module setting to inject display name
             })
 
         fragment.add_content(self.system.render_template('vert_module.html', {
