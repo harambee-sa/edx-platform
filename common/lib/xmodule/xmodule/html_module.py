@@ -111,7 +111,11 @@ class HtmlBlock(object):
         data = self.data
         display_name = self.display_name
         if self.inject_display_name:
+<<<<<<< HEAD
             data = "<h3> %s </h3> %s" % (display_name, data)
+=======
+            data = "<h3 class=\"hd hd-2\"> %s </h3> %s" % (display_name, data)
+>>>>>>> add display name to html module
 
         if self.system.anonymous_student_id:
             return data.replace("%%USER_ID%%", self.system.anonymous_student_id)
