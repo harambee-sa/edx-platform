@@ -1,9 +1,11 @@
 version: 2
 jobs:
   build_development:
+    machine:
+        enabled: true
+        post:
+            - pyenv global 2.7.12
     working_directory: ~/edx-platform
-    docker:
-      - image: circleci/python:2.7.10
     artifacts:
       - "reports"
       - "test_root/log"
