@@ -58,7 +58,7 @@ jobs:
           name: run all tests
           command: './scripts/all-tests.sh'
           
-   build_master:
+  build_master:
      machine:
        enabled: false
 
