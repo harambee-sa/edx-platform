@@ -6,6 +6,9 @@ general:
   artifacts:
     - "reports"
     - "test_root/log"
+  braches:
+    only:
+        - proversity/does-not-exist
 
 dependencies:
   pre:
