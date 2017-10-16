@@ -72,6 +72,5 @@ workflows:
           filters:
             branches:
               only: proversity/development
-            timeout: 900
   
               
