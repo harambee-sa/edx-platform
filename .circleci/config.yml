@@ -57,10 +57,16 @@ jobs:
       - run:
           name: run all tests
           command: './scripts/all-tests.sh'
-          
+          no_output_timeout: 20m
+
   build_master:
      machine:
        enabled: false
+     working_directory: ~/edx-platform
+     steps:
+       - run:
+           name: testing
+           command: 'ls -la' 
 
 
 workflows:
