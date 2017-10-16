@@ -30,13 +30,13 @@ jobs:
           name: pip install paver.txt
           command: 'pip install --exists-action w -r requirements/edx/paver.txt'
       - run:
-          name: install pre requirements/edx/paver
+          name: install pre requirements
           command: 'pip install --exists-action w -r requirements/edx/pre.txt'
       - run:
-          name: install github requirements/edx/paver
+          name: install github requirements
           command: 'pip install --exists-action w -r requirements/edx/github.txt'
       - run:
-          name: install local requirements/edx/github
+          name: install local requirements
           command: 'pip install --exists-action w -r requirements/edx/local.txt'
       - run:
           name: install pbr
