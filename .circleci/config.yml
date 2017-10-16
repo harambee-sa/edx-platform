@@ -12,14 +12,14 @@ jobs:
     steps:
       - checkout
       - run:
+          name: apt-get update
+          command: 'sudo apt-get update'
+      - run:
           name: install needed apt packages
           command: 'DEBIAN_FRONTEND=noninteractive sudo apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)'
       - run:
           name: nmp install
           command: 'npm install'
-      - run:
-          name: apt-get update
-          command: 'sudo apt-get update'
       - run:
            name: apt-get install python
            command: 'sudo apt-get install python-dev --fix-missing'
