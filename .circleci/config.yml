@@ -4,6 +4,11 @@ jobs:
     machine:
         enabled: true
     working_directory: ~/edx-platform
+    docker:
+      - image: circleci/python:2.7.10
+    artifacts:
+      - "reports"
+      - "test_root/log"
     steps:
       - checkout
       - run:
@@ -71,7 +76,7 @@ jobs:
 
 workflows:
   version: 2
-  build_and_test:
+  build:
     jobs:
       - build_development:
           filters:
