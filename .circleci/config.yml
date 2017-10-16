@@ -64,14 +64,6 @@ jobs:
           command: './scripts/all-tests.sh'
           no_output_timeout: 20m
 
-  build_master:
-     machine:
-       enabled: false
-     working_directory: ~/edx-platform
-     steps:
-       - run:
-           name: testing
-           command: 'ls -la' 
 
 
 workflows:
@@ -83,9 +75,5 @@ workflows:
             branches:
               only: proversity/development
             timeout: 900
-      - build_master:
-          filters:
-            branches:
-              only: master
   
               
