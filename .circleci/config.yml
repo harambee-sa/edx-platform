@@ -64,7 +64,8 @@ jobs:
           command: 'pip freeze'
       - save_cache:
           key: edx-platform-development-cache
-          path: /opt/circleci/.pyenv/versions/2.7.12/lib/python2.7/site-packages
+          path:
+            - /opt/circleci/.pyenv/versions/2.7.12/lib/python2.7/site-packages
       - run:
           name: run all tests
           command: './scripts/all-tests.sh'
