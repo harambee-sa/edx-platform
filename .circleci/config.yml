@@ -1,8 +1,6 @@
 version: 2
 jobs:
   build_development:
-    machine:
-        enabled: true
     working_directory: ~/edx-platform
     docker:
       - image: circleci/python:2.7.10
