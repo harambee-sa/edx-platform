@@ -4,8 +4,9 @@ jobs:
     machine:
         enabled: true
         post:
-            - pyenv global 2.7.10
+            - pyenv global 2.7.12
     working_directory: ~/edx-platform
+    parallelism: 1
     artifacts:
       - "reports"
       - "test_root/log"
