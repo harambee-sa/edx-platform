@@ -2,6 +2,10 @@
 Tests for block_structure.py
 """
 # pylint: disable=protected-access
+import json
+import requests
+from datetime import datetime, timedelta
+
 from collections import namedtuple
 from copy import deepcopy
 import ddt
@@ -10,10 +14,124 @@ from nose.plugins.attrib import attr
 from unittest import TestCase
 
 from openedx.core.lib.graph_traversals import traverse_post_order
+from openedx.core.djangoapps.content.block_structure.api import clear_course_from_cache
 
 from ..block_structure import BlockStructure, BlockStructureModulestoreData
 from ..exceptions import TransformerException
 from .helpers import MockXBlock, MockTransformer, ChildrenMapTestMixin
+
+from xmodule.modulestore import ModuleStoreEnum
+from xmodule.modulestore.tests.factories import SampleCourseFactory, check_mongo_calls
+from opaque_keys.edx.keys import CourseKey
+from terrain.stubs.http import StubHttpService, StubHttpRequestHandler, require_params
+from student.tests.factories import AdminFactory, UserFactory
+from provider.oauth2.models import Client, Grant
+from oauth2_provider import models as dot_models
+from provider.constants import CONFIDENTIAL
+from rest_framework import status
+from rest_framework.test import APITestCase
+from django.core.urlresolvers import Resolver404, resolve, reverse
+
+USER_PASSWORD = 'test'
+
+@attr(shard=2)
+@ddt.ddt
+class TestBlockStuctureAPI(APITestCase):
+    """
+    Tests for BlockStructure
+    """
+
+    def setUp(self):
+        """
+        Start the stub server.
+        """
+        super(TestBlockStuctureAPI, self).setUp()
+
+        self.app_user = app_user = UserFactory(
+            username='test_app_user',
+            email='test_app_user@openedx.org',
+            password=USER_PASSWORD
+        )
+
+        self.auth, self.auth_header_oauth2_provider =\
+            self.prepare_auth_token(app_user)
+
+        self.url = reverse('clear-course-cache')
+
+    @ddt.data(
+        ({'course_id': 'course-v1:edX+DemoX+Demo_Course'}, status.HTTP_200_OK),
+        ({'course_id': ''}, status.HTTP_400_BAD_REQUEST),
+        ({}, status.HTTP_400_BAD_REQUEST),
+    )
+    @ddt.unpack
+    def test_course_clear_cache(self, post_params, expected_status):
+        response = self.client.post(
+            self.url,
+            data=post_params,
+            HTTP_AUTHORIZATION=self.auth,
+            format='json'
+        )
+
+        self.assertEqual(response.status_code, expected_status)
+
+    def get_auth_token(self, app_grant, app_client):
+        """
+        Helper method to get the oauth token
+        """
+        token_data = {
+            'grant_type': 'authorization_code',
+            'code': app_grant.code,
+            'client_id': app_client.client_id,
+            'client_secret': app_client.client_secret
+        }
+        token_resp = self.client.post('/oauth2/access_token/', data=token_data)
+        self.assertEqual(token_resp.status_code, status.HTTP_200_OK)
+        token_resp_json = json.loads(token_resp.content)
+        return '{token_type} {token}'.format(
+            token_type=token_resp_json['token_type'],
+            token=token_resp_json['access_token']
+        )
+
+    def prepare_auth_token(self, user):
+        """
+        creates auth token for users
+        """
+        # create an oauth client app entry
+        app_client = Client.objects.create(
+            user=user,
+            name='test client',
+            url='http://localhost//',
+            redirect_uri='http://localhost//',
+            client_type=CONFIDENTIAL
+        )
+        # create an authorization code
+        app_grant = Grant.objects.create(
+            user=user,
+            client=app_client,
+            redirect_uri='http://localhost//'
+        )
+
+        # create an oauth2 provider client app entry
+        app_client_oauth2_provider = dot_models.Application.objects.create(
+            name='test client 2',
+            user=user,
+            client_type='confidential',
+            authorization_grant_type='authorization-code',
+            redirect_uris='http://localhost:8079/complete/edxorg/'
+        )
+        # create an authorization code
+        auth_oauth2_provider = dot_models.AccessToken.objects.create(
+            user=user,
+            application=app_client_oauth2_provider,
+            expires=datetime.utcnow() + timedelta(weeks=1),
+            scope='read write',
+            token='16MGyP3OaQYHmpT1lK7Q6MMNAZsjwF'
+        )
+
+        auth_header_oauth2_provider = "Bearer {0}".format(auth_oauth2_provider)
+        auth = self.get_auth_token(app_grant, app_client)
+
+        return auth, auth_header_oauth2_provider
 
 
 @attr(shard=2)

@@ -25,7 +25,7 @@ class ClearCourseCacheViewSet(ViewSet):
             Given a course id it will clear the course cache
 
         **Example Requests**:
-            POST /api/content/v1/block-structure/clear-course-cache
+            POST /api/content/v1/block-structure/clear-course-cache/
 
         **Response Values for POST**
             HttpResponse: 200 if the course cache was cleared.
@@ -51,8 +51,9 @@ class ClearCourseCacheViewSet(ViewSet):
             except InvalidKeyError as e:
                 LOGGER.error(str(e))
                 return Response(str(e), status=status.HTTP_400_BAD_REQUEST)
+
+        LOGGER.error("Course ID is required")
         return Response(
-            LOGGER.error("Course ID is required")
             {"message":"Course ID is required"},
             status=status.HTTP_400_BAD_REQUEST
         )
