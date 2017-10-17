@@ -14,25 +14,20 @@ from nose.plugins.attrib import attr
 from unittest import TestCase
 
 from openedx.core.lib.graph_traversals import traverse_post_order
-from openedx.core.djangoapps.content.block_structure.api import clear_course_from_cache
 
 from ..block_structure import BlockStructure, BlockStructureModulestoreData
 from ..exceptions import TransformerException
 from .helpers import MockXBlock, MockTransformer, ChildrenMapTestMixin
 
 from xmodule.modulestore import ModuleStoreEnum
-from xmodule.modulestore.tests.factories import SampleCourseFactory, check_mongo_calls
-from opaque_keys.edx.keys import CourseKey
-from terrain.stubs.http import StubHttpService, StubHttpRequestHandler, require_params
-from student.tests.factories import AdminFactory, UserFactory
+from student.tests.factories import UserFactory
 from provider.oauth2.models import Client, Grant
 from oauth2_provider import models as dot_models
 from provider.constants import CONFIDENTIAL
 from rest_framework import status
 from rest_framework.test import APITestCase
-from django.core.urlresolvers import Resolver404, resolve, reverse
+from django.core.urlresolvers import reverse
 
-USER_PASSWORD = 'test'
 
 @attr(shard=2)
 @ddt.ddt
@@ -50,7 +45,7 @@ class TestBlockStuctureAPI(APITestCase):
         self.app_user = app_user = UserFactory(
             username='test_app_user',
             email='test_app_user@openedx.org',
-            password=USER_PASSWORD
+            password='test'
         )
 
         self.auth, self.auth_header_oauth2_provider =\
