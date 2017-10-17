@@ -35,7 +35,7 @@ jobs:
           command: 'pip install --exists-action w -r requirements/edx/pre.txt'
       - run:
           name: install github requirements
-          command: 'pip install --exists-action w -r requirements/edx/github.txt'
+          command: 'pip install --exists-action w -r requirements/edx/github.txt' 
       - run:
           name: install local requirements
           command: 'pip install --exists-action w -r requirements/edx/local.txt'
