@@ -12,8 +12,6 @@ jobs:
       - "test_root/log"
     steps:
       - checkout
-      - restore_cache:
-          key: edx-platform-development-cache
       - run:
           name: apt-get update
           command: 'sudo apt-get update'
@@ -62,10 +60,6 @@ jobs:
       - run:
           name: output install packages to console, help with debug
           command: 'pip freeze'
-      - save_cache:
-          key: edx-platform-development-cache
-          paths:
-            - /opt/circleci/.pyenv/versions/2.7.12/lib/python2.7/site-packages
       - run:
           name: run all tests
           command: './scripts/all-tests.sh'
