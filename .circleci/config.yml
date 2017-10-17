@@ -6,7 +6,7 @@ jobs:
         post:
             - pyenv global 2.7.12
     working_directory: ~/edx-platform
-    parallelism: 1
+    parallelism: 4
     artifacts:
       - "reports"
       - "test_root/log"
@@ -70,6 +70,11 @@ jobs:
           name: run all tests
           command: './scripts/all-tests.sh'
           no_output_timeout: 20m
+      - store_artifacts:
+          path: reports
+          destination: test_reports
+      - store_test_results:
+          path: test_root/log
 
 
 
