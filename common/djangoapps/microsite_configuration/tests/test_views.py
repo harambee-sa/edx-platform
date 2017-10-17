@@ -109,6 +109,8 @@ class TestMicrositesDetailView(TestCase):
             "favicon_path": "TTR/images/favicon.ico",
             "ENABLE_MKTG_URLS": 'false'
         }
+        
+    @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
 
     def test_api_can_get_a_microsite(self):
         '''

@@ -52,7 +52,7 @@ from xmodule.modulestore.xml_exporter import export_course_to_xml
 from xmodule.modulestore.xml_importer import import_course_from_xml, perform_xlint
 from xmodule.seq_module import SequenceDescriptor
 
-from contentstore.utils import delete_course_and_groups, reverse_url, reverse_course_url
+from contentstore.utils import reverse_url, reverse_course_url
 from django_comment_common.utils import are_permissions_roles_seeded
 
 from student import auth

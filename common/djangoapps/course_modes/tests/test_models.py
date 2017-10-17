@@ -136,7 +136,7 @@ class CourseModeModelTest(TestCase):
         expired_mode.expiration_datetime = datetime.now(pytz.UTC) + timedelta(days=-1)
         expired_mode.save()
         modes = CourseMode.modes_for_course(self.course_key)
-        self.assertEqual([CourseMode.get_default_course_mode()], modes)
+        self.assertEqual([CourseMode.DEFAULT_MODE], modes)
 
         mode1 = Mode(u'honor', u'Honor Code Certificate', 0, '', 'usd', None, None, None, None)
         self.create_mode(mode1.slug, mode1.name, mode1.min_price, mode1.suggested_prices)
@@ -160,8 +160,8 @@ class CourseModeModelTest(TestCase):
         modes = CourseMode.modes_for_course(self.course_key)
         self.assertEqual([expired_mode_value, mode1], modes)
 
-        modes = CourseMode.modes_for_course(SlashSeparatedCourseKey('TestOrg', 'TestCourse', 'TestRun'))
-        self.assertEqual([CourseMode.get_default_course_mode()], modes)
+        modes = CourseMode.modes_for_course(CourseLocator('TestOrg', 'TestCourse', 'TestRun'))
+        self.assertEqual([CourseMode.DEFAULT_MODE], modes)
 
 
     def test_verified_mode_for_course(self):

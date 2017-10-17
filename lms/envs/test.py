@@ -59,6 +59,8 @@ MONGO_HOST = os.environ.get('EDXAPP_TEST_MONGO_HOST', 'localhost')
 
 os.environ['DJANGO_LIVE_TEST_SERVER_ADDRESS'] = 'localhost:8000-9000'
 
+COURSE_CATALOG_VISIBILITY_PERMISSION = 'see_in_catalog'
+
 THIS_UUID = uuid4().hex[:5]
 
 # can't test start dates with this True, but on the other hand,
@@ -116,6 +118,19 @@ DATA_DIR = COURSES_ROOT
 
 ENV_TOKENS = {
     'ENABLE_DOG': False
+}
+
+REGISTRATION_EXTRA_FIELDS = {
+    'confirm_email': 'hidden',
+    'level_of_education': 'optional',
+    'gender': 'optional',
+    'year_of_birth': 'optional',
+    'mailing_address': 'optional',
+    'goals': 'optional',
+    'honor_code': 'required',
+    'terms_of_service': 'hidden',
+    'city': 'hidden',
+    'country': 'hidden',
 }
 
 COMMON_TEST_DATA_ROOT = COMMON_ROOT / "test" / "data"
