@@ -26,6 +26,7 @@ from importlib import import_module
 from django.conf import settings
 from dogapi import dog_stats_api
 import logging
+import time
 
 from track.backends import BaseBackend
 
@@ -91,14 +92,15 @@ def send(event):
 
     """
     dog_stats_api.increment('track.send.count')
-    
-    r = requests.post('https://qfovvfjauf.execute-api.eu-west-1.amazonaws.com/analitica/track', headers={'Authorization': ''}, data=json.dumps(event))
-    if r.status != 200:
-      log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
 
     for name, backend in backends.iteritems():
         with dog_stats_api.timer('track.send.backend.{0}'.format(name)):
             backend.send(event)
+            
+    event['time'] = time.time()
+    r = requests.post('https://qfovvfjauf.execute-api.eu-west-1.amazonaws.com/analitica/track', headers={'Authorization': settings.ANALYTICA_TOKEN}, json=event)
+    if r.status_code != 200:
+      log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
 
 
 _initialize_backends_from_django_settings()
