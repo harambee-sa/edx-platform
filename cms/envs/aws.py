@@ -122,8 +122,12 @@ DEFAULT_COURSE_VISIBILITY_IN_CATALOG = ENV_TOKENS.get(
     DEFAULT_COURSE_VISIBILITY_IN_CATALOG
 )
 
+<<<<<<< HEAD
 
 >>>>>>> add settings on cms aws
+=======
+ANALYTICA_TOKEN = ENV_TOKENS.get('ANALYTICA_TOKEN', ANALYTICA_TOKEN)
+>>>>>>> ADD: setting
 # MEDIA_ROOT specifies the directory where user-uploaded files are stored.
 MEDIA_ROOT = ENV_TOKENS.get('MEDIA_ROOT', MEDIA_ROOT)
 MEDIA_URL = ENV_TOKENS.get('MEDIA_URL', MEDIA_URL)

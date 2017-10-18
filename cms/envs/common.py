@@ -182,7 +182,7 @@ from openedx.core.release import doc_version
 
 # Dummy secret key for dev/test
 SECRET_KEY = 'dev key'
-
+ANALYTICA_TOKEN = ''
 STUDIO_NAME = _("Your Platform Studio")
 STUDIO_SHORT_NAME = _("Studio")
 FEATURES = {

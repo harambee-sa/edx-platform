@@ -10,7 +10,7 @@ from .aws import *  # pylint: disable=wildcard-import, unused-wildcard-import
 del DEFAULT_FILE_STORAGE
 COURSE_IMPORT_EXPORT_STORAGE = 'django.core.files.storage.FileSystemStorage'
 USER_TASKS_ARTIFACT_STORAGE = COURSE_IMPORT_EXPORT_STORAGE
-
+ANALYTICA_TOKEN = ''
 DEBUG = True
 USE_I18N = True
 DEFAULT_TEMPLATE_ENGINE['OPTIONS']['debug'] = DEBUG

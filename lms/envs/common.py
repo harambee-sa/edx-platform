@@ -57,6 +57,8 @@ CC_MERCHANT_NAME = PLATFORM_NAME
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"
 
+ANALYTICA_TOKEN = ''
+
 ENABLE_JASMINE = False
 
 DISCUSSION_SETTINGS = {
