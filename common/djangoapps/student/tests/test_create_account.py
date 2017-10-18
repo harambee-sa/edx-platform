@@ -76,6 +76,9 @@ def get_mock_pipeline_data(username=TEST_USERNAME, email=TEST_EMAIL):
         "microsite": {
             "domain_prefix": "microsite",
             "extended_profile_fields": ["extra1", "extra2"],
+            "REGISTRATION_EXTRA_FIELDS": {
+                "terms_of_service": "optional"
+            },
         }
     },
     REGISTRATION_EXTRA_FIELDS={

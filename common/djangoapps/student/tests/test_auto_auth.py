@@ -259,7 +259,7 @@ class AutoAuthEnabledTestCase(AutoAuthTestCase):
 
         return response
 
-    @patch("openedx.core.djangoapps.site_configuration.helpers.get_value", Mock(return_value=False))
+    @override_settings(ALLOW_PUBLIC_ACCOUNT_CREATION=False)
     def test_create_account_not_allowed(self):
         """
         Test case to check user creation is forbidden when ALLOW_PUBLIC_ACCOUNT_CREATION feature flag is turned off
