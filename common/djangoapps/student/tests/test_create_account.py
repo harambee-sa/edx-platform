@@ -548,6 +548,24 @@ class TestCreateAccount(SiteMixin, TestCase):
 
 
 @ddt.ddt
+@override_settings(
+    MICROSITE_CONFIGURATION={
+        "microsite": {
+            "domain_prefix": "microsite",
+            "extended_profile_fields": ["extra1", "extra2"],
+            "REGISTRATION_EXTRA_FIELDS": {
+                "terms_of_service": "optional"
+            },
+        }
+    },
+    REGISTRATION_EXTRA_FIELDS={
+        key: "optional"
+        for key in [
+            "level_of_education", "gender", "mailing_address", "city", "country", "goals",
+            "year_of_birth", "terms_of_service"
+        ]
+    }
+)
 class TestCreateAccountValidation(TestCase):
     """
     Test validation of various parameters in the create_account view

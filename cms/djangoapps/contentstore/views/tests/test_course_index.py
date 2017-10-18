@@ -393,11 +393,16 @@ class TestCourseIndexArchived(CourseTestCase):
     @ddt.data(
         # Staff user has course staff access
 <<<<<<< HEAD
+<<<<<<< HEAD
         (True, 'staff', None, 3, 17),
         (False, 'staff', None, 3, 17),
 =======
         (True, 'staff', None, 3, 21),
         (False, 'staff', None, 3, 21),
+>>>>>>> test fixes
+=======
+        (True, 'staff', None, 3, 25),
+        (False, 'staff', None, 3, 25),
 >>>>>>> test fixes
         # Base user has global staff access
         (True, 'user', ORG, 3, 18),

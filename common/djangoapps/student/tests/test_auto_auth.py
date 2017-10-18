@@ -4,6 +4,7 @@ import ddt
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.test import TestCase
+from django.test.utils import override_settings
 from django.test.client import Client
 from mock import patch, Mock
 from opaque_keys.edx.locator import CourseLocator

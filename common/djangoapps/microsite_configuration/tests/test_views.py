@@ -6,6 +6,7 @@ import json
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.test import TestCase
+from django.conf import settings
 from rest_framework.test import APIClient
 from rest_framework import status
 from microsite_configuration.tests.factories import MicrositeFactory
