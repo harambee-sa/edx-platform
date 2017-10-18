@@ -20,6 +20,7 @@ below::
 
 import inspect
 import requests
+import json
 from importlib import import_module
 
 from django.conf import settings
@@ -91,7 +92,7 @@ def send(event):
     """
     dog_stats_api.increment('track.send.count')
     
-    r = requests.post('https://qfovvfjauf.execute-api.eu-west-1.amazonaws.com/analitica/track', headers={'Authorization': ''}, data=event, format='json')
+    r = requests.post('https://qfovvfjauf.execute-api.eu-west-1.amazonaws.com/analitica/track', headers={'Authorization': ''}, data=json.dumps(event))
     if r.status != 200:
       log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
 
