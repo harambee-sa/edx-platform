@@ -98,7 +98,13 @@ class Env(object):
     USING_DOCKER = SERVER_HOST != '0.0.0.0'
     SETTINGS = 'bok_choy_docker' if USING_DOCKER else 'bok_choy'
     DEVSTACK_SETTINGS = 'devstack_docker' if USING_DOCKER else 'devstack'
+<<<<<<< HEAD
     TEST_SETTINGS = 'test'
+=======
+    TEST_SETTINGS = 'test_docker' if USING_DOCKER else 'test'
+    
+    DJANGO_SETTINGS_MODULE = 'test'
+>>>>>>> uncomment nltk for sanbox [ci skip]
 
     BOK_CHOY_SERVERS = {
         'lms': {

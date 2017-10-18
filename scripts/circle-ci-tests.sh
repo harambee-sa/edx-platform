@@ -95,7 +95,7 @@ else
             ;;
 
         3)  # run the commonlib unit tests
-            paver test_lib --with-flaky --cov-args="-p" --with-xunit --no-randomize
+            paver test_lib --with-flaky --cov-args="-p" --with-xunit
             ;;
 
         *)
