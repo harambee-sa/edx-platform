@@ -36,4 +36,4 @@ matplotlib==2.0.2
 >>>>>>> merge fixes
 
 # We forked NLTK just to make it work with setuptools instead of distribute
-#git+https://github.com/edx/nltk.git@2.0.6#egg=nltk==2.0.6
+git+https://github.com/edx/nltk.git@2.0.6#egg=nltk==2.0.6
