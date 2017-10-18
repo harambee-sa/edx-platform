@@ -22,7 +22,8 @@ FAKE_SITE = {
         "state": "required",
         "country": "required",
         "company": "required",
-        "title": "required"
+        "title": "required",
+        "terms_of_service": "required"
     },
     "extended_profile_fields": [
         "address1", "state", "company", "title"
