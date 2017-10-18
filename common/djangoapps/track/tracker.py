@@ -97,10 +97,16 @@ def send(event):
         with dog_stats_api.timer('track.send.backend.{0}'.format(name)):
             backend.send(event)
             
-    event['time'] = time.time()
-    r = requests.post('https://qfovvfjauf.execute-api.eu-west-1.amazonaws.com/analitica/track', headers={'Authorization': settings.ANALYTICA_TOKEN}, json=event)
-    if r.status_code != 200:
-      log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
+    if settings.ANALITICA_ACTIVE:
+        event['time'] = time.time()
+        r =\
+            requests.post(
+                settings.ANALITICA_TRACK_URL,
+                headers={'Authorization': settings.ANALITICA_TOKEN},
+                json=event
+            )
+        if r.status_code != 200:
+            log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
 
 
 _initialize_backends_from_django_settings()

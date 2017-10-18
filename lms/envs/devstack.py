@@ -25,8 +25,11 @@ LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
 ENTERPRISE_API_URL = LMS_INTERNAL_ROOT_URL + '/enterprise/api/v1/'
 =======
 ENTERPRISE_API_URL = LMS_ROOT_URL + '/enterprise/api/v1/'
+<<<<<<< HEAD
 ANALYTICA_TOKEN = ''
 >>>>>>> ADD: setting
+=======
+>>>>>>> ADD: ANALITICA [ci skip]
 
 ################################ LOGGERS ######################################
 
@@ -41,6 +44,11 @@ LOG_OVERRIDES = [
 for log_name, log_level in LOG_OVERRIDES:
     logging.getLogger(log_name).setLevel(log_level)
 
+
+########################### ANALYTICA ################################
+ANALITICA_TRACK_URL = ''
+ANALITICA_ACTIVE = False
+ANALITICA_TOKEN = ''
 
 ################################ EMAIL ########################################
 

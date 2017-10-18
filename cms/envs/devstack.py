@@ -10,7 +10,6 @@ from .aws import *  # pylint: disable=wildcard-import, unused-wildcard-import
 del DEFAULT_FILE_STORAGE
 COURSE_IMPORT_EXPORT_STORAGE = 'django.core.files.storage.FileSystemStorage'
 USER_TASKS_ARTIFACT_STORAGE = COURSE_IMPORT_EXPORT_STORAGE
-ANALYTICA_TOKEN = ''
 DEBUG = True
 USE_I18N = True
 DEFAULT_TEMPLATE_ENGINE['OPTIONS']['debug'] = DEBUG
@@ -34,6 +33,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LMS_BASE = "localhost:8000"
 LMS_ROOT_URL = "http://{}".format(LMS_BASE)
 FEATURES['PREVIEW_LMS_BASE'] = "preview." + LMS_BASE
+
+########################### ANALYTICA ################################
+ANALITICA_TRACK_URL = ''
+ANALITICA_ACTIVE = False
+ANALITICA_TOKEN = ''
 
 ########################### PIPELINE #################################
 

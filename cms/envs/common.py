@@ -158,7 +158,12 @@ from lms.envs.common import (
     PAID_COURSE_REGISTRATION_CURRENCY,
     
     # Setting fro ENABLE_DOG, turns on the log sync to datadog
-	  ENABLE_DOG
+	  ENABLE_DOG,
+    
+    # Settings for ANALYTICA_TOKEN
+    ANALITICA_TRACK_URL,
+    ANALITICA_ACTIVE,
+    ANALITICA_TOKEN
 
 >>>>>>> merge fixes
 >>>>>>> merge fixes
