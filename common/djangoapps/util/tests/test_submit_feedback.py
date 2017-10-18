@@ -48,7 +48,7 @@ def fake_support_backend_values(name, default=None):  # pylint: disable=unused-a
 @mock.patch.dict("django.conf.settings.FEATURES", {"ENABLE_FEEDBACK_SUBMISSION": True})
 @override_settings(
     DEFAULT_FROM_EMAIL=TEST_SUPPORT_EMAIL,
-    HELPDESK="zendesk",
+    HELPDESK="Zendesk",
     HELPDESK_URL="dummy",
     HELPDESK_USER="dummy",
     HELPDESK_API_KEY="dummy",

@@ -12,6 +12,7 @@ from rest_framework import status
 from microsite_configuration.tests.factories import MicrositeFactory
 from microsite_configuration.models import Microsite
 
+@unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
 class TestMicrositesViewSet(TestCase):
 
     '''
@@ -29,6 +30,7 @@ class TestMicrositesViewSet(TestCase):
         self.client.force_authenticate(user=user)
         self.microsite = MicrositeFactory.create()
         # Create microsite in the setup, create some microsites
+        
 
     def test_api_can_get_microsite_list(self):
         '''
@@ -75,7 +77,7 @@ class TestMicrositesViewSet(TestCase):
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
-
+@unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
 class TestMicrositesDetailView(TestCase):
     '''
      Test for MicrsitesDeatailView
@@ -112,7 +114,6 @@ class TestMicrositesDetailView(TestCase):
             "ENABLE_MKTG_URLS": 'false'
         }
         
-    @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
 
     def test_api_can_get_a_microsite(self):
         '''

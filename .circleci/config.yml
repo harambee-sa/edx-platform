@@ -2,9 +2,8 @@ version: 2
 jobs:
   build_development:
     machine:
-        enabled: true
-        post:
-            - pyenv global 2.7.12
+        docker:
+            - image: circleci/python:2.7
     working_directory: ~/edx-platform
     parallelism: 4
     artifacts:
