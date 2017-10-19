@@ -95,6 +95,7 @@ else
             ;;
 
         3)  # run the commonlib unit tests
+            export DJANGO_SETTINGS_MODULE=lms.envs.test
             paver test_lib --with-flaky --cov-args="-p" --with-xunit
             ;;
 

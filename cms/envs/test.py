@@ -89,7 +89,7 @@ WEBPACK_LOADER['DEFAULT']['STATS_FILE'] = STATIC_ROOT / "webpack-stats.json"
 GITHUB_REPO_ROOT = TEST_ROOT / "data"
 DATA_DIR = TEST_ROOT / "data"
 COMMON_TEST_DATA_ROOT = COMMON_ROOT / "test" / "data"
-
+FEATURES['ENABLE_COMBINED_LOGIN_REGISTRATION'] = True
 # For testing "push to lms"
 FEATURES['ENABLE_EXPORT_GIT'] = True
 GIT_REPO_EXPORT_DIR = TEST_ROOT / "export_course_repos"
