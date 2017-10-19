@@ -221,8 +221,13 @@ class AccountCreationForm(forms.Form):
         self.extended_profile_fields = extended_profile_fields or {}
         self.enforce_username_neq_password = enforce_username_neq_password
         self.enforce_password_policy = enforce_password_policy
-        extra_tos_field = configuration_helpers.get_value('REGISTRATION_EXTRA_FIELDS', settings.REGISTRATION_EXTRA_FIELDS)['terms_of_service']
-        if tos_required and extra_tos_field != 'hidden':
+        extra_fields_dics = configuration_helpers.get_value('REGISTRATION_EXTRA_FIELDS', settings.REGISTRATION_EXTRA_FIELDS)
+        if "terms_of_service" in extra_fields_dics:
+            extra_tos_field = extra_fields_dics["terms_of_service"]
+        else:
+            extra_tos_field = 'optional'
+
+        if tos_required and (extra_tos_field != 'hidden' or extra_tos_field != 'optional'):
             self.fields["terms_of_service"] = TrueField(
                 error_messages={"required": _("You must accept the terms of service.")}
             )

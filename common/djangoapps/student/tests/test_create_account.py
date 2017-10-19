@@ -798,7 +798,7 @@ class TestCreateAccountValidation(TestCase):
             assert_terms_of_service_error("You must accept the terms of service.")
 
         # True
-        params["terms_of_service"] = "tRUe"
+        params["terms_of_service"] = "true"
         self.assert_success(params)
 
     @ddt.data(

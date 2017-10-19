@@ -57,6 +57,7 @@ THIS_UUID = uuid4().hex[:5]
 <<<<<<< HEAD
 =======
 BULK_EMAIL_DEFAULT_RETRY_DELAY = 30
+BULK_EMAIL_MAX_RETRIES = 15
 COURSE_CATALOG_VISIBILITY_PERMISSION = 'see_in_catalog'
 # Nose Test Runner
 TEST_RUNNER = 'openedx.core.djangolib.nose.NoseTestSuiteRunner'

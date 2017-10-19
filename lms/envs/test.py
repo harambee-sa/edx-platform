@@ -597,6 +597,8 @@ JWT_AUTH.update({
 })
 
 COURSE_CATALOG_API_URL = 'https://catalog.example.com/api/v1'
+BULK_EMAIL_DEFAULT_RETRY_DELAY = 30
+BULK_EMAIL_MAX_RETRIES = 15
 
 CREDENTIALS_INTERNAL_SERVICE_URL = 'https://credentials-internal.example.com'
 CREDENTIALS_PUBLIC_SERVICE_URL = 'https://credentials.example.com'
