@@ -87,15 +87,15 @@ else
             ;;
 
         1)  # run all of the lms unit tests
-            paver test_system -s lms --with-flaky --cov-args="-p" --with-xunit --no-randomize
+            paver test_system -s lms --with-flaky --cov-args="-p" --with-xunit --fasttest --disable-migrations --no-randomize
             ;;
 
         2)  # run all of the cms unit tests
-            paver test_system -s cms --with-flaky --cov-args="-p" --with-xunit --no-randomize
+            paver test_system -s cms --with-flaky --cov-args="-p" --with-xunit --fasttest --disable-migrations --no-randomize
             ;;
 
         3)  # run the commonlib unit tests
-            paver test_lib --with-flaky --cov-args="-p" --with-xunit
+            paver test_lib --with-flaky --cov-args="-p" --with-xunit --fasttest --disable-migrations --no-randomize
             ;;
 
         *)
