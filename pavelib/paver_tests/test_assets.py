@@ -107,7 +107,7 @@ class TestCollectAssets(PaverTestCase):
     @ddt.data(
         [{
             "collect_log_args": {},  # Test for default behavior
-            "expected_log_location": "> /dev/null"
+            "expected_log_location": ""
         }],
         [{
             "collect_log_args": {COLLECTSTATIC_LOG_DIR_ARG: "/foo/bar"},
@@ -116,7 +116,7 @@ class TestCollectAssets(PaverTestCase):
         [{
             "systems": ["lms", "cms"],
             "collect_log_args": {},
-            "expected_log_location": "> /dev/null"
+            "expected_log_location": ""
         }],  # multiple systems can be called
     )
     @ddt.unpack
@@ -126,7 +126,7 @@ class TestCollectAssets(PaverTestCase):
         """
         specified_log_loc = options.get("collect_log_args", {})
         specified_log_dict = specified_log_loc
-        log_loc = options.get("expected_log_location", "> /dev/null")
+        log_loc = options.get("expected_log_location", "")
         systems = options.get("systems", ["lms"])
         if specified_log_loc is None:
             collect_assets(
@@ -175,8 +175,13 @@ class TestUpdateAssetsTask(PaverTestCase):
     """
 
     @ddt.data(
+<<<<<<< HEAD
         [{"expected_substring": "> /dev/null"}],  # go to /dev/null by default
         [{"cmd_args": ["--debug"], "expected_substring": "collectstatic"}]  # TODO: make this regex
+=======
+        [{"expected_substring": ""}],  # go to /dev/null by default
+        [{"cmd_args": ["--debug"], "expected_substring": "collectstatic --noinput "}]  # TODO: make this regex
+>>>>>>> ADD: flow-control-xblock
     )
     @ddt.unpack
     def test_update_assets_task_collectstatic_log_arg(self, options):

@@ -296,5 +296,12 @@ git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
 =======
 =======
 -e git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
+<<<<<<< HEAD
 >>>>>>> add setting
+<<<<<<< HEAD
 >>>>>>> add setting
+=======
+=======
+git+https://github.com/eduNEXT/flow-control-xblock.git#egg=flow-control-xblock
+>>>>>>> ADD: flow-control-xblock
+>>>>>>> ADD: flow-control-xblock
