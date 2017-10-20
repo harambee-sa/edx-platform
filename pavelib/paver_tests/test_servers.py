@@ -207,7 +207,7 @@ class TestPaverServerTasks(PaverTestCase):
         """
         Verify the output of a server task.
         """
-        log_string = options.get("log_string", "> /dev/null")
+        log_string = options.get("log_string", "")
         settings = options.get("settings", None)
         asset_settings = options.get("asset-settings", None)
         is_optimized = options.get("optimized", False)
@@ -273,7 +273,7 @@ class TestPaverServerTasks(PaverTestCase):
         """
         Verify the output of a server task.
         """
-        log_string = options.get("log_string", "> /dev/null")
+        log_string = options.get("log_string", "")
         settings = options.get("settings", None)
         asset_settings = options.get("asset_settings", None)
         is_optimized = options.get("optimized", False)
