@@ -9,10 +9,13 @@ jobs:
       - "reports"
       - "test_root/log"
     steps:
-      - checkout
       - run:
           name: apt-get update
           command: 'apt-get -y update'
+      - run:
+          name: apt-get update
+          command: 'apt-get install git'
+      - checkout
       - run:
           name: install needed apt packages
           command: 'DEBIAN_FRONTEND=noninteractive apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)'
