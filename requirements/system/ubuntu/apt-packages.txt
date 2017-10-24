@@ -39,3 +39,7 @@ libgeos-ruby1.8
 lynx-cur
 libxmlsec1-dev
 swig
+python-setuptools
+libsqlite3-dev
+gcc-6
+g++-6
