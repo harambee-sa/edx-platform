@@ -1,9 +1,8 @@
 version: 2
 jobs:
   build_development:
-    machine:
-        docker:
-            - image: circleci/python:2.7
+    docker:
+      - image: ubuntu:16.04
     working_directory: ~/edx-platform
     parallelism: 4
     artifacts:

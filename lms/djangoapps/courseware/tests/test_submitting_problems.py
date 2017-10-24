@@ -8,6 +8,7 @@ Integration tests for submitting problem responses and getting grades.
 import json
 import os
 from textwrap import dedent
+from datetime import datetime
 
 import ddt
 from django.conf import settings
@@ -575,7 +576,7 @@ class TestCourseGrader(TestSubmittingProblems):
         """
         Check that answering incorrectly is graded properly.
         """
-        self.basic_setup()        
+        self.basic_setup(reset=True)        
         self.submit_question_answer('p1', {'2_1': 'Correct'})
         self.submit_question_answer('p2', {'2_1': 'Correct'})
         self.submit_question_answer('p3', {'2_1': 'Incorrect'})
@@ -588,7 +589,7 @@ class TestCourseGrader(TestSubmittingProblems):
             'item_id': unicode(self.problem_location('p3')),
             'item_type': 'problem'
         }
-        #submission = submissions_api.create_submission(student_item, 'any answer')
+        submission = submissions_api.create_submission(student_item, 'any answer', datetime.utcnow(), 1)
         #submissions_api.set_score(submission['uuid'], 1, 1)
         #self.check_grade_percent(1.0)
         #self.assertEqual(self.get_course_grade().letter_grade, 'A')
