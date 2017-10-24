@@ -582,12 +582,12 @@ class TestCourseGrader(TestSubmittingProblems):
         self.check_grade_percent(0.67)
         self.assertEqual(self.get_course_grade().letter_grade, 'B')
 
-        #student_item = {
-        #    'student_id': anonymous_id_for_user(self.student_user, self.course.id),
-        #    'course_id': unicode(self.course.id),
-        #    'item_id': unicode(self.problem_location('p3')),
-        #    'item_type': 'problem'
-        #}
+        student_item = {
+            'student_id': anonymous_id_for_user(self.student_user, self.course.id),
+            'course_id': unicode(self.course.id),
+            'item_id': unicode(self.problem_location('p3')),
+            'item_type': 'problem'
+        }
         #submission = submissions_api.create_submission(student_item, 'any answer')
         #submissions_api.set_score(submission['uuid'], 1, 1)
         #self.check_grade_percent(1.0)
