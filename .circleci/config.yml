@@ -11,10 +11,10 @@ jobs:
     steps:
       - run:
           name: apt-get update
-          command: 'apt-get -y update'
+          command: 'DEBIAN_FRONTEND=noninteractive apt-get -y update'
       - run:
           name: apt-get update
-          command: 'apt-get install git'
+          command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install git'
       - checkout
       - run:
           name: install needed apt packages
