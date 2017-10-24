@@ -2,7 +2,7 @@ version: 2
 jobs:
   build_development:
     docker:
-      - image: ubuntu:16.04
+      - image: ubuntu:xenial-20171006
     working_directory: ~/edx-platform
     parallelism: 4
     artifacts:
