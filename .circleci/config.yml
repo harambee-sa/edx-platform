@@ -27,6 +27,9 @@ jobs:
           name: pip install setuptools
           command: 'pip install setuptools'
       - run:
+          name: pip install Django.txt
+          command: 'pip install --exists-action w -r requirements/edx/django.txt'
+      - run:
           name: pip install paver.txt
           command: 'pip install --exists-action w -r requirements/edx/paver.txt'
       - run:
