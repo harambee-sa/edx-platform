@@ -2,7 +2,7 @@ version: 2
 jobs:
   build_development:
     docker:
-      - image: ubuntu:16.04
+      - image: blitznote/debootstrap-amd64:16.10
     working_directory: ~/edx-platform
     parallelism: 4
     artifacts:
