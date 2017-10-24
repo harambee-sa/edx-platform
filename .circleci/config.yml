@@ -33,7 +33,7 @@ jobs:
           command: 'npm install'
       - run:
            name: apt-get install python
-           command: 'apt-get install python-setuptools python-dev build-essential --fix-missing'
+           command: 'apt-get -y install python-setuptools python-dev build-essential --fix-missing'
       - run:
            name: install pip 
            command: 'easy_install pip'
