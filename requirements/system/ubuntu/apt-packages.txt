@@ -5,7 +5,7 @@ libatlas-dev
 libblas-dev
 libssl-dev
 liblapack-dev
-liblapack3gf
+liblapack3
 curl
 git
 python-virtualenv
