@@ -14,7 +14,7 @@ jobs:
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y update'
       - run:
           name: install software-properties-common
-          command: 'apt-get install software-properties-common package'
+          command: 'apt-get install software-properties-common'
       - run:
           name: set ppa
           command: 'add-apt-repository ppa:ubuntu-toolchain-r/test'
