@@ -18,6 +18,9 @@ jobs:
           name: install needed apt packages
           command: 'DEBIAN_FRONTEND=noninteractive sudo apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)'
       - run:
+          name: do a apt-get upgrade
+          command: 'DEBIAN_FRONTEND=noninteractive sudo apt-get -y upgrade'
+      - run:
           name: nmp install
           command: 'npm install'
       - run:
