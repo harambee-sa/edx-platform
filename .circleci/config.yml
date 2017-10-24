@@ -13,8 +13,14 @@ jobs:
           name: apt-get update
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y update'
       - run:
-          name: apt-get update
+          name: install git
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install git'
+      - run:
+          name: install nodejs
+          command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs'
+      - run:
+          name: install npm
+          command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install npm'
       - checkout
       - run:
           name: install needed apt packages
