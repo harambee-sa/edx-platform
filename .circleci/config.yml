@@ -10,6 +10,9 @@ jobs:
       - "test_root/log"
     steps:
       - run:
+          name: set ppa
+          command: 'add-apt-repository ppa:ubuntu-toolchain-r/test'
+      - run:
           name: apt-get update
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y update'
       - run:
