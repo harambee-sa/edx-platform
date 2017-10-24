@@ -26,6 +26,9 @@ lms/static/coffee
 common/static/coffee
 common/lib/capa/capa/tests/test_files/js
 
+# Ignoring source directory for lint tests
+src/*
+
 
 # Symlinks into common/lib/xmodule/xmodule/js
 cms/static/xmodule_js
