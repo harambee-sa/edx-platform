@@ -52,7 +52,7 @@ ALLOWED_HOSTS = [
 # mongo connection settings
 MONGO_PORT_NUM = int(os.environ.get('EDXAPP_TEST_MONGO_PORT', '27017'))
 MONGO_HOST = os.environ.get('EDXAPP_TEST_MONGO_HOST', 'localhost')
-
+GRADES_DOWNLOAD_ROUTING_KEY = ''
 THIS_UUID = uuid4().hex[:5]
 <<<<<<< HEAD
 =======

@@ -668,12 +668,7 @@
 
     .message-copy {
       @extend %body-text;
-<<<<<<< HEAD
-
-      margin: 0 !important;
-=======
       margin: 0;
->>>>>>> remove all the css importants
       padding: 0;
       list-style: none;
 
@@ -848,12 +843,7 @@
     box-shadow: inset 0 -1px 2px 0 tint($red, 85%);
 
     @include box-sizing(border-box);
-<<<<<<< HEAD
-
-    margin: $baseline 0 ($baseline/2) 0 !important;
-=======
     margin: $baseline 0 ($baseline/2) 0;
->>>>>>> remove all the css importants
     padding: $baseline;
     border: none;
     border-bottom: 3px solid shade($red, 10%);

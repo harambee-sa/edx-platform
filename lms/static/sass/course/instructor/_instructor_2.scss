@@ -13,14 +13,9 @@
   }
 }
 
-<<<<<<< HEAD
-#ui-datepicker-div {
-  z-index: 12000 !important;
-  width: 16.5em !important;
-}
-=======
+
 #ui-datepicker-div{z-index: 12000; width: 16.5em}
->>>>>>> remove all the css importants
+
 
 
 .instructor-dashboard-wrapper-2 {
@@ -149,7 +144,6 @@
     }
   }
 
-<<<<<<< HEAD
   .btn-blue {
     @extend %btn-primary-blue;
 
@@ -179,13 +173,6 @@
       background: $white;
       cursor: not-allowed;
       z-index: 2;
-=======
-    .btn-blue {
-        @extend %btn-primary-blue;
-        margin-bottom: 0;
-        padding: ($baseline/2.5) ($baseline/2);
-        text-shadow: none;
->>>>>>> remove all the css importants
     }
 
     .file-browse {
@@ -297,6 +284,7 @@
     @extend %ui-no-list;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     border-top: 1px solid $gray-l3;
@@ -324,6 +312,8 @@
           border-bottom: 3px solid theme-color("primary");
           color: $black;
 =======
+=======
+>>>>>>> upstream master merge
         .nav-item {
             @extend %t-copy-base;
             display: inline-block;
@@ -345,12 +335,11 @@
                     color: $black;
                 }
             }
->>>>>>> remove all the css importants
         }
       }
-    }
+    
   }
-}
+
 
 // elements - general
 // --------------------
@@ -721,12 +710,8 @@
      * Ideally we want to handle functionality with JS.
      * This functionality should eventually be moved into CS/JS, and out of here. */
     .has-hint:hover > .hint {
-<<<<<<< HEAD
-      @include left($baseline*10);
-=======
         @include left($baseline*10);
->>>>>>> remove all the css importants
-    }
+     }
 
     .has-hint input:focus ~ .hint {
       @include left($baseline*10);
@@ -1137,6 +1122,7 @@
   // CSV-based file upload for auto cohort assigning and
   // cohort the discussion topics.
 <<<<<<< HEAD
+<<<<<<< HEAD
   .toggle-cohort-management-secondary,
   .toggle-cohort-management-discussions {
     @extend %t-copy-sub1;
@@ -1152,6 +1138,8 @@
     &:focus {
       text-decoration: underline;
 =======
+=======
+>>>>>>> upstream master merge
     .toggle-cohort-management-secondary,
     .toggle-cohort-management-discussions {
         @extend %t-copy-sub1;
@@ -1166,8 +1154,7 @@
         &:focus {
             text-decoration: underline;
         }
->>>>>>> remove all the css importants
-    }
+        }
   }
 
   .cohort-management-file-upload {
@@ -1377,7 +1364,7 @@
       }
     }
   }
-}
+  
 
 // view - discussions management
 // --------------------
@@ -1823,14 +1810,9 @@ input[name="subject"] {
     margin-bottom: $baseline;
     display: none;
   }
-<<<<<<< HEAD
 
-  .content {
-    padding: 0 !important;
-=======
   .content{
     padding: 0;
->>>>>>> remove all the css importants
   }
 
   input[name="download_company_name"],
@@ -1851,6 +1833,7 @@ input[name="subject"] {
 =======
     tr:nth-child(even){
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> remove all the css importants
       background-color: $gray-l6;
       border-bottom: 1px solid #f3f3f3;
@@ -1866,6 +1849,8 @@ input[name="subject"] {
 
       td {
 =======
+=======
+>>>>>>> upstream master merge
         background-color: $gray-l6;
         border-bottom: 1px solid #f3f3f3;
       }
@@ -1876,7 +1861,6 @@ input[name="subject"] {
     tr.always-white{
       background: #fff;
       td{
->>>>>>> remove all the css importants
         padding: ($baseline*1.5) 0 ($baseline/2);
       }
     }
@@ -1933,6 +1917,7 @@ input[name="subject"] {
 
     // in_active coupon rows style
 <<<<<<< HEAD
+<<<<<<< HEAD
     .inactive_coupon {
 <<<<<<< HEAD
       background: #fff0f0 !important;
@@ -1943,6 +1928,10 @@ input[name="subject"] {
       background:  #FFF0F0;
 >>>>>>> remove all the css importants
 >>>>>>> remove all the css importants
+=======
+    .inactive_coupon{
+      background:  #FFF0F0;
+>>>>>>> upstream master merge
       text-decoration: line-through;
       color: rgba(51, 51, 51, 0.2);
       border-bottom: 1px solid #fff;
@@ -1954,16 +1943,10 @@ input[name="subject"] {
       }
     }
     // in_active coupon rows style
-<<<<<<< HEAD
-    .expired_coupon {
-      background: #feefb3 !important;
-      color: rgba(51, 51, 51, 0.2);
-=======
     .expired_coupon{
       background:  #FEEFB3;
 
       color: rgba(51,51,51,0.2);
->>>>>>> remove all the css importants
       border-bottom: 1px solid #fff;
 
       td:nth-child(3) {
@@ -2106,6 +2089,7 @@ input[name="subject"] {
       li:nth-child(4) {
         width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         @include margin-left(0 !important);
@@ -2115,27 +2099,19 @@ input[name="subject"] {
         @include margin-left(0px);
 >>>>>>> remove all the css importants
 >>>>>>> remove all the css importants
+=======
+        @include margin-left(0px);
+>>>>>>> upstream master merge
       }
 
       li:nth-child(3) {
-<<<<<<< HEAD
-        margin-bottom: 0 !important;
-
-=======
         margin-bottom: 0px;
->>>>>>> remove all the css importants
         textarea {
           min-height: 100px;
         }
       }
-<<<<<<< HEAD
-
-      li:last-child {
-        margin-bottom: 0 !important;
-=======
       li:last-child{
         margin-bottom: 0px;
->>>>>>> remove all the css importants
       }
     }
 
@@ -2190,13 +2166,7 @@ input[name="subject"] {
 
       li#generate-registration-modal-field-country {
         width: 204px;
-<<<<<<< HEAD
-
-        @include margin-left(15px !important);
-
-=======
         @include margin-left(15px);
->>>>>>> remove all the css importants
         margin-bottom: $baseline;
       }
 
@@ -2229,12 +2199,14 @@ input[name="subject"] {
 
         min-height: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         @include margin-left(0 !important);
 
 =======
+=======
+>>>>>>> upstream master merge
         @include margin-left(0px);
->>>>>>> remove all the css importants
         input[type='checkbox'] {
           width: auto;
           height: auto;
@@ -2268,14 +2240,16 @@ input[name="subject"] {
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     li#set-course-mode-modal-field-currency {
       @include margin-left(0 !important);
 
 =======
+=======
+>>>>>>> upstream master merge
     li#set-course-mode-modal-field-currency{
       @include margin-left(0px);
->>>>>>> remove all the css importants
       select {
         width: 100%;
       }

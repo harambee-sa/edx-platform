@@ -182,10 +182,6 @@ class UserGradeView(GradeViewMixin, GenericAPIView):
             # or a 404 if the requested user does not exist.
             return grade_user
 
-<<<<<<< HEAD
-        course_grade = CourseGradeFactory().read(grade_user, course)
-        return Response([{
-=======
         prep_course_for_grading(course, request)
         course_grade = CourseGradeFactory().create(grade_user, course)
         courseware_summary = course_grade.chapter_grades.values()
@@ -203,7 +199,6 @@ class UserGradeView(GradeViewMixin, GenericAPIView):
 
 
         return Response({
->>>>>>> Proversity/add new events for badges (#444)
             'username': grade_user.username,
             'course_key': course_id,
             'passed': course_grade.passed,

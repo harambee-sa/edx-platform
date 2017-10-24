@@ -65,7 +65,7 @@
 
     .placeholder-cam {
       .copy {
-        font-weight: bold !important;
+        font-weight: bold;
       }
     }
 
@@ -82,7 +82,6 @@
           }
         }
 
-<<<<<<< HEAD
         &.account-not-activated {
           width: 300px;
 
@@ -90,12 +89,6 @@
             height: 290px;
             min-height: 290px;
           }
-=======
-        .placeholder-cam {
-            .copy {
-                font-weight: bold;
-            }
->>>>>>> remove all the css importants
         }
       }
     }
@@ -156,12 +149,11 @@
       }
     }
 
-<<<<<<< HEAD
     .retake-photos {
       color: $blue;
-      background:none!important;
-      border:0!important;
-      padding:0!important;
+      background:none;
+      border:0;
+      padding:0;
       box-shadow: none;
       cursor: pointer;
 
@@ -173,24 +165,10 @@
     .tip {
       .is-expandable {
         .title-expand {
-          color: $blue !important;
-=======
-        .tip {
-            .is-expandable {
-                .title-expand {
-                    color: $blue;
-                }
-            }
-
-            .expandable-area {
-                margin-top: 5px;
-                padding-bottom: 20px;
-            }
->>>>>>> remove all the css importants
+          color: $blue;
         }
       }
 
-<<<<<<< HEAD
       .expandable-area {
         margin-top: 5px;
         padding-bottom: 20px;
@@ -198,18 +176,10 @@
     }
 
     .help-tips {
-      margin-left: 0 !important;
-=======
-        .help-tips {
-            margin-left: 0;
-
-            .title {
-                font-size: 16px;
-            }
->>>>>>> remove all the css importants
+      margin-left: 0;
 
       .title {
-        font-size: 16px !important;
+        font-size: 16px;
       }
 
       .list-tips {
@@ -230,15 +200,8 @@
     .list-help {
       list-style: disc;
 
-<<<<<<< HEAD
       @include padding-left($baseline);
     }
-=======
-            .wrapper-photos {
-                margin-bottom: 0;
-            }
-        }
->>>>>>> remove all the css importants
 
     .list-faq {
       dd {
@@ -252,7 +215,7 @@
       }
 
       .wrapper-photos {
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
       }
     }
 

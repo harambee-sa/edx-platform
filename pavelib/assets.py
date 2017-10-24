@@ -951,7 +951,7 @@ def update_assets(args):
         help="When running collectstatic, direct output to specified log directory",
     )
     parser.add_argument(
-        '--wait', type=float, default=0.0,
+        '--wait', type=float, default=0.1,
         help="How long to pause between filesystem scans"
     )
     args = parser.parse_args(args)

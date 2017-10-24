@@ -234,12 +234,7 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
       // actions
       .annotator-save, .annotator-cancel {
         @extend %notes-reset-background;
-<<<<<<< HEAD
-
-        padding: ($baseline/4) ($baseline/2) !important;
-=======
         padding: ($baseline/4) ($baseline/2);
->>>>>>> remove all the css importants
         border: none;
         box-shadow: none;
 <<<<<<< HEAD
@@ -253,13 +248,8 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
 >>>>>>> remove all the css importants
 
         // removing vendor icons
-<<<<<<< HEAD
-        &::after {
-          display: none !important;
-=======
         &:after {
           display: none;
->>>>>>> remove all the css importants
         }
       }
 
@@ -276,20 +266,11 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
       textarea {
         @extend %notes-reset-font;
         @extend %t-demi-strong;
-<<<<<<< HEAD
-
-        padding: ($baseline/5) !important;
-        font-size: 14px !important;
-        line-height: 22px !important;
-        color: $gray-d3 !important;
-        background: $notes-annotator-background-light !important; //matches annotator JS editing bubble triangle color
-=======
         padding: ($baseline/5);
         font-size: 14px;
         line-height: 22px;
         color: $gray-d3;
         background: $notes-annotator-background-light; //matches annotator JS editing bubble triangle color
->>>>>>> remove all the css importants
 
         // STATE: hover/focus
         &:hover, &:focus {
@@ -344,18 +325,10 @@ $notes-annotator-background-dark: rgba(122,122,122,0.6); // taken from annotator
     // poorly scoped selector for content of a note's comment
     div:first-of-type {
       @extend %notes-reset-font;
-<<<<<<< HEAD
-
-      padding: ($baseline/4) !important;
-      font-size: 14px !important;
-      line-height: 22px !important;
-      color: $gray-d2 !important;
-=======
       padding: ($baseline/4);
       font-size: 14px;
       line-height: 22px;
       color: $gray-d2;
->>>>>>> remove all the css importants
     }
 
     // controls

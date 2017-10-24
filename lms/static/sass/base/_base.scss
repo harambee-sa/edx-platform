@@ -157,12 +157,8 @@ a:visited:not(.btn) {
 }
 
 .no-min-scale {
-<<<<<<< HEAD
-  min-width: 0 !important;
-=======
   min-width: 0px;
->>>>>>> remove all the css importants
-}
+  }
 
 span.edx {
   text-transform: none;
@@ -244,8 +240,6 @@ mark {
   }
 }
 
-<<<<<<< HEAD
-=======
 .help-tab {
     @include transform(rotate(-90deg));
     @include transform-origin(0 0);
@@ -313,7 +307,6 @@ mark {
   }
 }
 
->>>>>>> remove all the css importants
 // ====================
 
 // UI - disabled state

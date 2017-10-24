@@ -60,7 +60,7 @@ MONGO_HOST = os.environ.get('EDXAPP_TEST_MONGO_HOST', 'localhost')
 os.environ['DJANGO_LIVE_TEST_SERVER_ADDRESS'] = 'localhost:8000-9000'
 
 COURSE_CATALOG_VISIBILITY_PERMISSION = 'see_in_catalog'
-
+TEST_PUBLIC_URL_ROOT = "http://localhost:8000"
 THIS_UUID = uuid4().hex[:5]
 
 # can't test start dates with this True, but on the other hand,

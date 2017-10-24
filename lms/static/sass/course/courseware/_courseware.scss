@@ -263,56 +263,32 @@ html.video-fullscreen {
       }
 
       &.success {
-<<<<<<< HEAD
-        border-left: 4px solid #22b557 !important;
-=======
         border-left: 4px solid #22B557;
->>>>>>> remove all the css importants
         margin: 0 auto;
       }
 
       &.success-top-bar {
-<<<<<<< HEAD
-        border-top: 4px solid #22b557 !important;
-=======
         border-top: 4px solid #22B557;
->>>>>>> remove all the css importants
         margin: 0 auto;
       }
 
       &.success-left-bar {
-<<<<<<< HEAD
-        border-left: 4px solid #22b557 !important;
-=======
         border-left: 4px solid #22B557;
->>>>>>> remove all the css importants
         margin: 0 auto;
       }
 
       &.message-top-bar {
-<<<<<<< HEAD
-        border-top: 4px solid #fab95c !important;
-=======
         border-top: 4px solid #FAB95C;
->>>>>>> remove all the css importants
         margin: 0 auto;
       }
 
       &.message-left-bar {
-<<<<<<< HEAD
-        border-left: 4px solid #fab95c !important;
-=======
         border-left: 4px solid #FAB95C;
->>>>>>> remove all the css importants
         margin: 0 auto;
       }
 
       &.failure {
-<<<<<<< HEAD
-        border-left: 4px solid #c93b34 !important;
-=======
         border-left: 4px solid #C93B34;
->>>>>>> remove all the css importants
         margin: 0 auto;
       }
 
@@ -777,14 +753,8 @@ section.self-assessment {
  */
 
 .CodeMirror {
-<<<<<<< HEAD
-  .CodeMirror-linenumber.CodeMirror-gutter-elt {
-    color: $gray-d3 !important;
-  }
-=======
 
     .CodeMirror-linenumber.CodeMirror-gutter-elt {
         color: $gray-d3;
     }
->>>>>>> remove all the css importants
 }

@@ -21,14 +21,9 @@ from lms.djangoapps.course_goals.models import GOAL_KEY_CHOICES
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 from openedx.core.djangolib.markup import HTML, Text
 from openedx.features.course_experience import CourseHomeMessages
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 from student.models import CourseEnrollment
-=======
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
->>>>>>> ENH: template setting switch and badgr xblock update
-=======
->>>>>>> Removing this code we do not want it on master yet
 
 
 class CourseHomeMessageFragmentView(EdxFragmentView):

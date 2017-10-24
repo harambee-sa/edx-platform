@@ -7,7 +7,11 @@
 # 
 =======
 # EdX Team <info@edx.org>, 2017.
+<<<<<<< HEAD
 >>>>>>> doroob landing banner i18n
+=======
+# 
+>>>>>>> upstream master merge
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2018 EdX
@@ -17,7 +21,11 @@
 # 
 =======
 # EdX Team <info@edx.org>, 2017.
+<<<<<<< HEAD
 >>>>>>> doroob landing banner i18n
+=======
+# 
+>>>>>>> upstream master merge
 # #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
 # edX translation file
 # Copyright (C) 2018 edX
@@ -27,7 +35,11 @@
 # 
 =======
 # EdX Team <info@edx.org>, 2017.
+<<<<<<< HEAD
 >>>>>>> doroob landing banner i18n
+=======
+# 
+>>>>>>> upstream master merge
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX translation file
 # Copyright (C) 2018 edX
@@ -37,7 +49,11 @@
 # 
 =======
 # EdX Team <info@edx.org>, 2017.
+<<<<<<< HEAD
 >>>>>>> doroob landing banner i18n
+=======
+# 
+>>>>>>> upstream master merge
 # #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
 # edX translation file
 # Copyright (C) 2018 edX
@@ -47,13 +63,22 @@
 # 
 =======
 # EdX Team <info@edx.org>, 2017.
+<<<<<<< HEAD
 >>>>>>> doroob landing banner i18n
+=======
+# 
+>>>>>>> upstream master merge
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:50+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.384997\n"
+=======
+"POT-Creation-Date: 2017-10-23 12:14-0400\n"
+"PO-Revision-Date: 2017-10-23 16:14:33.026562\n"
+>>>>>>> upstream master merge
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -67,6 +92,7 @@ msgstr ""
 #. the discussion forums
 #: cms/djangoapps/contentstore/views/component.py
 #: lms/djangoapps/courseware/tabs.py lms/djangoapps/discussion/plugins.py
+#: lms/djangoapps/django_comment_client/forum/views.py
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
 #: lms/djangoapps/discussion/templates/discussion/discussion_profile_page.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
@@ -219,6 +245,9 @@ msgstr ""
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 #: common/lib/xmodule/xmodule/x_module.py
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
 #: cms/templates/container.html cms/templates/library.html
 msgid "Display Name"
 msgstr ""
@@ -265,6 +294,11 @@ msgstr ""
 
 #: common/djangoapps/course_modes/models.py
 msgid "Verified modes cannot be free."
+msgstr ""
+
+#: common/djangoapps/course_modes/models.py lms/envs/common.py
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Audit"
 msgstr ""
 
 #. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
@@ -537,6 +571,17 @@ msgstr ""
 msgid "Disabled Account"
 msgstr ""
 
+#: common/djangoapps/student/middleware.py
+#, python-brace-format
+msgid ""
+"You do not belong to this organization. If you believe this is an error, "
+"please contact us at {support_email}"
+msgstr ""
+
+#: common/djangoapps/student/middleware.py
+msgid "User Organization Incorrect"
+msgstr ""
+
 #: common/djangoapps/student/models.py
 msgid "Male"
 msgstr ""
@@ -715,6 +760,10 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Course id is invalid"
+msgstr ""
+
+#: common/djangoapps/student/views.py
+msgid "You are not old enough to enroll in this course"
 msgstr ""
 
 #: common/djangoapps/student/views.py
@@ -1462,6 +1511,15 @@ msgid ""
 msgstr ""
 
 #: common/djangoapps/xblock_django/models.py
+msgid "Space-separated list of XBlocks which should not render."
+msgstr ""
+
+#: common/djangoapps/xblock_django/models.py
+msgid ""
+"Space-separated list of XBlock types whose creation to disable in Studio."
+msgstr ""
+
+#: common/djangoapps/xblock_django/models.py
 msgid "show deprecation messaging in Studio"
 msgstr ""
 
@@ -1644,7 +1702,7 @@ msgstr ""
 msgid "Incorrect:"
 msgstr ""
 
-#: common/lib/capa/capa/responsetypes.py
+#: common/lib/capa/capa/responsetypes.py src/xblock-poll/poll/poll.py
 msgid "Answer"
 msgstr ""
 
@@ -1757,7 +1815,8 @@ msgstr ""
 #. Translators: this is the last choice of a number of choices of how to log
 #. in
 #. to the site.
-#: common/lib/capa/capa/responsetypes.py lms/templates/login.html
+#: common/lib/capa/capa/responsetypes.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/login.html
 #: lms/templates/register-form.html lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -2131,9 +2190,10 @@ msgid ""
 "contact moocsupport@mathworks.com"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/capa_base.py cms/templates/index.html
-#: lms/templates/help_modal.html lms/templates/manage_user_standing.html
-#: lms/templates/register-shib.html
+#: common/lib/xmodule/xmodule/capa_base.py
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: cms/templates/index.html lms/templates/help_modal.html
+#: lms/templates/manage_user_standing.html lms/templates/register-shib.html
 #: lms/templates/dashboard/_reason_survey.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 #: lms/templates/survey/survey.html
@@ -2677,6 +2737,17 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
+msgid "Allow Private Discussion Posts with Staff"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter true or false. If true, students can create discussion posts that are "
+"not viewable by other students. This settings allows staff to communicate "
+"privately with a student."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
 #: common/lib/xmodule/xmodule/library_root_xblock.py
 msgid "Advanced Module List"
 msgstr ""
@@ -2697,9 +2768,17 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
-#: lms/templates/courseware/info.html
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-msgid "Course Handouts"
+msgid "Course Home Sidebar"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid "Enable the Course Home Sidebar"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter true or false. If true, you will able to use and update the Course "
+"Home Sidebar. If False the sidebar will be hidden from view."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3159,13 +3238,23 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
+<<<<<<< HEAD
 msgid "Highlights Enabled for Messaging"
+=======
+msgid "Minimum Age"
+>>>>>>> upstream master merge
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
+<<<<<<< HEAD
 "Enter true or false. If true, any highlights associated with content in the "
 "course will be messaged to learners at their scheduled time."
+=======
+"Enter a number of years. If specified only students of or older than the "
+"given age will be allowed to enroll.A value of 0 (zero) indicates that no "
+"age restriction applies."
+>>>>>>> upstream master merge
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3207,6 +3296,14 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Text"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/html_module.py
+msgid "Inject Display Name"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/html_module.py
+msgid "Inject display name on html"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
@@ -3528,6 +3625,7 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/lti_module.py
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
 msgid "Weight"
 msgstr ""
 
@@ -4882,7 +4980,7 @@ msgstr ""
 #, python-brace-format
 msgid ""
 "successfully completed, received a passing grade, and was awarded this "
-"{platform_name} {certificate_type} Certificate of Completion in "
+"{platform_name} Certificate of Completion in "
 msgstr ""
 
 #. Translators: This text describes the purpose (and therefore, value) of a
@@ -5008,9 +5106,7 @@ msgstr ""
 #. Translators:  This text represents the description of course
 #: lms/djangoapps/certificates/views/webview.py
 #, python-brace-format
-msgid ""
-"a course of study offered by {partner_short_name}, an online learning "
-"initiative of {partner_long_name}."
+msgid "a course of study offered by {partner_long_name}."
 msgstr ""
 
 #. Translators:  This text represents the description of course
@@ -5057,11 +5153,16 @@ msgstr ""
 msgid "More about {fullname}'s accomplishment"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor/views/tools.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: openedx/core/djangoapps/schedules/admin.py
+#: openedx/core/djangoapps/user_api/views.py
 #: lms/templates/staff_problem_info.html
 #: lms/templates/api_admin/catalogs/search.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
@@ -5836,11 +5937,17 @@ msgstr ""
 msgid "Courses loaded in the modulestore"
 msgstr ""
 
-#: lms/djangoapps/dashboard/sysadmin.py lms/templates/tracking_log.html
+#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
+#. Translators: This example email address is used as a placeholder in
+#. a field on the login form meant to hold the user's email address.
+#: lms/djangoapps/dashboard/sysadmin.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/login.html
+#: lms/templates/tracking_log.html
 msgid "username"
 msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
+#: openedx/core/djangoapps/user_api/views.py
 msgid "email"
 msgstr ""
 
@@ -5966,6 +6073,7 @@ msgid ""
 msgstr ""
 
 #: lms/djangoapps/django_comment_client/base/views.py
+#: src/rate-xblock/rate/rate.py
 msgid "Good"
 msgstr ""
 
@@ -6228,6 +6336,7 @@ msgid "enrolled learner profile"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "User ID"
 msgstr ""
@@ -6247,6 +6356,7 @@ msgid "Email"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Language"
 msgstr ""
@@ -6263,6 +6373,7 @@ msgstr ""
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's gender.
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: openedx/core/djangoapps/user_api/api.py lms/templates/register-form.html
 #: lms/templates/signup_modal.html
@@ -6271,11 +6382,13 @@ msgid "Gender"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Level of Education"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -6283,6 +6396,7 @@ msgid "Mailing Address"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Goals"
 msgstr ""
@@ -6307,6 +6421,7 @@ msgstr ""
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the city in which they live.
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/djangoapps/student_account/views.py
 #: openedx/core/djangoapps/user_api/api.py lms/templates/register-form.html
@@ -6317,6 +6432,7 @@ msgid "City"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/templates/register-form.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -6747,6 +6863,10 @@ msgstr ""
 msgid "Open Responses"
 msgstr ""
 
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
+msgid "Recap"
+msgstr ""
+
 #. Translators: number sent refers to the number of emails sent
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "0 sent"
@@ -6828,6 +6948,7 @@ msgstr ""
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's full name.
 #: lms/djangoapps/instructor/views/tools.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: openedx/core/djangoapps/user_api/api.py cms/templates/register.html
 #: lms/templates/register-form.html lms/templates/register-shib.html
@@ -6949,6 +7070,7 @@ msgstr ""
 
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the First Name
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/djangoapps/student_account/views.py
 #: openedx/core/djangoapps/user_api/api.py
@@ -6957,12 +7079,14 @@ msgstr ""
 
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the First Name
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/djangoapps/student_account/views.py
 #: openedx/core/djangoapps/user_api/api.py
 msgid "Last Name"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: openedx/core/djangoapps/api_admin/forms.py
 #: lms/templates/shoppingcart/receipt.html
@@ -6972,58 +7096,71 @@ msgstr ""
 #. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the Title
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/djangoapps/student_account/views.py
 #: openedx/core/djangoapps/user_api/api.py wiki/forms.py
 msgid "Title"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Year of Birth"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Enrollment Date"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Currently Enrolled"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Enrollment Source"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Manual (Un)Enrollment Reason"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Enrollment Role"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "List Price"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Payment Amount"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Coupon Codes Used"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Registration Code Used"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Payment Status"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Transaction Reference Number"
 msgstr ""
@@ -8529,11 +8666,6 @@ msgstr ""
 msgid "Your Platform Description Here"
 msgstr ""
 
-#: lms/envs/common.py
-#: lms/templates/instructor/instructor_dashboard_2/course_info.html
-msgid "Audit"
-msgstr ""
-
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
 #: lms/envs/common.py
@@ -8688,6 +8820,10 @@ msgid ""
 msgstr ""
 
 #: lms/templates/oauth2_provider/authorize.html
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/checkpoint_edit.html
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 msgid "Cancel"
@@ -8816,7 +8952,11 @@ msgstr ""
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
 #: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
 #: lms/templates/signup_modal.html lms/templates/ccx/schedule.html
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+=======
+#: lms/templates/courseware/course_about.html
+>>>>>>> upstream master merge
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -10078,6 +10218,7 @@ msgstr ""
 #. Translators: This example email address is used as a placeholder in
 #. a field on the login form meant to hold the user's email address.
 #: openedx/core/djangoapps/user_api/api.py
+#: openedx/core/djangoapps/user_api/views.py
 msgid "username@domain.com"
 msgstr ""
 
@@ -10085,7 +10226,10 @@ msgstr ""
 #. immediately below a field meant to hold the user's email address.
 #. Translators: These instructions appear on the login form, immediately
 #. below a field meant to hold the user's email address.
+#. Translators: These instructions appear on the login form, immediately
+#. below a field meant to hold the user's email address.
 #: openedx/core/djangoapps/user_api/api.py
+#: openedx/core/djangoapps/user_api/views.py
 #, python-brace-format
 msgid "The email address you used to register with {platform_name}"
 msgstr ""
@@ -10095,7 +10239,10 @@ msgstr ""
 #. meant to hold the user's password.
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's password.
-#: openedx/core/djangoapps/user_api/api.py cms/templates/login.html
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#: openedx/core/djangoapps/user_api/api.py
+#: openedx/core/djangoapps/user_api/views.py cms/templates/login.html
 #: cms/templates/register.html lms/templates/login.html
 #: lms/templates/provider_login.html lms/templates/register-form.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
@@ -10104,7 +10251,8 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: openedx/core/djangoapps/user_api/api.py lms/templates/login.html
+#: openedx/core/djangoapps/user_api/api.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/login.html
 msgid "Remember me"
 msgstr ""
 
@@ -10340,13 +10488,6 @@ msgid ""
 " the discussion forum for the course."
 msgstr ""
 
-#: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
-#, python-brace-format
-msgid ""
-"You are not signed in. To view the discussion content, {sign_in_link} or "
-"{register_link}, and enroll in this course."
-msgstr ""
-
 #: openedx/features/course_bookmarks/plugins.py
 #: openedx/features/course_bookmarks/views/course_bookmarks.py
 #: lms/templates/courseware/courseware.html
@@ -10371,9 +10512,10 @@ msgid "{sign_in_link} or {register_link} and then enroll in this course."
 msgstr ""
 
 #: openedx/features/course_experience/views/course_home_messages.py
-#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/navigation.html
 #: lms/templates/navigation/navbar-not-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/support/contact_us.html
+#: themes/edx.org/lms/templates/header.html
 msgid "Sign in"
 msgstr ""
 
@@ -10422,6 +10564,675 @@ msgstr ""
 msgid "Enrollment in {course_name} was not complete."
 msgstr ""
 
+#: openedx/features/learner_profile/views/learner_profile.py
+#, python-brace-format
+msgid ""
+"Welcome to the new learner profile page. Your full profile now displays more"
+" information to other learners. You can instead choose to display a limited "
+"profile. {learn_more_link_start}Learn more{learn_more_link_end}"
+msgstr ""
+
+#: src/edx-jsme/edx_jsme/__init__.py
+msgid "Must provide an answer."
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/reverification_block.py
+msgid ""
+"This verification checkpoint does not have a name.  To specify a name for "
+"this checkpoint, select Edit."
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+msgid "Verification successful"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+msgid "You have successfully verified your identity."
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "See Also"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"Frequently asked questions about verification and earning academic credit"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/checkpoint_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+#: lms/templates/problem.html lms/templates/word_cloud.html
+msgid "Save"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/closed.html
+msgid "Assessment closed"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/closed.html
+msgid ""
+"Because you did not verify your identity before this assessment closed, you "
+"are no longer eligible for credit in this course. However, you can still "
+"work toward a verified certificate."
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+msgid "Verification Checkpoint"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+#, python-format
+msgid ""
+"\n"
+"        <p>Some learners who are working toward a verified certificate have to verify their identity before they can access this content. You do not have to verify your identity, and you can proceed to the next unit.</p>\n"
+"\n"
+"        <p> To learn more about verified certificates, see %(link_start)sVerified Certificates%(link_end)s in the <i>EdX Guide for Students</i>.\n"
+"        "
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+msgid "You are taking this exam as an honor student."
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verification unsuccessful"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"        The attempt to verify your identity was unsuccessful. This assessment has closed and you are no longer eligible for credit in this course. If you feel that there has been a mistake, contact %(support_email)s.\n"
+"        "
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Identity verification required"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"\n"
+"        To receive credit for this course, you must verify your identity every time you receive a verification message.\n"
+"        If you do not want to verify your identity, you can opt out of verification.\n"
+"        However, you will no longer be eligible for credit in the course.\n"
+"        "
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"        To receive credit in this course, you must try to verify your identity again. If you do not want to verify your identity, you can %(start_link)sopt out of verification%(end_link)s. However, you will no longer be eligible for credit in the course.\n"
+"        "
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verification error"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"          An error occurred during the verification process.\n"
+"          Try to verify your identity again, or contact %(support_email)s for help.\n"
+"          "
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verify Your Identity"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Try Again"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Are you sure you want to opt out of verification?"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"\n"
+"      To receive credit for this course, you must verify your identity every time you receive a verification message.\n"
+"      If you opt out of identity verification, you are no longer eligible for course credit.\n"
+"      However, you can still work toward a verified certificate.\n"
+"      "
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Opt Out of Verification and Course Credit"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/skipped.html
+msgid "Verification not selected"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/skipped.html
+msgid ""
+"Because you opted out of identity verification, you are no longer eligible "
+"for course credit. However, you can still work toward a verified "
+"certificate."
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/studio_preview.html
+msgid "To preview the checkpoint, select View Live Version or Preview."
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/submitted.html
+msgid "Verification submitted"
+msgstr ""
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/submitted.html
+msgid ""
+"You can now continue to this assessment. You will receive a message when the"
+" verification process is complete. If verification is not successful, you "
+"will have to verify your identity again."
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "This assignment has not yet been graded."
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload a different file"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload your assignment"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Awaiting instructor approval"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Approve grade"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Enter grade"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Grade Submissions"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: lms/templates/staff_problem_info.html
+msgid "Staff Debug Info"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Graded Assignment"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Debug"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: lms/templates/staff_problem_info.html
+msgid "Module Fields"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Enter Grade"
+msgstr ""
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Remove grade"
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Please provide us feedback on this section."
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Please rate your overall experience with this section."
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Excellent"
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Average"
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Fair"
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Poor"
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Thank you for voting!"
+msgstr ""
+
+#: src/rate-xblock/rate/rate.py
+msgid "Thank you!"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Display Correctness?"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid ""
+"This is a flag that indicates if the indicator icon should be displayed "
+"after a student enters their response"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "This is the title for this question type"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Free-text Response"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Full-Credit Key Phrases"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid ""
+"This is a list of words or phrases, one of which must be present in order "
+"for the student's answer to receive full credit"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Half-Credit Key Phrases"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid ""
+"This is a list of words or phrases, one of which must be present in order "
+"for the student's answer to receive half credit"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Maximum Number of Attempts"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid ""
+"This is the maximum number of times a student is allowed to attempt the "
+"problem"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Maximum Word Count"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "This is the maximum number of words allowed for this question"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Minimum Word Count"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "This is the minimum number of words required for this question"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Prompt"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid ""
+"This is the prompt students will see when asked to enter their response"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Please enter your response within this text area"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Submission Received Message"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "This is the message students will see upon submitting their response"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Your submission has been received"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "This assigns an integer value representing the weight of this problem"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "Draft Received Message"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid "This is the message students will see upon submitting a draft response"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+msgid ""
+"Your answers have been saved but not graded. Click \"Submit\" to grade them."
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+#, python-brace-format
+msgid "Your response must be between {min} and {max} word."
+msgid_plural "Your response must be between {min} and {max} words."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+#, python-brace-format
+msgid "Invalid Word Count. {word_count_message}"
+msgstr ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+#, python-brace-format
+msgid "{weight} point possible"
+msgid_plural "{weight} points possible"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+#, python-brace-format
+msgid "{score_string}/{weight} point"
+msgid_plural "{score_string}/{weight} points"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
+#, python-brace-format
+msgid "You have used {count_attempts} of {max_attempts} submission"
+msgid_plural "You have used {count_attempts} of {max_attempts} submissions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Invalid Google Calendar"
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Please correct the outlined fields."
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Public Calendar ID"
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field. You can "
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Default View"
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"The calendar view that students see by default. A student can change this "
+"view."
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Invalid Google Document"
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Embed Code"
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Google provides an embed code for Drive documents. In the Google Drive "
+"document, from the File menu, select Publish to the Web. Modify settings as "
+"needed, click Publish, and copy the embed code into this field."
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Alternative text"
+msgstr ""
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Alternative text describes an image and appears if the image is unavailable."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Whether or not to display results to the user."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "The maximum number of times a user may send a submission."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Number of times the user has sent a submission."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Text to display after the user votes."
+msgstr ""
+
+#. Translators: {field} is either "answers" or "questions".
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid "'{field}' is not present, or not a JSON array."
+msgstr ""
+
+#. Translators: {noun} is either "Answer" or "Question". {item} identifies the
+#. answer or question.
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid "{noun} {item} not a javascript object!"
+msgstr ""
+
+#. Translators: {noun} is either "Answer" or "Question". {item} identifies the
+#. answer or question.
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid "{noun} {item} contains no key."
+msgstr ""
+
+#. Translators: {noun} is either "Answer" or "Question".
+#. {noun_lower} is the lowercase version of {noun}.
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid ""
+"{noun} has no text or img. Please make sure all {noun_lower}s have one or "
+"the other, or both."
+msgstr ""
+
+#. Translators: {noun} is either "Answer" or "Question".
+#. {noun_lower} is the lowercase version of {noun}.
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid ""
+"{noun} was added with no label. All {noun_lower}s must have labels. Please "
+"check the form. Check the form and explicitly delete {noun_lower}s if not "
+"needed."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid ""
+"All images must have an alternative text describing the image in a way that "
+"would allow someone to answer the poll if the image did not load."
+msgstr ""
+
+#. Translators: "{noun_lower} is either "answer" or "question".
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid "You must include at least one {noun_lower}."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Maximum Submissions missing or not an integer."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Private results may not be False when Maximum Submissions is not 1."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Poll"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "What is your favorite color?"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Red"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Blue"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Green"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py lms/templates/dashboard/_reason_survey.html
+msgid "Other"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "The answer options on this poll."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Total tally of answers from students."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "The student's answer"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "You have already voted in this poll."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Answer not included with request."
+msgstr ""
+
+#. Translators: {choice} uniquely identifies a specific answer belonging to a
+#. poll or survey.
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid "No key \"{choice}\" in answers table."
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "You have already voted as many times as you are allowed."
+msgstr ""
+
+<<<<<<< HEAD
+#: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
+#, python-brace-format
+msgid ""
+"You are not signed in. To view the discussion content, {sign_in_link} or "
+"{register_link}, and enroll in this course."
+msgstr ""
+
+#: openedx/features/course_bookmarks/plugins.py
+#: openedx/features/course_bookmarks/views/course_bookmarks.py
+#: lms/templates/courseware/courseware.html
+#: openedx/features/course_bookmarks/templates/course_bookmarks/course-bookmarks.html
+msgid "Bookmarks"
+=======
+#: src/xblock-poll/poll/poll.py
+msgid "You must specify a question."
+>>>>>>> upstream master merge
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Survey"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py lms/templates/courseware/course_about.html
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Yes"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py lms/templates/courseware/course_about.html
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "No"
+msgstr ""
+
+<<<<<<< HEAD
+#: openedx/features/course_experience/views/course_home_messages.py
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
+msgid "Sign in"
+=======
+#: src/xblock-poll/poll/poll.py
+msgid "Maybe"
+>>>>>>> upstream master merge
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Answer choices for this Survey"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Are you enjoying the course?"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Would you recommend this course to your friends?"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Do you think you will learn a lot?"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "Questions for this Survey"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid "The user's answers"
+msgstr ""
+
+#: src/xblock-poll/poll/poll.py
+msgid ""
+"Not all questions were included, or unknown questions were included. Try "
+"refreshing and trying again."
+msgstr ""
+
+#. Translators: {answer_key} uniquely identifies a specific answer belonging
+#. to a poll or survey.
+#. {question_key} uniquely identifies a specific question belonging to a poll
+#. or survey.
+#: src/xblock-poll/poll/poll.py
+#, python-brace-format
+msgid "Found unknown answer '{answer_key}' for question key '{question_key}'"
+msgstr ""
+
+<<<<<<< HEAD
 #: openedx/features/enterprise_support/utils.py
 #, python-brace-format
 msgid ""
@@ -10440,6 +11251,10 @@ msgid ""
 "Welcome to the new learner profile page. Your full profile now displays more"
 " information to other learners. You can instead choose to display a limited "
 "profile. {learn_more_link_start}Learn more{learn_more_link_end}"
+=======
+#: src/xblock-poll/poll/poll.py
+msgid "Question"
+>>>>>>> upstream master merge
 msgstr ""
 
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
@@ -11181,7 +11996,8 @@ msgstr ""
 msgid "Course Number:"
 msgstr ""
 
-#: cms/templates/index.html lms/templates/sysadmin_dashboard.html
+#: cms/templates/index.html lms/templates/navigation.html
+#: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 #: lms/templates/header/navbar-authenticated.html
@@ -11286,7 +12102,11 @@ msgstr ""
 msgid "Legal"
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/templates/widgets/header.html lms/templates/header/header.html
+=======
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+>>>>>>> upstream master merge
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -11297,8 +12117,12 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/templates/widgets/header.html
 #: lms/templates/header/navbar-authenticated.html
+=======
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+>>>>>>> upstream master merge
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
@@ -11526,8 +12350,12 @@ msgstr ""
 msgid "You are not enrolled in any courses yet."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/dashboard.html
 #: lms/templates/header/navbar-not-authenticated.html
+=======
+#: lms/templates/dashboard.html lms/templates/navigation.html
+>>>>>>> upstream master merge
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -12090,6 +12918,65 @@ msgstr ""
 msgid "Raw data:"
 msgstr ""
 
+#: lms/templates/navigation.html lms/templates/navigation/navigation.html
+msgid "Global"
+msgstr ""
+
+#: lms/templates/navigation.html lms/templates/header/brand.html
+#: lms/templates/navigation/navbar-logo-header.html
+#: lms/templates/navigation/bootstrap/navbar-logo-header.html
+msgid "{platform_name} Home Page"
+msgstr ""
+
+#: lms/templates/navigation.html lms/templates/learner_dashboard/programs.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+msgid "Programs"
+msgstr ""
+
+#. Translators: This is short for "System administration".
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-authenticated.html
+msgid "Sysadmin"
+msgstr ""
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/shoppingcart/shopping_cart.html
+#: themes/edx.org/lms/templates/header.html
+msgid "Shopping Cart"
+msgstr ""
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+msgid "How it Works"
+msgstr ""
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+msgid "Schools"
+msgstr ""
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+msgid "Explore Courses"
+msgstr ""
+
+#: lms/templates/navigation.html lms/templates/register-form.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "Register"
+msgstr ""
+
+#: lms/templates/navigation.html lms/templates/navigation/navigation.html
+#: themes/edx.org/lms/templates/header.html
+msgid ""
+"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
+"strongly recommend using {chrome_link} or {ff_link}."
+msgstr ""
+
 #: lms/templates/notes.html lms/templates/textannotation.html
 #: lms/templates/videoannotation.html
 msgid "You do not have any notes."
@@ -12141,10 +13028,6 @@ msgstr ""
 
 #: lms/templates/problem.html
 msgid "Hint"
-msgstr ""
-
-#: lms/templates/problem.html lms/templates/word_cloud.html
-msgid "Save"
 msgstr ""
 
 #: lms/templates/problem.html
@@ -12302,6 +13185,7 @@ msgstr ""
 msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/register-form.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -12310,6 +13194,8 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
+=======
+>>>>>>> upstream master merge
 #: lms/templates/register-form.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Create My Account"
@@ -12488,10 +13374,6 @@ msgid "Inactive Groups"
 msgstr ""
 
 #: lms/templates/staff_problem_info.html
-msgid "Staff Debug Info"
-msgstr ""
-
-#: lms/templates/staff_problem_info.html
 msgid "Submission history"
 msgstr ""
 
@@ -12557,10 +13439,6 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "Override Score"
-msgstr ""
-
-#: lms/templates/staff_problem_info.html
-msgid "Module Fields"
 msgstr ""
 
 #: lms/templates/staff_problem_info.html
@@ -14068,11 +14946,23 @@ msgid "An error occurred. Please try again later."
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
+msgid "Enroll in {course_name}"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "You are not old enough to enroll"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
 msgid ""
 "The currently logged-in user account does not have permission to enroll in "
 "this course. You may need to {start_logout_tag}log out{end_tag} then try the"
 " enroll button again. Please visit the {start_help_tag}help page{end_tag} "
 "for a possible solution."
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Are you {min_age} years or older?"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
@@ -14083,6 +14973,10 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "View Course"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Activate Your {platform_name} Account"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
@@ -14102,11 +14996,13 @@ msgid "Enrollment is Closed"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "Add {course_name} to Cart <span>({price} USD)</span>"
+msgid ""
+"Set your Year of Birth in the <a href='{account_settings_url}'>account "
+"settings</a>"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "Enroll in {course_name}"
+msgid "Add {course_name} to Cart <span>({price} USD)</span>"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
@@ -14303,6 +15199,11 @@ msgstr ""
 #: lms/templates/courseware/info.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Course Tools"
+msgstr ""
+
+#: lms/templates/courseware/info.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Course Handouts"
 msgstr ""
 
 #: lms/templates/courseware/news.html
@@ -14930,6 +15831,17 @@ msgid ""
 "{cert_name_long}{link_end}."
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid ""
+"You can no longer access this course because payment has not yet been "
+"received. You can {contact_link_start}contact the account "
+"holder{contact_link_end} to request payment, or you can "
+"{unenroll_link_start}unenroll{unenroll_link_end} from this course"
+msgstr ""
+
+>>>>>>> upstream master merge
 #. Translators: provider_name is the name of a credit provider or university
 #. (e.g. State University)
 #: lms/templates/dashboard/_dashboard_credit_info.html
@@ -15120,10 +16032,6 @@ msgstr ""
 
 #: lms/templates/dashboard/_reason_survey.html
 msgid "Something was broken"
-msgstr ""
-
-#: lms/templates/dashboard/_reason_survey.html
-msgid "Other"
 msgstr ""
 
 #: lms/templates/dashboard/_reason_survey.html
@@ -15621,6 +16529,13 @@ msgid ""
 msgstr ""
 
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
+msgid ""
+"You have been enrolled in {course_name} at {site_name} by a member of the "
+"course staff. Once you have activated your account you will be able to "
+"access the course on your {site_name} dashboard."
+msgstr ""
+
+#: lms/templates/emails/enroll_email_enrolledmessage.txt
 #: lms/templates/emails/unenroll_email_enrolledmessage.txt
 msgid "This email was automatically sent from {site_name} to {full_name}"
 msgstr ""
@@ -15979,6 +16894,7 @@ msgstr ""
 msgid "Apply for Financial Assistance"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/header/brand.html
 #: lms/templates/header/navbar-logo-header.html
 #: lms/templates/navigation/navbar-logo-header.html
@@ -16045,6 +16961,8 @@ msgstr ""
 msgid "Schools"
 msgstr ""
 
+=======
+>>>>>>> upstream master merge
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Add Coupon Code"
@@ -16243,14 +17161,6 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course started?"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/course_info.html
-msgid "Yes"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/course_info.html
-msgid "No"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -17605,6 +18515,7 @@ msgstr ""
 msgid "Program Details"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr ""
@@ -17621,6 +18532,8 @@ msgstr ""
 msgid "Send me a text with the link"
 msgstr ""
 
+=======
+>>>>>>> upstream master merge
 #: lms/templates/modal/_modal-settings-language.html
 msgid "Change Preferred Language"
 msgstr ""
@@ -17639,12 +18552,18 @@ msgid ""
 "translator!{link_end}"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Explore Courses"
 msgstr ""
 
 #: lms/templates/navigation/navigation.html
 msgid "Global"
+=======
+#: lms/templates/navigation/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+msgid "Profile"
+>>>>>>> upstream master merge
 msgstr ""
 
 #: lms/templates/peer_grading/peer_grading.html
@@ -22247,18 +23166,6 @@ msgstr ""
 msgid "Maintenance"
 msgstr ""
 
-#: wiki/apps.py
-msgid "Wiki notifications"
-msgstr ""
-
-#: wiki/apps.py
-msgid "Wiki images"
-msgstr ""
-
-#: wiki/apps.py
-msgid "Wiki attachments"
-msgstr ""
-
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
 msgstr ""
@@ -22883,12 +23790,4 @@ msgstr ""
 msgid ""
 "A new revision was created: Merge between Revision #%(r1)d and Revision "
 "#%(r2)d"
-msgstr ""
-
-#: lms/templates/index.html
-msgid "Improve your skills today!"
-msgstr ""
-
-#: lms/templates/index.html
-msgid "Doroob's programs provide the skills you need to succeed"
 msgstr ""

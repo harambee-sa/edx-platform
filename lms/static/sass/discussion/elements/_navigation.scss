@@ -5,39 +5,12 @@
 // Discussion Forums Page Header
 // ------
 .discussion-board > .page-header {
-<<<<<<< HEAD
   .has-breadcrumbs .breadcrumbs {
     margin-bottom: ($baseline / 2);
     font-size: font-size(base);
     font-weight: font-weight(semi-bold);
     line-height: $line-height-base;
   }
-=======
-    $searchBoxPadding: rem($baseline / 2 + 2);
-    $searchBoxHeight: (rem($baseline) + ($searchBoxPadding * 2));
-
-    div {
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .has-breadcrumbs .breadcrumbs {
-        margin-bottom: ($baseline / 2);
-        font-size: font-size(base);
-        font-weight: font-weight(semi-bold);
-        line-height: $base-line-height;
-    }
-
-    .page-header-main {
-        line-height: $searchBoxHeight;
-    }
-
-    .page-header-secondary > .form-actions > button {
-        // Overrides base size set in lms/static/sass/shared-v2/_layouts.scss
-        // Done to match size of UXPL's search box. This is bad, I know.
-        height: $searchBoxHeight;
-    }
->>>>>>> remove all the css importants
 }
 
 // -----------
@@ -86,7 +59,6 @@
 }
 
 .forum-nav-browse-title {
-<<<<<<< HEAD
   @include text-align(left);
 
   display: block;
@@ -105,33 +77,10 @@
   &.is-focused {
     // switched from a to button;
     // need to override button styles
-    background-image: none !important;
-    box-shadow: none !important;
-    background: $forum-color-background !important;
-  }
-=======
-    @include text-align(left);
-    display: block;
-    width: 100%;
-    border: 0;
-    border-radius: 0;
-    border-bottom: 1px solid $forum-color-border;
-    padding: ($baseline/2);
-    background: transparent;
-    box-shadow: none;
     background-image: none;
-    cursor: pointer;
-
-    &:hover,
-    &:focus,
-    &.is-focused {
-        // switched from a to button;
-        // need to override button styles
-        background-image: none;
-        box-shadow: none;
-        background: $forum-color-background;
-    }
->>>>>>> remove all the css importants
+    box-shadow: none;
+    background: $forum-color-background;
+  }
 }
 
 .forum-nav-browse-title .icon {
@@ -226,7 +175,7 @@
 // Thread list
 // -----------
 .forum-nav-thread-list {
-  padding-left: 0 !important; // should *not* be RTLed, see below for explanation
+  padding-left: 0 ; // should *not* be RTLed, see below for explanation
   min-height: 60px;  // @TODO: Remove this when we have a real empty state for the discussion thread list
   max-height: 800px;
   border-bottom: 1px solid theme-color("light");
@@ -240,7 +189,7 @@
     // Overrides overspecific courseware CSS from:
     // https://github.com/edx/edx-platform/blob/master/lms/static/sass/course/courseware/_courseware.scss#L470
     // note this should *not* be RTLed, as the rule it overrides is not RTLed
-    padding-left: 0 !important;
+    padding-left: 0;
   }
 
   .thread-preview-body {
@@ -442,7 +391,7 @@
     color: $forum-color-active-text;
     // !important overrides the one set here:
     // https://github.com/edx/edx-platform/blob/master/lms/static/sass/elements/_controls.scss#L472
-    background-color: $forum-color-active-thread !important;
+    background-color: $forum-color-active-thread ;
   }
 }
 

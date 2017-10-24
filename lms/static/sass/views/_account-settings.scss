@@ -73,6 +73,7 @@
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       button {
         @extend %ui-clear-button;
         @extend %btn-no-style;
@@ -107,6 +108,8 @@
 =======
           border-bottom: 4px solid $black-t3 !important;
 =======
+=======
+>>>>>>> upstream master merge
             button {
                 @extend %ui-clear-button;
                 @extend %btn-no-style;
@@ -123,13 +126,16 @@
                     border-bottom: 4px solid $black-t3;
                 }
             }
+<<<<<<< HEAD
 >>>>>>> remove all the css importants
 >>>>>>> remove all the css importants
+=======
+>>>>>>> upstream master merge
         }
       }
     }
-  }
-}
+  
+
 
 // +Settings Section
 .account-settings-sections {

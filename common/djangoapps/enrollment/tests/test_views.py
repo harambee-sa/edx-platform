@@ -39,7 +39,6 @@ from student.tests.factories import AdminFactory, UserFactory
 from util.models import RateLimitConfiguration
 from util.testing import UrlResetMixin
 
-@override_settings(BULK_EMAIL_DEFAULT_RETRY_DELAY=30)
 class EnrollmentTestMixin(object):
     """ Mixin with methods useful for testing enrollments. """
     API_KEY = "i am a key"

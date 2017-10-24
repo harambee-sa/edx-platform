@@ -1170,14 +1170,10 @@ $light-border: 1px solid $gray-l5;
 // Print
 
 @media print {
-<<<<<<< HEAD
-  a[href]::after {
-    content: none !important;
-=======
+
 
   a[href]:after {
     content: none;
->>>>>>> remove all the css importants
   }
 
   .steps, .blue.pull-right, .bordered-bar .pull-right, .left.nav-global.authenticated {

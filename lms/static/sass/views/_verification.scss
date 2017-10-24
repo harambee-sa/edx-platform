@@ -1563,12 +1563,7 @@
       // extra register options/info
       .title-expand {
         @extend %t-copy-sub1;
-<<<<<<< HEAD
-
-        font-weight: 500 !important;
-=======
         font-weight: 500;
->>>>>>> remove all the css importants
         display: inline-block;
         margin: 0;
       }

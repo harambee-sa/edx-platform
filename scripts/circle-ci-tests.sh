@@ -64,7 +64,6 @@ else
 
             echo "Finding ESLint violations and storing report..."
             paver run_eslint -l $ESLINT_THRESHOLD > eslint.log || { cat eslint.log; EXIT=1; }
-<<<<<<< HEAD
 
             echo "Finding Stylelint violations and storing report..."
             paver run_stylelint -l $STYLELINT_THRESHOLD > stylelint.log || { cat stylelint.log; EXIT=1; }
@@ -72,8 +71,6 @@ else
             # Run quality task. Pass in the 'fail-under' percentage to diff-quality
             paver run_quality -p 100 || EXIT=1
 
-=======
->>>>>>> upgrade i18n-tools, build with circleci
             echo "Running code complexity report (python)."
             paver run_complexity > reports/code_complexity.log || echo "Unable to calculate code complexity. Ignoring error."
             echo "Running safe template linter report."
@@ -95,7 +92,6 @@ else
             ;;
 
         3)  # run the commonlib unit tests
-            export DJANGO_SETTINGS_MODULE=lms.envs.test
             paver test_lib --with-flaky --cov-args="-p" --with-xunit
             ;;
 

@@ -31,18 +31,10 @@
 .forum-nav-browse-filter-input {
   @include padding-left($baseline/4);
   @include padding-right($baseline/2 + 12px); // Leave room for icon
-<<<<<<< HEAD
-
-  box-shadow: none !important;
-  border-radius: $forum-border-radius !important;
-  height: auto !important;
-  font-size: $forum-small-font-size !important;
-=======
   box-shadow: none;
   border-radius: $forum-border-radius;
   height: auto;
   font-size: $forum-small-font-size;
->>>>>>> remove all the css importants
 }
 
 // --------------------------------
@@ -75,13 +67,8 @@ li[class*=forum-nav-thread-label-] {
   }
 
   // Override clearfix stuff in .sidebar ul li rules
-<<<<<<< HEAD
-  &::before, &::after {
-    display: none !important;
-=======
   &:before, &:after {
     display: none;
->>>>>>> remove all the css importants
   }
 }
 
