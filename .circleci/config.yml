@@ -10,6 +10,9 @@ jobs:
       - "test_root/log"
     steps:
       - run:
+          name: install software-properties-common
+          command: 'apt-get install software-properties-common package'
+      - run:
           name: set ppa
           command: 'add-apt-repository ppa:ubuntu-toolchain-r/test'
       - run:
