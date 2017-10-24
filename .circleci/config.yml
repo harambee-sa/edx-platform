@@ -15,16 +15,16 @@ jobs:
           command: 'sudo apt-get update'
       - run:
           name: install needed apt packages
-          command: 'DEBIAN_FRONTEND=noninteractive sudo apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)'
+          command: 'DEBIAN_FRONTEND=noninteractive apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)'
       - run:
           name: do a apt-get upgrade
-          command: 'DEBIAN_FRONTEND=noninteractive sudo apt-get -y upgrade'
+          command: 'DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'
       - run:
           name: nmp install
           command: 'npm install'
       - run:
            name: apt-get install python
-           command: 'sudo apt-get install python-dev --fix-missing'
+           command: 'apt-get install python-dev --fix-missing'
       - run:
           name: pip install setuptools
           command: 'pip install setuptools'
