@@ -2,7 +2,7 @@ language: python
 python:
     - "2.7"
 before_install:
-    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    - sudo DEBIAN_FRONTEND=noninteractive add-apt-repository -y ppa:ubuntu-toolchain-r/test
     - sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
     - sudo DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
     - sudo DEBIAN_FRONTEND=noninteractive apt-get -y install npm
