@@ -1,7 +1,7 @@
 python-software-properties
 pkg-config
 gfortran
-libatlas-dev
+libatlas-base-dev
 libblas-dev
 libssl-dev
 liblapack-dev
@@ -15,7 +15,6 @@ build-essential
 python-dev
 gfortran
 libfreetype6-dev
-libpng12-dev
 libjpeg-dev
 libtiff5-dev
 zlib1g-dev
