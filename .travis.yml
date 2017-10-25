@@ -23,4 +23,4 @@ before_install:
     - sudo apt-get install --reinstall sed
     - sudo sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/mongodb.conf
     - sudo service mongodb restart
-script: paver test_lib --cov-args="-p"
+script: paver test_system -s lms --cov-args="-p" --fasttest --disable-migrations --no-randomize
