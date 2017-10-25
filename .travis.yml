@@ -2,6 +2,7 @@ language: python
 python:
     - "2.7"
 before_install:
+    - sudo rm /var/cache/apt/archives/mysql-server-5.5_5.5.43-0ubuntu0.14.04.1_amd64.deb
     - sudo DEBIAN_FRONTEND=noninteractive add-apt-repository -y ppa:ubuntu-toolchain-r/test
     - sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
     - sudo DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
