@@ -88,7 +88,7 @@ jobs:
             apt-get install --reinstall sed
             sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/mongodb.conf
             service mongodb restart
-      - test:
+      - run:
           name: run all tests
           command: './scripts/all-tests.sh'
           no_output_timeout: 20m
