@@ -24,10 +24,6 @@ yui-compressor
 graphviz
 libgraphviz-dev
 graphviz-dev
-mysql-server-core-5.5
-mysql-client-5.5
-mysql-server-5.5
-mysql-server
 libmysqlclient-dev
 libgeos-dev
 libreadline6
@@ -35,7 +31,6 @@ libreadline6-dev
 mongodb
 nodejs
 coffeescript
-mysql-client
 virtualenvwrapper
 libgeos-ruby1.8
 lynx-cur
