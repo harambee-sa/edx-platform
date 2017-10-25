@@ -2,13 +2,13 @@ language: python
 python:
     - "2.7"
 before_install:
-    - add-apt-repository ppa:ubuntu-toolchain-r/test
-    - DEBIAN_FRONTEND=noninteractive apt-get -y update
-    - DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
-    - DEBIAN_FRONTEND=noninteractive apt-get -y install npm
-    - DEBIAN_FRONTEND=noninteractive apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)
+    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    - sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
+    - sudo DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs
+    - sudo DEBIAN_FRONTEND=noninteractive apt-get -y install npm
+    - sudo DEBIAN_FRONTEND=noninteractive apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)
     - npm install
-    - update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 50
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 50
     - pip install setuptools
     - pip install --exists-action w -r requirements/edx/django.txt
     - pip install --exists-action w -r requirements/edx/paver.txt
@@ -20,7 +20,7 @@ before_install:
     - pip install --exists-action w -r requirements/edx/testing.txt
     - if [ -e requirements/edx/post.txt ]; then pip install --exists-action w -r requirements/edx/post.txt ; fi
     - pip install coveralls==1.0
-    - apt-get install --reinstall sed
-    - sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/mongodb.conf
-    - service mongodb restart
+    - sudo apt-get install --reinstall sed
+    - sudo sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/mongodb.conf
+    - sudo service mongodb restart
 script: paver test_lib --cov-args="-p"
