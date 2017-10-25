@@ -24,6 +24,8 @@ yui-compressor
 graphviz
 libgraphviz-dev
 graphviz-dev
+mysql-client-5.5
+mysql-server-5.5
 mysql-server
 libmysqlclient-dev
 libgeos-dev
