@@ -2,9 +2,10 @@ version: 2
 jobs:
   build_development:
     docker:
-      - image: ubuntu:xenial-20171006
+      - image: ubuntu:artful-20171019
     working_directory: ~/edx-platform
     parallelism: 4
+    resource_class: large
     artifacts:
       - "reports"
       - "test_root/log"
