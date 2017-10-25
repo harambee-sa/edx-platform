@@ -8,7 +8,7 @@ before_install:
     - sudo DEBIAN_FRONTEND=noninteractive apt-get -y install npm
     - sudo DEBIAN_FRONTEND=noninteractive apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)
     - npm install
-    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 50
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 50
     - pip install setuptools
     - pip install --exists-action w -r requirements/edx/django.txt
     - pip install --exists-action w -r requirements/edx/paver.txt
