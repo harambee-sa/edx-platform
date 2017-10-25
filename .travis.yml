@@ -9,10 +9,19 @@ before_install:
     - sudo DEBIAN_FRONTEND=noninteractive apt-get install -q -y $(cat requirements/system/ubuntu/apt-packages.txt)
     - npm install
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 50
+    - pip install setuptools
+    - pip install --exists-action w -r requirements/edx/django.txt
+    - pip install --exists-action w -r requirements/edx/paver.txt
+    - pip install --exists-action w -r requirements/edx/pre.txt
+    - pip install --exists-action w -r requirements/edx/github.txt
+    - pip install --exists-action w -r requirements/edx/local.txt
     - pip install  --exists-action w pbr==0.9.0
+    - pip install --exists-action w -r requirements/edx/base.txt
+    - pip install --exists-action w -r requirements/edx/testing.txt
     - if [ -e requirements/edx/post.txt ]; then pip install --exists-action w -r requirements/edx/post.txt ; fi
     - pip install coveralls==1.0
     - sudo apt-get install --reinstall sed
     - sudo sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/mongodb.conf
     - sudo service mongodb restart
+    - pip install boto==2.39.0
 script: paver test_system -s lms --cov-args="-p" --fasttest --disable-migrations --no-randomize
