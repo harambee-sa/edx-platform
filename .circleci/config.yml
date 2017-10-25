@@ -88,9 +88,15 @@ jobs:
             apt-get install --reinstall sed
             sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/mongodb.conf
             service mongodb restart
-      - run:
-          name: test mongo
-          command: 'mongo localhost:27017 /root/edx-platform/scripts/delete-mongo-test-dbs.js'
+      - test:
+          name: run all tests
+          command: './scripts/all-tests.sh'
+          no_output_timeout: 20m
+      - store_artifacts:
+          path: reports
+          destination: test_reports
+      - store_test_results:
+          path: test_root/log
 
 
 
