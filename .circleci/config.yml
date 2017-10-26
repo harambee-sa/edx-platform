@@ -31,12 +31,9 @@ jobs:
       - run:
           name: install nodejs
           command: |
-            curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
-            bash nodesource_setup.sh
-            sudo apt-get -y install nodejs            
-      - run:
-          name: install npm
-          command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install npm'
+            curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
+            apt-get -y install -y nodejs npm
+            npm install -g n && n stable          
       - run:
           name: do a apt-get upgrade
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'
