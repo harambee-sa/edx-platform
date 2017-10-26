@@ -33,7 +33,7 @@ jobs:
           command: |
             curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
             bash nodesource_setup.sh
-            sudo apt-get -y install nodejs
+            apt-get -y install nodejs
       - run:
           name: do a apt-get upgrade
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y upgrade'
