@@ -27,7 +27,10 @@ jobs:
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install git'
       - run:
           name: install nodejs
-          command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs'
+          command: |
+            curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
+            bash nodesource_setup.sh
+            sudo apt-get -y install nodejs            
       - run:
           name: install npm
           command: 'DEBIAN_FRONTEND=noninteractive apt-get -y install npm'
