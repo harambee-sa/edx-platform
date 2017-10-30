@@ -8,7 +8,7 @@ if [[ "$1" == "development" ]]; then
 	echo "Adding IP to EC2"
 	aws ec2 authorize-security-group-ingress --group-id $STAGING_SEC_GROUP --protocol tcp --port 22 --cidr "$IP/32"
 	sleep 2
-	echo "Running play to update Microsites and Assets"
+	echo "Running localized build for circle"
   
   ssh ubuntu@builder.proversity.io "sudo apt-get -y install  git"
   ssh ubuntu@builder.proversity.io "sudo rm -r /edx/app/edxapp/circleci_builds && sudo mkdir -p /edx/app/edxapp && cd /edx/app/edxapp && sudo git clone https://github.com/proversity-org/circleci_builds.git"
