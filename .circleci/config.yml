@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build_development:
     machine: true
     working_directory: ~/edx-platform
     parallelism: 1
