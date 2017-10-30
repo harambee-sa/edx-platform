@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: apt-get update
-          command: 'STAGING_SEC_GROUP=$STAGING_SEC_GROUP /bin/bash build_and_deploy.sh'
+          command: 'STAGING_SEC_GROUP=$STAGING_SEC_GROUP /bin/bash build_and_deploy.sh development'
       
 
 workflows:

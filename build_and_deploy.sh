@@ -10,9 +10,9 @@ if [[ "$1" == "development" ]]; then
 	sleep 2
 	echo "Running play to update Microsites and Assets"
   
-  ssh ubuntu@34.240.235.247 "sudo apt-get -y install  git"
-  ssh ubuntu@34.240.235.247 "sudo rm -r /edx/app/edxapp/circleci_builds && sudo mkdir -p /edx/app/edxapp && cd /edx/app/edxapp && sudo git clone https://github.com/proversity-org/circleci_builds.git"
-  ssh ubuntu@34.240.235.247 "cd /edx/app/edxapp/circleci_builds && sudo /bin/bash run_build.sh development"
+  ssh ubuntu@builder.proversity.io "sudo apt-get -y install  git"
+  ssh ubuntu@builder.proversity.io "sudo rm -r /edx/app/edxapp/circleci_builds && sudo mkdir -p /edx/app/edxapp && cd /edx/app/edxapp && sudo git clone https://github.com/proversity-org/circleci_builds.git"
+  ssh ubuntu@builder.proversity.io "cd /edx/app/edxapp/circleci_builds && sudo /bin/bash run_build.sh development"
 
 	ERROR=$?
 	sleep 2
