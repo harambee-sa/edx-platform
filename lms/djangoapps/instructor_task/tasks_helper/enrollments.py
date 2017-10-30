@@ -27,7 +27,7 @@ from shoppingcart.models import (
 )
 from student.models import CourseAccessRole, CourseEnrollment
 from util.file import course_filename_prefix_generator
-
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from .runner import TaskProgress
 from .utils import tracker_emit, upload_csv_to_report_store
 
@@ -278,7 +278,7 @@ def get_executive_report(course_id):
         avg_price_paid = gross_revenue / total_seats
 
     course = get_course_by_id(course_id, depth=0)
-    currency = settings.PAID_COURSE_REGISTRATION_CURRENCY[1]
+    currency = configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[1]
 
     return {
         'display_name': course.display_name,

@@ -29,6 +29,7 @@ from lms.djangoapps.commerce.utils import EcommerceService
 from lms.djangoapps.experiments.utils import get_experiment_user_metadata_context
 from openedx.core.djangoapps.catalog.utils import get_currency_data
 from openedx.core.djangoapps.embargo import api as embargo_api
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from student.models import CourseEnrollment
 from util.db import outer_atomic
 from xmodule.modulestore.django import modulestore
@@ -177,7 +178,7 @@ class ChooseModeView(View):
                 if x.strip()
             ]
 
-            default_currency = settings.PAID_COURSE_REGISTRATION_CURRENCY or ['usd', '$']
+            default_currency = configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY) or ['usd', '$']
             context["currency_code"] = default_currency[0].upper()
             context["currency_symbol"] = default_currency[1]
 

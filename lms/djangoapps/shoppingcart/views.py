@@ -210,8 +210,8 @@ def show_cart(request):
         'expired_course_names': expired_cart_item_names,
         'site_name': site_name,
         'form_html': form_html,
-        'currency_symbol': settings.PAID_COURSE_REGISTRATION_CURRENCY[1],
-        'currency': settings.PAID_COURSE_REGISTRATION_CURRENCY[0],
+        'currency_symbol': configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[1],
+        'currency': configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[0],
         'enable_bulk_purchase': configuration_helpers.get_value('ENABLE_SHOPPING_CART_BULK_PURCHASE', True)
     }
     return render_to_response("shoppingcart/shopping_cart.html", context)
@@ -744,8 +744,8 @@ def billing_details(request):
             'shoppingcart_items': cart_items,
             'amount': total_cost,
             'form_html': form_html,
-            'currency_symbol': settings.PAID_COURSE_REGISTRATION_CURRENCY[1],
-            'currency': settings.PAID_COURSE_REGISTRATION_CURRENCY[0],
+            'currency_symbol': configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[1],
+            'currency': configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[0],
             'site_name': configuration_helpers.get_value('SITE_NAME', settings.SITE_NAME),
         }
         return render_to_response("shoppingcart/billing_details.html", context)
@@ -945,8 +945,8 @@ def _show_receipt_html(request, order):
         'order_type': order_type,
         'appended_course_names': appended_course_names,
         'appended_recipient_emails': appended_recipient_emails,
-        'currency_symbol': settings.PAID_COURSE_REGISTRATION_CURRENCY[1],
-        'currency': settings.PAID_COURSE_REGISTRATION_CURRENCY[0],
+        'currency_symbol': configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[1],
+        'currency': configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[0],
         'total_registration_codes': total_registration_codes,
         'reg_code_info_list': reg_code_info_list,
         'order_purchase_date': order.purchase_time.strftime("%B %d, %Y"),

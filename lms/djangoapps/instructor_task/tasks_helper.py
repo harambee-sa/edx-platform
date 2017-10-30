@@ -39,6 +39,7 @@ from certificates.models import (
     CertificateStatuses,
     GeneratedCertificate
 )
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from courseware.courses import get_course_by_id, get_problems_in_section
 from lms.djangoapps.grades.context import grading_context_for_course
 from lms.djangoapps.grades.new.course_grade import CourseGradeFactory
@@ -1276,7 +1277,7 @@ def get_executive_report(course_id):
         avg_price_paid = gross_revenue / total_seats
 
     course = get_course_by_id(course_id, depth=0)
-    currency = settings.PAID_COURSE_REGISTRATION_CURRENCY[1]
+    currency = configuration_helpers.get_value('PAID_COURSE_REGISTRATION_CURRENCY', settings.PAID_COURSE_REGISTRATION_CURRENCY)[1]
 
     return {
         'display_name': course.display_name,
