@@ -37,11 +37,11 @@ if [ "$CIRCLE_NODE_TOTAL" == "1" ] ; then
     echo "via the CircleCI UI and adjust scripts/circle-ci-tests.sh to match."
 
     echo "Running tests for common/lib/ and pavelib/"
-    paver test_lib --with-flaky --cov-args="-p" --with-xunit || EXIT=1
+    paver test_lib --cov-args="-p" || EXIT=1
     echo "Running python tests for Studio"
-    paver test_system -s cms --with-flaky --cov-args="-p" --with-xunitmp || EXIT=1
+    paver test_system -s cms --cov-args="-p" || EXIT=1
     echo "Running python tests for lms"
-    paver test_system -s lms --with-flaky --cov-args="-p" --with-xunitmp || EXIT=1
+    paver test_system -s lms --cov-args="-p" || EXIT=1
 
     exit $EXIT
 else
