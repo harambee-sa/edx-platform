@@ -21,11 +21,10 @@ if [[ "$1" == "development" ]]; then
 fi
 
 
-if [ "$ERROR" -eq 0 ];
-then
-    echo "Updated!"
+if [[ "$ERROR" -eq 0 ]]; then
+  echo "Updated!"
 	exit 0
 else
-    echo "Update failed!"
+  echo "Update failed!"
 	exit 1
 fi
