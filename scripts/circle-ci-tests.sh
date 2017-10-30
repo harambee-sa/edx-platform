@@ -39,9 +39,9 @@ if [ "$CIRCLE_NODE_TOTAL" == "1" ] ; then
     echo "Running tests for common/lib/ and pavelib/"
     paver test_lib --cov-args="-p" || EXIT=1
     echo "Running python tests for Studio"
-    paver test_system -s cms --cov-args="-p" || EXIT=1
+    #paver test_system -s cms --cov-args="-p" || EXIT=1
     echo "Running python tests for lms"
-    paver test_system -s lms --cov-args="-p" || EXIT=1
+    #paver test_system -s lms --cov-args="-p" || EXIT=1
 
     exit $EXIT
 else
