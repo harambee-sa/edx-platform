@@ -95,7 +95,12 @@ FEATURES['ENABLE_ENROLLMENT_TRACK_USER_PARTITION'] = True
 
 FEATURES['ENABLE_BULK_ENROLLMENT_VIEW'] = True
 
+<<<<<<< HEAD
 DEFAULT_MOBILE_AVAILABLE = True
+=======
+DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
+DEFAULT_MOBILE_AVAILABLE = False
+>>>>>>> Returning work we wissed due to upgrade
 
 # Need wiki for courseware views to work. TODO (vshnayder): shouldn't need it.
 WIKI_ENABLED = True

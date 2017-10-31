@@ -27,12 +27,17 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:44+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.873858\n"
 =======
 "POT-Creation-Date: 2017-10-23 12:10-0400\n"
 "PO-Revision-Date: 2017-10-23 16:14:33.677054\n"
 >>>>>>> upstream master merge
+=======
+"POT-Creation-Date: 2017-10-31 05:31-0400\n"
+"PO-Revision-Date: 2017-10-31 09:35:18.511480\n"
+>>>>>>> Returning work we wissed due to upgrade
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -2004,6 +2009,7 @@ msgid "Turn off transcripts"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/AssetsPage.bace7aaf2adb48c51598.js
 msgid "end"
 msgstr ""
@@ -2011,14 +2017,21 @@ msgstr ""
 #: common/static/bundles/CourseGoals.c4996c40fda9d3059c82.js
 =======
 >>>>>>> upstream master merge
+=======
+#: common/static/bundles/CourseGoals.b56f05f27734759a3a6a.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/CourseGoals.js
 msgid "Thank you for setting your course goal to "
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseGoals.c4996c40fda9d3059c82.js
 =======
 >>>>>>> upstream master merge
+=======
+#: common/static/bundles/CourseGoals.b56f05f27734759a3a6a.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/CourseGoals.js
 msgid ""
 "There was an error in setting your goal, please reload the page and try "
@@ -2026,39 +2039,56 @@ msgid ""
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> upstream master merge
+=======
+#: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "You have successfully updated your goal."
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> upstream master merge
+=======
+#: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "There was an error updating your goal."
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> upstream master merge
+=======
+#: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/CourseHome.js
 msgid "Show more"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> upstream master merge
+=======
+#: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/CourseHome.js
 msgid "Show less"
 msgstr ""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #: common/static/bundles/SingleSupportForm.24c3e19077ebd20ce989.js
 #: common/static/bundles/SingleSupportForm.js
@@ -2206,6 +2236,9 @@ msgstr ""
 
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
+=======
+#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
 >>>>>>> upstream master merge
 #: common/static/bundles/StudioIndex.js
@@ -2213,8 +2246,12 @@ msgid "Organization:"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
+=======
+#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
 >>>>>>> upstream master merge
 #: common/static/bundles/StudioIndex.js
@@ -2222,8 +2259,12 @@ msgid "Course Number:"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
+=======
+#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
 >>>>>>> upstream master merge
 #: common/static/bundles/StudioIndex.js
@@ -2231,8 +2272,12 @@ msgid "Course Run:"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
+=======
+#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
 >>>>>>> upstream master merge
 #: common/static/bundles/StudioIndex.js
@@ -2240,8 +2285,12 @@ msgid "(Read-only)"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
+=======
+#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
 >>>>>>> upstream master merge
 #: common/static/bundles/StudioIndex.js
@@ -2249,8 +2298,12 @@ msgid "Re-run Course"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
+=======
+#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
+>>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
 >>>>>>> upstream master merge
 #: common/static/bundles/StudioIndex.js

@@ -9,6 +9,10 @@ from lms.djangoapps.grades.api import views
 
 urlpatterns = [
     url(
+        r'^v0/course_grade/bulk/$',
+        views.GradesBulkAPIView.as_view(), name='bulk_user_grades'
+    ),
+    url(
         r'^v0/course_grade/{course_id}/users/$'.format(
             course_id=settings.COURSE_ID_PATTERN,
         ),
@@ -20,4 +24,8 @@ urlpatterns = [
         ),
         views.CourseGradingPolicy.as_view(), name='course_grading_policy'
     ),
+<<<<<<< HEAD
 ]
+=======
+)
+>>>>>>> Returning work we wissed due to upgrade

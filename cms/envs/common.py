@@ -116,7 +116,11 @@ from lms.envs.common import (
     DEFAULT_MOBILE_AVAILABLE,
 =======
     DEFAULT_COURSE_VISIBILITY_IN_CATALOG,
+<<<<<<< HEAD
 >>>>>>> change catalog visibility default to none
+=======
+    DEFAULT_MOBILE_AVAILABLE,
+>>>>>>> Returning work we wissed due to upgrade
 
     CONTACT_EMAIL,
 

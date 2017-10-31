@@ -433,12 +433,16 @@ def _update_badge_context(context, course, user, preview_mode=None):
     """
     Updates context with badge info.
     """
-    badge = None
+    badges = []
     if badges_enabled() and course.issue_badges:
-        badges = get_completion_badge(course.location.course_key, user, preview_mode).get_for_user(user)
-        if badges:
-            badge = badges[0]
-    context['badge'] = badge
+        badges =\
+            get_completion_badge(
+                course.location.course_key,
+                user,
+                preview_mode
+            ).get_for_user(user)
+
+    context['badges'] = badges
 
 
 def _update_organization_context(context, course):

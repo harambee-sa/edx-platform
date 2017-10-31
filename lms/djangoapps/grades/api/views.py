@@ -1,20 +1,30 @@
 """ API v0 views. """
 import logging
+import urllib 
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from django.http import Http404
+from django.db.models import Q
+from edx_rest_framework_extensions.authentication import JwtAuthentication
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
+from rest_framework_oauth.authentication import OAuth2Authentication
 from rest_framework import status
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.decorators import api_view
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.generics import GenericAPIView, ListAPIView
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-
+from rest_framework.views import exception_handler
 from courseware.access import has_access
+#from lms.djangoapps.ccx.utils import prep_course_for_grading
 from lms.djangoapps.courseware import courses
 from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
-from lms.djangoapps.grades.api.serializers import GradingPolicySerializer
+from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer
 from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin, view_auth_classes
+from openedx.core.lib.api.permissions import IsStaffOrOwner
 from student.roles import CourseStaffRole
 
 log = logging.getLogger(__name__)
@@ -61,7 +71,6 @@ class GradeViewMixin(DeveloperErrorViewMixin):
         """
         Returns the user object corresponding to the request's 'username' parameter,
         or the current request.user if no 'username' was provided.
-
         Verifies that the request.user has access to the requested users's grades.
         Returns a 403 error response if access is denied, or a 404 error response if the user does not exist.
         """
@@ -111,45 +120,27 @@ class GradeViewMixin(DeveloperErrorViewMixin):
 class UserGradeView(GradeViewMixin, GenericAPIView):
     """
     **Use Case**
-
         * Get the current course grades for a user in a course.
-
         The currently logged-in user may request her own grades, or a user with staff access to the course may request
         any enrolled user's grades.
-
     **Example Request**
-
         GET /api/grades/v0/course_grade/{course_id}/users/?username={username}
-
     **GET Parameters**
-
         A GET request may include the following parameters.
-
         * course_id: (required) A string representation of a Course ID.
         * username: (optional) A string representation of a user's username.
           Defaults to the currently logged-in user's username.
-
     **GET Response Values**
-
         If the request for information about the course grade
         is successful, an HTTP 200 "OK" response is returned.
-
         The HTTP 200 response has the following values.
-
         * username: A string representation of a user's username passed in the request.
-
         * course_id: A string representation of a Course ID.
-
         * passed: Boolean representing whether the course has been
                   passed according the course's grading policy.
-
         * percent: A float representing the overall grade for the course
-
         * letter_grade: A letter grade as defined in grading_policy (e.g. 'A' 'B' 'C' for 6.002x) or None
-
-
     **Example GET Response**
-
         [{
             "username": "bob",
             "course_key": "edX/DemoX/Demo_Course",
@@ -157,16 +148,13 @@ class UserGradeView(GradeViewMixin, GenericAPIView):
             "percent": 0.03,
             "letter_grade": None,
         }]
-
     """
     def get(self, request, course_id):
         """
         Gets a course progress status.
-
         Args:
             request (Request): Django request object.
             course_id (string): URI element specifying the course location.
-
         Return:
             A JSON serialized representation of the requesting user's current grade status.
         """
@@ -182,8 +170,8 @@ class UserGradeView(GradeViewMixin, GenericAPIView):
             # or a 404 if the requested user does not exist.
             return grade_user
 
-        prep_course_for_grading(course, request)
-        course_grade = CourseGradeFactory().create(grade_user, course)
+        #prep_course_for_grading(course, request)
+        course_grade = CourseGradeFactory().update(grade_user, course)
         courseware_summary = course_grade.chapter_grades.values()
         grade_summary = course_grade.summary
 
@@ -208,26 +196,140 @@ class UserGradeView(GradeViewMixin, GenericAPIView):
         })
 
 
+class GradesBulkAPIView(ListAPIView):
+
+    """
+    **Use Case**
+        * Get the current course grades for a list of users in a list of courses.
+    **Example Request**
+        POST /api/grades/v0/course_grade/bulk/
+    
+          
+    **POST Response Values**
+        If the request for information about the course grade
+        is successful, an HTTP 200 "OK" response is returned.
+        The HTTP 200 response has the following values.
+        * username: A string representation of a user's username passed in the request.
+        * course_id: A string representation of a Course ID.
+        * passed: Boolean representing whether the course has been
+                  passed according the course's grading policy.
+        * percent: A float representing the overall grade for the course
+    **Example POST Response**
+        {
+          "course-v1:T3+T3+2014_T1": {
+            "dummy": {
+              "letter_grade": null,
+              "percent": 0,
+              "email": "lidija@proversity.org",
+              "passed": false,
+              "name": " "
+            },
+            "staff": {
+              "letter_grade": null,
+              "percent": 0,
+              "email": "staff@example.com",
+              "passed": false,
+              "name": " "
+            }
+          },
+          "course-v1:edX+DemoX+Demo_Course": {
+            "dummy": {
+              "letter_grade": "Pass",
+              "percent": 0.66,
+              "email": "lidija@proversity.org",
+              "passed": true,
+              "name": " "
+            },
+            "staff": {
+              "letter_grade": "Pass",
+              "percent": 0.72,
+              "email": "staff@example.com",
+              "passed": true,
+              "name": " "
+            }
+          }
+        }
+    """
+    http_method_names = ['post']
+    authentication_classes = (
+        OAuth2Authentication,
+        JwtAuthentication,
+        SessionAuthentication
+    )
+    serializer_class = GradeBulkAPIViewSerializer
+    permission_classes = (IsAuthenticated, IsStaffOrOwner)
+    
+    def post(self,  request):
+
+    
+        # create the list based on the post parameters
+
+        serializer = GradeBulkAPIViewSerializer(data=request.data)
+        courseParams = request.data['course_ids']
+        userParams = request.data['usernames']
+        
+        # Set up a dictionaries/list to contain the user grades and course grades
+        # catching the incorrect courses in a "course_failure" list
+        course_results = {}
+        course_success = {}
+        course_failure = []
+        user_grades = {}
+
+        for course_str in courseParams:
+            try:
+                course_key = CourseKey.from_string(str(course_str))
+                course = courses.get_course(course_key)
+                # Get the list of users in a specific course
+                # Django's "filter" takes care of "User not found"
+                user_list = USER_MODEL.objects.filter(
+                    Q(username__in=userParams) | Q(email__in=userParams),
+                    courseenrollment__course_id=CourseKey.from_string(course_str),
+                    courseenrollment__is_active=1,
+                ).order_by('username').select_related('profile')
+
+                for user in user_list:
+                    try:
+                        course_grade = CourseGradeFactory().update(user, course)
+                        user_grades[user.username] = {
+                            'name': "{} {}".format(user.first_name, user.last_name),
+                            'email': user.email,
+                            'passed': course_grade.passed,
+                            'percent': "{0:.0%}".format(course_grade.percent)
+                        }
+                    except Exception as e:
+                        log.error(e)
+                        pass
+
+                course_success[course_str] = user_grades
+                user_grades = {}
+                            
+            except InvalidKeyError:
+                log.error('Invalid key, {} does not exist'.format(course_str))
+                course_failure.append("{} does not exist".format(course_str))
+                pass
+            except ValueError:
+                log.error('Value error, {} could not be found.'.format(course_str))
+                course_failure.append("{} does not exist".format(course_str))
+
+                pass
+        course_results["successes"] = course_success
+        course_results["failures"] = course_failure
+            
+        return Response(course_results)
+
+
 class CourseGradingPolicy(GradeViewMixin, ListAPIView):
     """
     **Use Case**
-
         Get the course grading policy.
-
     **Example requests**:
-
         GET /api/grades/v0/policy/{course_id}/
-
     **Response Values**
-
         * assignment_type: The type of the assignment, as configured by course
           staff. For example, course staff might make the assignment types Homework,
           Quiz, and Exam.
-
         * count: The number of assignments of the type.
-
         * dropped: Number of assignments of the type that are dropped.
-
         * weight: The weight, or effect, of the assignment type on the learner's
           final grade.
     """

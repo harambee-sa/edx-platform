@@ -28,3 +28,11 @@ class GradingPolicySerializer(serializers.Serializer):
                 defaultdict(lambda: None, obj)
             )
         )
+
+
+class GradeBulkAPIViewSerializer(serializers.Serializer):
+    """
+    Serializer for GradesBulkAPIView
+    """
+    usernames = serializers.ListField(child=serializers.CharField())
+    course_ids = serializers.ListField(child=serializers.CharField())

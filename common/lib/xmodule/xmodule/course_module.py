@@ -39,8 +39,12 @@ CATALOG_VISIBILITY_NONE = "none"
 DEFAULT_MOBILE_AVAILABLE = getattr(settings, 'DEFAULT_MOBILE_AVAILABLE', False)
 =======
 DEFAULT_COURSE_VISIBILITY_IN_CATALOG = getattr(settings, 'DEFAULT_COURSE_VISIBILITY_IN_CATALOG', 'both')
+<<<<<<< HEAD
 >>>>>>> FIX: setting in xmodule and adding chaching
 
+=======
+DEFAULT_MOBILE_AVAILABLE = getattr(settings, 'DEFAULT_MOBILE_AVAILABLE', False)
+>>>>>>> Returning work we wissed due to upgrade
 
 class StringOrDate(Date):
     def from_json(self, value):
