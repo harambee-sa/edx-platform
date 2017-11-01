@@ -13,6 +13,8 @@ from web_fragments.fragment import Fragment
 from courseware.courses import get_course_with_access
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 from openedx.features.course_experience.views.course_updates import get_ordered_updates
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
 
 
 class LatestUpdateFragmentView(EdxFragmentView):
@@ -36,7 +38,10 @@ class LatestUpdateFragmentView(EdxFragmentView):
             'update_html': update_html,
         }
 
-        html = render_to_string('course_experience/latest-update-fragment.html', context)
+        if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
+            html = render_to_string('course_experience/latest-update-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/latest-update-fragment.html', context)
 
         return Fragment(html)
 

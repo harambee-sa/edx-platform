@@ -5,7 +5,8 @@ from django.http import Http404
 from django.template.loader import render_to_string
 from opaque_keys.edx.keys import CourseKey
 from web_fragments.fragment import Fragment
-
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
 from courseware.courses import get_course_date_blocks, get_course_with_access
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 
@@ -26,7 +27,10 @@ class CourseDatesFragmentView(EdxFragmentView):
             'course_date_blocks': course_date_blocks
         }
         
-        html = render_to_string('course_experience/course-dates-fragment.html', context)
+        if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
+            html = render_to_string('course_experience/course-dates-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/course-dates-fragment.html', context)
 
         return Fragment(html)
 

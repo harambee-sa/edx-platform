@@ -8,7 +8,8 @@ from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_control
 from django.views.decorators.csrf import ensure_csrf_cookie
-
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
 from commerce.utils import EcommerceService
 from course_modes.models import get_cosmetic_verified_display_price
 from courseware.access import has_access
@@ -211,7 +212,10 @@ class CourseHomeFragmentView(EdxFragmentView):
             'upgrade_price': upgrade_price,
             'upgrade_url': upgrade_url,
         }
-        
-        html = render_to_string('course_experience/course-home-fragment.html', context)
+
+        if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
+            html = render_to_string('course_experience/course-home-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/course-home-fragment.html', context)
 
         return Fragment(html)

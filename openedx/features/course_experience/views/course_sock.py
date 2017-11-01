@@ -11,6 +11,7 @@ from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 
 from student.models import CourseEnrollment
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
 
 
 
@@ -24,7 +25,10 @@ class CourseSockFragmentView(EdxFragmentView):
         """
         context = self.get_verification_context(request, course)
         
-        html = render_to_string('course_experience/course-sock-fragment.html', context)
+        if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
+            html = render_to_string('course_experience/course-sock-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/course-sock-fragment.html', context)
 
         return Fragment(html)
 

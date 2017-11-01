@@ -8,6 +8,8 @@ from web_fragments.fragment import Fragment
 
 from courseware.courses import get_course_overview_with_access
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
 
 from ..utils import get_course_outline_block_tree
 
@@ -34,6 +36,9 @@ class CourseOutlineFragmentView(EdxFragmentView):
             'blocks': course_block_tree,
         }
         
-        html = render_to_string('course_experience/course-outline-fragment.html', context)
+        if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
+            html = render_to_string('course_experience/course-outline-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/course-outline-fragment.html', context)
 
         return Fragment(html)
