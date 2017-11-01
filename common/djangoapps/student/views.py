@@ -169,6 +169,7 @@ REGISTRATION_UTM_CREATED_AT = 'registration_utm_created_at'
 # used to announce a registration
 REGISTER_USER = Signal(providing_args=["user", "registration"])
 
+<<<<<<< HEAD
 # TODO: Remove Django 1.11 upgrade shim
 # SHIM: Compensate for behavior change of default authentication backend in 1.10
 if django.VERSION[0] == 1 and django.VERSION[1] < 10:
@@ -176,6 +177,11 @@ if django.VERSION[0] == 1 and django.VERSION[1] < 10:
 else:
     # We want to allow inactive users to log in only when their account is first created
     NEW_USER_AUTH_BACKEND = 'django.contrib.auth.backends.AllowAllUsersModelBackend'
+=======
+
+USER_COURSE_ENROLLMENTS_ORDER_BY =\
+    getattr(settings, 'USER_COURSE_ENROLLMENTS_ORDER_BY', 'created_reverse')
+>>>>>>> prefer order by course enrollments in dashboard
 
 # Disable this warning because it doesn't make sense to completely refactor tests to appease Pylint
 # pylint: disable=logging-format-interpolation
@@ -939,9 +945,27 @@ def dashboard(request):
     valid_verification_statuses = ['approved', 'must_reverify', 'pending', 'expired']
     display_sidebar_on_dashboard = len(order_history_list) or verification_status in valid_verification_statuses
 
+<<<<<<< HEAD
     # Filter out any course enrollment course cards that are associated with fulfilled entitlements
     for entitlement in [e for e in course_entitlements if e.enrollment_course_run is not None]:
         course_enrollments = [enr for enr in course_enrollments if entitlement.enrollment_course_run.course_id != enr.course_id]  # pylint: disable=line-too-long
+=======
+    # sort the enrollment pairs by the flag USER_COURSE_ENROLLMENTS_ORDER_BY
+    if USER_COURSE_ENROLLMENTS_ORDER_BY == 'created':
+        course_enrollments.sort(key=lambda x: x.created, reverse=False)
+    elif USER_COURSE_ENROLLMENTS_ORDER_BY == 'created_reverse':
+        course_enrollments.sort(key=lambda x: x.created, reverse=True)
+    elif USER_COURSE_ENROLLMENTS_ORDER_BY == 'course_name':
+        course_enrollments.sort(
+            key=lambda x: x.course.display_name,
+            reverse=False
+        )
+    elif USER_COURSE_ENROLLMENTS_ORDER_BY == 'course_name_reverse':
+        course_enrollments.sort(
+            key=lambda x: x.course.display_name,
+            reverse=True
+        )
+>>>>>>> prefer order by course enrollments in dashboard
 
     context = {
         'urls': urls,
