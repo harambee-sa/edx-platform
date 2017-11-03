@@ -1,3 +1,4 @@
+# encoding: utf-8
 """
 Unit tests for the Mongo modulestore
 """
