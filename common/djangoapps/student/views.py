@@ -1482,7 +1482,7 @@ def _generate_not_activated_message(user):
     not_activated_message = not_activated_msg_template.format(
         email=user.email,
         support_url=support_url,
-        platform=platform_name
+        platform_name=platform_name
     )
 
     return not_activated_message
