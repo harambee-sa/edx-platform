@@ -1,5 +1,6 @@
 # #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 # edX translation file.
+<<<<<<< HEAD
 # Copyright (C) 2018 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 <<<<<<< HEAD
@@ -68,10 +69,41 @@
 =======
 # 
 >>>>>>> upstream master merge
+=======
+# Copyright (C) 2017 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2017.
+# 
+# #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2017 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2017.
+# 
+# #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2017 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2017.
+# 
+# #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2017 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2017.
+# 
+# #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2017 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2017.
+# 
+>>>>>>> [ci skip] reverting conftest
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:50+0000\n"
@@ -84,6 +116,10 @@ msgstr ""
 "POT-Creation-Date: 2017-10-31 05:35-0400\n"
 "PO-Revision-Date: 2017-10-31 09:35:17.857828\n"
 >>>>>>> Returning work we wissed due to upgrade
+=======
+"POT-Creation-Date: 2017-10-31 05:35-0400\n"
+"PO-Revision-Date: 2017-10-31 09:35:17.857828\n"
+>>>>>>> [ci skip] reverting conftest
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -138,11 +174,14 @@ msgstr ""
 msgid "Unit"
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/djangoapps/contentstore/views/helpers.py
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Empty"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: cms/djangoapps/contentstore/views/videos.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/djangoapps/instructor/views/api.py lms/templates/help_modal.html
@@ -393,10 +432,13 @@ msgid ""
 msgstr ""
 
 #: common/djangoapps/student/forms.py
+<<<<<<< HEAD
 msgid "Full Name cannot contain the following characters: < >"
 msgstr ""
 
 #: common/djangoapps/student/forms.py
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "A properly formatted e-mail is required"
 msgstr ""
 
@@ -1024,6 +1066,16 @@ msgstr ""
 
 #: common/djangoapps/third_party_auth/models.py
 msgid ""
+<<<<<<< HEAD
+=======
+"Whether to drop an existing session when accessing a view decorated with "
+"third_party_auth.decorators.tpa_hint_ends_existing_session when a tpa_hint "
+"URL query parameter mapping to this provider is included in the request."
+msgstr ""
+
+#: common/djangoapps/third_party_auth/models.py
+msgid ""
+>>>>>>> [ci skip] reverting conftest
 "If this option is set, then users logging in using this SSO provider will "
 "have their session length limited to no longer than this value. If set to 0 "
 "(zero), the session will expire upon the user closing their browser. If left"
@@ -1038,6 +1090,7 @@ msgid ""
 msgstr ""
 
 #: common/djangoapps/third_party_auth/models.py
+<<<<<<< HEAD
 msgid ""
 "Synchronize user profile data received from the identity provider with the "
 "edX user account on each SSO login. The user will be notified if the email "
@@ -1046,6 +1099,8 @@ msgid ""
 msgstr ""
 
 #: common/djangoapps/third_party_auth/models.py
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "The Site that this SAML configuration belongs to."
 msgstr ""
 
@@ -2201,7 +2256,11 @@ msgstr ""
 #: lms/templates/manage_user_standing.html lms/templates/register-shib.html
 #: lms/templates/dashboard/_reason_survey.html
 #: lms/templates/peer_grading/peer_grading_problem.html
+<<<<<<< HEAD
 #: lms/templates/survey/survey.html
+=======
+#: lms/templates/support/contact_us.html lms/templates/survey/survey.html
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview-language-fragment.html
 #: openedx/core/djangoapps/theming/templates/theming/theming-admin-fragment.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -2235,7 +2294,12 @@ msgstr ""
 #. the placeholders.
 #: common/lib/xmodule/xmodule/capa_base.py
 #, python-brace-format
+<<<<<<< HEAD
 msgid "{previous_hints}{list_start_tag}{strong_text}{hint_text}</li>"
+=======
+msgid ""
+"{previous_hints}<li><strong>{hint_number_prefix}</strong>{hint_text}</li>"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #. Translators: e.g. "Hint 1 of 3: " meaning we are showing the first of three
@@ -3244,14 +3308,19 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 <<<<<<< HEAD
+<<<<<<< HEAD
 msgid "Highlights Enabled for Messaging"
 =======
 msgid "Minimum Age"
 >>>>>>> upstream master merge
+=======
+msgid "Minimum Age"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 "Enter true or false. If true, any highlights associated with content in the "
 "course will be messaged to learners at their scheduled time."
@@ -3260,6 +3329,11 @@ msgid ""
 "given age will be allowed to enroll.A value of 0 (zero) indicates that no "
 "age restriction applies."
 >>>>>>> upstream master merge
+=======
+"Enter a number of years. If specified only students of or older than the "
+"given age will be allowed to enroll.A value of 0 (zero) indicates that no "
+"age restriction applies."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3271,6 +3345,7 @@ msgstr ""
 msgid "{assignment_type} = {weighted_percent:.2%} of a possible {weight:.2%}"
 msgstr ""
 
+<<<<<<< HEAD
 #: common/lib/xmodule/xmodule/graders.py
 msgid "Generated"
 msgstr ""
@@ -3299,6 +3374,8 @@ msgstr ""
 msgid "{short_label} Avg"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Text"
 msgstr ""
@@ -3874,6 +3951,7 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
+<<<<<<< HEAD
 msgid "Enable video auto-advance"
 msgstr ""
 
@@ -3885,6 +3963,8 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Video Pre-Roll"
 msgstr ""
 
@@ -4422,12 +4502,15 @@ msgid "The default speed for the video."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
+<<<<<<< HEAD
 msgid ""
 "Specify whether to advance automatically to the next unit when the video "
 "ends."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Specify whether YouTube is available for the user."
 msgstr ""
 
@@ -4639,6 +4722,7 @@ msgstr ""
 msgid "Powered by Open edX"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
 msgid "Blog"
 msgstr ""
@@ -4669,6 +4753,23 @@ msgstr ""
 
 #: lms/djangoapps/branding/api.py themes/red-theme/lms/templates/footer.html
 msgid "News"
+=======
+#: lms/djangoapps/branding/api.py
+#, python-brace-format
+msgid "{platform_name} for Business"
+msgstr ""
+
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
+msgid "Blog"
+msgstr ""
+
+#: lms/djangoapps/branding/api.py themes/red-theme/lms/templates/footer.html
+msgid "News"
+msgstr ""
+
+#: lms/djangoapps/branding/api.py
+msgid "Help Center"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
@@ -4684,6 +4785,13 @@ msgstr ""
 msgid "Careers"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
+msgid "Donate"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #: lms/djangoapps/branding/api.py
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
 msgid "Terms of Service & Honor Code"
@@ -4710,6 +4818,14 @@ msgstr ""
 msgid "Sitemap"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: lms/djangoapps/branding/api.py
+#: lms/templates/static_templates/media-kit.html
+msgid "Media Kit"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators: This is a legal document users must agree to
 #. in order to register a new account.
@@ -4722,6 +4838,7 @@ msgid "Terms of Service"
 msgstr ""
 
 #: lms/djangoapps/branding/api.py
+<<<<<<< HEAD
 msgid "Affiliates"
 msgstr ""
 
@@ -4730,6 +4847,8 @@ msgid "Open edX"
 msgstr ""
 
 #: lms/djangoapps/branding/api.py
+=======
+>>>>>>> [ci skip] reverting conftest
 #, python-brace-format
 msgid "Download the {platform_name} mobile app from the Apple App Store"
 msgstr ""
@@ -5000,8 +5119,12 @@ msgstr ""
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
 #: lms/djangoapps/certificates/views/webview.py
+<<<<<<< HEAD
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
+=======
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+>>>>>>> [ci skip] reverting conftest
 msgid "All rights reserved"
 msgstr ""
 
@@ -5249,15 +5372,23 @@ msgstr ""
 msgid "Automatically approve valid refund requests, without manual processing"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/commerce/signals.py lms/djangoapps/commerce/utils.py
+=======
+#: lms/djangoapps/commerce/signals.py
+>>>>>>> [ci skip] reverting conftest
 #, python-brace-format
 msgid ""
 "A refund request has been initiated for {username} ({email}). To process "
 "this request, please visit the link(s) below."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/commerce/signals.py lms/djangoapps/commerce/utils.py
 #: lms/djangoapps/shoppingcart/models.py
+=======
+#: lms/djangoapps/commerce/signals.py lms/djangoapps/shoppingcart/models.py
+>>>>>>> [ci skip] reverting conftest
 msgid "[Refund] User-Requested Refund"
 msgstr ""
 
@@ -5305,6 +5436,7 @@ msgid ""
 "{payment_support_link}."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/completion/api/v1/views.py
 msgid ""
 "BlockCompletion.objects.submit_batch_completion should not be called when "
@@ -5333,6 +5465,8 @@ msgstr ""
 msgid "ok"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/djangoapps/completion/models.py
 #, python-brace-format
 msgid "{value} must be between 0.0 and 1.0"
@@ -5550,7 +5684,10 @@ msgstr ""
 #: lms/djangoapps/courseware/date_summary.py
 #: cms/templates/group_configurations.html
 #: lms/templates/courseware/program_marketing.html
+<<<<<<< HEAD
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Learn More"
 msgstr ""
 
@@ -5600,10 +5737,13 @@ msgstr ""
 msgid "Disable the dynamic upgrade deadline for this course run."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/courseware/models.py
 msgid "Disable the dynamic upgrade deadline for this organization."
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/djangoapps/courseware/tabs.py lms/templates/courseware/syllabus.html
 msgid "Syllabus"
 msgstr ""
@@ -5622,6 +5762,7 @@ msgstr ""
 msgid "Textbooks"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/courseware/views/index.py
 #, python-brace-format
 msgid ""
@@ -5642,6 +5783,8 @@ msgstr ""
 msgid "register"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your enrollment: Audit track"
 msgstr ""
@@ -5699,10 +5842,26 @@ msgid "To see course content, {sign_in_link} or {register_link}."
 msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
+<<<<<<< HEAD
 #, python-brace-format
 msgid ""
 "You must be enrolled in the course to see course content."
 "                             {enroll_link_start}Enroll now{enroll_link_end}."
+=======
+msgid "sign in"
+msgstr ""
+
+#: lms/djangoapps/courseware/views/views.py
+#: openedx/features/course_experience/views/course_home_messages.py
+msgid "register"
+msgstr ""
+
+#: lms/djangoapps/courseware/views/views.py
+#, python-brace-format
+msgid ""
+"You must be enrolled in the course to see course content."
+"                         {enroll_link_start}Enroll now{enroll_link_end}."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
@@ -5978,6 +6137,10 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py cms/templates/course-create-rerun.html
 #: cms/templates/index.html lms/templates/shoppingcart/receipt.html
+<<<<<<< HEAD
+=======
+#: lms/templates/support/contact_us.html
+>>>>>>> [ci skip] reverting conftest
 msgid "Course Name"
 msgstr ""
 
@@ -6040,6 +6203,7 @@ msgstr ""
 msgid "full_name"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/discussion/templates/discussion/edx_ace/responsenotification/email/body.html
 #: lms/djangoapps/discussion/templates/discussion/edx_ace/responsenotification/email/body.txt
 #, python-format
@@ -6056,6 +6220,8 @@ msgstr ""
 msgid "Response to %(thread_title)s"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Title can't be empty"
 msgstr ""
@@ -6357,6 +6523,10 @@ msgstr ""
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: openedx/core/djangoapps/user_api/api.py
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+<<<<<<< HEAD
+=======
+#: lms/templates/support/contact_us.html
+>>>>>>> [ci skip] reverting conftest
 msgid "Email"
 msgstr ""
 
@@ -6428,7 +6598,10 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
+<<<<<<< HEAD
 #: lms/djangoapps/student_account/views.py
+=======
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/user_api/api.py lms/templates/register-form.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
@@ -6467,7 +6640,10 @@ msgid "Coupon Code"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
+<<<<<<< HEAD
 #: openedx/core/djangoapps/schedules/admin.py
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Course Id"
 msgstr ""
 
@@ -7077,7 +7253,10 @@ msgstr ""
 #. which allows the user to input the First Name
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
+<<<<<<< HEAD
 #: lms/djangoapps/student_account/views.py
+=======
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/user_api/api.py
 msgid "First Name"
 msgstr ""
@@ -7086,7 +7265,10 @@ msgstr ""
 #. which allows the user to input the First Name
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
+<<<<<<< HEAD
 #: lms/djangoapps/student_account/views.py
+=======
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/user_api/api.py
 msgid "Last Name"
 msgstr ""
@@ -7103,7 +7285,10 @@ msgstr ""
 #. which allows the user to input the Title
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
+<<<<<<< HEAD
 #: lms/djangoapps/student_account/views.py
+=======
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/user_api/api.py wiki/forms.py
 msgid "Title"
 msgstr ""
@@ -8239,8 +8424,12 @@ msgstr ""
 msgid "Course Announce Date"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/shoppingcart/reports.py cms/templates/course_outline.html
 #: cms/templates/settings.html
+=======
+#: lms/djangoapps/shoppingcart/reports.py cms/templates/settings.html
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html
 msgid "Course Start Date"
 msgstr ""
@@ -8367,6 +8556,7 @@ msgstr ""
 msgid "You do not have permission to view this page."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/djangoapps/student_account/test/test_views.py
 #: openedx/features/enterprise_support/utils.py
 #, python-brace-format
@@ -8381,6 +8571,8 @@ msgstr ""
 msgid "Some error occured during password change. Please try again"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/djangoapps/student_account/views.py
 msgid "No email address provided."
 msgstr ""
@@ -8389,6 +8581,7 @@ msgstr ""
 msgid "Create Account"
 msgstr ""
 
+<<<<<<< HEAD
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the State/Province/Region in which they
 #. live.
@@ -8439,6 +8632,11 @@ msgstr ""
 #: lms/djangoapps/student_account/views.py
 #: openedx/core/djangoapps/user_api/api.py
 msgid "Specialty"
+=======
+#: lms/djangoapps/student_account/views.py
+#: lms/templates/peer_grading/peer_grading_problem.html
+msgid "Continue"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/djangoapps/support/views/index.py
@@ -8958,10 +9156,14 @@ msgstr ""
 #: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
 #: lms/templates/signup_modal.html lms/templates/ccx/schedule.html
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 =======
 #: lms/templates/courseware/course_about.html
 >>>>>>> upstream master merge
+=======
+#: lms/templates/courseware/course_about.html
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -8982,7 +9184,10 @@ msgstr ""
 #. piece of UI that takes the full focus of the screen) is open or not
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/modal/_modal-settings-language.html
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "window open"
@@ -9297,6 +9502,7 @@ msgstr ""
 msgid "LMS Administration"
 msgstr ""
 
+<<<<<<< HEAD
 #: openedx/core/djangoapps/ace_common/apps.py
 msgid "ACE Common"
 msgstr ""
@@ -9434,6 +9640,55 @@ msgstr ""
 
 #: openedx/core/djangoapps/api_admin/models.py
 msgid "Status of this API access request"
+=======
+#: openedx/core/djangoapps/api_admin/admin.py
+#, python-brace-format
+msgid ""
+"Once you have approved this request, go to {catalog_admin_url} to set up a "
+"catalog for this user."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "Company Address"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "Describe what your application does."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "The URL of your company's website."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "The name of your company."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "The contact address of your company."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+#, python-brace-format
+msgid "The following users do not exist: {usernames}."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid ""
+"Comma-separated list of usernames which will be able to view this catalog."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
+msgid "Denied"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "Approved"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "Status of this API access request"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/api_admin/models.py
@@ -9498,7 +9753,10 @@ msgid "Bookmark with usage_id: {usage_id} does not exist."
 msgstr ""
 
 #: openedx/core/djangoapps/catalog/models.py
+<<<<<<< HEAD
 #: openedx/core/djangoapps/video_pipeline/models.py
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Internal API URL"
 msgstr ""
 
@@ -9513,6 +9771,7 @@ msgid ""
 msgstr ""
 
 #: openedx/core/djangoapps/catalog/models.py
+<<<<<<< HEAD
 msgid "Long Term Cache Time To Live"
 msgstr ""
 
@@ -9524,6 +9783,8 @@ msgid ""
 msgstr ""
 
 #: openedx/core/djangoapps/catalog/models.py
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid ""
 "Username created for Course Catalog Integration, e.g. "
 "lms_catalog_service_user."
@@ -9840,6 +10101,7 @@ msgstr ""
 msgid "Path used to construct URLs to programs marketing pages (e.g., \"/foo\")."
 msgstr ""
 
+<<<<<<< HEAD
 #: openedx/core/djangoapps/schedules/admin.py
 msgid "Known Error Case"
 msgstr ""
@@ -9856,6 +10118,8 @@ msgstr ""
 msgid "Experience"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/schedules/apps.py
 #: openedx/core/djangoapps/schedules/models.py
 msgid "Schedules"
@@ -9878,18 +10142,80 @@ msgstr ""
 msgid "Schedule"
 msgstr ""
 
+<<<<<<< HEAD
 #: openedx/core/djangoapps/schedules/templates/dropdown_filter.html
 #, python-format
 msgid " By %(filter_title)s "
+=======
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+#, python-format
+msgid "%(platform_name)s Home Page"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+#: cms/templates/login.html cms/templates/widgets/header.html
+#: themes/red-theme/cms/templates/login.html
+msgid "Sign In"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+#, python-format
+msgid "%(platform_name)s on LinkedIn"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+#, python-format
+msgid "%(platform_name)s on Twitter"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+#, python-format
+msgid "%(platform_name)s on Facebook"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+#, python-format
+msgid "%(platform_name)s on Google Plus"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+#, python-format
+msgid "%(platform_name)s on Reddit"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+msgid "Download the iOS app on the Apple Store"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+msgid "Download the Android app on the Google Play Store"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+msgid "View on Web"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+msgid "Unsubscribe from this list"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/common/base_body.html
+msgid "Our mailing address is"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/courseupdate/email/body.html
 #, python-format
+<<<<<<< HEAD
 msgid "Welcome to week %(week_num)s of %(course_name)s!"
+=======
+msgid "Welcome to week %(week_num)s of our %(course_name)s course!"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/courseupdate/email/body.html
 #, python-format
+<<<<<<< HEAD
 msgid ""
 "We hope you're enjoying <strong>%(course_name)s</strong>! We want to let you"
 " know what you can look forward to in week %(week_num)s:"
@@ -9901,6 +10227,16 @@ msgid ""
 "With self-paced courses, you learn on your own schedule. We encourage you to"
 " spend time with the course each week. Your focused attention will pay off "
 "in the end!"
+=======
+msgid "Welcome to week %(week_num)s of <strong>%(course_name)s</strong>!"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/courseupdate/email/body.html
+#, python-format
+msgid ""
+"Here is what you can look forward to learning this week: "
+"<p>%(week_summary)s</p>"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/courseupdate/email/body.html
@@ -9910,17 +10246,29 @@ msgstr ""
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/courseupdate/email/body.txt
 #, python-format
 msgid ""
+<<<<<<< HEAD
 "We hope you're enjoying %(course_name)s! We want to let you know what you "
 "can look forward to in week %(week_num)s:"
+=======
+"Welcome to week %(week_num)s of our %(course_name)s course! Here is what you"
+" can look forward to learning this week: %(week_summary)s"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/courseupdate/email/subject.txt
 #, python-format
+<<<<<<< HEAD
 msgid "Welcome to week %(week_num)s "
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.txt
+=======
+msgid "%(course_name)s - Welcome to Week %(week_num)s "
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
+>>>>>>> [ci skip] reverting conftest
 #, python-format
 msgid ""
 "Many %(platform_name)s learners are completing more problems every week, and"
@@ -9929,7 +10277,10 @@ msgid ""
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
+<<<<<<< HEAD
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.txt
+=======
+>>>>>>> [ci skip] reverting conftest
 #, python-format
 msgid ""
 "Many %(platform_name)s learners in %(course_name)s are completing more "
@@ -9943,11 +10294,26 @@ msgid "Keep up the momentum!"
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
+<<<<<<< HEAD
 #, python-format
 msgid ""
 "Many %(platform_name)s learners in <strong>%(course_name)s</strong> are "
 "completing more problems every week, and participating in the discussion "
 "forums. What do you want to do to keep learning?"
+=======
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.txt
+msgid ""
+"Many edX learners are completing more problems every week, and participating"
+" in the discussion forums. What do you want to do to keep learning?"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
+#, python-format
+msgid ""
+"Many edX learners in <strong>%(course_name)s</strong> are completing more "
+"problems every week, and participating in the discussion forums. What do you"
+" want to do to keep learning?"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
@@ -9955,21 +10321,65 @@ msgstr ""
 msgid "Keep learning"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
+#, python-format
+msgid ""
+"Don't miss the opportunity to highlight your new knowledge and skills by "
+"earning a verified certificate. Upgrade by "
+"%(user_schedule_upgrade_deadline_time)s."
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.html
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
+msgid "Upgrade Now"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.txt
+#, python-format
+msgid ""
+"Many edX learners in %(course_name)s are completing more problems every "
+"week, and participating in the discussion forums. What do you want to do to "
+"keep learning?"
+msgstr ""
+
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day10/email/body.txt
+#: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
+#, python-format
+msgid ""
+"Don't miss the opportunity to highlight your new knowledge and skills by "
+"earning a verified certificate. Upgrade by "
+"%(user_schedule_upgrade_deadline_time)s. Upgrade Now! <%(upsell_link)s>"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #, python-format
 msgid ""
+<<<<<<< HEAD
 "Remember when you enrolled in %(course_name)s, and other courses on "
 "%(platform_name)s? We do, and we’re glad to have you! Come see what everyone"
 " is learning."
+=======
+"Remember when you enrolled in %(course_name)s, and other courses on edX.org?"
+" We do, and we’re glad to have you! Come see what everyone is learning."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #, python-format
 msgid ""
+<<<<<<< HEAD
 "Remember when you enrolled in %(course_name)s on %(platform_name)s? We do, "
 "and we’re glad to have you! Come see what everyone is learning."
+=======
+"Remember when you enrolled in %(course_name)s on edX.org? We do, and we’re "
+"glad to have you! Come see what everyone is learning."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
@@ -9980,21 +10390,34 @@ msgstr ""
 #, python-format
 msgid ""
 "Remember when you enrolled in <strong>%(course_name)s</strong>, and other "
+<<<<<<< HEAD
 "courses on %(platform_name)s? We do, and we’re glad to have you! Come see "
 "what everyone is learning."
+=======
+"courses on edX.org? We do, and we’re glad to have you! Come see what "
+"everyone is learning."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
 #, python-format
 msgid ""
+<<<<<<< HEAD
 "Remember when you enrolled in <strong>%(course_name)s</strong> on "
 "%(platform_name)s? We do, and we’re glad to have you! Come see what everyone"
 " is learning."
+=======
+"Remember when you enrolled in <strong>%(course_name)s</strong> on edX.org? "
+"We do, and we’re glad to have you! Come see what everyone is learning."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.html
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
+<<<<<<< HEAD
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Start learning now"
 msgstr ""
 
@@ -10012,6 +10435,7 @@ msgstr ""
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.txt
 #, python-format
 msgid ""
+<<<<<<< HEAD
 "We hope you are enjoying learning with us so far on %(platform_name)s! A "
 "verified certificate allows you to highlight your new knowledge and skills. "
 "An %(platform_name)s certificate is official and easily shareable. Upgrade "
@@ -10026,6 +10450,12 @@ msgid ""
 " verified certificate allows you to highlight your new knowledge and skills."
 " An %(platform_name)s certificate is official and easily shareable. Upgrade "
 "by %(user_schedule_upgrade_deadline_time)s."
+=======
+"We hope you are enjoying learning with us so far in %(course_name)s! A "
+"verified certificate will allow you to highlight your new knowledge and "
+"skills. It's official, and easily shareable. Upgrade by "
+"%(user_schedule_upgrade_deadline_time)s."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
@@ -10035,6 +10465,7 @@ msgstr ""
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
 #, python-format
 msgid ""
+<<<<<<< HEAD
 "We hope you are enjoying learning with us so far on "
 "<strong>%(platform_name)s</strong>! A verified certificate allows you to "
 "highlight your new knowledge and skills. An %(platform_name)s certificate is"
@@ -10048,6 +10479,12 @@ msgid ""
 "<strong>%(first_course_name)s</strong>! A verified certificate allows you to"
 " highlight your new knowledge and skills. An %(platform_name)s certificate "
 "is official and easily shareable."
+=======
+"We hope you are enjoying learning with us so far in "
+"<strong>%(course_name)s</strong>! A verified certificate will allow you to "
+"highlight your new knowledge and skills. It's official, and easily "
+"shareable."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
@@ -10056,11 +10493,15 @@ msgid "Upgrade by <strong>%(user_schedule_upgrade_deadline_time)s</strong>."
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
+<<<<<<< HEAD
 msgid "You are eligible to upgrade in these courses:"
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
 msgid "Example of a verified certificate"
+=======
+msgid "Example print-out of a verified certificate"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.txt
@@ -10069,12 +10510,16 @@ msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/subject.txt
 #, python-format
+<<<<<<< HEAD
 msgid "Upgrade to earn a verified certificate on %(platform_name)s"
 msgstr ""
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/subject.txt
 #, python-format
 msgid "Upgrade to earn a verified certificate in %(first_course_name)s"
+=======
+msgid "Upgrade to earn a verified certificate in %(course_name)s"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/self_paced/models.py
@@ -10222,6 +10667,11 @@ msgstr ""
 #. a field on the password reset form meant to hold the user's email address.
 #. Translators: This example email address is used as a placeholder in
 #. a field on the login form meant to hold the user's email address.
+<<<<<<< HEAD
+=======
+#. Translators: This example email address is used as a placeholder in
+#. a field on the registration form meant to hold the user's email address.
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/user_api/api.py
 #: openedx/core/djangoapps/user_api/views.py
 msgid "username@domain.com"
@@ -10274,6 +10724,15 @@ msgstr ""
 msgid "Confirm Email"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#. Translators: This example name is used as a placeholder in
+#. a field on the registration form meant to hold the user's name.
+#: openedx/core/djangoapps/user_api/api.py
+msgid "Jane Q. Learner"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #. Translators: These instructions appear on the registration form,
 #. immediately
 #. below a field meant to hold the user's full name.
@@ -10300,6 +10759,15 @@ msgid ""
 "The name that will identify you in your courses. It cannot be changed later."
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#. Translators: This example username is used as a placeholder in
+#. a field on the registration form meant to hold the user's username.
+#: openedx/core/djangoapps/user_api/api.py
+msgid "Jane_Q_Learner"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's highest completed level of education.
 #: openedx/core/djangoapps/user_api/api.py
@@ -10314,6 +10782,48 @@ msgid "Year of birth"
 msgstr ""
 
 #. Translators: This label appears above a dropdown menu on the registration
+<<<<<<< HEAD
+=======
+#. form used to select the user's profession
+#: openedx/core/djangoapps/user_api/api.py
+msgid "Profession"
+msgstr ""
+
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's specialty
+#: openedx/core/djangoapps/user_api/api.py
+msgid "Specialty"
+msgstr ""
+
+#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's mailing address.
+#: openedx/core/djangoapps/user_api/api.py lms/templates/signup_modal.html
+msgid "Mailing address"
+msgstr ""
+
+#. Translators: This phrase appears above a field on the registration form
+#. meant to hold the user's reasons for registering with edX.
+#: openedx/core/djangoapps/user_api/api.py
+#, python-brace-format
+msgid "Tell us why you're interested in {platform_name}"
+msgstr ""
+
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the State/Province/Region in which they
+#. live.
+#: openedx/core/djangoapps/user_api/api.py
+msgid "State/Province/Region"
+msgstr ""
+
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the Company
+#: openedx/core/djangoapps/user_api/api.py
+msgid "Company"
+msgstr ""
+
+#. Translators: This label appears above a dropdown menu on the registration
+>>>>>>> [ci skip] reverting conftest
 #. form used to select the country in which the user lives.
 #: openedx/core/djangoapps/user_api/api.py
 msgid "Country or Region of Residence"
@@ -10326,6 +10836,13 @@ msgstr ""
 msgid "The country or region where you live."
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: openedx/core/djangoapps/user_api/api.py
+msgid "Review the Honor Code"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #. Translators: This is a legal document users must agree to
 #. in order to register a new account.
 #: openedx/core/djangoapps/user_api/api.py
@@ -10333,10 +10850,14 @@ msgid "Terms of Service and Honor Code"
 msgstr ""
 
 #: openedx/core/djangoapps/user_api/api.py
+<<<<<<< HEAD
 #, python-brace-format
 msgid ""
 "I agree to the {platform_name} "
 "{terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}"
+=======
+msgid "Review the Terms of Service and Honor Code"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #. Translators: "Terms of Service" is a legal document users must agree to
@@ -10345,16 +10866,32 @@ msgstr ""
 #. in order to register a new account.
 #: openedx/core/djangoapps/user_api/api.py
 #, python-brace-format
+<<<<<<< HEAD
 msgid "You must agree to the {platform_name} {terms_of_service}"
 msgstr ""
 
+=======
+msgid "I agree to the {platform_name} {terms_of_service}"
+msgstr ""
+
+#. Translators: "Terms of Service" is a legal document users must agree to
+#. in order to register a new account.
+>>>>>>> [ci skip] reverting conftest
 #. Translators: "Terms of service" is a legal document users must agree to
 #. in order to register a new account.
 #: openedx/core/djangoapps/user_api/api.py
 #, python-brace-format
+<<<<<<< HEAD
 msgid ""
 "I agree to the {platform_name} "
 "{tos_link_start}{terms_of_service}{tos_link_end}"
+=======
+msgid "You must agree to the {platform_name} {terms_of_service}"
+msgstr ""
+
+#: openedx/core/djangoapps/user_api/api.py
+msgid "Review the Terms of Service"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/core/djangoapps/user_api/preferences/api.py
@@ -10421,6 +10958,7 @@ msgstr ""
 msgid "The course key for the course we would like to be auto-cohorted."
 msgstr ""
 
+<<<<<<< HEAD
 #: openedx/core/djangoapps/video_pipeline/models.py
 msgid "Oauth client name of video pipeline service."
 msgstr ""
@@ -10434,6 +10972,8 @@ msgid ""
 "Username created for Video Pipeline Integration, e.g. veda_service_user."
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: openedx/core/djangoapps/waffle_utils/models.py
 msgid "Force On"
 msgstr ""
@@ -11154,6 +11694,7 @@ msgid "You have already voted as many times as you are allowed."
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
 #, python-brace-format
 msgid ""
@@ -11170,6 +11711,10 @@ msgid "Bookmarks"
 #: src/xblock-poll/poll/poll.py
 msgid "You must specify a question."
 >>>>>>> upstream master merge
+=======
+#: src/xblock-poll/poll/poll.py
+msgid "You must specify a question."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: src/xblock-poll/poll/poll.py
@@ -11187,6 +11732,7 @@ msgid "No"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: openedx/features/course_experience/views/course_home_messages.py
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -11196,6 +11742,10 @@ msgid "Sign in"
 #: src/xblock-poll/poll/poll.py
 msgid "Maybe"
 >>>>>>> upstream master merge
+=======
+#: src/xblock-poll/poll/poll.py
+msgid "Maybe"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: src/xblock-poll/poll/poll.py
@@ -11238,6 +11788,7 @@ msgid "Found unknown answer '{answer_key}' for question key '{question_key}'"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: openedx/features/enterprise_support/utils.py
 #, python-brace-format
 msgid ""
@@ -11274,6 +11825,10 @@ msgstr ""
 msgid ""
 "Remember when you enrolled in %(course_name)s on edX.org? We do, and we’re "
 "glad to have you! Come see what everyone is learning."
+=======
+#: src/xblock-poll/poll/poll.py
+msgid "Question"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: cms/djangoapps/contentstore/course_group_config.py
@@ -11537,6 +12092,13 @@ msgstr ""
 msgid "Vertical"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: cms/djangoapps/contentstore/views/helpers.py
+msgid "Empty"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #: cms/djangoapps/contentstore/views/import_export.py
 msgid "File upload corrupted. Please try again"
 msgstr ""
@@ -11642,6 +12204,7 @@ msgstr ""
 msgid "Access restricted to: {list_of_groups}"
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/djangoapps/contentstore/views/transcript_settings.py
 msgid "The information you entered is incorrect."
 msgstr ""
@@ -11666,6 +12229,8 @@ msgid ""
 "file."
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: cms/djangoapps/contentstore/views/transcripts_ajax.py
 msgid "Incoming video data is empty."
 msgstr ""
@@ -11987,6 +12552,14 @@ msgstr ""
 msgid "Course Outline"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: cms/templates/course_outline.html
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Course Start Date:"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #: cms/templates/html_error.html lms/templates/module-error.html
 msgid "Error:"
 msgstr ""
@@ -12005,12 +12578,18 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
+<<<<<<< HEAD
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
+=======
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+>>>>>>> [ci skip] reverting conftest
 msgid "Courses"
 msgstr ""
 
@@ -12108,16 +12687,21 @@ msgid "Legal"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: cms/templates/widgets/header.html lms/templates/header/header.html
 =======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
 >>>>>>> upstream master merge
+=======
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
 msgstr ""
 
 #: cms/templates/widgets/header.html lms/templates/user_dropdown.html
+<<<<<<< HEAD
 #: lms/templates/header/user_dropdown.html
 msgid "Account"
 msgstr ""
@@ -12133,6 +12717,16 @@ msgstr ""
 #: lms/templates/static_templates/help.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 #: wiki/plugins/help/wiki_plugin.py
+=======
+#: themes/edx.org/lms/templates/header.html
+msgid "Account"
+msgstr ""
+
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/static_templates/help.html
+#: themes/edx.org/lms/templates/header.html wiki/plugins/help/wiki_plugin.py
+>>>>>>> [ci skip] reverting conftest
 msgid "Help"
 msgstr ""
 
@@ -12186,11 +12780,18 @@ msgstr ""
 msgid "Send an email to {email}"
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/templates/widgets/tabs-aggregator.html
 #: lms/templates/courseware/static_tab.html
 #: lms/templates/courseware/tab-view-v2.html
 #: lms/templates/courseware/tab-view.html
 msgid "name"
+=======
+#: cms/templates/widgets/sock.html lms/templates/support/contact_us.html
+#: themes/edx.org/cms/templates/widgets/sock.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "Contact Us"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
@@ -12202,7 +12803,10 @@ msgid "Usermenu dropdown"
 msgstr ""
 
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
+<<<<<<< HEAD
 #: lms/templates/header/user_dropdown.html
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Sign Out"
 msgstr ""
 
@@ -12242,6 +12846,7 @@ msgstr ""
 msgid "Feedback from user"
 msgstr ""
 
+<<<<<<< HEAD
 #: common/templates/emails/sync_learner_profile_data_email_change_body.txt
 msgid ""
 "The email associated with your {platform_name} account has changed from "
@@ -12262,6 +12867,8 @@ msgstr ""
 msgid "Your {platform_name} account email has been updated"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/djangoapps/discussion/templates/discussion/discussion_board_fragment.html
 msgid "Add a Post"
 msgstr ""
@@ -12346,7 +12953,10 @@ msgid "View all Courses"
 msgstr ""
 
 #: lms/templates/dashboard.html lms/templates/user_dropdown.html
+<<<<<<< HEAD
 #: lms/templates/header/user_dropdown.html
+=======
+>>>>>>> [ci skip] reverting conftest
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Dashboard"
 msgstr ""
@@ -12356,6 +12966,7 @@ msgid "You are not enrolled in any courses yet."
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/dashboard.html
 #: lms/templates/header/navbar-not-authenticated.html
 =======
@@ -12363,6 +12974,10 @@ msgstr ""
 >>>>>>> upstream master merge
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
+=======
+#: lms/templates/dashboard.html lms/templates/navigation.html
+#: lms/templates/navigation/navbar-authenticated.html
+>>>>>>> [ci skip] reverting conftest
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Explore courses"
 msgstr ""
@@ -12402,8 +13017,11 @@ msgstr ""
 
 #: lms/templates/dashboard.html lms/templates/ccx/enrollment.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Unenroll"
@@ -13191,6 +13809,7 @@ msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/register-form.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -13201,6 +13820,8 @@ msgstr ""
 
 =======
 >>>>>>> upstream master merge
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/register-form.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Create My Account"
@@ -13317,11 +13938,19 @@ msgid "Previous"
 msgstr ""
 
 #: lms/templates/seq_module.html
+<<<<<<< HEAD
 msgid "Next"
 msgstr ""
 
 #: lms/templates/seq_module.html
 msgid "Sequence"
+=======
+msgid "Sequence"
+msgstr ""
+
+#: lms/templates/seq_module.html
+msgid "Next"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/signup_modal.html
@@ -13617,10 +14246,13 @@ msgstr ""
 msgid "No git import logs have been recorded for this course."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/text-me-the-app.html
 msgid "Text Me The App"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/textannotation.html
 msgid "Source:"
 msgstr ""
@@ -13656,7 +14288,11 @@ msgid ""
 " not mean to do this, {undo_link_start}you can re-subscribe{link_end}."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/user_dropdown.html lms/templates/header/user_dropdown.html
+=======
+#: lms/templates/user_dropdown.html
+>>>>>>> [ci skip] reverting conftest
 msgid "Dashboard for:"
 msgstr ""
 
@@ -13664,11 +14300,14 @@ msgstr ""
 msgid "More options"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/user_dropdown.html lms/templates/header/header.html
 #: lms/templates/header/user_dropdown.html
 msgid "More Options"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/using.html
 msgid "Using the system"
 msgstr ""
@@ -14655,7 +15294,11 @@ msgstr ""
 msgid "time"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/ccx/schedule.html
+=======
+#: lms/templates/ccx/schedule.html lms/templates/support/contact_us.html
+>>>>>>> [ci skip] reverting conftest
 msgid "(Optional)"
 msgstr ""
 
@@ -15220,6 +15863,7 @@ msgid "Updates to Discussion Posts You Follow"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+<<<<<<< HEAD
 msgid "Purchase the Program ("
 msgstr ""
 
@@ -15241,6 +15885,9 @@ msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
 msgid "{currency})"
+=======
+msgid "Purchase the Program"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
@@ -15312,6 +15959,21 @@ msgid "Price (USD)"
 msgstr ""
 
 #: lms/templates/courseware/program_marketing.html
+<<<<<<< HEAD
+=======
+msgid "Original Price"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "${oldPrice}"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+msgid "Discounted Price"
+msgstr ""
+
+#: lms/templates/courseware/program_marketing.html
+>>>>>>> [ci skip] reverting conftest
 msgid "${newPrice}{htmlEnd} for entire program"
 msgstr ""
 
@@ -15480,16 +16142,28 @@ msgstr ""
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
 msgid ""
+<<<<<<< HEAD
 "Congratulations! You are now eligible to receive course credit from "
 "{providers} for successfully completing your {platform_name} course! "
 "{link_start}Purchase credit now.{link_end}"
+=======
+"Congratulations! You are eligible to receive course credit from {providers} "
+"for successfully completing your {platform_name} course! {link_start}Get "
+"your credit now.{link_end}"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
 msgid ""
+<<<<<<< HEAD
 "Congratulations! You are now eligible to receive course credit for "
 "successfully completing your {platform_name} course! {link_start}Purchase "
 "credit now.{link_end}"
+=======
+"Congratulations! You are eligible to receive course credit for successfully "
+"completing your {platform_name} course! {link_start}Get your credit "
+"now.{link_end}"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
@@ -15500,6 +16174,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
+<<<<<<< HEAD
 msgid "There are 2 steps to getting course credit."
 msgstr ""
 
@@ -15516,6 +16191,13 @@ msgid ""
 "{bold_start}Request Credit{bold_end} button under the course title to "
 "request an official academic transcript at the institution that granted the "
 "credit."
+=======
+msgid ""
+"To get course credit, simply go to your {link_start}{platform_name} "
+"dashboard{link_end} and click the <b>Get Credit</b> button. After you "
+"receive your credit, you will also have an official academic transcript at "
+"the institution that granted the credit."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
@@ -15667,6 +16349,7 @@ msgid "Starts - {date}"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+<<<<<<< HEAD
 msgid "You must select a session by {expiration_date} to access the course."
 msgstr ""
 
@@ -15687,11 +16370,17 @@ msgid "You can change sessions until {entitlement_expiration_date}."
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "View Archived Course"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+<<<<<<< HEAD
 msgid "I'm taking {course_name} online with {facebook_brand}. Check it out!"
+=======
+msgid "I'm taking {course_name} online with edX.org. Check it out!"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -15704,7 +16393,11 @@ msgid "Share on Facebook"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+<<<<<<< HEAD
 msgid "I'm taking {course_name} online with {twitter_brand}. Check it out!"
+=======
+msgid "I'm taking {course_name} online with @edxonline. Check it out!"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -15716,12 +16409,18 @@ msgid "Course options for"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Available Actions"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Email Settings"
 msgstr ""
 
@@ -15730,6 +16429,7 @@ msgid "Related Programs"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+<<<<<<< HEAD
 msgid "Buy all remaining courses in this program and save 10%"
 msgstr ""
 
@@ -15761,6 +16461,8 @@ msgid ""
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Verification not yet complete."
 msgstr ""
 
@@ -15837,7 +16539,10 @@ msgid ""
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You can no longer access this course because payment has not yet been "
@@ -15846,7 +16551,10 @@ msgid ""
 "{unenroll_link_start}unenroll{unenroll_link_end} from this course"
 msgstr ""
 
+<<<<<<< HEAD
 >>>>>>> upstream master merge
+=======
+>>>>>>> [ci skip] reverting conftest
 #. Translators: provider_name is the name of a credit provider or university
 #. (e.g. State University)
 #: lms/templates/dashboard/_dashboard_credit_info.html
@@ -15913,6 +16621,7 @@ msgid ""
 "An error occurred with this transaction. For help, contact {support_email}."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html
 msgid "Course options for {courseName}"
 msgstr ""
@@ -15931,6 +16640,8 @@ msgstr ""
 msgid "View Consent"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/dashboard/_dashboard_status_verification.html
 msgid "Current Verification Status: Approved"
 msgstr ""
@@ -16900,6 +17611,7 @@ msgid "Apply for Financial Assistance"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/header/brand.html
 #: lms/templates/header/navbar-logo-header.html
 #: lms/templates/navigation/navbar-logo-header.html
@@ -16968,6 +17680,8 @@ msgstr ""
 
 =======
 >>>>>>> upstream master merge
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Add Coupon Code"
@@ -17153,10 +17867,13 @@ msgid "Course Display Name:"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
+<<<<<<< HEAD
 msgid "Course Start Date:"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
+=======
+>>>>>>> [ci skip] reverting conftest
 msgid "Course End Date:"
 msgstr ""
 
@@ -18521,6 +19238,7 @@ msgid "Program Details"
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr ""
@@ -18539,6 +19257,8 @@ msgstr ""
 
 =======
 >>>>>>> upstream master merge
+=======
+>>>>>>> [ci skip] reverting conftest
 #: lms/templates/modal/_modal-settings-language.html
 msgid "Change Preferred Language"
 msgstr ""
@@ -18558,6 +19278,7 @@ msgid ""
 msgstr ""
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Explore Courses"
 msgstr ""
@@ -18569,6 +19290,11 @@ msgid "Global"
 #: themes/edx.org/lms/templates/header.html
 msgid "Profile"
 >>>>>>> upstream master merge
+=======
+#: lms/templates/navigation/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+msgid "Profile"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/peer_grading/peer_grading.html
@@ -19324,7 +20050,51 @@ msgid "Student Support: Certificates"
 msgstr ""
 
 #: lms/templates/support/contact_us.html
+<<<<<<< HEAD
 msgid "Contact {platform_name} Support"
+=======
+msgid "Contact US"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "Your question may have already been answered."
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "Visit edX Help"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "Sign in for a faster response"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "What can we help you with, {username}?"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "Message"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "The more you tell us, themore quickly and helpfully we can respond!"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "Add Attachment"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "1 file uploaded:"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "Remove file"
+msgstr ""
+
+#: lms/templates/support/contact_us.html
+msgid "Cancel upload"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/support/enrollment.html
@@ -19599,6 +20369,7 @@ msgstr ""
 msgid "Important Course Dates"
 msgstr ""
 
+<<<<<<< HEAD
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Goal: "
 msgstr ""
@@ -19693,16 +20464,73 @@ msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Upgrade ({course_price})"
+=======
+#: openedx/features/course_experience/templates/course_experience/course-dates-fragment.html
+msgid "Today is {date}"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Show/Hide"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Show less"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid ""
+"Sample verified certificate with your name, the course title, the logo of "
+"the institution and the signatures of the instructors for this course."
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Official proof of completion"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Easily shareable certificate"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Proven motivator to complete the course"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Certificate purchases help us continue to offer free courses"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Upgrade ({price})"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Goal: "
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Edit your course goal:"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+msgid "{subsection_format} due {{date}}"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+msgid "This is your last visited course section."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/course-updates-fragment.html
 msgid "This course does not have any updates."
 msgstr ""
 
+<<<<<<< HEAD
 #: openedx/features/course_experience/templates/course_experience/dates-summary.html
 msgid "Today is {date}"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
 msgstr ""
@@ -19792,15 +20620,25 @@ msgid "Page Footer"
 msgstr ""
 
 #: themes/edx.org/lms/templates/footer.html
+<<<<<<< HEAD
 msgid "edX Home Page"
 msgstr ""
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "© 2012–{year} edX Inc. "
+=======
+#: themes/edx.org/lms/templates/certificates/_about-edx.html
+msgid "About edX"
+msgstr ""
+
+#: themes/edx.org/lms/templates/footer.html
+msgid "edX Home Page"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: themes/edx.org/lms/templates/footer.html
 msgid ""
+<<<<<<< HEAD
 "EdX, Open edX, and MicroMasters are trademarks of edX Inc., registered in "
 "the U.S. and other countries."
 msgstr ""
@@ -19815,6 +20653,23 @@ msgid ""
 "© 2012–{year} edX Inc.  All rights reserved except where noted.  EdX, Open "
 "edX and the edX and Open edX logos are registered trademarks or trademarks "
 "of edX Inc."
+=======
+"© 2012–{year} edX Inc.  All rights reserved except where noted.  EdX, Open "
+"edX and the edX and Open edX logos are registered trademarks or trademarks "
+"of edX Inc."
+msgstr ""
+
+#: themes/edx.org/lms/templates/header.html
+msgid "Main"
+msgstr ""
+
+#: themes/edx.org/lms/templates/header.html
+msgid "Find Courses"
+msgstr ""
+
+#: themes/edx.org/lms/templates/header.html
+msgid "Schools & Partners"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: themes/edx.org/lms/templates/certificates/_about-accomplishments.html
@@ -19885,6 +20740,7 @@ msgid ""
 "certificates to help fund free education for everyone globally"
 msgstr ""
 
+<<<<<<< HEAD
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Find Courses"
 msgstr ""
@@ -19893,6 +20749,8 @@ msgstr ""
 msgid "Schools & Partners"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
 #: themes/red-theme/lms/templates/footer.html
@@ -20021,10 +20879,13 @@ msgstr ""
 msgid "If the problem persists, please email us at {email_link}."
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/templates/accessibility.html
 msgid "Studio Accessibility Policy"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #: cms/templates/activation_active.html cms/templates/activation_complete.html
 #: cms/templates/activation_invalid.html
 msgid "{studio_name} Account Activation"
@@ -20592,8 +21453,13 @@ msgstr ""
 msgid "Edit Start Date"
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/templates/course_outline.html cms/templates/settings.html
 msgid "Course Pacing"
+=======
+#: cms/templates/course_outline.html
+msgid "Course Pacing:"
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: cms/templates/course_outline.html cms/templates/settings.html
@@ -21553,6 +22419,7 @@ msgid "What content is imported?"
 msgstr ""
 
 #: cms/templates/import.html
+<<<<<<< HEAD
 msgid "The following content is imported."
 msgstr ""
 
@@ -21587,6 +22454,13 @@ msgstr ""
 
 #: cms/templates/import.html
 msgid "The course team"
+=======
+msgid ""
+"Only the course content and structure (including sections, subsections, and "
+"units) are imported. Other data, including student data, grading "
+"information, discussion forum data, course settings, and course team "
+"information, remains the same as it was in the existing course."
+>>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: cms/templates/import.html
@@ -22615,6 +23489,13 @@ msgid ""
 msgstr ""
 
 #: cms/templates/settings.html
+<<<<<<< HEAD
+=======
+msgid "Course Pacing"
+msgstr ""
+
+#: cms/templates/settings.html
+>>>>>>> [ci skip] reverting conftest
 msgid "Set the pacing for this course"
 msgstr ""
 
@@ -23051,6 +23932,7 @@ msgid ""
 " account."
 msgstr ""
 
+<<<<<<< HEAD
 #: cms/templates/widgets/footer.html
 msgid "Policies"
 msgstr ""
@@ -23059,6 +23941,8 @@ msgstr ""
 msgid "Accessibility Accommodation Request"
 msgstr ""
 
+=======
+>>>>>>> [ci skip] reverting conftest
 #. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
 #. Inc.'. Please do not translate any of these trademarks and company names.
 #: cms/templates/widgets/footer.html
@@ -23163,6 +24047,13 @@ msgstr ""
 msgid "Open edX Portal"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: cms/templates/widgets/tabs-aggregator.html
+msgid "name"
+msgstr ""
+
+>>>>>>> [ci skip] reverting conftest
 #: cms/templates/widgets/user_dropdown.html
 msgid "Currently signed in as:"
 msgstr ""
