@@ -231,8 +231,17 @@ class MicrositesViewSet(ViewSet):
         platform_name = request.data.get('platform_name', None)
         course_org_filter = request.data.get('course_org_filter', None)
 
+        if site_url is None:
+            generate_error_response('SITE_NAME')
+        if site_name  is None:
+            generate_error_response('domain_prefix')
+        if platform_name is None:
+            generate_error_response('platform_name')
+        if course_org_filter is None:
+            generate_error_response('course_org_filter')
+
         # Check if staging is in the site name, strip staging from the name
-        if 'staging' in site_name:
+        if site_name is not None and 'staging' in site_name:
             site_name = site_name.replace('staging.', '')
 
         # need to check if site exists, do not duplicate
@@ -252,14 +261,6 @@ class MicrositesViewSet(ViewSet):
         
         messages = {}
 
-        if site_url is None:
-            generate_error_response('SITE_NAME')
-        if site_name  is None:
-            generate_error_response('domain_prefix')
-        if platform_name is None:
-            generate_error_response('platform_name')
-        if course_org_filter is None:
-            generate_error_response('course_org_filter')
             
         # Check if org exits, if not add organization
         try:
