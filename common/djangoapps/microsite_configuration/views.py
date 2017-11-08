@@ -219,10 +219,10 @@ class MicrositesViewSet(ViewSet):
         Site = apps.get_model('sites', 'Site')
 
         # Parse the request.data as json
-        site_url = request.data['SITE_NAME']
-        site_name = request.data['domain_prefix']
-        platform_name = request.data['platform_name']
-        course_org_filter = request.data['course_org_filter']
+        site_url = request.data.get('SITE_NAME', None)
+        site_name = request.data.get('domain_prefix', None)
+        platform_name = request.data.get('platform_name', None)
+        course_org_filter = request.data.get('course_org_filter', None)
 
         # Check if staging is in the site name, strip staging from the name
         if 'staging' in site_name:
@@ -251,7 +251,7 @@ class MicrositesViewSet(ViewSet):
         except org_exceptions.InvalidOrganizationException:
             organizations_api.add_organization(org_data)
         if 's3_logo_url' in request.data:
-            s3_logo_url = request.data['s3_logo_url']
+            s3_logo_url = request.data.get('s3_logo_url', None)
             try:
                 save_org_logo(s3_logo_url, course_org_filter)
                 messages['logo-image-error'] = ""
@@ -366,10 +366,11 @@ class MicrositesDetailView(ViewSet):
         messages = {}
 
         # Parse the request.data as json
-        site_url = request.data['SITE_NAME']
-        site_name = request.data['domain_prefix']
-        platform_name = request.data['platform_name']
-        course_org_filter = request.data['course_org_filter']
+        site_url = request.data.get('SITE_NAME', None)
+        site_name = request.data.get('domain_prefix', None)
+        platform_name = request.data.get('platform_name', None)
+        course_org_filter = request.data.get('course_org_filter', None)
+
         
         # Get the microsite
         microsite = Microsite.objects.get(pk=pk)
@@ -403,7 +404,7 @@ class MicrositesDetailView(ViewSet):
         Microsite.objects.filter(pk=pk).update(values=request.data)
 
         if 's3_logo_url' in request.data:
-            s3_logo_url = request.data['s3_logo_url']
+            s3_logo_url = request.data.get('s3_logo_url', None)
             try:
                 save_org_logo(s3_logo_url, course_org_filter)
                 messages['logo-image-error'] = ""
