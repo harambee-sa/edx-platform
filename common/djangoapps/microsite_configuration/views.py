@@ -84,9 +84,11 @@ def save_org_logo(url, org_short_name):
         raise
         
 def generate_error_response(string):
-
+    """
+    Generate Response with error message about missing request data
+    """
     return Response(
-        { "error": "{str} has blank, it must be include in request body.".format(string=string)},
+        {"error": "{} is None, please add to request body.".format(string)},
         status=status.HTTP_400_BAD_REQUEST
     )
 
