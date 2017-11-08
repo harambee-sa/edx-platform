@@ -2,38 +2,103 @@
 """
 Views for microsites api end points.
 """
-import sys, yaml
+import cStringIO  
 from collections import OrderedDict
+import copy
+import logging
+from PIL import Image
+import sys, yaml
+import urllib2
+import urlparse 
+
 from django.apps import apps
 from django.conf import settings
 from django.contrib.sites.models import Site
+from django.core.files.base import ContentFile, File
+from django.db import IntegrityError
+from django.shortcuts import get_object_or_404
+
 from edx_rest_framework_extensions.authentication import JwtAuthentication
+
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.viewsets import ViewSet
-from django.shortcuts import get_object_or_404
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_oauth.authentication import OAuth2Authentication
-from microsite_configuration.models import Microsite, MicrositeOrganizationMapping
-from microsite_configuration.serializers import MicrositeSerializer, MicrositeModelSerializer
+from rest_framework.viewsets import ViewSet
+
+from microsite_configuration.models import \
+    Microsite, MicrositeOrganizationMapping
+
+from microsite_configuration.serializers import \
+    MicrositeSerializer, MicrositeModelSerializer
+
 from organizations import api as organizations_api
 from organizations import exceptions as org_exceptions
-from openedx.core.djangoapps.user_api.errors import UserNotFound, UserNotAuthorized
+from organizations.models import Organization
 
+from openedx.core.djangoapps.user_api.errors import \
+    UserNotFound, UserNotAuthorized
+
+log = logging.getLogger(__name__)
+
+def download_image(url):
+    """
+    Downloads an image
+    Returns a PIL Image, otherwise raises an exception.
+    """
+    r = urllib2.Request(url)
+    try:
+        request = urllib2.urlopen(r, timeout=10)
+        image_data = cStringIO.StringIO(request.read()) # StringIO is a file
+        img = Image.open(image_data) # Creates an instance of PIL Image class
+        if img.format in ('PNG', 'png'):
+            return img
+        else:
+            return None
+    except urllib2.HTTPError as e:
+        log.error(e)
+        raise
+        
+
+
+def save_org_logo(url, org_short_name):
+    """
+    Download and save remote organization logo
+    """
+    try:
+        image = download_image(url)
+        filename = urlparse.urlparse(url).path.split('/')[-1]
+        tempfile = image
+        tempfile_io = cStringIO.StringIO() # Creates file-like object in mem
+        tempfile.save(tempfile_io, format=image.format)
+        org = Organization.objects.get(short_name=org_short_name)
+        org.logo.save(
+            filename,
+            ContentFile(tempfile_io.getvalue()),
+            save=False
+        )
+        org.save()
+    except Exception as e:
+        log.error(e)
+        raise
+        
+
+
+"""        
+    The following 3 methods are helper functions to:       
+        1: generate a proper json object for the microsite values       
+        2: generate a yaml file that gets saved on the server that will be used
+           to generate config files for the microsites to run through lms and
+           for the nginx site configurations.                 
+        The file location is controlled via EDXAPP_MICROSITE_CONFIG_FILE kept
+        in server_vars.yml               
 """
-    The following 3 methods are helper functions to:
-        1: generate a proper json object for the microsite values to be sent up and down the server
-        2: generate a yaml file that gets saved on the server that will be used to generate,
-           configuration files for the microsites to run through lms and for the nginx site configurations.
-           
-    The file location is controlled via EDXAPP_MICROSITE_CONFIG_FILE kept in server_vars.yml
 
-"""
-
-# Updated the given map with the key:value pair provided, but if the value provided is an OrderedDict
-# it will construct a new dict object and update the new created dict with the contents of that OrderedDict recursively
 def update_map( map, key, values):
+    """
+    Updated the given map with the key:value pair provided
+    """
     if isinstance(values, OrderedDict):
         new_map = {}
         for i in values:
@@ -42,19 +107,28 @@ def update_map( map, key, values):
     else:
         map.update({key:values})
 
-# simple utility to serve as intermetiate between save_to_file and update_map,
-# as to allow for the transformation of a single microsite value set.
+
+
 def build_inner_map(microsite):
+    """
+    simple utility to serve as intermediate between save_to_file and
+    update_map to allow for the transformation of a single microsite value set.
+    """
     inner_map = {}
 
     for item in microsite:
         update_map(inner_map, item, microsite[item])
     return inner_map
 
-# get all microsites from the database and loop over them contructing a dictionary by the use of build_inner_map,
-# each microsite is parsed with build_inner_map and then added to a main "outer" dictionary for compiling of the yaml file.
-# after all microsites has been parsed the main dictonary is dumped as a yaml file.
+
 def save_to_file():
+    """
+    get all microsites from the database and loop over them contructing a 
+    dictionary by the use of build_inner_map, each microsite is parsed with 
+    build_inner_map and then added to a main "outer" dictionary for compiling
+    of the yaml file. After all microsites have been parsed the main dictonary
+    is dumped to a yaml file.
+    """
     microsites = Microsite.objects.all()
     data = {}
     outer_map = {}
@@ -65,11 +139,16 @@ def save_to_file():
     
     f = open(settings.MICROSITE_CONFIG_FILE, 'w+')
     f.write("---\n")
-    yaml.safe_dump(data, f, default_flow_style=False, encoding='utf-8', allow_unicode=True)
+    yaml.safe_dump(
+        data,
+        f,
+        default_flow_style=False,
+        encoding='utf-8',
+        allow_unicode=True
+    )
     f.close()
 
 class MicrositesViewSet(ViewSet):
-
     """
         **Use Cases**
             Microsite view to fetch microsite data and create a new microsite
@@ -106,7 +185,7 @@ class MicrositesViewSet(ViewSet):
             "ENABLE_MKTG_URLS": false
             }
 
-         Inserts a new organization into app/local state given the following dictionary:
+         Inserts new organization into app/local state given the following:
 
          {
              'name': string,
@@ -114,12 +193,15 @@ class MicrositesViewSet(ViewSet):
              'description': string,
              'logo': (not required),
          }
-         Returns an updated dictionary including a new 'id': integer field/value
+         Returns updated dictionary including a new 'id': integer field/value
     """
-    queryset = Microsite.objects.all()  # pylint: disable=no-member
+
+    queryset = Microsite.objects.all()
     serializer_class = MicrositeSerializer
     lookup_field = 'key'
-    authentication_classes = (OAuth2Authentication, JwtAuthentication, SessionAuthentication)
+    authentication_classes =\
+        (OAuth2Authentication, JwtAuthentication, SessionAuthentication)
+
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, format=None):
@@ -137,62 +219,77 @@ class MicrositesViewSet(ViewSet):
         Site = apps.get_model('sites', 'Site')
 
         # Parse the request.data as json
-        json_values = request.data
-        site_url = json_values['SITE_NAME']
-        site_name = json_values['domain_prefix']
+        site_url = request.data['SITE_NAME']
+        site_name = request.data['domain_prefix']
+        platform_name = request.data['platform_name']
+        course_org_filter = request.data['course_org_filter']
 
-        # Need to check if staging is in the site name, strip staging from the name
+        # Check if staging is in the site name, strip staging from the name
         if 'staging' in site_name:
             site_name = site_name.replace('staging.', '')
 
-
         # need to check if site exists, do not duplicate
-
         if not Site.objects.filter(domain=site_url):
             site = Site(domain=site_url, name=site_name)
             site.save()
         else:
-            return Response({'error': 'That site url already exists'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {'error': 'That site url already exists'},
+                status=status.HTTP_400_BAD_REQUEST)
 
         org_data = {
-            'name': json_values['platform_name'],
-            'short_name': json_values['course_org_filter'],
-            'description': json_values['platform_name'],
-            'logo': ''
+            'name': platform_name,
+            'short_name': course_org_filter,
+            'description': platform_name,
         }
+        
+        messages = {}
 
-        # Need to check if org exits, if not add organization
+        # Check if org exits, if not add organization
         try:
-            organizations_api.get_organization_by_short_name(org_data['short_name'])
+            organizations_api.get_organization_by_short_name(course_org_filter)
         except org_exceptions.InvalidOrganizationException:
             organizations_api.add_organization(org_data)
+        if 's3_logo_url' in request.data:
+            s3_logo_url = request.data['s3_logo_url']
+            try:
+                save_org_logo(s3_logo_url, course_org_filter)
+                messages['logo-image-error'] = ""
+            except Exception as e:
+                messages['logo-image-error'] = '{}'.format(e)
         # Need to check if the microsite key is a duplicate
         try:
-            microsite = Microsite(key=org_data['short_name'], values=json_values, site=site)
+            microsite = Microsite(
+                key=org_data['short_name'],
+                values=request.data,
+                site=site
+            )
             microsite.save()
         except IntegrityError:
             return Response(
-                {"error": "Duplicate entry for microsite key {key}".format(key=org_data['short_name'])},
+                { "error": "Duplicate entry for microsite key {key}".format(
+                    key=org_data['short_name'])
+                },
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Get the id of the newly created microsite
-        microsite_id = {"id": microsite.id}
-
         # Map the organization and microsite
-        mapping = MicrositeOrganizationMapping(organization=org_data['short_name'], microsite=microsite)
+        mapping = MicrositeOrganizationMapping(
+            organization=org_data['short_name'],
+            microsite=microsite
+        )
         mapping.save()
 
 
         if serializer.is_valid():
             serializer.save()
             save_to_file()
-            return Response(microsite_id, status=status.HTTP_201_CREATED)
+            messages['id'] = microsite.id
+            return Response(messages, status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class MicrositesDetailView(ViewSet):
-
     '''
         **Use Cases**
             Microsite view to fetch microsite and update an existing microsite
@@ -227,11 +324,8 @@ class MicrositesDetailView(ViewSet):
             }
     '''
 
-    authentication_classes = (
-        OAuth2Authentication,
-        JwtAuthentication,
-        SessionAuthentication
-    )
+    authentication_classes =\
+        (OAuth2Authentication, JwtAuthentication, SessionAuthentication)
 
     permission_classes = (IsAuthenticated,)
 
@@ -254,7 +348,6 @@ class MicrositesDetailView(ViewSet):
     def delete(self, request, pk, format=None):
 
         # Get the mircosite
-
         microsite = Microsite.objects.get(pk=pk)
         microsite_id = {"id": microsite.id}
         domain = microsite.site.domain
@@ -268,19 +361,18 @@ class MicrositesDetailView(ViewSet):
             status=status.HTTP_200_OK
         )
 
-
     def put(self, request, pk, format=None):
 
-        update_data = {
-            "domain_prefix": request.data['domain_prefix'],
-            "SITE_NAME": request.data['SITE_NAME'],
-            "course_org_filter": request.data['course_org_filter'],
-        }
+        messages = {}
+
+        # Parse the request.data as json
+        site_url = request.data['SITE_NAME']
+        site_name = request.data['domain_prefix']
+        platform_name = request.data['platform_name']
+        course_org_filter = request.data['course_org_filter']
         
         # Get the microsite
-
         microsite = Microsite.objects.get(pk=pk)
-        microsite_id = {"id": microsite.id}
         domain = microsite.site.domain
         serializer = MicrositeSerializer(data=request.data)
         if microsite is None:
@@ -288,16 +380,14 @@ class MicrositesDetailView(ViewSet):
                 {"error": "The microsite was not found"},
                 status=status.HTTP_404_NOT_FOUND
             )
-        elif microsite.key != update_data['course_org_filter']:
+        elif microsite.key != course_org_filter:
             return Response(
-                {"error": "You can not change the course_org_filter value for this microsite."},
+                {"error": "The course_org_filter cannot be changed."},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # If there is a new site url, we need to create a new site and update the mapping
-        elif microsite.site.domain != update_data["SITE_NAME"]:
-            site_url = update_data["SITE_NAME"]
-            site_name = update_data['domain_prefix']
+        # If new site url, we need to create a new site and update the mapping
+        elif microsite.site.domain != site_url:
             if not Site.objects.filter(domain=site_url):
                 new_site = Site(domain=site_url, name=site_name)
                 new_site.save()
@@ -305,15 +395,27 @@ class MicrositesDetailView(ViewSet):
                 old_site = Site.objects.filter(domain=domain)
                 old_site.delete()
             else:
-                return Response({'error': 'That site url already exists'}, status=status.HTTP_400_BAD_REQUEST)
+                return Response(
+                    {'error': 'That site url already exists'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
 
         Microsite.objects.filter(pk=pk).update(values=request.data)
+
+        if 's3_logo_url' in request.data:
+            s3_logo_url = request.data['s3_logo_url']
+            try:
+                save_org_logo(s3_logo_url, course_org_filter)
+                messages['logo-image-error'] = ""
+            except Exception as e:
+                messages['logo-image-error'] = '{}'.format(e)
         
         if serializer.is_valid():
             serializer.save()
+            messages['id'] = microsite.id
             save_to_file()
             return Response(
-                microsite_id,
+                messages,
                 status=status.HTTP_200_OK
             )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -99,7 +99,8 @@ class TestMicrositesDetailView(TestCase):
             "course_about_show_social_links": 'false',
             "css_overrides_file": "TTR/css/overrides.css",
             "favicon_path": "TTR/images/favicon.ico",
-            "ENABLE_MKTG_URLS": 'false'
+            "ENABLE_MKTG_URLS": 'false',
+            "s3_logo_url": "https:www.test_image_url.com"
         }
 
         self.invalid_payload = {
