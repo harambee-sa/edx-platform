@@ -121,8 +121,10 @@ python-memcached==1.48
 django-memcached-hashring==0.1.2
 python-openid==2.2.5
 python-dateutil==2.1
-social-auth-app-django==1.2.0
-social-auth-core==1.4.0
+#social-auth-app-django==1.2.0
+git+https://github.com/proversity-org/social-app-django@1.2.0#egg=social-app-django==1.2.0
+#social-auth-core==1.4.0
+git+https://github.com/proversity-org/social-core@1.4.0#egg=social-core==1.4.0
 pytz==2016.7
 pysrt==0.4.7
 PyYAML==3.12
