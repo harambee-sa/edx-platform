@@ -1,4 +1,4 @@
-# encoding: utf-8
+#-*- coding: utf-8 -*-
 """
 The data type and use of it for declaratively creating test courses.
 """
