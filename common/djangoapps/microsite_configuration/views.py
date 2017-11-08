@@ -83,7 +83,12 @@ def save_org_logo(url, org_short_name):
         log.error(e)
         raise
         
+def generate_error_response(string):
 
+    return Response(
+        { "error": "{str} has blank, it must be include in request body.".format(string=string)},
+        status=status.HTTP_400_BAD_REQUEST
+    )
 
 """        
     The following 3 methods are helper functions to:       
@@ -245,6 +250,15 @@ class MicrositesViewSet(ViewSet):
         
         messages = {}
 
+        if site_url is None:
+            generate_error_response('SITE_NAME')
+        if site_name  is None:
+            generate_error_response('domain_prefix')
+        if platform_name is None:
+            generate_error_response('platform_name')
+        if course_org_filter is None:
+            generate_error_response('course_org_filter')
+            
         # Check if org exits, if not add organization
         try:
             organizations_api.get_organization_by_short_name(course_org_filter)
@@ -371,7 +385,14 @@ class MicrositesDetailView(ViewSet):
         platform_name = request.data.get('platform_name', None)
         course_org_filter = request.data.get('course_org_filter', None)
 
-        
+        if site_url is None:
+            generate_error_response('SITE_NAME')
+        if site_name  is None:
+            generate_error_response('domain_prefix')
+        if platform_name is None:
+            generate_error_response('platform_name')
+        if course_org_filter is None:
+            generate_error_response('course_org_filter')
         # Get the microsite
         microsite = Microsite.objects.get(pk=pk)
         domain = microsite.site.domain
