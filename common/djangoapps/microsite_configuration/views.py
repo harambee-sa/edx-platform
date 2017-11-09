@@ -406,7 +406,7 @@ class MicrositesDetailView(ViewSet):
         # Get the microsite
         microsite = Microsite.objects.get(pk=pk)
         domain = microsite.site.domain
-        serializer = MicrositeSerializer(data=request.data)
+        
         if microsite is None:
             return Response(
                 {"error": "The microsite was not found"},
@@ -441,7 +441,8 @@ class MicrositesDetailView(ViewSet):
                 messages['logo-image-error'] = "No error."
             except Exception as e:
                 messages['logo-image-error'] = '{}'.format(e)
-        
+                
+        serializer = MicrositeSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             messages['id'] = microsite.id
