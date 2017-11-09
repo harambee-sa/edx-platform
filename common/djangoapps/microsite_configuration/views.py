@@ -227,27 +227,21 @@ class MicrositesViewSet(ViewSet):
         Site = apps.get_model('sites', 'Site')
 
         # Parse the request.data as json
-        site_url = request.data.get('SITE_NAME', None)
-        site_name = request.data.get('domain_prefix', None)
-        platform_name = request.data.get('platform_name', None)
-        course_org_filter = request.data.get('course_org_filter', None)
-
-        # Check if staging is in the site name, strip staging from the name
-        if site_name is not None and 'staging' in site_name:
-            site_name = site_name.replace('staging.', '')
-
-        # need to check if site exists, do not duplicate
-
         try:
+            site_url = request.data.get('SITE_NAME', None)
+            site_name = request.data.get('domain_prefix', None)
+            platform_name = request.data.get('platform_name', None)
+            course_org_filter = request.data.get('course_org_filter', None)
+        # Check if staging is in the site name, strip staging from the name
+            if 'staging' in site_name:
+                site_name = site_name.replace('staging.', '')
+        # need to check if site exists, do not duplicate
             Site.objects.filter(domain=site_url)
             site = Site(domain=site_url, name=site_name)
             site.save()
         except IntegrityError as e:
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
-        # else:
-        #     return Response(
-        #         {'error': 'That site url already exists'},
-        #         status=status.HTTP_400_BAD_REQUEST)
+             status=status.HTTP_400_BAD_REQUEST)
 
         
         org_data = {
