@@ -238,7 +238,7 @@ class MicrositesViewSet(ViewSet):
             platform_name = request.data.get('platform_name', None)
             course_org_filter = request.data.get('course_org_filter', None)
             # Check if staging is in the site name, strip staging from the name
-            if 'staging' in site_name:
+            if site_name is not None and 'staging' in site_name:
                 site_name = site_name.replace('staging.', '')
             # need to check if site exists, do not duplicate
             Site.objects.filter(domain=site_url)
@@ -246,15 +246,12 @@ class MicrositesViewSet(ViewSet):
             site.save()
         except IntegrityError as e:
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
-        
         org_data = {
             'name': platform_name,
             'short_name': course_org_filter,
             'description': platform_name,
         }
-        
         messages = {}
-
         # Check if org exits, if not add organization
         try:
             organizations_api.get_organization_by_short_name(course_org_filter)
@@ -285,15 +282,12 @@ class MicrositesViewSet(ViewSet):
                 { "error": str(e)},
                 status=status.HTTP_400_BAD_REQUEST
             )
-
         # Map the organization and microsite
         mapping = MicrositeOrganizationMapping(
             organization=org_data['short_name'],
             microsite=microsite
         )
         mapping.save()
-
-
         if serializer.is_valid():
             serializer.save()
             save_to_file()
