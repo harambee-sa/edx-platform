@@ -92,7 +92,6 @@ def generate_error_response(string):
     """
     Generate Response with error message about missing request data
     """
-    
     return Response(
         {"error": "{} is None, please add to request body.".format(string)},
         status=status.HTTP_400_BAD_REQUEST
@@ -120,7 +119,6 @@ def update_map( map, key, values):
         map.update({key:new_map})
     else:
         map.update({key:values})
-
 
 
 def build_inner_map(microsite):
@@ -255,7 +253,10 @@ class MicrositesViewSet(ViewSet):
                 site = Site(domain=site_url, name=site_name)
                 site.save()
             except IntegrityError as e:
-                return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+                return Response(
+                    {"error": str(e)},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
             org_data = {
                 'name': platform_name,
                 'short_name': course_org_filter,
@@ -269,7 +270,10 @@ class MicrositesViewSet(ViewSet):
                 try:
                     organizations_api.add_organization(org_data)
                 except org_exceptions.InvalidOrganizationException:
-                    return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)  
+                    return Response(
+                        {"error": str(e)},
+                        status=status.HTTP_400_BAD_REQUEST
+                    )  
     
             if 's3_logo_url' in request.data:
                 s3_logo_url = request.data.get('s3_logo_url', None)
@@ -307,8 +311,6 @@ class MicrositesViewSet(ViewSet):
                 return Response(messages, status=status.HTTP_201_CREATED)
 
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        generate_error_response('SITE_NAME')
 
 class MicrositesDetailView(ViewSet):
     '''
@@ -391,6 +393,15 @@ class MicrositesDetailView(ViewSet):
         site_name = request.data.get('domain_prefix', None)
         platform_name = request.data.get('platform_name', None)
         course_org_filter = request.data.get('course_org_filter', None)
+
+        if site_url is None:
+            return generate_error_response('SITE_NAME')
+        elif site_name is None:
+            return generate_error_response('domain_prefix')
+        elif platform_name is None:
+            return generate_error_response('platform_name')
+        elif course_org_filter is None:
+            return generate_error_response('course_org_filter')
 
         # Get the microsite
         microsite = Microsite.objects.get(pk=pk)
