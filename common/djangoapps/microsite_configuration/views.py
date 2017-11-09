@@ -247,7 +247,7 @@ class MicrositesViewSet(ViewSet):
             return generate_error_response('course_org_filter')
         else:
             # Check if staging is in the site name, strip staging from the name
-            if site_name is not None and 'staging' in site_name:
+            if 'staging' in site_name:
                 site_name = site_name.replace('staging.', '')
             # need to check if site exists, do not duplicate
             try:
