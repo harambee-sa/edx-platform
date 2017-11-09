@@ -68,7 +68,6 @@ class TestMicrositesViewSet(TestCase):
             my_test_data,
             format='json'
         )
-        print response.data
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_authentication_is_enforced(self):
