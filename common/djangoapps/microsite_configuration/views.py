@@ -232,17 +232,6 @@ class MicrositesViewSet(ViewSet):
         platform_name = request.data.get('platform_name', None)
         course_org_filter = request.data.get('course_org_filter', None)
 
-        if site_url is None:
-            print "I am here"
-            generate_error_response('SITE_NAME')
-        if site_name  is None:
-            print "YO"
-            generate_error_response('domain_prefix')
-        if platform_name is None:
-            generate_error_response('platform_name')
-        if course_org_filter is None:
-            generate_error_response('course_org_filter')
-
         # Check if staging is in the site name, strip staging from the name
         if site_name is not None and 'staging' in site_name:
             site_name = site_name.replace('staging.', '')
@@ -254,22 +243,21 @@ class MicrositesViewSet(ViewSet):
             site = Site(domain=site_url, name=site_name)
             site.save()
         except IntegrityError as e:
-            return Response({"error": "{}".format(e)}, status=status.HTTP_400_BAD_REQUEST)
-        else:
-            return Response(
-                {'error': 'That site url already exists'},
-                status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        # else:
+        #     return Response(
+        #         {'error': 'That site url already exists'},
+        #         status=status.HTTP_400_BAD_REQUEST)
 
-        if platform_name and course_org_filter is not None:
-            org_data = {
-                'name': platform_name,
-                'short_name': course_org_filter,
-                'description': platform_name,
-            }
+        
+        org_data = {
+            'name': platform_name,
+            'short_name': course_org_filter,
+            'description': platform_name,
+        }
         
         messages = {}
 
-            
         # Check if org exits, if not add organization
         try:
             organizations_api.get_organization_by_short_name(course_org_filter)
@@ -279,7 +267,7 @@ class MicrositesViewSet(ViewSet):
             s3_logo_url = request.data.get('s3_logo_url', None)
             try:
                 save_org_logo(s3_logo_url, course_org_filter)
-                messages['logo-image-error'] = ""
+                messages['logo-image-error'] = "No error."
             except Exception as e:
                 messages['logo-image-error'] = '{}'.format(e)
         # Need to check if the microsite key is a duplicate
@@ -396,14 +384,6 @@ class MicrositesDetailView(ViewSet):
         platform_name = request.data.get('platform_name', None)
         course_org_filter = request.data.get('course_org_filter', None)
 
-        if site_url is None:
-            generate_error_response('SITE_NAME')
-        if site_name  is None:
-            generate_error_response('domain_prefix')
-        if platform_name is None:
-            generate_error_response('platform_name')
-        if course_org_filter is None:
-            generate_error_response('course_org_filter')
         # Get the microsite
         microsite = Microsite.objects.get(pk=pk)
         domain = microsite.site.domain
@@ -439,7 +419,7 @@ class MicrositesDetailView(ViewSet):
             s3_logo_url = request.data.get('s3_logo_url', None)
             try:
                 save_org_logo(s3_logo_url, course_org_filter)
-                messages['logo-image-error'] = ""
+                messages['logo-image-error'] = "No error."
             except Exception as e:
                 messages['logo-image-error'] = '{}'.format(e)
         
