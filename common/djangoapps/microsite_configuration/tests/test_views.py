@@ -46,7 +46,8 @@ class TestMicrositesViewSet(TestCase):
         '''
         my_test_data = {
             "domain_prefix": "test-site",
-            "university": "test_site", "platform_name": "Test Site DB",
+            "university": "test_site",
+            "platform_name": "Test Site DB",
             "logo_image_url": "test_site/images/header-logo.png",
             "email_from_address": "test_site@edx.org",
             "payment_support_email": "test_site_dbe@edx.org",
@@ -59,13 +60,15 @@ class TestMicrositesViewSet(TestCase):
             "show_homepage_promo_video": "false",
             "course_index_overlay_text": "This is a Test Site Overlay Text.",
             "course_index_overlay_logo_file": "test_site/images/header-logo.png",
-            "homepage_overlay_html": "<h1>This is a Test Site Overlay HTML</h1>"
+            "homepage_overlay_html": "<h1>This is a Test Site Overlay HTML</h1>",
+            "s3_logo_url": "https:www.test_image_url.com"
         }
         response = self.client.post(
             reverse('microsites-list'),
             my_test_data,
             format='json'
         )
+        print response.data
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_authentication_is_enforced(self):

@@ -256,11 +256,10 @@ class MicrositesViewSet(ViewSet):
         try:
             organizations_api.get_organization_by_short_name(course_org_filter)
         except org_exceptions.InvalidOrganizationException as e:
-            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)  
-        try:
-            organizations_api.add_organization(org_data)
-        except org_exceptions.InvalidOrganizationException:
-            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)  
+            try:
+                organizations_api.add_organization(org_data)
+            except org_exceptions.InvalidOrganizationException:
+                return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)  
 
         if 's3_logo_url' in request.data:
             s3_logo_url = request.data.get('s3_logo_url', None)
@@ -278,6 +277,7 @@ class MicrositesViewSet(ViewSet):
             )
             microsite.save()
         except IntegrityError as e:
+            print "line 286"
             return Response(
                 { "error": str(e)},
                 status=status.HTTP_400_BAD_REQUEST
@@ -288,6 +288,7 @@ class MicrositesViewSet(ViewSet):
             microsite=microsite
         )
         mapping.save()
+
         if serializer.is_valid():
             serializer.save()
             save_to_file()
