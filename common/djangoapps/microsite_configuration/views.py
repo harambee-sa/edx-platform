@@ -74,7 +74,7 @@ def save_org_logo(url, org_short_name):
         tempfile.save(tempfile_io, format=image.format)
         try:
             org = Organization.objects.get(short_name=org_short_name)
-        except org_exceptions.InvalidOrganizationException:
+        except org_exceptions.InvalidCourseKeyException:
             raise
         else:    
             org.logo.save(
@@ -258,8 +258,13 @@ class MicrositesViewSet(ViewSet):
         # Check if org exits, if not add organization
         try:
             organizations_api.get_organization_by_short_name(course_org_filter)
-        except org_exceptions.InvalidOrganizationException:
+        except org_exceptions.InvalidOrganizationException as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)  
+        try:
             organizations_api.add_organization(org_data)
+        except org_exceptions.InvalidOrganizationException:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)  
+
         if 's3_logo_url' in request.data:
             s3_logo_url = request.data.get('s3_logo_url', None)
             try:
