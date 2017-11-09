@@ -87,6 +87,7 @@ def generate_error_response(string):
     """
     Generate Response with error message about missing request data
     """
+    print "in the error fucntion"
     return Response(
         {"error": "{} is None, please add to request body.".format(string)},
         status=status.HTTP_400_BAD_REQUEST
@@ -232,8 +233,10 @@ class MicrositesViewSet(ViewSet):
         course_org_filter = request.data.get('course_org_filter', None)
 
         if site_url is None:
+            print "I am here"
             generate_error_response('SITE_NAME')
         if site_name  is None:
+            print "YO"
             generate_error_response('domain_prefix')
         if platform_name is None:
             generate_error_response('platform_name')
@@ -245,19 +248,24 @@ class MicrositesViewSet(ViewSet):
             site_name = site_name.replace('staging.', '')
 
         # need to check if site exists, do not duplicate
-        if not Site.objects.filter(domain=site_url):
+
+        try:
+            Site.objects.filter(domain=site_url)
             site = Site(domain=site_url, name=site_name)
             site.save()
+        except IntegrityError as e:
+            return Response({"error": "{}".format(e)}, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response(
                 {'error': 'That site url already exists'},
                 status=status.HTTP_400_BAD_REQUEST)
 
-        org_data = {
-            'name': platform_name,
-            'short_name': course_org_filter,
-            'description': platform_name,
-        }
+        if platform_name and course_org_filter is not None:
+            org_data = {
+                'name': platform_name,
+                'short_name': course_org_filter,
+                'description': platform_name,
+            }
         
         messages = {}
 
