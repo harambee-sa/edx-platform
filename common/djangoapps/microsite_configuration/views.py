@@ -72,13 +72,18 @@ def save_org_logo(url, org_short_name):
         tempfile = image
         tempfile_io = cStringIO.StringIO() # Creates file-like object in mem
         tempfile.save(tempfile_io, format=image.format)
-        org = Organization.objects.get(short_name=org_short_name)
-        org.logo.save(
-            filename,
-            ContentFile(tempfile_io.getvalue()),
-            save=False
-        )
-        org.save()
+        try:
+            org = Organization.objects.get(short_name=org_short_name)
+        except org_exceptions.InvalidOrganizationException:
+            raise
+        else:    
+            org.logo.save(
+                filename,
+                ContentFile(tempfile_io.getvalue()),
+                save=False
+            )
+            org.save()
+       
     except Exception as e:
         log.error(e)
         raise
@@ -232,17 +237,15 @@ class MicrositesViewSet(ViewSet):
             site_name = request.data.get('domain_prefix', None)
             platform_name = request.data.get('platform_name', None)
             course_org_filter = request.data.get('course_org_filter', None)
-        # Check if staging is in the site name, strip staging from the name
+            # Check if staging is in the site name, strip staging from the name
             if 'staging' in site_name:
                 site_name = site_name.replace('staging.', '')
-        # need to check if site exists, do not duplicate
+            # need to check if site exists, do not duplicate
             Site.objects.filter(domain=site_url)
             site = Site(domain=site_url, name=site_name)
             site.save()
         except IntegrityError as e:
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
-             status=status.HTTP_400_BAD_REQUEST)
-
         
         org_data = {
             'name': platform_name,
@@ -267,16 +270,14 @@ class MicrositesViewSet(ViewSet):
         # Need to check if the microsite key is a duplicate
         try:
             microsite = Microsite(
-                key=org_data['short_name'],
+                key= course_org_filter,
                 values=request.data,
                 site=site
             )
             microsite.save()
-        except IntegrityError:
+        except IntegrityError as e:
             return Response(
-                { "error": "Duplicate entry for microsite key {key}".format(
-                    key=org_data['short_name'])
-                },
+                { "error": str(e)},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
