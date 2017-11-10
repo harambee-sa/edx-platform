@@ -37,7 +37,7 @@ if [ "$CIRCLE_NODE_TOTAL" == "1" ] ; then
     echo "via the CircleCI UI and adjust scripts/circle-ci-tests.sh to match."
 
     echo "Running tests for common/lib/ and pavelib/"
-    paver test_lib --cov-args="-p" || EXIT=1
+    paver test_lib -t common/lib/xmodule/xmodule/modulestore/tests/test_mongo.py --cov-args="-p" || EXIT=1
     echo "Running python tests for Studio"
     #paver test_system -s cms --cov-args="-p" || EXIT=1
     echo "Running python tests for lms"
