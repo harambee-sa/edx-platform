@@ -18,6 +18,17 @@ def url_name_for_block(block):
     return block.location.name
 
 
+def location(block):
+    """
+    Given a block, returns the block's id.
+
+    Arguments:
+        block (XModuleMixin|CourseOverview|BlockStructureBlockData):
+            Block that is being accessed
+    """
+    return block.location
+    
+
 def display_name_with_default(block):
     """
     Calculates the display name for a block.

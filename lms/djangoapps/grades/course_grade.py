@@ -207,6 +207,7 @@ class CourseGradeBase(object):
         return {
             'display_name': block_metadata_utils.display_name_with_default_escaped(chapter),
             'url_name': block_metadata_utils.url_name_for_block(chapter),
+            'location': block_metadata_utils.location(chapter),
             'sections': chapter_subsection_grades,
         }
 

@@ -30,6 +30,31 @@ from student.roles import CourseStaffRole
 log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
 
+def get_user_grades(grade_user, course):
+    
+    course_grade = CourseGradeFactory().update(grade_user, course)
+    
+    courseware_summary = course_grade.chapter_grades.values()
+    grade_summary = course_grade.summary
+    grades_schema = {}
+    subsection_schema = {}
+    for chapter in courseware_summary: 
+        for section in chapter['sections']: 
+            earned = section.all_total.earned
+            total = section.all_total.possible
+            name = section.display_name
+            section_id = str(section.location)
+            sections_scores  = {}
+            i = 0
+            problem_scores_dictionary_keys = section.problem_scores_with_keys.items()
+            if len(section.problem_scores_with_keys.values()) > 0:
+                for score in section.problem_scores_with_keys.values():
+                    sections_scores[problem_scores_dictionary_keys[i][0]] = \
+                        [float(score.earned),float(score.possible)]
+                    i += 1
+                if total > 0:
+                    grades_schema[section_id] = sections_scores
+    return grades_schema
 
 @view_auth_classes()
 class GradeViewMixin(DeveloperErrorViewMixin):
@@ -261,7 +286,8 @@ class GradesBulkAPIView(ListAPIView):
     
     def post(self,  request):
 
-    
+        query_params = self.request.query_params
+        depth = query_params.get('depth', None)  
         # create the list based on the post parameters
 
         serializer = GradeBulkAPIViewSerializer(data=request.data)
@@ -290,11 +316,16 @@ class GradesBulkAPIView(ListAPIView):
                 for user in user_list:
                     try:
                         course_grade = CourseGradeFactory().update(user, course)
+                        if depth == 'all':
+                            grades_schema =  get_user_grades(user, course)
+                        else:
+                            grades_schema = 'Specify depth=all in query parameters.'
                         user_grades[user.username] = {
                             'name': "{} {}".format(user.first_name, user.last_name),
                             'email': user.email,
                             'passed': course_grade.passed,
-                            'percent': "{0:.0%}".format(course_grade.percent)
+                            'percent': course_grade.percent,
+                            'all_grades': grades_schema
                         }
                     except Exception as e:
                         log.error(e)

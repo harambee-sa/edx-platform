@@ -214,14 +214,17 @@ class CreateSubsectionGrade(NonZeroSubsectionGrade):
     """
     def __init__(self, subsection, course_structure, submissions_scores, csm_scores):
         self.problem_scores = OrderedDict()
+        self.problem_scores_with_keys = OrderedDict()
         for block_key in course_structure.post_order_traversal(
                 filter_func=possibly_scored,
                 start_node=subsection.location,
         ):
             problem_score = self._compute_block_score(block_key, course_structure, submissions_scores, csm_scores)
             if problem_score:
+                
                 self.problem_scores[block_key] = problem_score
-
+                self.problem_scores_with_keys[str(block_key)] = problem_score
+        
         all_total, graded_total = graders.aggregate_scores(self.problem_scores.values())
 
         super(CreateSubsectionGrade, self).__init__(subsection, all_total, graded_total)
