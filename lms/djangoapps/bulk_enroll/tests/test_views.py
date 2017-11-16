@@ -11,7 +11,7 @@ from django.test.utils import override_settings
 from rest_framework.test import APIRequestFactory, APITestCase, force_authenticate
 
 from bulk_enroll.serializers import BulkEnrollmentSerializer
-from bulk_enroll.views import BulkEnrollView
+from bulk_enroll.views import BulkEnrollView, BulkRegisterEnrollView
 from courseware.tests.helpers import LoginEnrollmentTestCase
 from microsite_configuration import microsite
 from student.models import (
@@ -335,3 +335,135 @@ class BulkEnrollmentTest(ModuleStoreTestCase, LoginEnrollmentTestCase, APITestCa
 
         # Check the outbox
         self.assertEqual(len(mail.outbox), 0)
+
+
+@override_settings(ENABLE_BULK_ENROLLMENT_VIEW=True)
+@ddt.ddt
+class BulkRegisterEnrollmentTest(ModuleStoreTestCase, LoginEnrollmentTestCase, APITestCase):
+    """
+    Test the bulk enrollment endpoint
+    """
+
+    USERNAME = "Bob"
+    EMAIL = "bob@example.com"
+    PASSWORD = "edx"
+
+    def setUp(self):
+        """ Create a course and user, then log in. """
+        super(BulkRegisterEnrollmentTest, self).setUp()
+
+        self.view = BulkRegisterEnrollView.as_view()
+        self.request_factory = APIRequestFactory()
+        self.url = reverse('bulk_register_enroll')
+
+        self.staff = UserFactory.create(
+            username=self.USERNAME,
+            email=self.EMAIL,
+            password=self.PASSWORD,
+            is_staff=True,
+        )
+
+        self.course = CourseFactory.create()
+        self.course_key = unicode(self.course.id)
+
+        # Email URL values
+        self.site_name = microsite.get_value(
+            'SITE_NAME',
+            settings.SITE_NAME
+        )
+        self.about_path = '/courses/{}/about'.format(self.course.id)
+        self.course_path = '/courses/{}/'.format(self.course.id)
+
+    def request_bulk_register_enroll(self, data=None, use_json=False, **extra):
+        """ Make an authenticated request to the bulk enrollment API. """
+        content_type = None
+        if use_json:
+            content_type = 'application/json'
+            data = json.dumps(data)
+        request = self.request_factory.post(
+            self.url,
+            data=data,
+            content_type=content_type,
+            **extra
+        )
+        force_authenticate(request, user=self.staff)
+        response = self.view(request)
+        response.render()
+        return response
+
+    def test_non_staff(self):
+        """ Test that non global staff users are forbidden from API use. """
+        self.staff.is_staff = False
+        self.staff.save()
+        response = self.request_bulk_register_enroll()
+        self.assertEqual(response.status_code, 403)
+
+    def test_missing_params(self):
+        """ Test the response when missing all query parameters. """
+        response = self.request_bulk_register_enroll()
+        self.assertEqual(response.status_code, 400)
+
+    def test_enroll_with_username(self):
+        """ Test enrolling using a username as the identifier. """
+        response = self.request_bulk_register_enroll({
+            "auto_enroll": False,
+            "action": "enroll",
+            "courses": str(self.course_key),
+            "email_students": False,
+            "identifiers":"nuser1, nuser2",
+            "country": "South Africa",
+            "course_mode": "audit",
+            "email_extension": "@example.com"
+        })
+
+        # test the response data
+        expected_data = {
+            "enrollments": {
+                "action": "enroll",
+                "courses": {
+                    str(self.course_key): {
+                        "action": "enroll",
+                        "results": [{
+                            "identifier": "nuser1",
+                            "after": {
+                                "enrollment": True,
+                                "allowed": False,
+                                "user": True,
+                                "auto_enroll": False
+                            },
+                            "before": {
+                                "enrollment": False,
+                                "allowed": False,
+                                "user": True,
+                                "auto_enroll": False
+                            }
+                        }, {
+                            "identifier": "nuser2",
+                            "after": {
+                                "enrollment": True,
+                                "allowed": False,
+                                "user": True,
+                                "auto_enroll": False
+                            },
+                            "before": {
+                                "enrollment": False,
+                                "allowed": False,
+                                "user": True,
+                                "auto_enroll": False
+                            }
+                        }],
+                        "auto_enroll": False
+                    }
+                },
+                "email_students": False,
+                "auto_enroll": False
+            },
+            "registration-info": {
+                "nuser2": "newly registered.",
+                "nuser1": "newly registered."
+            }
+        }
+
+        self.assertEqual(response.status_code, 200)
+        res_json = json.loads(response.content)
+        self.assertEqual(res_json, expected_data)

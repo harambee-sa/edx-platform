@@ -148,6 +148,9 @@ SUCCESS_MESSAGE_TEMPLATE = _("The {report_type} report is being created. "
 from django.template import Context
 from django.template.loader import get_template
 
+from django.contrib.auth import get_user_model
+USER_MODEL = get_user_model()
+
 def common_exceptions_400(func):
     """
     Catches common exceptions and renders matching 400 errors.
@@ -589,6 +592,78 @@ def create_and_enroll_user(email, username, name, country, password, course_id, 
     return errors
 
 
+    
+def _build_emails(identifiers, email_extension):
+    """
+    Itterates over a given list of indetifiers and adds the email extension
+    returns completed email list.
+    """
+    email_list = []
+    for identifier in identifiers:
+        email_list = email_list + ["{id}{ext}".format(id=identifier.strip(), ext=email_extension)]
+    return email_list
+    
+@require_POST
+@ensure_csrf_cookie
+def create_and_register_users_without_email(request):
+    """
+    Create and Enroll.
+    Requires staff access.
+    
+    NB: The email extention in this API must match with the email extention in the 
+    lms/djangoapps/student_account/harambee.py file.
+    
+    The reason for this is harambee sends only a identifier when registering/logging in with SSO
+    'harambee-oauth2' if these emails does not match the user accounts will go out of sync and harambee
+    will lose a lot of user information.    
+    
+    """
+
+    enrollment_result = {}
+    identifiers_raw = request.POST.get('identifiers')
+    identifiers = identifiers_raw.split(',')
+    email_extension = request.POST.get('email_extension')
+    country = request.POST.get('country')
+    course_mode = request.POST.get('course_mode')
+    enrolled_by = request.user
+
+    # compile list of email adresses
+    list_of_emails = _build_emails(identifiers, email_extension)
+
+    # query database for all users holding these emails
+    user_list = USER_MODEL.objects.filter(
+        email__in=list_of_emails,
+    )
+
+    # Only create_and_enroll_users which do not exist, get complament of user list
+    new_users_to_register = set(list_of_emails) - set([user.email for user in user_list])
+    try:
+        with transaction.atomic():
+            for email in list(new_users_to_register):
+                identifier = email.split('@')[0]
+                email = email
+                name = '{}'.format(identifier)
+                password = '{}12345'.format(identifier)
+                user = create_user_and_user_profile(
+                    email,
+                    identifier,
+                    name,
+                    country,
+                    password
+                )
+                enrollment_result[user.username] =\
+                "newly registered.".format(identifier)
+            # enroll user
+    except IntegrityError:
+        log.warning('This user already exists')
+
+    # take note of the existing users
+    for user in user_list:
+        enrollment_result[user.username] = "already exists.".format(user.email)
+
+    return JsonResponse(enrollment_result)
+
+
 @require_POST
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
@@ -634,11 +709,23 @@ def students_update_enrollment(request, course_id):
     course_id = CourseKey.from_string(course_id)
     action = request.POST.get('action')
     identifiers_raw = request.POST.get('identifiers')
-    identifiers = _split_input_list(identifiers_raw)
     auto_enroll = _get_boolean_param(request, 'auto_enroll')
     email_students = _get_boolean_param(request, 'email_students')
     is_white_label = CourseMode.is_white_label(course_id)
     reason = request.POST.get('reason')
+    
+    """
+    NB: when the request contains the email_extension field, we assume this to be the 'master identifier'
+    and will build the list of emails and pass that on for enrollment.
+    Reason: the incomming username from harambee is too long for the username field in edx, so it cuts off.
+    """
+    if request.POST.get('email_extension'):
+        identifiers = _build_emails(_split_input_list(identifiers_raw), request.POST.get('email_extension'))
+    else:
+        identifiers = _split_input_list(identifiers_raw)
+    
+    
+    
     if is_white_label:
         if not reason:
             return JsonResponse(

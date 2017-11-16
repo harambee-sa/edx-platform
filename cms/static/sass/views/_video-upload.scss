@@ -1,3 +1,4 @@
+@import '../partials/cms/base/_variables.scss';
 .view-video-uploads {
   .content-primary, .content-supplementary {
     @include box-sizing(border-box);
@@ -80,7 +81,7 @@
       .action-close-course-video-settings {
         width: 100%;
         padding: ($baseline/2) ($baseline*0.8);
-        background-color: $gray-u1;
+        background-color: #ecf0f1;
         border: transparent;
         height: ($baseline*2.4);
         color: $text-dark-black-blue;
