@@ -600,7 +600,10 @@ def _build_emails(identifiers, email_extension):
     """
     email_list = []
     for identifier in identifiers:
-        email_list = email_list + ["{id}{ext}".format(id=identifier.strip(), ext=email_extension)]
+        if "@" in identifier:
+            email_list.append(identifier)
+        else:
+            email_list.append("{id}{ext}".format(id=identifier.strip(), ext=email_extension))
     return email_list
     
 @require_POST
@@ -622,21 +625,29 @@ def create_and_register_users_without_email(request):
     enrollment_result = {}
     identifiers_raw = request.POST.get('identifiers')
     identifiers = identifiers_raw.split(',')
-    email_extension = request.POST.get('email_extension')
+    email_extension = request.POST.get('email_extension', None)
     country = request.POST.get('country')
     course_mode = request.POST.get('course_mode')
     enrolled_by = request.user
 
     # compile list of email adresses
-    list_of_emails = _build_emails(identifiers, email_extension)
+    
+    if email_extension is not None:
+        list_of_emails_or_usernames =\
+            _build_emails(identifiers, email_extension)
+    else:
+      list_of_emails_or_usernames = identifiers
 
     # query database for all users holding these emails
     user_list = USER_MODEL.objects.filter(
-        email__in=list_of_emails,
+        Q(username__in=list_of_emails_or_usernames) | 
+        Q(email__in=list_of_emails_or_usernames)
     )
 
     # Only create_and_enroll_users which do not exist, get complament of user list
-    new_users_to_register = set(list_of_emails) - set([user.email for user in user_list])
+    new_users_to_register =\ 
+        set(list_of_emails_or_usernames) -
+        set([user.email for user in user_list])
     try:
         with transaction.atomic():
             for email in list(new_users_to_register):
@@ -720,7 +731,11 @@ def students_update_enrollment(request, course_id):
     Reason: the incomming username from harambee is too long for the username field in edx, so it cuts off.
     """
     if request.POST.get('email_extension'):
-        identifiers = _build_emails(_split_input_list(identifiers_raw), request.POST.get('email_extension'))
+        identifiers =\
+            _build_emails(
+                _split_input_list(identifiers_raw),
+                request.POST.get('email_extension')
+            )
     else:
         identifiers = _split_input_list(identifiers_raw)
     
@@ -740,7 +755,8 @@ def students_update_enrollment(request, course_id):
     email_params = {}
     if email_students:
         course = get_course_by_id(course_id)
-        email_params = get_email_params(course, auto_enroll, secure=request.is_secure())
+        email_params =\
+            get_email_params(course, auto_enroll, secure=request.is_secure())
 
     results = []
     for identifier in identifiers:
@@ -763,7 +779,12 @@ def students_update_enrollment(request, course_id):
             validate_email(email)  # Raises ValidationError if invalid
             if action == 'enroll':
                 before, after, enrollment_obj = enroll_email(
-                    course_id, email, auto_enroll, email_students, email_params, language=language
+                    course_id,
+                    email,
+                    auto_enroll,
+                    email_students,
+                    email_params,
+                    language=language
                 )
                 before_enrollment = before.to_dict()['enrollment']
                 before_user_registered = before.to_dict()['user']
