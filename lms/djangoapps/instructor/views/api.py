@@ -646,8 +646,7 @@ def create_and_register_users_without_email(request):
 
     # Only create_and_enroll_users which do not exist, get complament of user list
     new_users_to_register =\
-        set(list_of_emails_or_usernames) -
-        set([user.email for user in user_list])
+        set(list_of_emails_or_usernames) - set([user.email for user in user_list])
     try:
         with transaction.atomic():
             for email in list(new_users_to_register):
