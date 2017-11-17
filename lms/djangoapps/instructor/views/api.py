@@ -23,6 +23,7 @@ from django.core.mail.message import EmailMessage
 from django.core.urlresolvers import reverse
 from django.core.validators import validate_email
 from django.db import IntegrityError, transaction
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.utils.html import strip_tags
