@@ -28,15 +28,21 @@ class HarambeeOAuth2(BaseOAuth2):
     ACCESS_TOKEN_URL = 'https://mvpdev.harambeecloud.com/identityserver/connect/token'
     ACCESS_TOKEN_METHOD = 'POST'
     RESPONSE_TYPE = 'code id_token'
+    REDIRECT_IS_HTTPS = True
 
     # The order of the default scope is important
     DEFAULT_SCOPE = ['openid', 'profile']
 
     def auth_params(self, state=None):
         client_id, client_secret = self.get_key_and_secret()
+        
+        uri = self.get_redirect_uri(state)
+        if self.REDIRECT_IS_HTTPS:
+          uri = uri.replace('http://', 'https://')
+        
         params = {
             'client_id': client_id,
-            'redirect_uri': self.get_redirect_uri(state)
+            'redirect_uri': uri)
         }
         if self.STATE_PARAMETER and state:
             params['state'] = state
@@ -48,12 +54,15 @@ class HarambeeOAuth2(BaseOAuth2):
 
     def auth_complete_params(self, state=None):
         client_id, client_secret = self.get_key_and_secret()
+        uri = self.get_redirect_uri(state)
+        if self.REDIRECT_IS_HTTPS:
+          uri = uri.replace('http://', 'https://')
         return {
             'grant_type': 'authorization_code',  # request auth code
             'code': self.data.get('code', ''),  # server response code
             'client_id': client_id,
             'client_secret': client_secret,
-            'redirect_uri': self.get_redirect_uri(state)
+            'redirect_uri': uri
         }
 
     def get_user_details(self, response):
