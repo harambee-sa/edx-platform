@@ -42,7 +42,7 @@ class HarambeeOAuth2(BaseOAuth2):
         
         params = {
             'client_id': client_id,
-            'redirect_uri': uri)
+            'redirect_uri': uri
         }
         if self.STATE_PARAMETER and state:
             params['state'] = state
