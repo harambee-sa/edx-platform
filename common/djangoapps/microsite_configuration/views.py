@@ -85,6 +85,7 @@ def save_org_logo(url, org_short_name):
             org.save()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        
     except Exception as e:
         log.error(e)
@@ -104,6 +105,13 @@ def save_org_logo(url, org_short_name):
         raise
 
 >>>>>>> Proversity/development (#558) (#559)
+=======
+
+    except Exception as e:
+        log.error(e)
+        raise
+
+>>>>>>> Proversity/staging (#564)
 def generate_error_response(string):
     """
     Generate Response with error message about missing request data
@@ -329,12 +337,16 @@ class MicrositesViewSet(ViewSet):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Proversity/development (#558)
 =======
 
 >>>>>>> Proversity/development (#558) (#559)
+=======
+
+>>>>>>> Proversity/staging (#564)
 
 class MicrositesDetailView(ViewSet):
     '''
@@ -469,12 +481,16 @@ class MicrositesDetailView(ViewSet):
         serializer = MicrositeSerializer(data=request.data)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Proversity/development (#558)
 =======
 
 >>>>>>> Proversity/development (#558) (#559)
+=======
+
+>>>>>>> Proversity/staging (#564)
         if serializer.is_valid():
             serializer.save()
             messages['id'] = microsite.id
