@@ -9,10 +9,13 @@ urlpatterns = [
     url(r'^bulk_enroll', BulkEnrollView.as_view(), name='bulk_enroll'),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 =======
 =======
 >>>>>>> Proversity/development (#558)
+=======
+>>>>>>> Proversity/development (#558) (#559)
     url(r'^bulk_register_enroll', BulkRegisterEnrollView.as_view(), name='bulk_register_enroll'),
 )
 >>>>>>> Proversity/harambee backend (#553)
