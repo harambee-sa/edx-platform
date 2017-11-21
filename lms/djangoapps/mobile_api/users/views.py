@@ -2,6 +2,10 @@
 Views for user API
 """
 
+import logging
+log = logging.getLogger(__name__)
+
+from django.conf import settings
 from django.shortcuts import redirect
 from django.utils import dateparse
 from opaque_keys import InvalidKeyError
@@ -274,11 +278,56 @@ class UserCourseEnrollmentsList(generics.ListAPIView):
         """
         return check_org is None or (check_org.lower() == course_org.lower())
 
+    def queryset_order_by_created(self, partial_queryset):
+        """
+        Order user enrollments by creation date
+        """
+        return partial_queryset.order_by('created')
+
+    def queryset_order_by_created_reverse(self, partial_queryset):
+        """
+        Order user enrollments by creation date and reverse it
+        """
+        return partial_queryset.order_by('created').reverse()
+
+    def queryset_order_by_course_name(self, partial_queryset):
+        """
+        Order user enrollments by coruse name
+        """
+        return partial_queryset.order_by('course__display_name')
+
+    def queryset_order_by_course_name_reverse(self, partial_queryset):
+        """
+        Order user enrollments by coruse name and reverse it
+        """
+        return partial_queryset.order_by('course__display_name').reverse()
+
     def get_queryset(self):
-        enrollments = self.queryset.filter(
-            user__username=self.kwargs['username'],
-            is_active=True
-        ).order_by('created').reverse()
+        CREATED = 'created'
+        CREATED_REVERSE = 'created_reverse'
+        COURSE_NAME = 'course_name'
+        COURSE_NAME_REVERSE = 'course_name_reverse'
+        
+        queryset_options = {
+            CREATED: self.queryset_order_by_created,
+            CREATED_REVERSE: self.queryset_order_by_created_reverse,
+            COURSE_NAME: self.queryset_order_by_course_name,
+            COURSE_NAME_REVERSE: self.queryset_order_by_course_name_reverse
+        }
+
+        partial_queryset =\
+            self.queryset.filter(
+                user__username=self.kwargs['username'],
+                is_active=True
+            )
+
+        order_by =\
+            configuration_helpers.get_value(
+                'USER_COURSE_ENROLLMENTS_ORDER_BY',
+                settings.USER_COURSE_ENROLLMENTS_ORDER_BY
+            )
+
+        enrollments = queryset_options[order_by](partial_queryset)
         org = self.request.query_params.get('org', None)
         orgs = configuration_helpers.get_all_orgs()
         return [
