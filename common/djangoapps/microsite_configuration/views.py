@@ -86,6 +86,7 @@ def save_org_logo(url, org_short_name):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        
     except Exception as e:
         log.error(e)
@@ -112,6 +113,14 @@ def save_org_logo(url, org_short_name):
         raise
 
 >>>>>>> Proversity/staging (#564)
+=======
+
+    except Exception as e:
+        log.error(e)
+        raise
+
+
+>>>>>>> dynamically update release dates (#567)
 def generate_error_response(string):
     """
     Generate Response with error message about missing request data
@@ -348,6 +357,7 @@ class MicrositesViewSet(ViewSet):
 
 >>>>>>> Proversity/staging (#564)
 
+
 class MicrositesDetailView(ViewSet):
     '''
         **Use Cases**
@@ -439,6 +449,7 @@ class MicrositesDetailView(ViewSet):
         elif course_org_filter is None:
             return generate_error_response('course_org_filter')
 
+
         # Get the microsite
         microsite = Microsite.objects.get(pk=pk)
         domain = microsite.site.domain
@@ -482,6 +493,7 @@ class MicrositesDetailView(ViewSet):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Proversity/development (#558)
@@ -491,6 +503,9 @@ class MicrositesDetailView(ViewSet):
 =======
 
 >>>>>>> Proversity/staging (#564)
+=======
+
+>>>>>>> dynamically update release dates (#567)
         if serializer.is_valid():
             serializer.save()
             messages['id'] = microsite.id
