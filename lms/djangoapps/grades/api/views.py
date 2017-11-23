@@ -30,10 +30,8 @@ from student.roles import CourseStaffRole
 log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
 
-def get_user_grades(grade_user, course):
-    
-    course_grade = CourseGradeFactory().update(grade_user, course)
-    
+def get_user_grades(grade_user, course, course_grade):
+        
     courseware_summary = course_grade.chapter_grades.values()
     grade_summary = course_grade.summary
     grades_schema = {}
@@ -55,6 +53,20 @@ def get_user_grades(grade_user, course):
                 if total > 0:
                     grades_schema[section_id] = sections_scores
     return grades_schema
+
+
+def _build_emails(identifiers, email_extension):
+    """
+    Itterates over a given list of indetifiers and adds the email extension
+    returns completed email list.
+    """
+    email_list = []
+    for identifier in identifiers:
+        if "@" in identifier:
+            email_list.append(identifier)
+        else:
+            email_list.append("{id}{ext}".format(id=identifier.strip(), ext=email_extension))
+    return email_list
 
 @view_auth_classes()
 class GradeViewMixin(DeveloperErrorViewMixin):
@@ -291,9 +303,28 @@ class GradesBulkAPIView(ListAPIView):
         # create the list based on the post parameters
 
         serializer = GradeBulkAPIViewSerializer(data=request.data)
-        courseParams = request.data['course_ids']
-        userParams = request.data['usernames']
         
+        try:
+            course_ids = request.data['course_ids']
+        except KeyError:
+            course_ids = None
+        try:
+            usernames = request.data['usernames']
+        except KeyError:
+            usernames = None
+        try:
+            email_extension = request.data['email_extension']
+        except KeyError:
+            email_extension = None      
+
+        # compile list of email adresses
+    
+        if email_extension is not None:
+            list_of_emails_or_usernames =\
+                _build_emails(usernames, email_extension)
+        else:
+            list_of_emails_or_usernames = usernames
+
         # Set up a dictionaries/list to contain the user grades and course grades
         # catching the incorrect courses in a "course_failure" list
         course_results = {}
@@ -301,23 +332,23 @@ class GradesBulkAPIView(ListAPIView):
         course_failure = []
         user_grades = {}
 
-        for course_str in courseParams:
+        for course_str in course_ids:
             try:
                 course_key = CourseKey.from_string(str(course_str))
                 course = courses.get_course(course_key)
-                # Get the list of users in a specific course
+
+                # query database for all users holding these emails
                 # Django's "filter" takes care of "User not found"
                 user_list = USER_MODEL.objects.filter(
-                    Q(username__in=userParams) | Q(email__in=userParams),
-                    courseenrollment__course_id=CourseKey.from_string(course_str),
-                    courseenrollment__is_active=1,
+                    Q(username__in=usernames) |
+                    Q(email__in=list_of_emails_or_usernames),
+                    courseenrollment__course_id=CourseKey.from_string(course_str)
                 ).order_by('username').select_related('profile')
-
                 for user in user_list:
                     try:
                         course_grade = CourseGradeFactory().update(user, course)
                         if depth == 'all':
-                            grades_schema =  get_user_grades(user, course)
+                            grades_schema =  get_user_grades(user, course, course_grade)
                         else:
                             grades_schema = 'Specify depth=all in query parameters.'
                         user_grades[user.username] = {

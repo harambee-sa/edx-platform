@@ -487,7 +487,11 @@ def _section_course_info(course, access):
         'course_org': course.display_org_with_default,
         'course_number': course.display_number_with_default,
         'course_name': course.display_name,
+<<<<<<< HEAD
         'course_display_name': course.display_name,
+=======
+        'course_display_name': course.display_name_with_default,
+>>>>>>> Proversity/development (#576)
         'has_started': course.has_started(),
         'has_ended': course.has_ended(),
         'start_date': course.start,

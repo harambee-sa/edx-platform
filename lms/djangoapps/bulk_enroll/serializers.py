@@ -63,16 +63,24 @@ class BulkRegisterEnrollSerializer(serializers.Serializer):
     email_students = serializers.BooleanField(default=False)
     country = serializers.CharField()
     course_mode = serializers.CharField()
-    email_extension = serializers.CharField()
+    email_extension = serializers.CharField(required=False)
 
     def validate_courses(self, value):
         """
         Check that each course key in list is valid.
         """
         course_keys = value
+        new_values = []
         for course in course_keys:
+            course = course.replace(" ", "")
             try:
                 CourseKey.from_string(course)
+                new_values.append(course)
+            except Exception as e:
+                raise \
+                    serializers.ValidationError("Course key not valid: {}".format(course))
             except InvalidKeyError:
-                raise serializers.ValidationError("Course key not valid: {}".format(course))
-        return value
+                raise \
+                    serializers.ValidationError("Course key not valid: {}".format(course))
+                    
+        return new_values

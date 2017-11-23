@@ -186,6 +186,15 @@ UNVERIFIED_CERT_DATA = CertData(
     cert_web_view_url=None
 )
 
+COURSE_HOMEPAGE_INVERT_TITLE =\
+    configuration_helpers.get_value('COURSE_HOMEPAGE_INVERT_TITLE', False)
+
+COURSE_HOMEPAGE_SHOW_SUBTITLE =\
+    configuration_helpers.get_value('COURSE_HOMEPAGE_SHOW_SUBTITLE', True)
+
+COURSE_HOMEPAGE_SHOW_ORG =\
+    configuration_helpers.get_value('COURSE_HOMEPAGE_SHOW_ORG', True)
+
 
 def _downloadable_cert_data(download_url=None, cert_web_view_url=None):
     return CertData(
@@ -389,6 +398,12 @@ def course_info(request, course_id):
         # Get the course tools enabled for this user and course
         course_tools = CourseToolsPluginManager.get_enabled_course_tools(request, course_key)
 
+        course_title = course.display_number_with_default
+        course_subtitle = course.display_name_with_default
+        if COURSE_HOMEPAGE_INVERT_TITLE:
+            course_title = course.display_name_with_default
+            course_subtitle = course.display_number_with_default
+            
         context = {
             'request': request,
             'masquerade_user': user,
@@ -396,6 +411,10 @@ def course_info(request, course_id):
             'url_to_enroll': CourseTabView.url_to_enroll(course_key),
             'cache': None,
             'course': course,
+            'course_title': course_title,
+            'course_subtitle': course_subtitle,
+            'show_subtitle': COURSE_HOMEPAGE_SHOW_SUBTITLE,
+            'show_org': COURSE_HOMEPAGE_SHOW_ORG,
             'staff_access': staff_access,
             'masquerade': masquerade,
             'supports_preview_menu': True,

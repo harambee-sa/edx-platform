@@ -648,13 +648,18 @@ def create_and_register_users_without_email(request):
     # Only create_and_enroll_users which do not exist, get complament of user list
     new_users_to_register =\
         set(list_of_emails_or_usernames) - set([user.email for user in user_list])
-    try:
-        with transaction.atomic():
-            for email in list(new_users_to_register):
-                identifier = email.split('@')[0]
-                email = email
-                name = '{}'.format(identifier)
-                password = '{}12345'.format(identifier)
+    
+    
+    for email in list(new_users_to_register):
+        identifier = email.split('@')[0]
+        email = email
+        name = '{}'.format(identifier)
+        password = '{}12345'.format(identifier)
+        user_exists =\
+            User.objects.filter(Q(username=identifier)|Q(email=email)).exists()
+
+        if not user_exists:
+            with transaction.atomic():
                 user = create_user_and_user_profile(
                     email,
                     identifier,
@@ -663,14 +668,20 @@ def create_and_register_users_without_email(request):
                     password
                 )
                 enrollment_result[user.username] =\
-                "newly registered.".format(identifier)
-            # enroll user
-    except IntegrityError:
-        log.warning('This user already exists')
+                "{} newly registered.".format(identifier)
+        else:
+            user =\
+                User.objects.filter(Q(username=identifier)|Q(email=email))[0]
+
+            enrollment_result[identifier] =\
+                "already exists with this email {}.".format(user.email)
+
+            log.warning("This user already exists: {}".format(user.email))
 
     # take note of the existing users
     for user in user_list:
-        enrollment_result[user.username] = "already exists.".format(user.email)
+        enrollment_result[user.username] =\
+            "already exists with this email {}.".format(user.email)
 
     return JsonResponse(enrollment_result)
 
@@ -720,6 +731,7 @@ def students_update_enrollment(request, course_id):
     course_id = CourseKey.from_string(course_id)
     action = request.POST.get('action')
     identifiers_raw = request.POST.get('identifiers')
+    identifiers_raw = _split_input_list(identifiers_raw)
     auto_enroll = _get_boolean_param(request, 'auto_enroll')
     email_students = _get_boolean_param(request, 'email_students')
     is_white_label = CourseMode.is_white_label(course_id)
@@ -733,13 +745,11 @@ def students_update_enrollment(request, course_id):
     if request.POST.get('email_extension'):
         identifiers =\
             _build_emails(
-                _split_input_list(identifiers_raw),
+                identifiers_raw,
                 request.POST.get('email_extension')
             )
     else:
-        identifiers = _split_input_list(identifiers_raw)
-    
-    
+        identifiers = identifiers_raw
     
     if is_white_label:
         if not reason:
@@ -759,7 +769,7 @@ def students_update_enrollment(request, course_id):
             get_email_params(course, auto_enroll, secure=request.is_secure())
 
     results = []
-    for identifier in identifiers:
+    for index, identifier in enumerate(identifiers):
         # First try to get a user object from the identifer
         user = None
         email = None
@@ -830,7 +840,7 @@ def students_update_enrollment(request, course_id):
             # Flag this email as an error if invalid, but continue checking
             # the remaining in the list
             results.append({
-                'identifier': identifier,
+                'identifier': identifiers_raw[index],
                 'invalidIdentifier': True,
             })
 
@@ -840,7 +850,7 @@ def students_update_enrollment(request, course_id):
             log.exception(u"Error while #{}ing student")
             log.exception(exc)
             results.append({
-                'identifier': identifier,
+                'identifier': identifiers_raw[index],
                 'error': True,
             })
 
@@ -849,7 +859,7 @@ def students_update_enrollment(request, course_id):
                 request.user, email, state_transition, reason, enrollment_obj
             )
             results.append({
-                'identifier': identifier,
+                'identifier': identifiers_raw[index],
                 'before': before.to_dict(),
                 'after': after.to_dict(),
             })

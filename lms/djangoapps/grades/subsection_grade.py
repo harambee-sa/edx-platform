@@ -120,6 +120,27 @@ class ZeroSubsectionGrade(SubsectionGradeBase):
                     locations[block_key] = problem_score
         return locations
 
+    @lazy
+    def problem_scores_with_keys(self):
+        """
+        Overrides the problem_scores member variable in order
+        to return empty scores for all scorable problems in the
+        course.
+        """
+        problem_scores_with_keys = OrderedDict()  # dict of problem locations to ProblemScore
+        for block_key in self.course_data.structure.post_order_traversal(
+                filter_func=possibly_scored,
+                start_node=self.location,
+        ):
+            block = self.course_data.structure[block_key]
+            if getattr(block, 'has_score', False):
+                problem_score = get_score(
+                    submissions_scores={}, csm_scores={}, persisted_block=None, block=block,
+                )
+                if problem_score is not None:
+                    problem_scores_with_keys[str(block_key)] = problem_score
+        return problem_scores_with_keys
+
 
 class NonZeroSubsectionGrade(SubsectionGradeBase):
     """
@@ -206,6 +227,21 @@ class ReadSubsectionGrade(NonZeroSubsectionGrade):
             if problem_score:
                 problem_scores[block.locator] = problem_score
         return problem_scores
+
+    @lazy
+    def problem_scores_with_keys(self):
+        problem_scores_with_keys = OrderedDict()
+        for block in self.model.visible_blocks.blocks:
+            problem_score = self._compute_block_score(
+                block.locator,
+                self.factory.course_data.structure,
+                self.factory._submissions_scores,
+                self.factory._csm_scores,
+                block,
+            )
+            if problem_score:
+                problem_scores_with_keys[str(block.locator)] = problem_score
+        return problem_scores_with_keys
 
 
 class CreateSubsectionGrade(NonZeroSubsectionGrade):
