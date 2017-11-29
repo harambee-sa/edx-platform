@@ -24,11 +24,16 @@ class HarambeeOAuth2(BaseOAuth2):
     REDIRECT_STATE = False
     ID_KEY = 'username'
     STATE_PARAMETER = True
-    AUTHORIZATION_URL = 'https://mvpdev.harambeecloud.com/identityserver/connect/authorize'
-    ACCESS_TOKEN_URL = 'https://mvpdev.harambeecloud.com/identityserver/connect/token'
+    AUTHORIZATION_URL = \
+        'https://mvpdev.harambeecloud.com/identityserver/connect/authorize'
+    ACCESS_TOKEN_URL = \
+        'https://mvpdev.harambeecloud.com/identityserver/connect/token'
     ACCESS_TOKEN_METHOD = 'POST'
     RESPONSE_TYPE = 'code id_token'
     REDIRECT_IS_HTTPS = True
+    REVOKE_TOKEN_URL = \
+        'https://mvpdev.harambeecloud.com/identityserver/connect/endsession'
+    REVOKE_TOKEN_METHOD = 'GET'
 
     # The order of the default scope is important
     DEFAULT_SCOPE = ['openid', 'profile']
@@ -116,3 +121,6 @@ class HarambeeOAuth2(BaseOAuth2):
             user.is_new = out.get('is_new')
 
         return user
+        
+    def revoke_token_params(self, token, uid):
+        return {'access_token': token}
