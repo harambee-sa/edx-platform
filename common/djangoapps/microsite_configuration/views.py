@@ -113,6 +113,7 @@ def save_org_logo(url, org_short_name):
         raise
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Proversity/staging (#564)
 =======
 
@@ -125,6 +126,9 @@ def save_org_logo(url, org_short_name):
 =======
 
 >>>>>>> Proversity/development (#581)
+=======
+
+>>>>>>> Proversity/development (#581) (#582)
 def generate_error_response(string):
     """
     Generate Response with error message about missing request data
