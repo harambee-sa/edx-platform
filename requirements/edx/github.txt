@@ -284,6 +284,7 @@ git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
 =======
 =======
 git+https://github.com/proversity-org/recap-xblock.git@0.2.1#egg=recap-xblock==0.2.1
+<<<<<<< HEAD
 git+https://github.com/proversity-org/badger-xblock.git#egg=badger-xblock
 >>>>>>> UPD: new badgr version
 <<<<<<< HEAD
@@ -328,6 +329,9 @@ git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xbloc
 =======
 git+https://github.com/proversity-org/badger-xblock.git@0.2.3#egg=badger-xblock==0.2.3
 >>>>>>> Proversity/development (#587)
+=======
+git+https://github.com/proversity-org/badger-xblock.git@0.2.3#egg=badger-xblock==0.2.3
+>>>>>>> master merge (#588)
 -e git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
 git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
 >>>>>>> upstream master merge

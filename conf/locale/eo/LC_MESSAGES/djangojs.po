@@ -27,12 +27,17 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:44+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.873858\n"
 =======
 "POT-Creation-Date: 2017-11-14 02:56-0500\n"
 "PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
 >>>>>>> Proversity/development (#587)
+=======
+"POT-Creation-Date: 2017-11-14 02:56-0500\n"
+"PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
+>>>>>>> master merge (#588)
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -43,9 +48,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
 #: cms/static/js/views/video_transcripts.js common/static/bundles/Import.js
 =======
+=======
+>>>>>>> master merge (#588)
 #: cms/static/cms/js/main.js cms/static/coffee/src/main.js
 #: cms/static/js/views/active_video_upload_list.js
 #: common/static/bundles/Import.js
@@ -131,6 +139,7 @@ msgstr "ÖK Ⱡ'σя#"
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/learner_dashboard/verification_popover.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/response-comment-edit.underscore
@@ -145,6 +154,8 @@ msgstr "ÖK Ⱡ'σя#"
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-edit.underscore
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 msgid "Cancel"
 msgstr "Çänçél Ⱡ'σяєм ιρѕυ#"
 
@@ -285,6 +296,7 @@ msgid "Choose File"
 msgstr "Çhöösé Fïlé Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -309,6 +321,8 @@ msgstr "Nöné Ⱡ'σяєм ι#"
 
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: cms/static/js/views/course_video_settings.js
 #: cms/static/js/views/metadata.js
 #: cms/static/js/views/previous_video_upload.js
@@ -2151,6 +2165,7 @@ msgid "Turn off transcripts"
 msgstr "Türn öff tränsçrïpts Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/AssetsPage.bace7aaf2adb48c51598.js
 msgid "end"
 msgstr "énd Ⱡ'σяєм#"
@@ -2158,6 +2173,8 @@ msgstr "énd Ⱡ'σяєм#"
 #: common/static/bundles/CourseGoals.c4996c40fda9d3059c82.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/CourseGoals.js
 msgid "Thank you for setting your course goal to "
 msgstr ""
@@ -2165,9 +2182,12 @@ msgstr ""
 "¢σηѕє¢тєтυя #"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseGoals.c4996c40fda9d3059c82.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/CourseGoals.js
 msgid ""
 "There was an error in setting your goal, please reload the page and try "
@@ -2177,9 +2197,12 @@ msgstr ""
 "ägäïn. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "You have successfully updated your goal."
@@ -2188,9 +2211,12 @@ msgstr ""
 "¢σηѕє¢тєтυя#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "There was an error updating your goal."
@@ -2199,21 +2225,28 @@ msgstr ""
 "¢σηѕє¢тєтυя#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/CourseHome.js
 msgid "Show more"
 msgstr "Shöw möré Ⱡ'σяєм ιρѕυм ∂σł#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/CourseHome.js
 msgid "Show less"
 msgstr "Shöw léss Ⱡ'σяєм ιρѕυм ∂σł#"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #: common/static/bundles/SingleSupportForm.24c3e19077ebd20ce989.js
 #: common/static/bundles/SingleSupportForm.js
@@ -2379,46 +2412,63 @@ msgstr "Çänçél üplöäd Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/StudioIndex.js
 msgid "Organization:"
 msgstr "Örgänïzätïön: Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/StudioIndex.js
 msgid "Course Number:"
 msgstr "Çöürsé Nümßér: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/StudioIndex.js
 msgid "Course Run:"
 msgstr "Çöürsé Rün: Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/StudioIndex.js
 msgid "(Read-only)"
 msgstr "(Réäd-önlý) Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/StudioIndex.js
 msgid "Re-run Course"
 msgstr "Ré-rün Çöürsé Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: common/static/bundles/StudioIndex.js
 #: cms/templates/js/show-textbook.underscore
 msgid "View Live"
@@ -8191,10 +8241,13 @@ msgstr "Érrör pöstïng ýöür méssägé. Ⱡ'σяєм ιρѕυм ∂σłσ�
 
 #: common/static/common/templates/discussion/new-post-visibility.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: test_root/staticfiles/common/templates/discussion/new-post-visibility.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post-visibility.underscore
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #, python-format
 msgid "This post will be visible only to %(group_name)s."
 msgstr ""
@@ -8203,10 +8256,13 @@ msgstr ""
 
 #: common/static/common/templates/discussion/new-post-visibility.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: test_root/staticfiles/common/templates/discussion/new-post-visibility.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post-visibility.underscore
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 msgid "This post will be visible to everyone."
 msgstr ""
 "Thïs pöst wïll ßé vïsïßlé tö évérýöné. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
@@ -8242,15 +8298,21 @@ msgstr ""
 
 #: common/static/common/templates/discussion/new-post.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 =======
+=======
+>>>>>>> master merge (#588)
 msgid "Your question or idea (required)"
 msgstr ""
 "Ýöür qüéstïön ör ïdéä (réqüïréd) Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
 
 #: common/static/common/templates/discussion/new-post.underscore
+<<<<<<< HEAD
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 msgid "follow this post"
 msgstr "föllöw thïs pöst Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
 
@@ -8264,6 +8326,10 @@ msgstr "pöst änönýmöüslý tö çlässmätés Ⱡ'σяєм ιρѕυм ∂σ
 
 <<<<<<< HEAD
 =======
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "post privately to staff"
+msgstr "pöst prïvätélý tö stäff Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "post privately to staff"
 msgstr "pöst prïvätélý tö stäff Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
@@ -8681,6 +8747,7 @@ msgstr "Läst mödïfïéd ßý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/support/templates/enrollment.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
@@ -8691,6 +8758,8 @@ msgstr "N/À Ⱡ'σяєм#"
 #: test_root/staticfiles/support/templates/enrollment.underscore
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 msgid "Change Enrollment"
 msgstr "Çhängé Énröllmént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
 
@@ -9529,11 +9598,14 @@ msgid "Final Grade"
 msgstr "Fïnäl Grädé Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
+<<<<<<< HEAD
 #: test_root/staticfiles/templates/learner_dashboard/course_enroll.underscore
 msgid "for {courseName}"
 msgstr "för {courseName} Ⱡ'σяєм ιρѕυм #"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
+=======
+>>>>>>> master merge (#588)
 msgid "View Archived Course"
 msgstr "Vïéw Àrçhïvéd Çöürsé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
 
@@ -9543,9 +9615,12 @@ msgstr "Vïéw Çöürsé Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 msgid "Select a session:"
 msgstr "Séléçt ä séssïön: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
 =======
+=======
+>>>>>>> master merge (#588)
 msgid "Choose a course run:"
 msgstr "Çhöösé ä çöürsé rün: Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
 >>>>>>> Proversity/development (#587)
@@ -9753,14 +9828,20 @@ msgstr "Förgöt pässwörd? Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
 
 #: lms/templates/student_account/hinted_login.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: test_root/staticfiles/templates/student_account/hinted_login.underscore
 =======
+=======
+>>>>>>> master merge (#588)
 #: lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr "Sïgn ïn Ⱡ'σяєм ιρѕυм #"
 
 #: lms/templates/student_account/hinted_login.underscore
+<<<<<<< HEAD
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #, python-format
 msgid "Would you like to sign in using your %(providerName)s credentials?"
 msgstr ""
@@ -9815,6 +9896,7 @@ msgstr "Çréäté än Àççöünt. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт 
 
 #: lms/templates/student_account/login.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 msgid "Sign in to continue learning as {email}"
 msgstr ""
 "Sïgn ïn tö çöntïnüé léärnïng äs {email} Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
@@ -9857,6 +9939,8 @@ msgstr ""
 #: test_root/staticfiles/templates/student_account/login.underscore
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 msgid "Sign In"
 msgstr "Sïgn Ìn Ⱡ'σяєм ιρѕυм #"
 
@@ -9923,13 +10007,19 @@ msgstr "Sïgn ïn. Ⱡ'σяєм ιρѕυм ∂#"
 
 #: lms/templates/student_account/register.underscore
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: test_root/staticfiles/templates/student_account/register.underscore
 =======
+=======
+>>>>>>> master merge (#588)
 msgid "Create an Account"
 msgstr "Çréäté än Àççöünt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
 
 #: lms/templates/student_account/register.underscore
+<<<<<<< HEAD
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 msgid "Create an account using"
 msgstr "Çréäté än äççöünt üsïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
 
@@ -10734,6 +10824,7 @@ msgstr ""
 "ýöür ßäçkpäçk.</li> Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Add a New Allowance"
 msgstr "Àdd ä Néw Àllöwänçé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
@@ -10809,6 +10900,8 @@ msgstr "Çhöösé ä çöürsé rün: Ⱡ'σяєм ιρѕυм ∂σłσя ѕι�
 
 =======
 >>>>>>> Proversity/development (#587)
+=======
+>>>>>>> master merge (#588)
 #: cms/templates/js/access-editor.underscore
 msgid "Limit Access"
 msgstr "Lïmït Àççéss Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
