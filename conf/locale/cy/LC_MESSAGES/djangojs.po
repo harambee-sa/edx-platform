@@ -1,41 +1,16 @@
-# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
-# edX community translations have been downloaded from Welsh (http://www.transifex.com/open-edx/edx-platform/language/cy/).
-# Copyright (C) 2017 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2017 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2017 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2017 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: edx-platform\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2017-05-11 15:05+0000\n"
-"PO-Revision-Date: 2017-05-11 15:11+0000\n"
-"Last-Translator: Ned Batchelder <ned@edx.org>\n"
-"Language-Team: Welsh (http://www.transifex.com/open-edx/edx-platform/language/cy/)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
-"Language: cy\n"
-"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != 11) ? 2 : 3;\n"
+"X-Generator: Translate Toolkit 1.13.0\n"
 
 #: cms/static/cms/js/xblock/cms.runtime.v1.js
 #: cms/static/js/certificates/views/signatory_details.js
@@ -43,8 +18,7 @@ msgstr ""
 #: cms/static/js/views/asset.js cms/static/js/views/container.js
 #: cms/static/js/views/course_info_handout.js
 #: cms/static/js/views/course_info_update.js
-#: cms/static/js/views/edit_textbook.js
-#: cms/static/js/views/list_item_editor.js
+#: cms/static/js/views/edit_textbook.js cms/static/js/views/list_item_editor.js
 #: cms/static/js/views/modals/edit_xblock.js cms/static/js/views/tabs.js
 #: cms/static/js/views/utils/xblock_utils.js lms/static/js/ccx/schedule.js
 #: lms/static/js/views/fields.js
@@ -154,8 +128,7 @@ msgstr "Cau"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-#: cms/static/js/views/assets.js
-#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: cms/static/js/views/assets.js common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/course-instructor-details.underscore
 #: cms/templates/js/previous-video-upload-list.underscore
@@ -194,8 +167,7 @@ msgstr "Ok"
 msgid "Unknown"
 msgstr "Anhysbys"
 
-#: cms/static/js/views/metadata.js
-#: cms/static/js/views/previous_video_upload.js
+#: cms/static/js/views/metadata.js cms/static/js/views/previous_video_upload.js
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 #: lms/static/js/views/image_field.js
 #: cms/templates/js/video/metadata-translations-item.underscore
@@ -279,7 +251,8 @@ msgstr "Creu grwpiau coll"
 
 #: common/lib/xmodule/xmodule/assets/word_cloud/public/js/word_cloud_main.js
 msgid "{start_strong}{total}{end_strong} words submitted in total."
-msgstr "{start_strong}{total}{end_strong} o eiriau wedi'u cyflwyno at ei gilydd."
+msgstr ""
+"{start_strong}{total}{end_strong} o eiriau wedi'u cyflwyno at ei gilydd."
 
 #: common/lib/xmodule/xmodule/assets/word_cloud/public/js/word_cloud_main.js
 msgid "text_word_{uniqueId} title_word_{uniqueId}"
@@ -323,9 +296,11 @@ msgstr "Ymateb i'r anodiad"
 msgid "%(num_points)s point possible (graded, results hidden)"
 msgid_plural "%(num_points)s points possible (graded, results hidden)"
 msgstr[0] ""
+"{\"one\"=>\"%(num_points) y pwyntiau sy'n bosibl (graded)\", \"other\"=>"
+"\"%(num_points) y pwyntiau sy'n bosibl (graded)\"}"
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+"{\"one\"=>\"%(num_points) y pwyntiau sy'n bosibl (graded)\", \"other\"=>"
+"\"%(num_points) y pwyntiau sy'n bosibl (graded)\"}"
 
 #. Translators: %(num_points)s is the number of points possible (examples: 1,
 #. 3, 10).;
@@ -333,9 +308,11 @@ msgstr[3] ""
 msgid "%(num_points)s point possible (ungraded, results hidden)"
 msgid_plural "%(num_points)s points possible (ungraded, results hidden)"
 msgstr[0] ""
+"{\"one\"=>\"%(num_points) y pwyntiau sy'n bosibl (ungraded)\", \"other\"=>"
+"\"%(num_points) y pwyntiau sy'n bosibl (ungraded)\"}"
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+"{\"one\"=>\"%(num_points) y pwyntiau sy'n bosibl (ungraded)\", \"other\"=>"
+"\"%(num_points) y pwyntiau sy'n bosibl (ungraded)\"}"
 
 #. Translators: %(num_points)s is the number of points possible (examples: 1,
 #. 3, 10).;
@@ -344,8 +321,6 @@ msgid "%(num_points)s point possible (graded)"
 msgid_plural "%(num_points)s points possible (graded)"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #. Translators: %(num_points)s is the number of points possible (examples: 1,
 #. 3, 10).;
@@ -354,8 +329,6 @@ msgid "%(num_points)s point possible (ungraded)"
 msgid_plural "%(num_points)s points possible (ungraded)"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #. Translators: %(earned)s is the number of points earned. %(possible)s is the
 #. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
@@ -366,8 +339,6 @@ msgid "%(earned)s/%(possible)s point (graded)"
 msgid_plural "%(earned)s/%(possible)s points (graded)"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #. Translators: %(earned)s is the number of points earned. %(possible)s is the
 #. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
@@ -378,8 +349,6 @@ msgid "%(earned)s/%(possible)s point (ungraded)"
 msgid_plural "%(earned)s/%(possible)s points (ungraded)"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "The grading process is still running. Refresh the page to see updates."
@@ -403,13 +372,11 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "You submitted {filename}; only {allowedFiles} are allowed."
-msgstr ""
-"Rydych wedi cyflwyno {filename}; {allowedFiles} yn unig a ganiateir."
+msgstr "Rydych wedi cyflwyno {filename}; {allowedFiles} yn unig a ganiateir."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "Your file {filename} is too large (max size: {maxSize}MB)."
-msgstr ""
-"Mae eich ffeil {filename} yn rhy fawr (mwyafswm maint: {maxSize}MB)."
+msgstr "Mae eich ffeil {filename} yn rhy fawr (mwyafswm maint: {maxSize}MB)."
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "You did not submit the required files: {requiredFiles}."
@@ -1263,8 +1230,8 @@ msgid ""
 "Paste is now in plain text mode. Contents will now be pasted as plain text "
 "until you toggle this option off."
 msgstr ""
-"Mae gludo bellach mewn modd testun plaen. Bydd y cynnwys nawr yn cael "
-"ei ludo fel testun plaen hyd nes i chi doglo'r dewis hwn i ffwrdd."
+"Mae gludo bellach mewn modd testun plaen. Bydd y cynnwys nawr yn cael ei "
+"ludo fel testun plaen hyd nes i chi doglo'r dewis hwn i ffwrdd."
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1312,8 +1279,7 @@ msgstr "Blaenorol"
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
-#: lms/static/coffee/src/customwmd.js
-#: cms/templates/js/asset-library.underscore
+#: lms/static/coffee/src/customwmd.js cms/templates/js/asset-library.underscore
 msgid "Preview"
 msgstr "Rhagolwg"
 
@@ -1369,8 +1335,8 @@ msgid ""
 "Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press "
 "ALT-0 for help"
 msgstr ""
-"Maes testun cyfoethog. Gwasgwch ALT-F9 am ddewislen. Gwasgwch ALT-F10 am "
-"far offer. Gwasgwch ALT-0 am help"
+"Maes testun cyfoethog. Gwasgwch ALT-F9 am ddewislen. Gwasgwch ALT-F10 am far "
+"offer. Gwasgwch ALT-0 am help"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1563,8 +1529,8 @@ msgid ""
 "The URL you entered seems to be an external link. Do you want to add the "
 "required http:// prefix?"
 msgstr ""
-"Mae'n debyg mai dolen allanol yw'r URL a roesoch. Ydych chi am "
-"ychwanegu'r rhagddodiad http:// gofynnol?"
+"Mae'n debyg mai dolen allanol yw'r URL a roesoch. Ydych chi am ychwanegu'r "
+"rhagddodiad http:// gofynnol?"
 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -1692,13 +1658,15 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/lti/lti.js
 msgid ""
-"Click OK to have your username and e-mail address sent to a 3rd party application.\n"
+"Click OK to have your username and e-mail address sent to a 3rd party "
+"application.\n"
 "\n"
 "Click Cancel to return to this page without sending your information."
 msgstr ""
 "Cliciwch OK i adael i'ch enw defnyddiwr a'ch cyfeiriad e-bost gael eu hanfon "
-"i gymhwysiad 3ydd parti.\n \n Cliciwch canslo i ddychwelyd i'r dudalen hon "
-"heb anfon eich gwybodaeth."
+"i gymhwysiad 3ydd parti.\n"
+" \n"
+" Cliciwch canslo i ddychwelyd i'r dudalen hon heb anfon eich gwybodaeth."
 
 #: common/lib/xmodule/xmodule/js/src/lti/lti.js
 msgid ""
@@ -1707,8 +1675,9 @@ msgid ""
 "Click Cancel to return to this page without sending your information."
 msgstr ""
 "Cliciwch OK i adael i'ch enw defnyddiwr gael ei anfon i gymhwysiad 3ydd "
-"parti.\n \n Cliciwch canslo i ddychwelyd i'r dudalen hon heb anfon eich "
-"gwybodaeth."
+"parti.\n"
+" \n"
+" Cliciwch canslo i ddychwelyd i'r dudalen hon heb anfon eich gwybodaeth."
 
 #: common/lib/xmodule/xmodule/js/src/lti/lti.js
 msgid ""
@@ -1717,8 +1686,9 @@ msgid ""
 "Click Cancel to return to this page without sending your information."
 msgstr ""
 "Cliciwch OK i adael i'ch cyfeiriad e-bost gael ei anfon i gymhwysiad 3ydd "
-"parti.\n \n Cliciwch canslo i ddychwelyd i'r dudalen hon heb anfon eich "
-"gwybodaeth."
+"parti.\n"
+" \n"
+" Cliciwch canslo i ddychwelyd i'r dudalen hon heb anfon eich gwybodaeth."
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 msgid "incorrect"
@@ -1738,13 +1708,15 @@ msgstr "Eglurhad byr"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 msgid ""
-"If you use the Advanced Editor, this problem will be converted to XML and you will not be able to return to the Simple Editor Interface.\n"
+"If you use the Advanced Editor, this problem will be converted to XML and "
+"you will not be able to return to the Simple Editor Interface.\n"
 "\n"
 "Proceed to the Advanced Editor and convert this problem to XML?"
 msgstr ""
 "Os ydych yn defnyddio'r Advanced Editor, bydd y broblem hon yn cael ei "
-"throsi i XML ac ni chewch ddychwelyd i Simple Editor Interface.\n \n Ewch "
-"ymlaen i Advanced Editor a throsi'r broblem hon i XML?"
+"throsi i XML ac ni chewch ddychwelyd i Simple Editor Interface.\n"
+" \n"
+" Ewch ymlaen i Advanced Editor a throsi'r broblem hon i XML?"
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 msgid "Explanation"
@@ -1873,32 +1845,26 @@ msgid "%(value)s hour"
 msgid_plural "%(value)s hours"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 msgid "%(value)s minute"
 msgid_plural "%(value)s minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "oddeutu munud"
+msgstr[1] "oddeutu munud"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 msgid "%(value)s second"
 msgid_plural "%(value)s seconds"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 msgid ""
 "Click on this button to mute or unmute this video or press UP or DOWN "
 "buttons to increase or decrease volume level."
 msgstr ""
-"Cliciwch ar y botwm hwn i dewi neu ddad-dewi'r fideo hwn neu wasgu botymau "
-"I FYNY neu I LAWR neu droi lefel y sain i lawr."
+"Cliciwch ar y botwm hwn i dewi neu ddad-dewi'r fideo hwn neu wasgu botymau I "
+"FYNY neu I LAWR neu droi lefel y sain i lawr."
 
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 msgid "Adjust video volume"
@@ -1964,13 +1930,13 @@ msgstr "Diwedd y trawsgrifiad. Neidio i'r dechrau."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid ""
-"Press the UP arrow key to enter the language menu then use UP and DOWN arrow"
-" keys to navigate language options. Press ENTER to change to the selected "
+"Press the UP arrow key to enter the language menu then use UP and DOWN arrow "
+"keys to navigate language options. Press ENTER to change to the selected "
 "language."
 msgstr ""
 "Gwasgwch bysell saeth I FYNY i agor y ddewislen iaith ac yna ddefnyddio'r "
-"bysellau saeth I FYNY ac I LAWR i lywio'r dewisiadau iaith. Gwasgwch ENTER "
-"i newid i'r iaith a ddewiswyd."
+"bysellau saeth I FYNY ac I LAWR i lywio'r dewisiadau iaith. Gwasgwch ENTER i "
+"newid i'r iaith a ddewiswyd."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid "Hide closed captions"
@@ -1978,8 +1944,7 @@ msgstr "Cuddio'r capsiynau caeëdig"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid "(Caption will be displayed when you start playing the video.)"
-msgstr ""
-"(Bydd y pennawd yn ymddangos pan fyddwch yn dechrau chwarae'r fideo.)"
+msgstr "(Bydd y pennawd yn ymddangos pan fyddwch yn dechrau chwarae'r fideo.)"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid "Turn on closed captioning"
@@ -2059,16 +2024,12 @@ msgid "there is currently {numVotes} vote"
 msgid_plural "there are currently {numVotes} votes"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid "{numVotes} Vote"
 msgid_plural "{numVotes} Votes"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid ""
@@ -2079,8 +2040,7 @@ msgstr ""
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid ""
-"You could not be unsubscribed from this post. Refresh the page and try "
-"again."
+"You could not be unsubscribed from this post. Refresh the page and try again."
 msgstr ""
 "Ni fedrwyd eich datanysgrifio i'r postiad hwn. Adnewyddwch y dudalen a "
 "rhowch gynnig arall arni."
@@ -2106,14 +2066,14 @@ msgid ""
 "This response could not be marked as endorsed. Refresh the page and try "
 "again."
 msgstr ""
-"Ni fedrwyd marcio'r ymateb hwn fel wedi'i gadarnhau. Adnewyddwch y dudalen "
-"a rhowch gynnig arall arni."
+"Ni fedrwyd marcio'r ymateb hwn fel wedi'i gadarnhau. Adnewyddwch y dudalen a "
+"rhowch gynnig arall arni."
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid "This response could not be unendorsed. Refresh the page and try again."
 msgstr ""
-"Ni fedrwyd marcio'r ymateb hwn fel heb ei gadarnhau. Adnewyddwch y dudalen "
-"a rhowch gynnig arall arni."
+"Ni fedrwyd marcio'r ymateb hwn fel heb ei gadarnhau. Adnewyddwch y dudalen a "
+"rhowch gynnig arall arni."
 
 #: common/static/common/js/discussion/views/discussion_content_view.js
 msgid "This vote could not be processed. Refresh the page and try again."
@@ -2193,8 +2153,7 @@ msgstr "Yn llwytho rhestr postiadau"
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid ""
-"No results found for {original_query}. Showing results for "
-"{suggested_query}."
+"No results found for {original_query}. Showing results for {suggested_query}."
 msgstr "Ni chafwyd canlyniadau ar gyfer {original_query}."
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
@@ -2225,30 +2184,24 @@ msgstr ""
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "{numResponses} other response"
 msgid_plural "{numResponses} other responses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Llwytho'r {numResponses} ymateb nesaf"
+msgstr[1] "Llwytho'r {numResponses} ymateb nesaf"
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "{numResponses} response"
 msgid_plural "{numResponses} responses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Llwytho'r {numResponses} ymateb nesaf"
+msgstr[1] "Llwytho'r {numResponses} ymateb nesaf"
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Showing all responses"
-msgstr ""
+msgstr "Dangos pob ymateb"
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Showing first response"
 msgid_plural "Showing first {numResponses} responses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Dangos pob ymateb"
+msgstr[1] "Dangos pob ymateb"
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Load all responses"
@@ -2350,40 +2303,34 @@ msgstr "oddeutu munud"
 #, javascript-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "tua %d munud"
+msgstr[1] "tua %d munud"
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about an hour"
-msgstr ""
+msgstr "oddeutu awr"
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
 msgid "about %d hour"
 msgid_plural "about %d hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "tua %d awr"
+msgstr[1] "tua %d awr"
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "a day"
-msgstr ""
+msgstr "y dydd"
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d dydd"
+msgstr[1] "%d dydd"
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about a month"
-msgstr ""
+msgstr "oddeutu mis"
 
 #: common/static/js/src/jquery.timeago.locale.js
 #, javascript-format
@@ -2391,8 +2338,6 @@ msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about a year"
@@ -2404,8 +2349,6 @@ msgid "%d year"
 msgid_plural "%d years"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "User"
@@ -2532,20 +2475,16 @@ msgstr "Cliciwch y blwch i ddileu'r holl fflagiau."
 #: common/static/js/vendor/ova/flagging-annotator.js
 msgid "Check the box to remove %(totalFlags)s flag."
 msgid_plural "Check the box to remove %(totalFlags)s flags."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Cliciwch y blwch i ddileu'r holl fflagiau."
+msgstr[1] "Cliciwch y blwch i ddileu'r holl fflagiau."
 
 #. Translators: 'count' is the number of flags solely for that annotation that
 #. will be removed
 #: common/static/js/vendor/ova/flagging-annotator.js
 msgid "Check the box to remove %(count)s flag."
 msgid_plural "Check the box to remove %(count)s flags."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Cliciwch y blwch i ddileu'r holl fflagiau."
+msgstr[1] "Cliciwch y blwch i ddileu'r holl fflagiau."
 
 #: common/static/js/vendor/ova/flagging-annotator.js
 msgid "All flags have been removed. To undo, uncheck the box."
@@ -2565,8 +2504,6 @@ msgid "This annotation has %(count)s flag."
 msgid_plural "This annotation has %(count)s flags."
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/djangoapps/support/static/support/js/views/certificates.js
 msgid "An unexpected error occurred.  Please try again."
@@ -2704,13 +2641,13 @@ msgstr "Cafwyd gwall wrth ddileu aelod o'r tîm. Rhowch gynnig arall arni."
 msgid "This team does not have any members."
 msgstr "Nid oes unrhyw aelodau gan y tîm hwn."
 
-#. Translators: 'date' is a placeholder for a fuzzy, relative timestamp (see:
+#. Translators: 'date' is a placeholder for a relative timestamp (see:
 #. https://github.com/rmm5t/jquery-timeago)
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid "Joined %(date)s"
 msgstr "Ymunwyd %(date)s"
 
-#. Translators: 'date' is a placeholder for a fuzzy, relative timestamp (see:
+#. Translators: 'date' is a placeholder for a relative timestamp (see:
 #. https://github.com/rmm5t/jquery-timeago)
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid "Last Activity %(date)s"
@@ -2722,8 +2659,8 @@ msgstr "Dileu'r aelod tîm hwn?"
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 msgid ""
-"This learner will be removed from the team, allowing another learner to take"
-" the available spot."
+"This learner will be removed from the team, allowing another learner to take "
+"the available spot."
 msgstr ""
 "Bydd y dysgwr hwn yn cael ei ddileu o'r tîm, gan ganiatáu i ddysgwr arall "
 "gymryd ei le."
@@ -2754,7 +2691,7 @@ msgstr "Nid ydych yn aelod o unrhyw dîm ar hyn o bryd."
 msgid "and others"
 msgstr "ac eraill"
 
-#. Translators: 'date' is a placeholder for a fuzzy, relative timestamp (see:
+#. Translators: 'date' is a placeholder for a relative timestamp (see:
 #. http://momentjs.com/)
 #: lms/djangoapps/teams/static/teams/js/views/team_card.js
 msgid "Last activity %(date)s"
@@ -2801,8 +2738,6 @@ msgid "%(memberCount)s / %(maxMemberCount)s Member"
 msgid_plural "%(memberCount)s / %(maxMemberCount)s Members"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams.js
 msgid "All teams"
@@ -2818,11 +2753,11 @@ msgstr "Pynciau"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
-"See all teams in your course, organized by topic. Join a team to collaborate"
-" with other learners who are interested in the same topic as you are."
-msgstr ""
 "See all teams in your course, organized by topic. Join a team to collaborate "
 "with other learners who are interested in the same topic as you are."
+msgstr ""
+"Gweld pob tîm ar eich cwrs, yn nhrefn pynciau. Ymunwch â thîm i gydweithio "
+"gyda dysgwyr eraill sydd â diddordeb yn yr un pwnc â chi."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "My Team"
@@ -2837,17 +2772,18 @@ msgstr "Pori"
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Your request could not be completed. Reload the page and try again."
 msgstr ""
-"Nid oedd modd cwblhau eich cais. Ail-lwythwch y dudalen a rhowch "
-"gynnig arall arni."
+"Nid oedd modd cwblhau eich cais. Ail-lwythwch y dudalen a rhowch gynnig "
+"arall arni."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
-"Your request could not be completed due to a server problem. Reload the page"
-" and try again. If the issue persists, click the Help tab to report the "
+"Your request could not be completed due to a server problem. Reload the page "
+"and try again. If the issue persists, click the Help tab to report the "
 "problem."
 msgstr ""
-"Ni fedrwyd cwblhau eich cais oherwydd problem gyda'r gweinydd. Ail-lwythwch "
-"y dudalen"
+"Nid oedd modd cwblhau eich cais. Ail-lwythwch y dudalen a rhowch gynnig "
+"arall arni. Os yw'r broblem yn parhau, cliciwch ar tab Help i adrodd am y "
+"broblem."
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Team Search"
@@ -2920,10 +2856,8 @@ msgstr "Ni ellid dod o hyd i'r tîm \"{team}\"."
 #: lms/djangoapps/teams/static/teams/js/views/topic_card.js
 msgid "%(team_count)s Team"
 msgid_plural "%(team_count)s Teams"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "nifer yn y tîm"
+msgstr[1] "nifer yn y tîm"
 
 #: lms/djangoapps/teams/static/teams/js/views/topic_card.js
 msgid "Topic"
@@ -3014,8 +2948,8 @@ msgid ""
 "Please describe this image or agree that it has no contextual value by "
 "checking the checkbox."
 msgstr ""
-"Disgrifiwch y ddelwedd hon neu gytuno nad oes ganddo unrhyw werth "
-"cyd-destunol drwy wirio'r blwch gwirio."
+"Disgrifiwch y ddelwedd hon neu gytuno nad oes ganddo unrhyw werth cyd-"
+"destunol drwy wirio'r blwch gwirio."
 
 #: lms/static/js/Markdown.Editor.js
 msgid ""
@@ -3054,8 +2988,6 @@ msgid "%(errorCount)s error found in form."
 msgid_plural "%(errorCount)s errors found in form."
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Bold (Ctrl+B)"
@@ -3146,7 +3078,7 @@ msgstr "Rhagweld yr ymholiad"
 
 #: lms/static/js/ccx/schedule.js
 msgid "All subsections"
-msgstr "Gwall wedi digwydd. Rhowch gynnig arall arni."
+msgstr "Pob is-adrannau"
 
 #: lms/static/js/ccx/schedule.js
 msgid "All units"
@@ -3186,12 +3118,14 @@ msgid ""
 "Student username/email field is required and can not be empty. Kindly fill "
 "in username/email and then press \"Add to Exception List\" button."
 msgstr ""
+"Mae'r maes enw defnyddiwr/e-bost y myfyriwr yn ofynnol ac ni all fod yn wag."
 
 #: lms/static/js/certificates/models/certificate_invalidation.js
 msgid ""
 "Student username/email field is required and can not be empty. Kindly fill "
 "in username/email and then press \"Invalidate Certificate\" button."
 msgstr ""
+"Mae'r maes enw defnyddiwr/e-bost y myfyriwr yn ofynnol ac ni all fod yn wag."
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid "Uploaded file issues. Click on \"+\" to view."
@@ -3208,39 +3142,49 @@ msgstr "ychwanegwyd y dysgwr yn llwyddiannus i'r rhestr eithriadau"
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " records are not in correct format and not added to the exception list"
 msgstr ""
-"nid yw'r cofnodion yn y fformat cywir ac nid ydynt wedi'u hychwanegu at"
+"nid yw'r cofnod yn y fformat cywir ar y cwrs ac nid yw wedi'i ychwanegu at "
+"yr eithriadau"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " record is not in correct format and not added to the exception list"
 msgstr ""
-"nid yw'r cofnod yn y fformat cywir ar y cwrs ac nid yw wedi'i ychwanegu at yr eithriadau"
+"nid yw'r cofnod yn y fformat cywir ar y cwrs ac nid yw wedi'i ychwanegu at "
+"yr eithriadau"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learners do not exist in LMS and not added to the exception list"
-msgstr "nid yw'r dysgwyr yn bodoli yn LMS ac nid ydynt wedi'u hychwanegu at y"
-
-#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner does not exist in LMS and not added to the exception list"
-msgstr ""
-
-#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners are already white listed and not added to the exception list"
 msgstr ""
 "nid yw'r dysgwr yn bodoli yn LMS ac nid yw wedi'i ychwanegu i'r rhestr "
 "eithriadau"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner does not exist in LMS and not added to the exception list"
+msgstr ""
+"nid yw'r dysgwr yn bodoli yn LMS ac nid yw wedi'i ychwanegu i'r rhestr "
+"eithriadau"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are already white listed and not added to the exception list"
+msgstr ""
+"Mae'r dysgwr eisoes ar y rhestr ganiatáu a heb ei ychwanegu at yr eithriadau"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learner is already white listed and not added to the exception list"
 msgstr ""
+"Mae'r dysgwr eisoes ar y rhestr ganiatáu a heb ei ychwanegu at yr eithriadau"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid ""
 " learners are not enrolled in course and not added to the exception list"
 msgstr ""
+"nid yw'r dysgwr wedi'i gofrestru ar y cwrs ac nid yw wedi'i ychwanegu at yr "
+"eithriadau"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learner is not enrolled in course and not added to the exception list"
 msgstr ""
+"nid yw'r dysgwr wedi'i gofrestru ar y cwrs ac nid yw wedi'i ychwanegu at yr "
+"eithriadau"
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 msgid ""
@@ -3252,8 +3196,7 @@ msgstr ""
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 msgid "Certificate has been successfully invalidated for <%= user %>."
-msgstr ""
-"Mae'r dystysgrif eisoes wedi cael ei annilysu ar gyfer <%= user %>."
+msgstr "Mae'r dystysgrif eisoes wedi cael ei annilysu ar gyfer <%= user %>."
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 #: lms/static/js/certificates/views/certificate_whitelist.js
@@ -3271,8 +3214,8 @@ msgstr ""
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 msgid ""
-"Could not find Certificate Invalidation in the list. Please refresh the page"
-" and try again"
+"Could not find Certificate Invalidation in the list. Please refresh the page "
+"and try again"
 msgstr ""
 "Ni fedrwyd dod o hyd i annilysiad tystysgrif ar y rhestr. Adnewyddwch y "
 "dudalen a rhowch gynnig arall arni"
@@ -3329,10 +3272,8 @@ msgstr "Gwall wedi digwydd. Rhowch gynnig arall arni nes ymlaen."
 #, javascript-format
 msgid "Viewing %s course"
 msgid_plural "Viewing %s courses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Gweld %s cwrs"
+msgstr[1] "Gweld %s cwrs"
 
 #: lms/static/js/discovery/views/search_form.js
 #, javascript-format
@@ -3348,8 +3289,8 @@ msgstr "Cafwyd gwall, ceisiwch chwilio eto."
 #: lms/static/js/edxnotes/views/notes_visibility_factory.js
 #: lms/static/js/edxnotes/views/search_box.js
 msgid ""
-"An error has occurred. Make sure that you are connected to the Internet, and"
-" then try refreshing the page."
+"An error has occurred. Make sure that you are connected to the Internet, and "
+"then try refreshing the page."
 msgstr ""
 "Gwall wedi digwydd. Sicrhewch eich bod yn gysylltiedig â'r Rhyngrwyd, ac yna "
 "ceisiwch Ail-wneud y dudalen."
@@ -3451,38 +3392,30 @@ msgstr "Rhowch enw defnyddiwr neu e-bost."
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numUsersAdded} student has been added to this cohort"
 msgid_plural "{numUsersAdded} students have been added to this cohort"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Ychwanegu myfyrwyr i'r cohort hwn"
+msgstr[1] "Ychwanegu myfyrwyr i'r cohort hwn"
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numMoved} student was removed from {oldCohort}"
 msgid_plural "{numMoved} students were removed from {oldCohort}"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numPresent} student was already in the cohort"
 msgid_plural "{numPresent} students were already in the cohort"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Unknown user: {user}"
-msgstr ""
+msgstr "Defnyddiwr anhysbys: {defnyddiwr}"
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "There was an error when trying to add students:"
 msgid_plural "There were {numErrors} errors when trying to add students:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Cafwyd gwall yn ystod y broses llwytho i fyny."
+msgstr[1] "Cafwyd gwall yn ystod y broses llwytho i fyny."
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "View all errors"
@@ -3520,8 +3453,8 @@ msgstr "Ychwanegu cohort"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid ""
-"The {cohortGroupName} cohort has been created. You can manually add students"
-" to this cohort below."
+"The {cohortGroupName} cohort has been created. You can manually add students "
+"to this cohort below."
 msgstr ""
 "Mae'r cohort {cohortGroupName} wedi cael eu creu. Gallwch ychwanegu myfyrwyr "
 "eich hun i'r cohort isod."
@@ -3559,8 +3492,8 @@ msgstr "Cohortau wedi'u hanalluogi"
 
 #: lms/static/js/groups/views/verified_track_settings_notification.js
 msgid ""
-"This course uses automatic cohorting for verified track learners. You cannot"
-" disable cohorts, and you cannot rename the manual cohort named "
+"This course uses automatic cohorting for verified track learners. You cannot "
+"disable cohorts, and you cannot rename the manual cohort named "
 "'{verifiedCohortName}'. To change the configuration for verified track "
 "cohorts, contact your edX partner manager."
 msgstr ""
@@ -3571,8 +3504,8 @@ msgstr ""
 
 #: lms/static/js/groups/views/verified_track_settings_notification.js
 msgid ""
-"This course has automatic cohorting enabled for verified track learners, but"
-" the required cohort does not exist. You must create a manually-assigned "
+"This course has automatic cohorting enabled for verified track learners, but "
+"the required cohort does not exist. You must create a manually-assigned "
 "cohort named '{verifiedCohortName}' for the feature to work."
 msgstr ""
 "Mae gan y cwrs hwn gohortu awtomataidd ar gyfer dysgwyr llwybr dilys, ond "
@@ -3581,12 +3514,12 @@ msgstr ""
 
 #: lms/static/js/groups/views/verified_track_settings_notification.js
 msgid ""
-"This course has automatic cohorting enabled for verified track learners, but"
-" cohorts are disabled. You must enable cohorts for the feature to work."
+"This course has automatic cohorting enabled for verified track learners, but "
+"cohorts are disabled. You must enable cohorts for the feature to work."
 msgstr ""
 "Mae gan y cwrs hwn gohortu awtomataidd ar gyfer dysgwyr llwybr dilys, ond "
-"mae cohortau wedi cael eu hanalluogi. Rhaid i chi alluogi cohortau er "
-"mwyn i'r nodwedd weithio."
+"mae cohortau wedi cael eu hanalluogi. Rhaid i chi alluogi cohortau er mwyn "
+"i'r nodwedd weithio."
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
@@ -3627,8 +3560,7 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating survey results. Please try again."
-msgstr ""
-"Gwall wrth gynhyrchu canlyniadau arolwg. Rhowch gynnig arall arni."
+msgstr "Gwall wrth gynhyrchu canlyniadau arolwg. Rhowch gynnig arall arni."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating student profile information. Please try again."
@@ -3662,8 +3594,8 @@ msgstr "Gwall wrth gynhyrchu graddau. Rhowch gynnig arall arni."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating problem grade report. Please try again."
-msgstr "Gwall wrth gynhyrchu adroddiad gradd problem. Rhowch gynnig arall "
-"arni."
+msgstr ""
+"Gwall wrth gynhyrchu adroddiad gradd problem. Rhowch gynnig arall arni."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating ORA data report. Please try again."
@@ -3671,9 +3603,11 @@ msgstr "Gwall wrth gynhyrchu adroddiad data ORA. Rhowch gynnig arall arni."
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid ""
-"There was a problem creating the report. Select \"Create Executive Summary\""
-" to try again."
+"There was a problem creating the report. Select \"Create Executive Summary\" "
+"to try again."
 msgstr ""
+"Cafwyd problem wrth greu'r adroddiad. Dewiswch \"Creu Crynodeb Weithredol\" "
+"er mwyn ceisio eto."
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Enter the enrollment code."
@@ -3726,8 +3660,8 @@ msgstr "Gwall wrth newid caniatadau defnyddiwr."
 msgid ""
 "Could not find a user with username or email address '<%- identifier %>'."
 msgstr ""
-"Ni fedrwyd canfod defnyddiwr gyda'r enw defnyddiwr neu'r cyfeiriad e-bost "
-"'<%- identifier %>'."
+"Ni fedrwyd canfod defnyddiwr gyda'r enw defnyddiwr neu'r cyfeiriad e-bost '<"
+"%- identifier %>'."
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid ""
@@ -3802,8 +3736,8 @@ msgid ""
 "Users must create and activate their account before they can be promoted to "
 "beta tester."
 msgstr ""
-"Rhaid i ddefnyddwyr greu ac ysgogi eu cyfrifon cyn cael eu dyrchafu i fod "
-"yn brofwr beta."
+"Rhaid i ddefnyddwyr greu ac ysgogi eu cyfrifon cyn cael eu dyrchafu i fod yn "
+"brofwr beta."
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Could not find users associated with the following identifiers:"
@@ -3858,8 +3792,7 @@ msgstr ""
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "These users will be enrolled once they register:"
-msgstr ""
-"Bydd y defnyddwyr hyn yn ymgofrestru ar ôl cofrestru:"
+msgstr "Bydd y defnyddwyr hyn yn ymgofrestru ar ôl cofrestru:"
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
@@ -3934,8 +3867,8 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid ""
-"You are sending an email message with the subject {subject} to the following"
-" recipients."
+"You are sending an email message with the subject {subject} to the following "
+"recipients."
 msgstr "Rydych yn anfon neges e-bost gyda'r pwnc {subject} at y bobl hyn."
 
 #: lms/static/js/instructor_dashboard/send_email.js
@@ -3971,7 +3904,7 @@ msgid ""
 "Error getting student progress url for '<%- student_id %>'. Make sure that "
 "the student identifier is spelled correctly."
 msgstr ""
-"Gwall wrth gyrchu url cynnydd myfyriwr ar gyfer '<%= student_id %>'. "
+"Gwall wrth gyrchu url cynnydd myfyriwr ar gyfer '<%- student_id %>'. "
 "Sicrhewch bod dynodydd y myfyriwr wedi'i sillafu'n gywir."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
@@ -3983,18 +3916,18 @@ msgid ""
 "Success! Problem attempts reset for problem '<%- problem_id %>' and student "
 "'<%- student_id %>'."
 msgstr ""
-"Llwyddiant! Ailosodwyd y ceisiadau problem ar gyfer problem "
-"'<%= problem_id %>' a myfyriwr '<%= student_id %>'."
+"Llwyddiant! Ailosodwyd y ceisiadau problem ar gyfer problem '<%- problem_id "
+"%>' a myfyriwr '<%- student_id %>'."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Error resetting problem attempts for problem '<%= problem_id %>' and student"
-" '<%- student_id %>'. Make sure that the problem and student identifiers are"
-" complete and correct."
+"Error resetting problem attempts for problem '<%= problem_id %>' and student "
+"'<%- student_id %>'. Make sure that the problem and student identifiers are "
+"complete and correct."
 msgstr ""
-"Gwall wrth ailosod ceisiadau problem ar gyfer problem '<%= problem_id %>' "
-"a myfyriwr '<%= student_id %>'. Sicrhewch bod dynodwyr y broblem a'r "
-"myfyrwyr yn gyflawn ac yn gywir."
+"Gwall wrth ailosod ceisiadau problem ar gyfer problem '<%= problem_id %>' a "
+"myfyriwr '<%- student_id %>'. Sicrhewch bod dynodwyr y broblem a'r myfyrwyr "
+"yn gyflawn ac yn gywir."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -4004,13 +3937,13 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Error deleting student '<%- student_id %>'s state on problem '<%- problem_id"
-" %>'. Make sure that the problem and student identifiers are complete and "
+"Error deleting student '<%- student_id %>'s state on problem '<%- problem_id "
+"%>'. Make sure that the problem and student identifiers are complete and "
 "correct."
 msgstr ""
-"Gwall wrth ddileu cyflwr myfyriwr '<%- student_id %> ar broblem "
-"'<%- problem_id %>'. Sicrhewch bod dynodwyr y broblem a'r myfyrwyr yn "
-"gyflawn ac yn gywir."
+"Gwall wrth ddileu cyflwr myfyriwr '<%- student_id %> ar broblem '<%- "
+"problem_id %>'. Sicrhewch bod dynodwyr y broblem a'r myfyrwyr yn gyflawn ac "
+"yn gywir."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Module state successfully deleted."
@@ -4022,9 +3955,9 @@ msgid ""
 "student_id %>'. Make sure that the problem and student identifiers are "
 "complete and correct."
 msgstr ""
-"Gwall wrth gyrchu hanes tasg ar gyfer problem '<%- problem_id %>' a "
-"myfyriwr '<%- student_id %>'. Sicrhewch bod dynodwyr y broblem a'r myfyrwyr "
-"yn gyflawn ac yn gywir."
+"Gwall wrth gyrchu hanes tasg ar gyfer problem '<%- problem_id %>' a myfyriwr "
+"'<%- student_id %>'. Sicrhewch bod dynodwyr y broblem a'r myfyrwyr yn "
+"gyflawn ac yn gywir."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Entrance exam attempts is being reset for student '{student_id}'."
@@ -4034,8 +3967,8 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Error resetting entrance exam attempts for student '{student_id}'. Make sure"
-" student identifier is correct."
+"Error resetting entrance exam attempts for student '{student_id}'. Make sure "
+"student identifier is correct."
 msgstr ""
 "Gwall wrth ailosod ceisiadau arholiad mynediad ar gyfer myfyriwr "
 "'{student_id}'. Sicrhewch bod y dynodydd myfyriwr yn gywir."
@@ -4046,16 +3979,15 @@ msgstr "Rhowch enw defnyddiwr neu gyfeiriad e-bost myfyriwr."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Do you want to allow this student ('{student_id}') to skip the entrance "
-"exam?"
+"Do you want to allow this student ('{student_id}') to skip the entrance exam?"
 msgstr ""
 "Ydych chi am ganiatáu i'r myfyriwr hwn ('{student_id}') beidio â gwneud yr "
 "arholiad mynediad?"
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"An error occurred. Make sure that the student's username or email address is"
-" correct and try again."
+"An error occurred. Make sure that the student's username or email address is "
+"correct and try again."
 msgstr ""
 "Gwall wedi digwydd. Sicrhewch bod enw defnyddiwr a chyfeiriad e-bost y "
 "myfyriwr yn gywir a cheisio eto."
@@ -4084,17 +4016,16 @@ msgstr ""
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Reset attempts for all students on problem '<%- problem_id %>'?"
 msgstr ""
-"Ail-osod ceisiadau ar gyfer pob myfyriwr ar gyfer problem "
-"'<%= problem_id %>'?"
+"Ail-osod ceisiadau ar gyfer pob myfyriwr ar gyfer problem '<%- problem_id "
+"%>'?"
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Successfully started task to reset attempts for problem '<%- problem_id %>'."
-" Click the 'Show Task Status' button to see the status of the task."
+"Successfully started task to reset attempts for problem '<%- problem_id %>'. "
+"Click the 'Show Task Status' button to see the status of the task."
 msgstr ""
-"Dechreuwyd tasg i ailosod ceisiadau ar gyfer y broblem yn llwyddiannus "
-"'<%= problem_id %>'. Cliciwch y botwm 'Dangos Hanes Tasg Gefndir y Broblem' "
-"i weld statws y dasg."
+"Dechreuwyd tasg i ailosod ceisiadau ar gyfer y broblem yn llwyddiannus '<%- "
+"problem_id %>'. Cliciwch y botwm 'Dangos Statws Tasg' i weld statws y dasg."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -4103,7 +4034,7 @@ msgid ""
 "correct."
 msgstr ""
 "Gwall wrth ddechrau tasg i ail-osod ceisiadau ar gyfer yr holl fyfyrwyr ar "
-"gyfer problem '<%= problem_id %>'. Sicrhewch bod dynodydd y broblem yn "
+"gyfer problem '<%- problem_id %>'. Sicrhewch bod dynodydd y broblem yn "
 "gyflawn ac yn gywir."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
@@ -4112,9 +4043,9 @@ msgstr "Gwall wrth restru hanes tasg ar gyfer y myfyriwr hwn a'r broblem hon."
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Started rescore problem task for problem '<%- problem_id %>' and student "
-"'<%- student_id %>'. Click the 'Show Task Status' button to see the status "
-"of the task."
+"Started rescore problem task for problem '<%- problem_id %>' and student '<"
+"%- student_id %>'. Click the 'Show Task Status' button to see the status of "
+"the task."
 msgstr ""
 "Dechreuwyd ail-sgorio tasg broblem ar gyfer problem '<%- problem_id %>' a "
 "myfyriwr '<%- student_id %>'. Cliciwch y botwm 'Dangos Statws Tasg' i weld "
@@ -4122,8 +4053,8 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Error starting a task to rescore problem '<%- problem_id %>' for student "
-"'<%- student_id %>'. Make sure that the the problem and student identifiers "
+"Error starting a task to rescore problem '<%- problem_id %>' for student '<"
+"%- student_id %>'. Make sure that the the problem and student identifiers "
 "are complete and correct."
 msgstr ""
 "Gwall wrth ddechrau tasg i ail-sgorio problem '<%- problem_id %>' ar gyfer "
@@ -4162,8 +4093,8 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
-"Error starting a task to rescore problem '<%- problem_id %>'. Make sure that"
-" the problem identifier is complete and correct."
+"Error starting a task to rescore problem '<%- problem_id %>'. Make sure that "
+"the problem identifier is complete and correct."
 msgstr ""
 "Gwall wrth ddechrau tasg i ail-sgorio problem '<%- problem_id %>'. Sicrhewch "
 "bod dynodydd y broblem yn gyflawn ac yn gywir."
@@ -4224,8 +4155,8 @@ msgstr "Cynnydd y dasg"
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid ""
-"An error occurred retrieving your email. Please try again later, and contact"
-" technical support if the problem persists."
+"An error occurred retrieving your email. Please try again later, and contact "
+"technical support if the problem persists."
 msgstr ""
 "Cafwyd gwall wrth nôl eich e-bost. Rhowch gynnig arall arni nes ymlaen, a "
 "chysylltu â chefnogaeth dechnegol os yw'r broblem yn parhau."
@@ -4292,11 +4223,11 @@ msgstr ""
 
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
 msgid "{type} Progress"
-msgstr ""
+msgstr "Ar waith"
 
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
 msgid "Earned Certificates"
-msgstr ""
+msgstr "Tystysgrif wedi'i gwirio"
 
 #: lms/static/js/learner_dashboard/views/program_details_view_2017.js
 msgid "Enrolled"
@@ -4306,10 +4237,8 @@ msgstr "Cofrestrwyd"
 #, javascript-format
 msgid "%s result"
 msgid_plural "%s results"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%s canlyniadau"
+msgstr[1] "%s canlyniadau"
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Unknown Error Occurred."
@@ -4416,16 +4345,16 @@ msgstr "Edrychwch yn eich e-bost"
 msgid ""
 "{paragraphStart}You entered {boldStart}{email}{boldEnd}. If this email "
 "address is associated with your {platform_name} account, we will send a "
-"message with password reset instructions to this email "
-"address.{paragraphEnd}{paragraphStart}If you do not receive a password reset"
-" message, verify that you entered the correct email address, or check your "
-"spam folder.{paragraphEnd}{paragraphStart}If you need further assistance, "
-"{anchorStart}contact technical support{anchorEnd}.{paragraphEnd}"
+"message with password reset instructions to this email address.{paragraphEnd}"
+"{paragraphStart}If you do not receive a password reset message, verify that "
+"you entered the correct email address, or check your spam folder."
+"{paragraphEnd}{paragraphStart}If you need further assistance, {anchorStart}"
+"contact technical support{anchorEnd}.{paragraphEnd}"
 msgstr ""
-"{paragraphStart}Rhoesoch {boldStart}{email}{boldEnd}. Os yw'r cyfeiriad "
-"e-bost hwn yn gysylltiedig â'ch cyfrif {platform_name}, byddwn yn anfon "
-"neges gyda chyfarwyddiadau ailosod cyfrinair i'r cyfeiriad e-bost "
-"hwn.{paragraphEnd}"
+"{paragraphStart}Rhoesoch {boldStart}{email}{boldEnd}. Os yw'r cyfeiriad e-"
+"bost hwn yn gysylltiedig â'ch cyfrif {platform_name}, byddwn yn anfon neges "
+"gyda chyfarwyddiadau ailosod cyfrinair i'r cyfeiriad e-bost hwn."
+"{paragraphEnd}"
 
 #: lms/static/js/student_account/views/LoginView.js
 msgid ""
@@ -4438,8 +4367,8 @@ msgstr ""
 #: lms/static/js/student_account/views/LoginView.js
 msgid ""
 "You have successfully signed into %(currentProvider)s, but your "
-"%(currentProvider)s account does not have a linked %(platformName)s account."
-" To link your accounts, sign in now using your %(platformName)s password."
+"%(currentProvider)s account does not have a linked %(platformName)s account. "
+"To link your accounts, sign in now using your %(platformName)s password."
 msgstr ""
 "Rydych wedi mewngofnodi'n llwyddiannus i %(currentProvider), ond eich "
 "%(currentProvider)s"
@@ -4493,7 +4422,11 @@ msgid ""
 "exactly as it appears on your government-issued photo ID, including any non-"
 "Roman characters."
 msgstr ""
-"Yr enw a ddefnyddir ar gyfer gwirio pwy ydych chi ac sy'n ymddangos ar eich tystysgrifau. Ni fydd y dysgwyr eraill yn gweld eich enw llawn. Sicrhewch eich bod yn rhoi eich enw'n union fel y mae'n ymddangos ar eich cerdyn adnabod llun a ddyroddwyd gan lywodraeth, gan gynnwys unrhyw nodau/gymeriadau nad ydynt yn Rufeinig."
+"Yr enw a ddefnyddir ar gyfer gwirio pwy ydych chi ac sy'n ymddangos ar eich "
+"tystysgrifau. Ni fydd y dysgwyr eraill yn gweld eich enw llawn. Sicrhewch "
+"eich bod yn rhoi eich enw'n union fel y mae'n ymddangos ar eich cerdyn "
+"adnabod llun a ddyroddwyd gan lywodraeth, gan gynnwys unrhyw nodau/"
+"gymeriadau nad ydynt yn Rufeinig."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address"
@@ -4519,8 +4452,8 @@ msgstr "Ail-osod wich cyfrinair"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
-"When you select \"Reset Your Password\", a message will be sent to the email"
-" address for your {platform_name} account. Click the link in the message to "
+"When you select \"Reset Your Password\", a message will be sent to the email "
+"address for your {platform_name} account. Click the link in the message to "
 "reset your password."
 msgstr ""
 "Pan fyddwch yn dewis \"Ailosod eich cyfrinair\", bydd neges yn cael ei "
@@ -4635,16 +4568,16 @@ msgstr ""
 msgid ""
 "You must sign out and sign back in before your language changes take effect."
 msgstr ""
-"Rhaid i chi allgofnodi a mewngofnodi unwaith eto cyn i'r newid iaith ddod "
-"i rym."
+"Rhaid i chi allgofnodi a mewngofnodi unwaith eto cyn i'r newid iaith ddod i "
+"rym."
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "We've sent a message to {email_address}. Click the link in the message to "
 "reset your password."
 msgstr ""
-"Rydym wedi anfon neges at {email_address}. Cliciwch ar y ddolen yn y neges "
-"i ailosod eich cyfrinair."
+"Rydym wedi anfon neges at {email_address}. Cliciwch ar y ddolen yn y neges i "
+"ailosod eich cyfrinair."
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Link your {accountName} account"
@@ -4952,8 +4885,8 @@ msgstr ""
 
 #: lms/static/js/views/image_field.js
 msgid ""
-"Removal is in progress. To avoid errors, stay on this page until the process"
-" is complete."
+"Removal is in progress. To avoid errors, stay on this page until the process "
+"is complete."
 msgstr ""
 "Dileu ar waith I osgoi gwallau, arhoswch ar y dudalen hon hyd nes bod y "
 "broses yn gyflawn."
@@ -4987,24 +4920,18 @@ msgid "%(num_students)s student opened Subsection"
 msgid_plural "%(num_students)s students opened Subsection"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "%(num_students)s student"
 msgid_plural "%(num_students)s students"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "%(num_questions)s question"
 msgid_plural "%(num_questions)s questions"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "Number of Students"
@@ -5122,7 +5049,7 @@ msgstr "ABCChDDdEFFfGNgHIJLLlMNOPPhRRhSTThUWY"
 
 #: cms/static/js/factories/export.js
 msgid "Your export has failed."
-msgstr ""
+msgstr "Mae eich mewnforio wedi methu."
 
 #: cms/static/js/factories/import.js
 msgid "There was an error while importing the new library to our database."
@@ -5189,8 +5116,7 @@ msgid "Already a library team member"
 msgstr "Eisoes yn aelod tîm y llyfrgell"
 
 #: cms/static/js/factories/manage_users_lib.js
-msgid ""
-"Are you sure you want to delete {email} from the library “{container}”?"
+msgid "Are you sure you want to delete {email} from the library “{container}”?"
 msgstr ""
 "Ydych chi'n siŵr eich bod am ddileu'r {email} o'r llyfrgell “{container}”?"
 
@@ -5355,8 +5281,8 @@ msgstr "Rhaid i bob pennod gael enw ac ased"
 
 #: cms/static/js/models/uploads.js
 msgid ""
-"Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
-"<%= fileExtensions %> to upload."
+"Only <%= fileTypes %> files can be uploaded. Please select a file ending in <"
+"%= fileExtensions %> to upload."
 msgstr ""
 "Ffeiliau <%= fileTypes %> yn unig a gaiff eu llwytho i fyny. Dewiswch ffeil "
 "sy'n gorffen â <%= fileExtensions %> i lwytho i fyny."
@@ -5395,7 +5321,7 @@ msgstr "Llwytho i fyny wedi methu ar gyfer fideo {fileName}"
 msgid ""
 "{filename} is not in a supported file format. Supported file formats are "
 "{supportedFileFormats}."
-msgstr ""
+msgstr "Nid yw {filename} mewn fformat ffeil a gefnogir."
 
 #: cms/static/js/views/active_video_upload_list.js
 msgid "{filename} exceeds maximum size of {maxFileSizeInGB} GB."
@@ -5417,10 +5343,12 @@ msgstr "Dileu cadarnhad y ffeil"
 msgid ""
 "Are you sure you wish to delete this item. It cannot be reversed!\n"
 "\n"
-"Also any content that links/refers to this item will no longer work (e.g. broken images and/or links)"
+"Also any content that links/refers to this item will no longer work (e.g. "
+"broken images and/or links)"
 msgstr ""
-"Ydych chi'n siŵr eich bod am ddileu'r eitem hon. Ni ellir ei ddadwneud!\n \n "
-"Hefyd ni fydd unrhyw gynnwys sy'n cysylltu/cyfeirio at yr eitem hon bellach "
+"Ydych chi'n siŵr eich bod am ddileu'r eitem hon. Ni ellir ei ddadwneud!\n"
+" \n"
+" Hefyd ni fydd unrhyw gynnwys sy'n cysylltu/cyfeirio at yr eitem hon bellach "
 "yn gweithio (e.e. delweddau a/neu ddolenni wedi'u torri)"
 
 #: cms/static/js/views/asset.js
@@ -5455,8 +5383,7 @@ msgstr ""
 msgid "Max file size exceeded"
 msgstr "Mae'r ffeil yn rhy fawr"
 
-#: cms/static/js/views/assets.js
-#: cms/templates/js/asset-upload-modal.underscore
+#: cms/static/js/views/assets.js cms/templates/js/asset-upload-modal.underscore
 msgid "Upload New File"
 msgstr "Llwytho ffeil newydd i fyny"
 
@@ -5491,7 +5418,7 @@ msgstr "Dewiswch ffeil PDF i'w llwytho i fyny."
 
 #: cms/static/js/views/export.js
 msgid "There has been an error while exporting."
-msgstr "Cafwyd gwall wrth lwytho i fyny"
+msgstr "Cafwyd gwall wrth allforio."
 
 #: cms/static/js/views/export.js
 msgid ""
@@ -5529,8 +5456,8 @@ msgstr "Ewch â fi i brif dudalen y llyfrgell"
 
 #: cms/static/js/views/export.js
 msgid ""
-"Your course could not be exported to XML. There is not enough information to"
-" identify the failed component. Inspect your course to identify any "
+"Your course could not be exported to XML. There is not enough information to "
+"identify the failed component. Inspect your course to identify any "
 "problematic components and try again."
 msgstr ""
 "Ni fedrwyd allforio eich cwrs i XML. Nid oes digon o wybodaeth i nodi'r "
@@ -5554,10 +5481,8 @@ msgstr "Cafwyd gwall wrth allforio."
 #: cms/static/js/views/group_configuration_details.js
 msgid "Contains {count} group"
 msgid_plural "Contains {count} groups"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Creu grŵp cynnwys"
+msgstr[1] "Creu grŵp cynnwys"
 
 #: cms/static/js/views/group_configuration_details.js
 #: cms/static/js/views/partition_group_details.js
@@ -5572,8 +5497,6 @@ msgid "Used in {count} unit"
 msgid_plural "Used in {count} units"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #. Translators: this refers to a collection of groups.
 #: cms/static/js/views/group_configuration_item.js
@@ -5678,8 +5601,8 @@ msgstr "Rhannu tebyg"
 #: cms/static/js/views/license.js
 msgid ""
 "Allow others to distribute derivative works only under a license identical "
-"to the license that governs your work. This option is incompatible with \"No"
-" Derivatives\"."
+"to the license that governs your work. This option is incompatible with \"No "
+"Derivatives\"."
 msgstr ""
 "Caniatáu i eraill ddosbarthu gwaith deilliadol o dan drwydded yr un union yr "
 "un fath â'r drwydded sy'n llywodraethu eich gwaith chi. Mae'r dewis hwn yn "
@@ -5726,8 +5649,8 @@ msgstr "Eisoes yn aelod"
 
 #: cms/static/js/views/manage_users_and_roles.js
 msgid ""
-"{email} is already on the {container} team. Recheck the email address if you"
-" want to add a new member."
+"{email} is already on the {container} team. Recheck the email address if you "
+"want to add a new member."
 msgstr ""
 "Mae'r {email} eisoes ar y tîm {container}. Ailwiriwch y cyfeiriad e-bost os "
 "ydych am ychwanegu aelod newydd."
@@ -5773,7 +5696,7 @@ msgstr "Sylfaenol"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Visibility"
-msgstr ""
+msgstr "Gwelededd yr uned"
 
 #. Translators: "title" is the name of the current component being edited.
 #: cms/static/js/views/modals/edit_xblock.js
@@ -5794,7 +5717,7 @@ msgstr ""
 
 #: cms/static/js/views/modals/move_xblock_modal.js
 msgid "Move: {displayName}"
-msgstr ""
+msgstr "Enw a ddangosir"
 
 #: cms/static/js/views/modals/validation_error_modal.js
 msgid "Validation Error While Saving"
@@ -5810,24 +5733,24 @@ msgstr "Newid eich hunan"
 
 #: cms/static/js/views/move_xblock_list.js
 msgid "Sections"
-msgstr ""
+msgstr "Adran"
 
 #: cms/static/js/views/move_xblock_list.js
 msgid "Subsections"
-msgstr ""
+msgstr "Is-adran"
 
 #: cms/static/js/views/move_xblock_list.js
 msgid "Units"
-msgstr ""
+msgstr "Uned"
 
 #: cms/static/js/views/move_xblock_list.js
 msgid "Components"
-msgstr ""
+msgstr "Cydran"
 
 #: cms/static/js/views/move_xblock_list.js
 #: cms/templates/js/group-configuration-editor.underscore
 msgid "Groups"
-msgstr ""
+msgstr "Grwpiau"
 
 #: cms/static/js/views/move_xblock_list.js
 msgid "This {parentCategory} has no {childCategory}"
@@ -6058,8 +5981,8 @@ msgstr "Dileu “<%= name %>”?"
 
 #: cms/static/js/views/show_textbook.js
 msgid ""
-"Deleting a textbook cannot be undone and once deleted any reference to it in"
-" your courseware's navigation will also be removed."
+"Deleting a textbook cannot be undone and once deleted any reference to it in "
+"your courseware's navigation will also be removed."
 msgstr ""
 "Ni ellir dad-wneud dileu gwerslyfr ac wedi ei ddileu bydd unrhyw gyfeiriad "
 "ato yn eich deunydd cwrs hefyd yn cael ei ddileu."
@@ -6098,8 +6021,8 @@ msgid ""
 "The combined length of the organization and library code fields cannot be "
 "more than <%=limit%> characters."
 msgstr ""
-"Ni chaiff hyd cyfun y meysydd sefydliad a chôd llyfrgell fod yn fwy na "
-"<%=limit%> o nodau/gymeriadau."
+"Ni chaiff hyd cyfun y meysydd sefydliad a chôd llyfrgell fod yn fwy na <"
+"%=limit%> o nodau/gymeriadau."
 
 #: cms/static/js/views/utils/move_xblock_utils.js
 msgid "Success! \"{displayName}\" has been moved."
@@ -6113,11 +6036,11 @@ msgstr ""
 
 #: cms/static/js/views/utils/move_xblock_utils.js
 msgid "Undo move"
-msgstr ""
+msgstr "Dad-wneud"
 
 #: cms/static/js/views/utils/move_xblock_utils.js
 msgid "Take me to the new location"
-msgstr ""
+msgstr "Ewch â fi i brif dudalen y cwrs"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Duplicating"
@@ -6125,11 +6048,11 @@ msgstr "Dyblygu"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Undo moving"
-msgstr ""
+msgstr "Yn dileu"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Moving"
-msgstr ""
+msgstr "Yn dileu"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Deleting this {xblock_type} is permanent and cannot be undone."
@@ -6341,20 +6264,19 @@ msgstr "Pellhau"
 #: test_root/staticfiles/common/templates/sequence-breadcrumbs.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/sequence-breadcrumbs.underscore
 msgid "Return to course outline"
-msgstr ""
+msgstr "Dychwelyd i restr y timau"
 
 #: common/static/common/templates/sequence-breadcrumbs.underscore
 #: test_root/staticfiles/common/templates/sequence-breadcrumbs.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/sequence-breadcrumbs.underscore
 msgid "Outline"
-msgstr ""
+msgstr "Amlinelliad o'r cwrs"
 
 #: common/static/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
-#, python-format
 msgid "Page number out of %(total_pages)s"
-msgstr "Rhif tudalen allan o %(total_pages)s"
+msgstr "Rhif tudalen allan o %(total_pages)"
 
 #: common/static/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/common/templates/components/paging-footer.underscore
@@ -6544,13 +6466,13 @@ msgstr "Cyflwyno"
 #: test_root/staticfiles/common/templates/discussion/post-user-display.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/post-user-display.underscore
 msgid "(Community TA)"
-msgstr "(CD cymunedol)"
+msgstr "CD cymunedol"
 
 #: common/static/common/templates/discussion/post-user-display.underscore
 #: test_root/staticfiles/common/templates/discussion/post-user-display.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/post-user-display.underscore
 msgid "(Staff)"
-msgstr "(Staff)"
+msgstr "Staff"
 
 #: common/static/common/templates/discussion/profile-thread.underscore
 #: common/static/common/templates/discussion/thread.underscore
@@ -6582,9 +6504,8 @@ msgstr "Diweddaru sylw"
 #: common/static/common/templates/discussion/response-comment-show.underscore
 #: test_root/staticfiles/common/templates/discussion/response-comment-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-show.underscore
-#, python-format
 msgid "posted %(time_ago)s by %(author)s"
-msgstr "postiwyd %(time_ago)s yn ôl gan %(author)s"
+msgstr "postiwyd %(time_ago) yn ôl gan %(author)"
 
 #: common/static/common/templates/discussion/response-comment-show.underscore
 #: common/static/common/templates/discussion/thread-response-show.underscore
@@ -6664,7 +6585,6 @@ msgstr "{unread_comments_count} newydd"
 #: common/static/common/templates/discussion/thread-list-item.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
-#, python-format
 msgid ""
 "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s "
 "unread comments)%(span_close)s"
@@ -6675,7 +6595,6 @@ msgstr ""
 #: common/static/common/templates/discussion/thread-list-item.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
-#, python-format
 msgid "%(comments_count)s %(span_sr_open)scomments %(span_close)s"
 msgstr "%(comments_count)s %(span_sr_open)scomments %(span_close)s"
 
@@ -6694,41 +6613,34 @@ msgstr "Diweddaru ymateb"
 #: common/static/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
-#, python-format
 msgid "marked as answer %(time_ago)s by %(user)s"
-msgstr "marciwyd fel ateb %(time_ago)s gan %(user)s"
+msgstr "marciwyd fel ateb %(time_ago) gan %(user)"
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
-#, python-format
 msgid "marked as answer %(time_ago)s"
-msgstr "marciwyd fel ateb %(time_ago)s"
+msgstr "marciwyd fel ateb %(time_ago)"
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
-#, python-format
 msgid "endorsed %(time_ago)s by %(user)s"
 msgstr "cadarnhawyd %(time_ago)s gan %(user)s"
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
-#, python-format
 msgid "endorsed %(time_ago)s"
 msgstr "cadarnhawyd %(time_ago)s"
 
 #: common/static/common/templates/discussion/thread-response.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-response.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response.underscore
-#, python-format
 msgid "Show Comment (%(num_comments)s)"
 msgid_plural "Show Comments (%(num_comments)s)"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: common/static/common/templates/discussion/thread-response.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-response.underscore
@@ -6739,16 +6651,14 @@ msgstr "Ychwanegu sylw"
 #: common/static/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
-#, python-format
 msgid "discussion posted %(time_ago)s by %(author)s"
-msgstr ""
+msgstr "postiwyd %(time_ago) yn ôl gan %(author)"
 
 #: common/static/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
-#, python-format
 msgid "question posted %(time_ago)s by %(author)s"
-msgstr ""
+msgstr "postiwyd %(time_ago) yn ôl gan %(author)"
 
 #: common/static/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-show.underscore
@@ -6759,14 +6669,12 @@ msgstr "Wedi'i gau"
 #: common/static/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
-#, python-format
 msgid "Related to: %(courseware_title_linked)s"
 msgstr "Yn ymwneud â: %(courseware_title_linked)s"
 
 #: common/static/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-show.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
-#, python-format
 msgid "This post is visible only to %(group_name)s."
 msgstr "Caiff y postiad hwn ei weld gan %(group_name)s yn unig."
 
@@ -6837,9 +6745,8 @@ msgstr "Hafan trafodaeth"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 #: test_root/staticfiles/discussion/templates/discussion-home.underscore
-#, python-format
 msgid "How to use %(platform_name)s discussions"
-msgstr "Sut i ddefnyddio trafodaethau %(platform_name)s"
+msgstr "Sut i ddefnyddio trafodaethau %(platform_name)"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 #: test_root/staticfiles/discussion/templates/discussion-home.underscore
@@ -6899,8 +6806,8 @@ msgid ""
 "Check this box to receive an email digest once a day notifying you about "
 "new, unread activity from posts you are following."
 msgstr ""
-"Cliciwch y blwch i dderbyn e-bost crynhoad unwaith y dydd yn eich hysbysu "
-"am weithgareddau newydd, heb eu darllen o bostiadau rydych yn eu dilyn."
+"Cliciwch y blwch i dderbyn e-bost crynhoad unwaith y dydd yn eich hysbysu am "
+"weithgareddau newydd, heb eu darllen o bostiadau rydych yn eu dilyn."
 
 #: lms/djangoapps/discussion/static/discussion/templates/user-profile.underscore
 #: test_root/staticfiles/discussion/templates/user-profile.underscore
@@ -7190,8 +7097,8 @@ msgstr "Rhoddi"
 #: lms/templates/api_admin/catalog-error.underscore
 #: test_root/staticfiles/templates/api_admin/catalog-error.underscore
 msgid ""
-"There was an error retrieving preview results for this catalog. Please check"
-" that your query is correct and try again."
+"There was an error retrieving preview results for this catalog. Please check "
+"that your query is correct and try again."
 msgstr ""
 "Cafwyd gwall yn adfer canlyniadau rhagolwg ar gyfer y catalog hwn. Gwiriwch "
 "bod eich ymholiad yn gywir a rhoi cynnig arall arni."
@@ -7233,7 +7140,6 @@ msgstr "dileu'r cyfan"
 
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
-#, python-format
 msgid "toggle chapter %(displayName)s"
 msgstr "toglo pennod %(displayName)s"
 
@@ -7244,7 +7150,6 @@ msgstr "Adran"
 
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
-#, python-format
 msgid "Remove chapter %(chapterDisplayName)s"
 msgstr "Dileu pennod %(chapterDisplayName)s"
 
@@ -7255,7 +7160,6 @@ msgstr "dileu"
 
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
-#, python-format
 msgid "toggle subsection %(displayName)s"
 msgstr "toglo is-adran %(displayName)s"
 
@@ -7266,34 +7170,30 @@ msgstr "Is-adran"
 
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
-#, python-format
 msgid "Remove subsection %(subsectionDisplayName)s"
 msgstr "Dileu is-adran %(subsectionDisplayName)s"
 
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
-#, python-format
 msgid "Remove unit %(unitName)s"
-msgstr "Dileu uned %(unitName)staticfiles"
+msgstr "Dileu uned %(unitName)"
 
 #: lms/templates/commerce/provider.underscore
 #: test_root/staticfiles/templates/commerce/provider.underscore
-#, python-format
 msgid ""
 "You still need to visit the %(display_name)s website to complete the credit "
 "process."
 msgstr ""
-"Mae angen i chi fynd i wefan %(display_name)s i gwblhau proses y credydau."
+"Mae angen i chi fynd i wefan %(display_name) i gwblhau proses y credydau."
 
 #: lms/templates/commerce/provider.underscore
 #: test_root/staticfiles/templates/commerce/provider.underscore
-#, python-format
 msgid ""
 "To finalize course credit, %(display_name)s requires %(platform_name)s "
 "learners to submit a credit request."
 msgstr ""
-"I orffen credyd cwrs, mae %(display_name)s yn gofyn i ddysgwyr "
-"%(platform_name)s gyflwyno cais am gredyd."
+"I orffen credyd cwrs, mae %(display_name) yn gofyn i ddysgwyr "
+"%(platform_name) gyflwyno cais am gredyd."
 
 #: lms/templates/commerce/provider.underscore
 #: test_root/staticfiles/templates/commerce/provider.underscore
@@ -7302,19 +7202,18 @@ msgstr "Cael credyd"
 
 #: lms/templates/commerce/receipt.underscore
 #: test_root/staticfiles/templates/commerce/receipt.underscore
-#, python-format
 msgid ""
 "Thank you %(full_name)s! We have received your payment for %(course_name)s."
 msgstr ""
-"Diolch %(full_name)s! Rydym wedi derbyn eich taliad ar gyfer %(course_name)s."
+"Diolch %(full_name)s! Rydym wedi derbyn eich taliad ar gyfer %(course_name)."
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 #: test_root/staticfiles/templates/commerce/receipt.underscore
 #: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid ""
-"Please print this page for your records; it serves as your receipt. You will"
-" also receive an email with the same information."
+"Please print this page for your records; it serves as your receipt. You will "
+"also receive an email with the same information."
 msgstr ""
 "Argraffwch y dudalen hon ar gyfer eich cofnodion; hwn fydd eich derbynneb. "
 "Byddwch hefyd yn derbyn e-bost gyda'r un wybodaeth."
@@ -7381,8 +7280,8 @@ msgstr "Ewch i'r dangosfwrdd"
 #: test_root/staticfiles/templates/commerce/receipt.underscore
 msgid ""
 "If you don't verify your identity now, you can still explore your course "
-"from your dashboard. You will receive periodic reminders from {platformName}"
-" to verify your identity."
+"from your dashboard. You will receive periodic reminders from {platformName} "
+"to verify your identity."
 msgstr ""
 "Os na wiriwch chi pwy ydych chi nawr, gallwch barhau i archwilio'ch cwrs "
 "o'ch dangosfwrdd. Byddwch yn derbyn nodiadau atgoffa o bryd i'w gilydd gan "
@@ -7433,7 +7332,6 @@ msgstr "DYSGU MWY"
 #: lms/templates/discovery/course_card_2017.underscore
 #: test_root/staticfiles/templates/discovery/course_card.underscore
 #: test_root/staticfiles/templates/discovery/course_card_2017.underscore
-#, python-format
 msgid "Starts: %(start_date)s"
 msgstr "Dechrau: %(start_date)s"
 
@@ -7491,12 +7389,12 @@ msgstr "Clicio i olygu"
 #: lms/templates/fields/field_order_history.underscore
 #: test_root/staticfiles/templates/fields/field_order_history.underscore
 msgid "Order Number"
-msgstr "Rhif yr archeb"
+msgstr "Rhif y cwrs"
 
 #: lms/templates/fields/field_order_history.underscore
 #: test_root/staticfiles/templates/fields/field_order_history.underscore
 msgid "Date Placed"
-msgstr ""
+msgstr "Dyddiad ychwanegwyd"
 
 #: lms/templates/fields/field_order_history.underscore
 #: test_root/staticfiles/templates/fields/field_order_history.underscore
@@ -7511,12 +7409,12 @@ msgstr "Manylion yr archeb"
 #: lms/templates/fields/field_order_history.underscore
 #: test_root/staticfiles/templates/fields/field_order_history.underscore
 msgid "for"
-msgstr ""
+msgstr "neu"
 
 #: lms/templates/fields/field_order_history.underscore
 #: test_root/staticfiles/templates/fields/field_order_history.underscore
 msgid "Product Name"
-msgstr ""
+msgstr "Enw'r hyfforddwr"
 
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
 #: lms/templates/financial-assistance/financial_assessment_submitted.underscore
@@ -7533,8 +7431,8 @@ msgstr "Amdanoch chi"
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
 #: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
 msgid ""
-"The following information is already a part of your {platform} profile. "
-"We\\'ve included it here for your application."
+"The following information is already a part of your {platform} profile. We"
+"\\'ve included it here for your application."
 msgstr ""
 "Mae'r wybodaeth a ganlyn eisoes yn rhan o'ch proffil {platform}. Rydym\\ "
 "wedi'i gynnwys yma ar gyfer eich cymhwysiad."
@@ -7910,13 +7808,10 @@ msgstr "Creu grŵp cynnwys"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
-#, python-format
 msgid "(contains %(student_count)s student)"
 msgid_plural "(contains %(student_count)s students)"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
@@ -7944,7 +7839,6 @@ msgstr "Dewis cohort"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
-#, python-format
 msgid "%(cohort_name)s (%(user_count)s)"
 msgstr "%(cohort_name)s (%(user_count)s)"
 
@@ -8009,18 +7903,17 @@ msgstr "Gweld y dystysgrif"
 #: test_root/staticfiles/templates/learner_dashboard/certificate_status_2017.underscore
 #: test_root/staticfiles/templates/learner_dashboard/upgrade_message_2017.underscore
 msgid "Certificate Status:"
-msgstr ""
+msgstr "Manylion y dystysgrif"
 
 #: lms/templates/learner_dashboard/certificate_status_2017.underscore
 #: test_root/staticfiles/templates/learner_dashboard/certificate_status_2017.underscore
 msgid "Certificate Purchased"
-msgstr ""
+msgstr "Cynhyrchwyd y dystysgrif"
 
 #: lms/templates/learner_dashboard/course_card.underscore
 #: test_root/staticfiles/templates/learner_dashboard/course_card.underscore
-#, python-format
 msgid "%(courseName)s Home Page."
-msgstr "Hafan %(courseName)s."
+msgstr "Hafan %(courseName)."
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 #: test_root/staticfiles/templates/learner_dashboard/course_enroll.underscore
@@ -8044,7 +7937,7 @@ msgstr "Gweld cwrs a archifwyd"
 #: lms/templates/learner_dashboard/course_enroll.underscore
 #: test_root/staticfiles/templates/learner_dashboard/course_enroll.underscore
 msgid "Not Enrolled"
-msgstr "Heb Gofrestru"
+msgstr "heb gofrestru"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 #: test_root/staticfiles/templates/learner_dashboard/course_enroll.underscore
@@ -8063,7 +7956,6 @@ msgstr "Dewiswch ddyddiad y cwrs"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 #: test_root/staticfiles/templates/learner_dashboard/course_enroll.underscore
-#, python-format
 msgid "Starts %(start)s"
 msgstr "Dechrau %(start)s"
 
@@ -8098,7 +7990,7 @@ msgstr "Nid yw ar gael ar hyn o bryd"
 #: lms/templates/learner_dashboard/course_enroll_2017.underscore
 #: test_root/staticfiles/templates/learner_dashboard/course_enroll_2017.underscore
 msgid "Choose a course run:"
-msgstr ""
+msgstr "Dewiswch ddyddiad y cwrs"
 
 #: lms/templates/learner_dashboard/empty_programs_list.underscore
 #: test_root/staticfiles/templates/learner_dashboard/empty_programs_list.underscore
@@ -8130,35 +8022,31 @@ msgstr "Archwilio rhaglenni newydd"
 #: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Course"
 msgid_plural "Courses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Y cwrs"
+msgstr[1] "Y cwrs"
 
 #: lms/templates/learner_dashboard/program_card.underscore
 #: test_root/staticfiles/templates/learner_dashboard/program_card.underscore
 msgid "Completed"
-msgstr ""
+msgstr "Cydran"
 
 #: lms/templates/learner_dashboard/program_card.underscore
 #: test_root/staticfiles/templates/learner_dashboard/program_card.underscore
 msgid "Remaining"
-msgstr ""
+msgstr "Rhybudd"
 
 #: lms/templates/learner_dashboard/program_card.underscore
 #: test_root/staticfiles/templates/learner_dashboard/program_card.underscore
-#, python-format
 msgid "%(programName)s Home Page."
-msgstr "Hafan %(programName)s."
+msgstr "Hafan %(programName)."
 
 #: lms/templates/learner_dashboard/program_details_sidebar.underscore
 #: test_root/staticfiles/templates/learner_dashboard/program_details_sidebar.underscore
 msgid "Your {program} Certificate"
-msgstr ""
+msgstr "Tystysgrifau rhaglenni"
 
 #: lms/templates/learner_dashboard/program_details_sidebar.underscore
 #: test_root/staticfiles/templates/learner_dashboard/program_details_sidebar.underscore
-#, python-format
 msgid "Open the certificate you earned for the %(title)s program."
 msgstr ""
 
@@ -8243,24 +8131,21 @@ msgstr "Diweddaru nawr"
 #: lms/templates/learner_dashboard/upgrade_message_2017.underscore
 #: test_root/staticfiles/templates/learner_dashboard/upgrade_message_2017.underscore
 msgid "Needs verified certificate "
-msgstr ""
+msgstr "Tystysgrif wedi'i gwirio"
 
 #: lms/templates/learner_dashboard/upgrade_message_2017.underscore
 #: test_root/staticfiles/templates/learner_dashboard/upgrade_message_2017.underscore
 msgid "Buy Certificate"
-msgstr ""
+msgstr "Gweld y dystysgrif"
 
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
 #: test_root/staticfiles/templates/search/course_search_results.underscore
 #: test_root/staticfiles/templates/search/dashboard_search_results.underscore
-#, python-format
 msgid "Load next %(num_items)s result"
 msgid_plural "Load next %(num_items)s results"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Llwytho'r {numResponses} ymateb nesaf"
+msgstr[1] "Llwytho'r {numResponses} ymateb nesaf"
 
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
@@ -8315,15 +8200,13 @@ msgstr "Mewngofnodi"
 
 #: lms/templates/student_account/hinted_login.underscore
 #: test_root/staticfiles/templates/student_account/hinted_login.underscore
-#, python-format
 msgid "Would you like to sign in using your %(providerName)s credentials?"
-msgstr "Hoffech chi fewngofnodi gan ddefnyddio'ch cymwysterau %(providerName)s?"
+msgstr "Hoffech chi fewngofnodi gan ddefnyddio'ch cymwysterau %(providerName)?"
 
 #: lms/templates/student_account/hinted_login.underscore
 #: test_root/staticfiles/templates/student_account/hinted_login.underscore
-#, python-format
 msgid "Sign in using %(providerName)s"
-msgstr "Mewngofnodi gyda %(providerName)s"
+msgstr "Mewngofnodi gyda %(providerName)"
 
 #: lms/templates/student_account/hinted_login.underscore
 #: test_root/staticfiles/templates/student_account/hinted_login.underscore
@@ -8383,9 +8266,8 @@ msgstr "neu fewngofnodi gyda"
 
 #: lms/templates/student_account/login.underscore
 #: test_root/staticfiles/templates/student_account/login.underscore
-#, python-format
 msgid "Sign in with %(providerName)s"
-msgstr "Mewngofnodi gyda %(providerName)s"
+msgstr "Mewngofnodi gyda %(providerName)"
 
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
@@ -8396,9 +8278,8 @@ msgstr "Defnyddio fy nghymwysterau sefydliad/campws"
 
 #: lms/templates/student_account/login.underscore
 #: test_root/staticfiles/templates/student_account/login.underscore
-#, python-format
 msgid "New to %(platformName)s?"
-msgstr "Yn newydd i %(platformName)s?"
+msgstr "Yn newydd i %(platformName)?"
 
 #: lms/templates/student_account/login.underscore
 #: test_root/staticfiles/templates/student_account/login.underscore
@@ -8431,9 +8312,8 @@ msgstr "Creu cyfrif gan ddefnyddio"
 
 #: lms/templates/student_account/register.underscore
 #: test_root/staticfiles/templates/student_account/register.underscore
-#, python-format
 msgid "Create account using %(providerName)s."
-msgstr "Creu cyfrif gan ddefnyddio %(providerName)s."
+msgstr "Creu cyfrif gan ddefnyddio %(providerName)."
 
 #: lms/templates/student_account/register.underscore
 #: test_root/staticfiles/templates/student_account/register.underscore
@@ -8462,7 +8342,6 @@ msgstr "Gennych gyfrif eisoes?"
 
 #: lms/templates/student_profile/badge.underscore
 #: test_root/staticfiles/templates/student_profile/badge.underscore
-#, python-format
 msgid "Share your \"%(display_name)s\" award"
 msgstr "Rhannu eich dyfarniad \"%(display_name)s\""
 
@@ -8473,7 +8352,6 @@ msgstr "Rhannu"
 
 #: lms/templates/student_profile/badge.underscore
 #: test_root/staticfiles/templates/student_profile/badge.underscore
-#, python-format
 msgid "Earned %(created)s."
 msgstr "Enillwyd %(created)s."
 
@@ -8524,29 +8402,26 @@ msgstr ""
 
 #: lms/templates/student_profile/share_modal.underscore
 #: test_root/staticfiles/templates/student_profile/share_modal.underscore
-#, python-format
 msgid ""
 "Create a %(link_start)sMozilla Backpack%(link_end)s account, or log in to "
 "your existing account"
 msgstr ""
-"Creu cyfrif %(link_start)sMozilla Backpack%(link_end)s, neu fewngofnodi i'ch "
+"Creu cyfrif %(link_start)sMozilla Backpack%(link_end), neu fewngofnodi i'ch "
 "cyfrif presennol"
 
 #: lms/templates/student_profile/share_modal.underscore
 #: test_root/staticfiles/templates/student_profile/share_modal.underscore
-#, python-format
 msgid ""
 "%(download_link_start)sDownload this image (right-click or option-click, "
 "save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to "
 "your backpack.</li>"
 msgstr ""
-"%(download_link_start)s I lawrlwytho'r ddelwedd hon (de-gliciwch neu "
-"dewis-gliciwch, cadw fel)%(link_end)s ac yna %(upload_link_start)s llwytho i "
-"fyny %(link_end)s i'ch backpack.</li>"
+"%(download_link_start)s I lawrlwytho'r ddelwedd hon (de-gliciwch neu dewis-"
+"gliciwch, cadw fel)%(link_end)s ac yna %(upload_link_start)s llwytho i fyny "
+"%(link_end)s i'ch backpack.</li>"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 #: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
-#, python-format
 msgid "Congratulations! You are now verified on %(platformName)s!"
 msgstr "Llongyfarchiadau! Rydych nawr wedi'ch gwirio ar %(platformName)s!"
 
@@ -8578,7 +8453,6 @@ msgstr "Statws wedi'i wirio"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 #: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
-#, python-format
 msgid ""
 "Thank you for submitting your photos. We will review them shortly. You can "
 "now sign up for any %(platformName)s course that offers verified "
@@ -8696,7 +8570,6 @@ msgstr "Cwestiynau Cyffredin"
 #: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
-#, python-format
 msgid "Why does %(platformName)s need my photo?"
 msgstr "Pam mae ar %(platformName)s angen fy llun?"
 
@@ -8721,7 +8594,6 @@ msgstr ""
 #: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
-#, python-format
 msgid "What does %(platformName)s do with this photo?"
 msgstr "Beth mae %(platformName)s yn ei wneud gyda'r llun?"
 
@@ -8731,12 +8603,11 @@ msgstr "Beth mae %(platformName)s yn ei wneud gyda'r llun?"
 #: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
-#, python-format
 msgid ""
 "We use the highest levels of security available to encrypt your photo and "
 "send it to our authorization service for review. Your photo and information "
-"are not saved or visible anywhere on %(platformName)s after the verification"
-" process is complete."
+"are not saved or visible anywhere on %(platformName)s after the verification "
+"process is complete."
 msgstr ""
 "Rydym yn defnyddio'r lefelau diogelwch uchaf sydd ar gael i amgryptio eich "
 "llun a'i anfon i'n gwasanaeth awdurdodi i'w adolygu. Ni chaiff eich llun "
@@ -8751,7 +8622,6 @@ msgstr ""
 #: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/intro_step.underscore
 #: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
-#, python-format
 msgid "Next: %(nextStepTitle)s"
 msgstr "Nesaf: %(nextStepTitle)s"
 
@@ -8958,8 +8828,7 @@ msgstr "Llun adnabod a ddyroddwyd gan lywodraeth"
 
 #: lms/templates/verify_student/make_payment_step.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
-msgid ""
-"ID-Verification is not required for this Professional Education course."
+msgid "ID-Verification is not required for this Professional Education course."
 msgstr ""
 "Nid oes angen gwirio pwy ydych chi ar gyfer y cwrs addysg broffesiynol hwn."
 
@@ -9091,7 +8960,6 @@ msgstr ""
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 #: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
-#, python-format
 msgid ""
 "If you don't verify your identity now, you can still explore your course "
 "from your dashboard. You will receive periodic reminders from "
@@ -9099,7 +8967,7 @@ msgid ""
 msgstr ""
 "Os na wiriwch chi pwy ydych chi nawr, gallwch barhau i archwilio'ch cwrs "
 "o'ch dangosfwrdd. Byddwch yn derbyn nodiadau atgoffa o bryd i'w gilydd gan "
-"%(platformName)s i wirio pwy ydych chi."
+"%(platformName) i wirio pwy ydych chi."
 
 #: lms/templates/verify_student/reverify_success_step.underscore
 #: test_root/staticfiles/templates/verify_student/reverify_success_step.underscore
@@ -9139,13 +9007,11 @@ msgstr ""
 
 #: lms/templates/verify_student/review_photos_step.underscore
 #: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
-#, python-format
 msgid "Photo of %(fullName)s"
 msgstr "Llun o %(fullName)s"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 #: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
-#, python-format
 msgid "Photo of %(fullName)s's ID"
 msgstr "Llun o gerdyn adnabod %(fullName)s"
 
@@ -9171,10 +9037,9 @@ msgstr "A yw eich enw ar y cerdyn adnabod yn ddarllenadwy?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 #: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
-#, python-format
 msgid "Does the name on your ID match your account name: %(fullName)s?"
 msgstr ""
-"A yw'r enw ar y manylion adnabod yn cyd-fynd ag enw'ch cyfrif: %(fullName)s?"
+"A yw'r enw ar y manylion adnabod yn cyd-fynd ag enw'ch cyfrif: %(fullName)?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
 #: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
@@ -9236,7 +9101,7 @@ msgstr "Wedi rhoi nod tudalen ar"
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 #: test_root/staticfiles/course_bookmarks/templates/bookmarks-list.underscore
 msgid "You have not bookmarked any courseware pages yet"
-msgstr ""
+msgstr "Nid ydych wedi rhoi nod tudalen ar unrhyw dudalennau o'r cwrs eto."
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 #: test_root/staticfiles/course_bookmarks/templates/bookmarks-list.underscore
@@ -9251,21 +9116,20 @@ msgstr ""
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Add a New Allowance"
-msgstr ""
+msgstr "Ychwanegu cohort newydd"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Special Exam"
-msgstr ""
+msgstr "Sefydlu arholiad arbennig"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
-#, python-format
 msgid " %(exam_display_name)s "
-msgstr ""
+msgstr "Dileu %(item_display_name)?"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Exam Type"
-msgstr ""
+msgstr "Mathau o arholiadau"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
@@ -9278,7 +9142,7 @@ msgstr ""
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Value"
-msgstr ""
+msgstr "Clirio'r gwerth"
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "minutes"
@@ -9286,7 +9150,7 @@ msgstr ""
 
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Username or Email"
-msgstr "Enw ddefnyddiwr neu E-bost"
+msgstr "enw ddefnyddiwr neu e-bost"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowances"
@@ -9294,33 +9158,32 @@ msgstr ""
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Add Allowance"
-msgstr ""
+msgstr "Ychwanegu iaith"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Exam Name"
-msgstr ""
+msgstr "Mathau o arholiadau"
 
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Allowance Value"
-msgstr ""
+msgstr "Clirio'r gwerth"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Time Limit"
-msgstr ""
+msgstr "Amser anfonwyd"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Started At"
-msgstr ""
+msgstr "Dyddiad dechrau"
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 msgid "Completed At"
 msgstr ""
 
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
-#, python-format
 msgid " %(username)s "
-msgstr ""
+msgstr "Enw defnyddiwr"
 
 #: cms/templates/js/access-editor.underscore
 msgid "Limit Access"
@@ -9380,7 +9243,6 @@ msgstr "Ychwanegu cydran:"
 
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
-#, python-format
 msgid "%(type)s Component Template Menu"
 msgstr "Dewislen Patrymlun Cydrannau %(type)s"
 
@@ -9511,12 +9373,12 @@ msgstr "Llofnodwyr y dystysgrif"
 #: cms/templates/js/certificate-editor.underscore
 msgid ""
 "It is strongly recommended that you include four or fewer signatories. If "
-"you include additional signatories, preview the certificate in Print View to"
-" ensure the certificate will print correctly on one page."
+"you include additional signatories, preview the certificate in Print View to "
+"ensure the certificate will print correctly on one page."
 msgstr ""
 "Argymhellir yn gryf eich bod yn cynnwys pedwar llofnodwr neu lai. Os ydych "
-"yn cynnwys llofnodwyr ychwanegol, agorwch rhagolwg o'r dystysgrif yng "
-"Ngwedd Argraffu i sicrhau bod y dystysgrif yn argraffu'n gywir ar y dudalen."
+"yn cynnwys llofnodwyr ychwanegol, agorwch rhagolwg o'r dystysgrif yng Ngwedd "
+"Argraffu i sicrhau bod y dystysgrif yn argraffu'n gywir ar y dudalen."
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Information"
@@ -9580,15 +9442,15 @@ msgstr ""
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "Content Group Name"
-msgstr ""
+msgstr "Enw'r grŵp cynnwys"
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "Content Group ID"
-msgstr "Ni ellir ei ddileu pan fod uned yn ei ddefnyddio"
+msgstr "Rhif adnabod y grŵp cynnwys"
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "This is the name of the group"
-msgstr "Defnyddir y grŵp cynnwys hwn yn:"
+msgstr "Dyma enw'r grŵp"
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "This content group is used in one or more units."
@@ -9645,11 +9507,10 @@ msgid ""
 "Learners do not see the subsection in the course outline. The subsection is "
 "not included in grade calculations."
 msgstr ""
-"Nid yw'r dysgwyr yn gweld yr is-adran yn amlinelliad y cwrs. Ni chaiff yr "
-"is-adran ei chynnwys wrth gyfrifo graddau."
+"Nid yw'r dysgwyr yn gweld yr is-adran yn amlinelliad y cwrs. Ni chaiff yr is-"
+"adran ei chynnwys wrth gyfrifo graddau."
 
 #: cms/templates/js/content-visibility-editor.underscore
-#, python-format
 msgid ""
 "If you select an option other than \"%(hide_label)s\", published units in "
 "this subsection become available to learners unless they are explicitly "
@@ -9725,7 +9586,6 @@ msgid "Upload Photo"
 msgstr "Llwytho llun i fyny"
 
 #: cms/templates/js/course-outline.underscore
-#, python-format
 msgid "Prerequisite: %(prereq_display_name)s"
 msgstr "Hanfodol: %(prereq_display_name)s"
 
@@ -9749,6 +9609,7 @@ msgstr "Newidiadau heb eu cyhoeddi i gynnwys a gaiff ei ryddhau yn y dyfodol"
 msgid ""
 "Some content in this unit is visible only to specific groups of learners"
 msgstr ""
+"Mae peth cynnwys yr uned hon yn weladwy i grwpiau cynnwys penodol yn unig"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Ungraded"
@@ -9764,9 +9625,8 @@ msgstr "Arholiad procter"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
-#, python-format
 msgid "Collapse/Expand this %(xblock_type)s"
-msgstr "Cwympo/Ehangu'r %(xblock_type)s hwn"
+msgstr "Cwympo/Ehangu'r %(xblock_type) hwn"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Display Name"
@@ -9822,9 +9682,8 @@ msgstr "Nid ydych wedi ychwanegu unrhyw gynnwys i'r cwrs hwn eto."
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
-#, python-format
 msgid "Click to add a new %(xblock_type)s"
-msgstr "Cliciwch i ychwanegu %(xblock_type)s newydd"
+msgstr "Cliciwch i ychwanegu %(xblock_type) newydd"
 
 #: cms/templates/js/course-settings-learning-fields.underscore
 msgid "Learning Outcome"
@@ -9852,8 +9711,8 @@ msgstr "Byrfodd"
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid ""
-"This short name for the assignment type (for example, HW or Midterm) appears"
-" next to assignments on a learner's Progress page."
+"This short name for the assignment type (for example, HW or Midterm) appears "
+"next to assignments on a learner's Progress page."
 msgstr ""
 "Mae'r enw byr hwn ar gyfer y math o aseiniad (er enghraifft, GC neu "
 "Canoltym) yn ymddangos nesaf at aseiniadau ar dudalen cynnydd y dysgwyr."
@@ -9902,8 +9761,8 @@ msgstr "Nid ydych wedi diffinio unrhyw daflenni"
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid ""
-"There is invalid code in your content. Please check to make sure it is valid"
-" HTML."
+"There is invalid code in your content. Please check to make sure it is valid "
+"HTML."
 msgstr ""
 "Mae côd annilys yn eich cynnwys. Gwiriwch i wneud yn siŵr ei fod yn HTML "
 "dilys."
@@ -10013,8 +9872,8 @@ msgstr "Caiff y ffurfweddiad grŵp hwn ei ddefnyddio yn:"
 
 #: cms/templates/js/group-configuration-details.underscore
 msgid ""
-"This Group Configuration is not in use. Start by adding a content experiment"
-" to any Unit via the {linkStart}Course Outline{linkEnd}."
+"This Group Configuration is not in use. Start by adding a content experiment "
+"to any Unit via the {linkStart}Course Outline{linkEnd}."
 msgstr ""
 "Nid yw'r ffurfweddiad grŵp hwn yn cael ei ddefnyddio. Ddechreuwch drwy "
 "ychwanegu arbrawf cynnwys i unrhyw uned drwy {linkStart}Amlinelliad y "
@@ -10114,12 +9973,10 @@ msgid "Some Rights Reserved"
 msgstr "Cedwir peth hawliau"
 
 #: cms/templates/js/list.underscore
-#, python-format
 msgid "%(new_item_message)s"
 msgstr "%(new_item_message)s"
 
 #: cms/templates/js/list.underscore
-#, python-format
 msgid "New %(item_type)s"
 msgstr "%(item_type)s newydd"
 
@@ -10154,15 +10011,15 @@ msgstr ""
 
 #: cms/templates/js/move-xblock-list.underscore
 msgid "Current location"
-msgstr ""
+msgstr "Sgwrs gyfredol"
 
 #: cms/templates/js/move-xblock-list.underscore
 msgid "View child items"
-msgstr ""
+msgstr "Gweld cwrs a archifwyd"
 
 #: cms/templates/js/move-xblock-list.underscore
 msgid "Currently selected"
-msgstr ""
+msgstr "Heb ddethol"
 
 #: cms/templates/js/no-textbooks.underscore
 msgid "You haven't added any textbooks to this course yet."
@@ -10181,6 +10038,8 @@ msgid ""
 "Use this group to control a component's visibility in the {linkStart}Course "
 "Outline{linkEnd}."
 msgstr ""
+"Nid yw'r grŵp cynnwys hwn yn cael ei ddefnyddio. Ychwanegu grŵp cynnwys i "
+"unrhyw uned o {linkStart}Amlinelliad y Cwrs{linkEnd}."
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Previous Uploads"
@@ -10211,9 +10070,8 @@ msgid "Never published"
 msgstr "Erioed wedi'i gyhoeddi"
 
 #: cms/templates/js/publish-history.underscore
-#, python-format
 msgid "Last published %(last_published_date)s by %(publish_username)s"
-msgstr "Cyhoeddwyd ddiwethaf %(last_published_date)s gan %(publish_username)s"
+msgstr "Cyhoeddwyd ddiwethaf %(last_published_date) gan %(publish_username)"
 
 #: cms/templates/js/publish-history.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -10250,8 +10108,8 @@ msgstr "Statws cyhoeddi"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid ""
-"Draft saved on {lastSavedStart}{editedOn}{lastSavedEnd} by "
-"{editedByStart}{editedBy}{editedByEnd}"
+"Draft saved on {lastSavedStart}{editedOn}{lastSavedEnd} by {editedByStart}"
+"{editedBy}{editedByEnd}"
 msgstr ""
 
 #: cms/templates/js/publish-xblock.underscore
@@ -10261,7 +10119,6 @@ msgid ""
 msgstr ""
 
 #: cms/templates/js/publish-xblock.underscore
-#, python-format
 msgid "with %(release_date_from)s"
 msgstr "gyda %(release_date_from)s"
 
@@ -10278,7 +10135,6 @@ msgid "Staff Only"
 msgstr "Staff yn unig"
 
 #: cms/templates/js/publish-xblock.underscore
-#, python-format
 msgid "with %(section_or_subsection)s"
 msgstr "gyda %(section_or_subsection)s"
 
@@ -10369,8 +10225,8 @@ msgstr ""
 
 #: cms/templates/js/show-correctness-editor.underscore
 msgid ""
-"If the subsection does not have a due date, learners always see their scores"
-" when they submit answers to assessments."
+"If the subsection does not have a due date, learners always see their scores "
+"when they submit answers to assessments."
 msgstr ""
 
 #: cms/templates/js/show-textbook.underscore
@@ -10465,14 +10321,13 @@ msgstr ""
 "dysgwyr."
 
 #: cms/templates/js/staff-lock-editor.underscore
-#, python-format
 msgid ""
 "If you make this %(xblockType)s visible to learners, learners will be able "
 "to see its content after the release date has passed and you have published "
 "the unit. Only units that are explicitly hidden from learners will remain "
 "hidden after you clear this option for the %(xblockType)s."
 msgstr ""
-"Os byddwch yn gwneud y %(xblockType)s hwn yn weladwy i ddysgwyr, dylai'r "
+"Os byddwch yn gwneud y %(xblockType) hwn yn weladwy i ddysgwyr, dylai'r "
 "dysgwyr allu gweld ei gynnwys wedi i'r dyddiad rhyddhau fod a'ch bod wedi "
 "cyhoeddi'r uned. Unedau a gaiff eu cuddio'n benodol oddi wrth dysgwyr yn "
 "unig a fydd yn parhau'n gudd oni bai eich bod yn clirio'r opsiwn hwn ar "
@@ -10564,8 +10419,8 @@ msgstr "Amser a roddir (AA:MM):"
 #: cms/templates/js/timed-examination-preference-editor.underscore
 msgid ""
 "Select a time allotment for the exam. If it is over 24 hours, type in the "
-"amount of time. You can grant individual learners extra time to complete the"
-" exam through the Instructor Dashboard."
+"amount of time. You can grant individual learners extra time to complete the "
+"exam through the Instructor Dashboard."
 msgstr ""
 "Dewis faint o amser i'w roi i'r arholiad. Os yw dros 24 awr, rhowch faint o "
 "amser. Gallwch roi mwy o amser i ddysgwyr unigol i gwblhau'r arholiad drwy "
@@ -10623,14 +10478,13 @@ msgid "Edit the name"
 msgstr "Golygu'r enw"
 
 #: cms/templates/js/xblock-string-field-editor.underscore
-#, python-format
 msgid "Edit %(display_name)s (required)"
 msgstr "Golygu %(display_name)s (gofynnol)"
 
 #: cms/templates/js/maintenance/force-published-course-response.underscore
 msgid ""
-"You have done a dry run of force publishing the course. Nothing has changed."
-" Had you run it, the following course versions would have been change."
+"You have done a dry run of force publishing the course. Nothing has changed. "
+"Had you run it, the following course versions would have been change."
 msgstr ""
 "Rydych wedi ymarfer gorfodi cyhoeddi'r cwrs. Dim byd wedi newid. Petaech "
 "wedi'i redeg, byddai'r fersiynau hyn o'r cwrs wedi cael eu newid."
@@ -10649,8 +10503,8 @@ msgstr "Ychwanegu UL ar gyfer fersiynau ychwanegol"
 
 #: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
 msgid ""
-"To be sure all students can access the video, we recommend providing both an"
-" .mp4 and a .webm version of your video. Click below to add a URL for "
+"To be sure all students can access the video, we recommend providing both "
+"an .mp4 and a .webm version of your video. Click below to add a URL for "
 "another version. These URLs cannot be YouTube URLs. The first listed video "
 "that's compatible with the student's computer will play."
 msgstr ""
@@ -10670,8 +10524,8 @@ msgstr "Gwrthdaro trawsgrifiad a amserwyd"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
 msgid ""
-"The timed transcript for the first video file does not appear to be the same"
-" as the timed transcript for the second video file."
+"The timed transcript for the first video file does not appear to be the same "
+"as the timed transcript for the second video file."
 msgstr ""
 "Nid yw'r trawsgrifiad a amserwyd ar gyfer y fideo cyntaf yn ymddangos yr un "
 "un â'r trawsgrifiad a amserwyd ar gyfer yr ail fideo."
@@ -10691,7 +10545,6 @@ msgid "Error."
 msgstr "Gwall."
 
 #: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
-#, python-format
 msgid "Timed Transcript from %(filename)s"
 msgstr "Trawsgrifiad a amserwyd ar gyfer %(filename)s"
 
@@ -10735,10 +10588,13 @@ msgstr "Dim trawsgrifiad EdX a amserwyd"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
 msgid ""
-"EdX doesn't have a timed transcript for this video in Studio, but we found a"
-" transcript on YouTube. You can import the YouTube transcript or upload your"
-" own .srt transcript file."
+"EdX doesn't have a timed transcript for this video in Studio, but we found a "
+"transcript on YouTube. You can import the YouTube transcript or upload your "
+"own .srt transcript file."
 msgstr ""
+"Nid oes gan EdX drawsgrifiad wedi'i amseru ar gyfer y fideo hwn yn Studio, "
+"ond cawsom hyd i drawsgrifiad ar YouTube. Gallwch fewnforio'r trawsgrifiad "
+"YouTube neu lwytho eich ffeil trawsgrifiad .srt eich hun i fyny."
 
 #: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
 msgid "Import YouTube Transcript"
@@ -10758,16 +10614,15 @@ msgstr ""
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
 msgid ""
-"The timed transcript for this video on edX is out of date, but YouTube has a"
-" current timed transcript for this video."
+"The timed transcript for this video on edX is out of date, but YouTube has a "
+"current timed transcript for this video."
 msgstr ""
 "Mae'r trawsgrifiad a amserwyd ar gyfer y fideo ar edX wedi dyddio, ond mae "
 "gan YouTube drawsgrifiad a amserwyd cyfredol ar gyfer y fideo hwn."
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
 msgid "Do you want to replace the edX transcript with the YouTube transcript?"
-msgstr ""
-"Ydych chi am amnewid y trawsgrifiad edX gyda'r trawsgrifiad YouTube?"
+msgstr "Ydych chi am amnewid y trawsgrifiad edX gyda'r trawsgrifiad YouTube?"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
 msgid "Yes, replace the edX transcript with the YouTube transcript"
@@ -10795,8 +10650,8 @@ msgstr "Cadarnhau trawsgrifiad a amserwyd"
 #: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
 msgid ""
 "You changed a video URL, but did not change the timed transcript file. Do "
-"you want to use the current timed transcript or upload a new .srt transcript"
-" file?"
+"you want to use the current timed transcript or upload a new .srt transcript "
+"file?"
 msgstr ""
 "Gwnaethoch newid URL fideo, ond heb newid y ffeil trawsgrifiad a amserwyd. "
 "Os ydych am ddefnyddio'r trawsgrifiad aamserwyd cyfredol, llwythwch ffeil "
@@ -10805,3 +10660,427 @@ msgstr ""
 #: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
 msgid "Use Current Transcript"
 msgstr "Defnyddio'r trawsgrifiad cyfredol"
+
+msgid "The email address you used to register with {platform_name}"
+msgstr ""
+"Nid yw'r cyfeiriad e-bost rydych wedi'i ddarparu wedi'i fformatio'n gywir."
+
+msgid "RESET MY PASSWORD"
+msgstr "Ailosod fy Nghyfrinair"
+
+msgid "No email address provided."
+msgstr "Mae angen cyfeiriad e-bost dilys"
+
+msgid ""
+"You entered {email}. If this email address is associated with your "
+"Proversity account, we will send a message with password reset instructions "
+"to this email address."
+msgstr ""
+"{paragraphStart}Rhoesoch {boldStart}{email}{boldEnd}. Os yw'r cyfeiriad e-"
+"bost hwn yn gysylltiedig â'ch cyfrif {platform_name}, byddwn yn anfon neges "
+"gyda chyfarwyddiadau ailosod cyfrinair i'r cyfeiriad e-bost hwn."
+"{paragraphEnd}"
+
+msgid ""
+"If you do not receive a password reset message, verify that you entered the "
+"correct email address, or check your spam folder."
+msgstr ""
+"Os na chewch neges ailsefydlu cyfrinair, gwiriwch eich bod wedi cofnodi'r "
+"cyfeiriad e-bost cywir, neu wirio'ch ffolder sbam."
+
+msgid "If you need further assistance, contact technical support."
+msgstr "Os oes angen cymorth pellach arnoch, cysylltwch â chymorth technegol."
+
+msgid ""
+"{\"one\"=>\"%(earned)s/%(possible)s point (graded)\", \"other\"=>"
+"\"%(earned)s/%(possible)s points (graded)\"}"
+msgstr ""
+"{\"one\"=>\"%(earned)s/%(possible)s pwynt (graded)\", \"other\"=>"
+"\"%(earned)s/%(possible)s pwynt (graded)\"}"
+
+msgid ""
+"{\"one\"=>\"%(earned)s/%(possible)s point (ungraded)\", \"other\"=>"
+"\"%(earned)s/%(possible)s points (ungraded)\"}"
+msgstr ""
+"{\"one\"=>\"%(earned)s/%(possible)s pwynt (ungraded)\", \"other\"=>"
+"\"%(earned)s/%(possible)s pwynt (ungraded)\"}"
+
+msgid ""
+"Answers to this problem are now shown. Navigate through the problem to "
+"review it with answers inline."
+msgstr ""
+"Nid yw atebion y broblem hon wedi'u dangos. Llywiwch drwy'r broblem i'w "
+"hadolygu gydag atebion yn eu lle."
+
+msgid ""
+"VideoPlayer: Element corresponding to the given selector was not found."
+msgstr ""
+"VideoPlayer: Ni chanfuwyd yr elfen gyfatebol a roddwyd i'r detholydd."
+
+msgid "{\"one\"=>\"%(value)s hour\", \"other\"=>\"%(value)s hours\"}"
+msgstr "{\"one\"=>\"%(value)s awr\", \"other\"=>\"%(value)s awr\"}"
+
+msgid "{\"one\"=>\"%(value)s minute\", \"other\"=>\"%(value)s minutes\"}"
+msgstr "{\"one\"=>\"%(value)s munud\", \"other\"=>\"%(value)s munud\"}"
+
+msgid "{\"one\"=>\"%(value)s second\", \"other\"=>\"%(value)s seconds\"}"
+msgstr "{\"one\"=>\"%(value)s eiliad\", \"other\"=>\"%(value)s eiliad\"}"
+
+msgid ""
+"{\"one\"=>\"there is currently {numVotes} vote\", \"other\"=>\"there are "
+"currently {numVotes} votes\"}"
+msgstr ""
+"{\"one\"=>\"ar hyn o bryd ceir {numVotes} pleidlais\", \"other\"=>\"ar "
+"hyn o bryd ceir {numVotes} pleidlais\"}"
+
+msgid "{\"one\"=>\"{numVotes} Vote\", \"other\"=>\"{numVotes} Votes\"}"
+msgstr ""
+"{\"one\"=>\"{numVotes} pleidlais\", \"other\"=>\"{numVotes} pleidlais\"}"
+
+msgid ""
+"{\"one\"=>\"{numResponses} other response\", \"other\"=>\"{numResponses} "
+"other responses\"}"
+msgstr ""
+"{\"one\"=>\"{numResponses} ymateb arall\", \"other\"=>\"{numResponses} "
+"ymateb arall\"}"
+
+msgid ""
+"{\"one\"=>\"{numResponses} response\", \"other\"=>\"{numResponses} "
+"responses\"}"
+msgstr ""
+"{\"one\"=>\"{numResponses} ymateb\", \"other\"=>\"{numResponses} ymateb\"}"
+
+msgid ""
+"{\"one\"=>\"Showing first response\", \"other\"=>\"Showing first "
+"{numResponses} responses\"}"
+msgstr ""
+"{\"one\"=>\"Yr ymateb cyntaf\", \"other\"=>\"Yr {numResponses} ymateb "
+"cyntaf\"}"
+
+msgid "{\"one\"=>\"%d minute\", \"other\"=>\"%d minutes\"}"
+msgstr "{\"one\"=>\"%d munud\", \"other\"=>\"%d munud\"}"
+
+msgid "{\"one\"=>\"about %d hour\", \"other\"=>\"about %d hours\"}"
+msgstr "{\"one\"=>\"oddeutu %d awr\", \"other\"=>\"oddeutu %d awr\"}"
+
+msgid "{\"one\"=>\"%d day\", \"other\"=>\"%d days\"}"
+msgstr "{\"one\"=>\"%d diwrnod\", \"other\"=>\"%d diwrnod\"}"
+
+msgid "{\"one\"=>\"%d month\", \"other\"=>\"%d months\"}"
+msgstr "{\"one\"=>\"%d mis\", \"other\"=>\"%d mis\"}"
+
+msgid "{\"one\"=>\"%d year\", \"other\"=>\"%d years\"}"
+msgstr "{\"one\"=>\"%d blwyddyn\", \"other\"=>\"%d blwyddyn\"}"
+
+msgid ""
+"{\"one\"=>\"Check the box to remove %(totalFlags)s flag.\", \"other\"=>"
+"\"Check the box to remove %(totalFlags)s flags.\"}"
+msgstr ""
+"{\"one\"=>\"Check the box to remove %(totalFlags)s flag.\", \"other\"=>"
+"\"Check the box to remove %(totalFlags)s flags.\"}"
+
+msgid ""
+"{\"one\"=>\"Check the box to remove %(count)s flag.\", \"other\"=>\"Check "
+"the box to remove %(count)s flags.\"}"
+msgstr ""
+"{\"one\"=>\"Check the box to remove %(count)s flag.\", \"other\"=>\"Check "
+"the box to remove %(count)s flags.\"}"
+
+msgid ""
+"{\"one\"=>\"This annotation has %(count)s flag.\", \"other\"=>\"This "
+"annotation has %(count)s flags.\"}"
+msgstr ""
+"{\"one\"=>\"This annotation has %(count)s flag.\", \"other\"=>\"This "
+"annotation has %(count)s flags.\"}"
+
+msgid ""
+"{\"one\"=>\"%(memberCount)s / %(maxMemberCount)s Member\", \"other\"=>"
+"\"%(memberCount)s / %(maxMemberCount)s Members\"}"
+msgstr ""
+"{\"one\"=>\"%(memberCount)s / %(maxMemberCount)s aelod\", \"other\"=>"
+"\"%(memberCount)s / %(maxMemberCount)s aelod\"}"
+
+msgid ""
+"Your request could not be completed due to a server problem. Reload the "
+"page"
+msgstr ""
+"Ni fedrwyd cwblhau eich cais oherwydd problem gyda'r gweinydd. Ail-"
+"lwythwch y dudalen"
+
+msgid ""
+"{\"one\"=>\"%(team_count)s Team\", \"other\"=>\"%(team_count)s Teams\"}"
+msgstr ""
+"{\"one\"=>\"%(team_count)s tîm\", \"other\"=>\"%(team_count)s tîm\"}"
+
+msgid ""
+"Error getting student progress url for '<%= student_id %>'. Make sure "
+"that the student identifier is spelled correctly."
+msgstr ""
+"Gwall wrth gyrchu url cynnydd myfyriwr ar gyfer '<%= student_id %>'. "
+"Sicrhewch bod dynodydd y myfyriwr wedi'i sillafu'n gywir."
+
+msgid ""
+"Success! Problem attempts reset for problem '<%= problem_id %>' and "
+"student '<%= student_id %>'."
+msgstr ""
+"Llwyddiant! Ailosodwyd y ceisiadau problem ar gyfer problem '<%= "
+"problem_id %>' a myfyriwr '<%= student_id %>'."
+
+msgid ""
+"Error resetting problem attempts for problem '<%= problem_id %>' and "
+"student '<%= student_id %>'. Make sure that the problem and student "
+"identifiers are complete and correct."
+msgstr ""
+"Gwall wrth ailosod ceisiadau problem ar gyfer problem '<%= problem_id %>' "
+"a myfyriwr '<%= student_id %>'. Sicrhewch bod dynodwyr y broblem a'r "
+"myfyrwyr yn gyflawn ac yn gywir."
+
+msgid ""
+"Delete student '<%= student_id %>'s state on problem '<%= problem_id %>'?"
+msgstr ""
+"Dileu cyflwr myfyriwr '<%- student_id %> ar broblem '<%- problem_id %>'?"
+
+msgid ""
+"Error deleting student '<%= student_id %>'s state on problem '<%= "
+"problem_id %>'. Make sure that the problem and student identifiers are "
+"complete and correct."
+msgstr ""
+"Gwall wrth ddileu cyflwr myfyriwr '<%- student_id %> ar broblem '<%= "
+"problem_id %>'. Sicrhewch bod dynodwyr y broblem a'r myfyrwyr yn gyflawn "
+"ac yn gywir."
+
+msgid ""
+"Started rescore problem task for problem '<%= problem_id %>' and student "
+"'<%= student_id %>'. Click the 'Show Background Task History for Student' "
+"button to see the status of the task."
+msgstr ""
+"Dechreuwyd ail-sgorio tasg broblem ar gyfer problem '<%= problem_id %>' a "
+"myfyriwr '<%= student_id %>'. Cliciwch y botwm 'Dangos Hanes Tasg Gefndir "
+"y Myfyriwr i weld statws y dasg."
+
+msgid ""
+"Error starting a task to rescore problem '<%= problem_id %>' for student "
+"'<%= student_id %>'. Make sure that the the problem and student "
+"identifiers are complete and correct."
+msgstr ""
+"Gwall wrth ddechrau tasg i ail-sgorio problem '<%= problem_id %>' ar "
+"gyfer myfyriwr '<%= student_id %>'. Sicrhewch bod dynodwyr y broblem a'r "
+"myfyrwyr yn gyflawn ac yn gywir."
+
+msgid ""
+"Error getting task history for problem '<%= problem_id %>' and student '<"
+"%= student_id %>'. Make sure that the problem and student identifiers are "
+"complete and correct."
+msgstr ""
+"Gwall wrth gyrchu hanes tasg ar gyfer problem '<%= problem_id %>' a "
+"myfyriwr '<%= student_id %>'. Sicrhewch bod dynodwyr y broblem a'r "
+"myfyrwyr yn gyflawn ac yn gywir."
+
+msgid ""
+"Started entrance exam rescore task for student '{student_id}'. Click the "
+"'Show Background Task History for Student' button to see the status of "
+"the task."
+msgstr ""
+"Dechrau tasg ailfarcio arholiad mynediad ar gyfer myfyriwr "
+"'{student_id}'. Cliciwch y botwm 'Dangos Hanes Tasg Gefndir y Myfyriwr i "
+"weld statws y dasg."
+
+msgid "Reset attempts for all students on problem '<%= problem_id %>'?"
+msgstr ""
+"Ail-osod ceisiadau ar gyfer pob myfyriwr ar gyfer problem '<%= problem_id "
+"%>'?"
+
+msgid ""
+"Successfully started task to reset attempts for problem '<%= problem_id "
+"%>'. Click the 'Show Background Task History for Problem' button to see "
+"the status of the task."
+msgstr ""
+"Dechreuwyd tasg i ailosod ceisiadau ar gyfer y broblem yn llwyddiannus '<"
+"%= problem_id %>'. Cliciwch y botwm 'Dangos Hanes Tasg Gefndir y Broblem' "
+"i weld statws y dasg."
+
+msgid ""
+"Error starting a task to reset attempts for all students on problem '<%= "
+"problem_id %>'. Make sure that the problem identifier is complete and "
+"correct."
+msgstr ""
+"Gwall wrth ddechrau tasg i ail-osod ceisiadau ar gyfer yr holl fyfyrwyr "
+"ar gyfer problem '<%= problem_id %>'. Sicrhewch bod dynodydd y broblem yn "
+"gyflawn ac yn gywir."
+
+msgid "Rescore problem '<%= problem_id %>' for all students?"
+msgstr "Ail-sgorio problem '<%= problem_id %>' ar gyfer pob myfyriwr?"
+
+msgid ""
+"Successfully started task to rescore problem '<%= problem_id %>' for all "
+"students. Click the 'Show Background Task History for Problem' button to "
+"see the status of the task."
+msgstr ""
+"dechreuwyd tasg i ail-sgorio problem '<%= problem_id %>' yn llwyddiannus. "
+"Cliciwch y botwm 'Dangos Hanes Tasg Gefndir y Broblem' i weld statws y "
+"dasg."
+
+msgid ""
+"Error starting a task to rescore problem '<%= problem_id %>'. Make sure "
+"that the problem identifier is complete and correct."
+msgstr ""
+"Gwall wrth ddechrau tasg i ail-sgorio problem '<%= problem_id %>'. "
+"Sicrhewch bod dynodydd y broblem yn gyflawn ac yn gywir."
+
+msgid ""
+"{\"one\"=>\"%(errorCount)s error found in form.\", \"other\"=>"
+"\"%(errorCount)s errors found in form.\"}"
+msgstr ""
+"{\"one\"=>\"Cafuwyd %(errorCount)s gwall yn y ffurflen.\", \"other\"=>"
+"\"Canfuwyd %(errorCount)s gwall yn y ffurflen.\"}"
+
+msgid "You have been logged out of your edX account."
+msgstr "Rydych wedi cael eich allgofnodi o'ch cyfrif edX."
+
+msgid "Click to add"
+msgstr "Cliciwch i ychwanegu"
+
+msgid "Bookmark this page"
+msgstr "Rhoi nod tudalen yma"
+
+msgid "Click to remove"
+msgstr "Cliciwch i ddileu"
+
+msgid "records are not in correct format and not added to"
+msgstr ""
+"nid yw'r cofnodion yn y fformat cywir ac nid ydynt wedi'u hychwanegu at"
+
+msgid "learners do not exist in LMS and not added to the"
+msgstr ""
+"nid yw'r dysgwyr yn bodoli yn LMS ac nid ydynt wedi'u hychwanegu at y"
+
+msgid "learners are already white listed and not added to"
+msgstr "mae'r dysgwyr eisoes ar y rhestr ganiatáu a heb eu hychwanegu at"
+
+msgid "learners are not enrolled in course and not added to"
+msgstr ""
+"nid yw'r dysgwyr wedi'u cofrestru ar y cwrs ac nid ydynt wedi'u "
+"hychwanegu at"
+
+msgid "{\"one\"=>\"Viewing %s course\", \"other\"=>\"Viewing %s courses\"}"
+msgstr "{\"one\"=>\"Viewing %s course\", \"other\"=>\"Viewing %s courses\"}"
+
+msgid ""
+"{\"one\"=>\"{numUsersAdded} student has been added to this cohort\", "
+"\"other\"=>\"{numUsersAdded} students have been added to this cohort\"}"
+msgstr ""
+"{\"one\"=>\"Ychwanegwyd {numUsersAdded} myfyriwr i'r cohort hwn\", \"other"
+"\"=>\"Ychwanegwyd {numUsersAdded} myfyriwr i'r cohort hwn\"}"
+
+msgid ""
+"{\"one\"=>\"{numMoved} student was removed from {oldCohort}\", \"other\"=>"
+"\"{numMoved} students were removed from {oldCohort}\"}"
+msgstr ""
+"{\"one\"=>\"Dilëwyd{numMoved} myfyriwr o {oldCohort}\", \"other\"=>"
+"\"Dilëwyd{numMoved} myfyriwr o {oldCohort}\"}"
+
+msgid ""
+"{\"one\"=>\"{numPresent} student was already in the cohort\", \"other\"=>"
+"\"{numPresent} students were already in the cohort\"}"
+msgstr ""
+"{\"one\"=>\"Roedd {numPresent} myfyriwr eisoes yn y cohort\", \"other\"=>"
+"\"Roedd {numPresent} myfyriwr eisoes yn y cohort\"}"
+
+msgid ""
+"{\"one\"=>\"There was an error when trying to add students:\", \"other\"=>"
+"\"There were {numErrors} errors when trying to add students:\"}"
+msgstr ""
+"{\"one\"=>\"Cafwyd gwall wrth geisio ychwanegu myfyrwyr:\", \"other\"=>"
+"\"Cafwyd {numErrors} gwall wrth geisio ychwanegu myfyrwyr:\"}"
+
+msgid "{\"one\"=>\"%s result\", \"other\"=>\"%s results\"}"
+msgstr "{\"one\"=>\"%s canlyniac\", \"other\"=>\"%s canlyniac\"}"
+
+msgid ""
+"You have successfully signed into %(currentProvider)s, but your "
+"%(currentProvider)s"
+msgstr ""
+"Rydych wedi mewngofnodi'n llwyddiannus i %(currentProvider), ond eich "
+"%(currentProvider)s"
+
+msgid "Unable to retrieve data, please try again later."
+msgstr "Yn methu adfer data, rhowch gynnig arni nes ymlaen."
+
+msgid ""
+"{\"one\"=>\"%(num_students)s student opened Subsection\", \"other\"=>"
+"\"%(num_students)s students opened Subsection\"}"
+msgstr ""
+"{\"one\"=>\"agorodd %(num_students)s myfyriwr is-adran\", \"other\"=>"
+"\"agorodd %(num_students)s o fyfyrwyr is-adran\"}"
+
+msgid ""
+"{\"one\"=>\"%(num_students)s student\", \"other\"=>\"%(num_students)s "
+"students\"}"
+msgstr ""
+"{\"one\"=>\"%(num_students)s myfyriwr\", \"other\"=>\"%(num_students)s o "
+"fyfyrwyr\"}"
+
+msgid ""
+"{\"one\"=>\"%(num_questions)s question\", \"other\"=>\"%(num_questions)s "
+"questions\"}"
+msgstr ""
+"{\"one\"=>\"%(num_questions)s cwestiwn\", \"other\"=>\"%(num_questions)s "
+"o gwestiynau\"}"
+
+msgid ""
+"{\"one\"=>\"Used in {count} unit\", \"other\"=>\"Used in {count} units\"}"
+msgstr ""
+"{\"one\"=>\"Used in {count} unit\", \"other\"=>\"Used in {count} units\"}"
+
+msgid ""
+"{\"one\"=>\"Contains {count} group\", \"other\"=>\"Contains {count} groups"
+"\"}"
+msgstr ""
+"{\"one\"=>\"Contains {count} group\", \"other\"=>\"Contains {count} groups"
+"\"}"
+
+msgid "Add a clear and descriptive title to encourage participation."
+msgstr "Ychwanegu teitl clir a disgrifiadol i annog cyfranogiad."
+
+msgid ""
+"{\"one\"=>\"Show Comment (%(num_comments)s)\", \"other\"=>\"Show Comments "
+"(%(num_comments)s)\"}"
+msgstr ""
+"{\"one\"=>\"Show Comment (%(num_comments)s)\", \"other\"=>\"Show Comments "
+"(%(num_comments)s)\"}"
+
+msgid "%(post_type)s posted %(time_ago)s by %(author)s"
+msgstr "%(post_type) wedi'i bostio %(time_ago) yn ôl gan %(author)"
+
+msgid "My Bookmarks"
+msgstr "Fy nodau tudalen"
+
+msgid ""
+"{\"one\"=>\"(contains %(student_count)s student)\", \"other\"=>"
+"\"(contains %(student_count)s students)\"}"
+msgstr ""
+"{\"one\"=>\"(contains %(student_count)s student)\", \"other\"=>"
+"\"(contains %(student_count)s students)\"}"
+
+msgid ""
+"You have earned certificates in %(completed_courses)s of the "
+"%(total_courses)s courses so far."
+msgstr ""
+"Rydych wedi ennill tystysgrifau yn %(completed_courses)s o'r "
+"%(total_courses)s cwrs hyd yma."
+
+msgid ""
+"{\"one\"=>\"Load next %(num_items)s result\", \"other\"=>\"Load next "
+"%(num_items)s results\"}"
+msgstr ""
+"{\"one\"=>\"Load next %(num_items)s result\", \"other\"=>\"Load next "
+"%(num_items)s results\"}"
+
+msgid "This content group is used in:"
+msgstr "Defnyddir y grŵp cynnwys hwn yn:"
+
+msgid "Draft saved on %(last_saved_date)s by %(edit_username)s"
+msgstr "Cadwyd y drafft ar %(last_saved_date)s gan %(edit_username)s"
+
+msgid "Course Type"
+msgstr "Math y Cwrs"

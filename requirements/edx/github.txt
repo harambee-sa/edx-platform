@@ -298,6 +298,7 @@ git+https://github.com/proversity-org/recap-xblock.git@0.2.1#egg=recap-xblock==0
 =======
 >>>>>>> upstream master merge
 git+https://github.com/proversity-org/recap-xblock.git@0.2.1#egg=recap-xblock==0.2.1
+<<<<<<< HEAD
 git+https://github.com/proversity-org/badger-xblock.git@0.2.1#egg=badger-xblock==0.2.1
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,6 +325,9 @@ git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xbloc
 >>>>>>> ADD: flow-control-xblock
 >>>>>>> ADD: flow-control-xblock
 =======
+=======
+git+https://github.com/proversity-org/badger-xblock.git@0.2.3#egg=badger-xblock==0.2.3
+>>>>>>> Proversity/development (#587)
 -e git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
 git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
 >>>>>>> upstream master merge

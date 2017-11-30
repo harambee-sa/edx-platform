@@ -3,8 +3,9 @@
         'jquery',
         'underscore',
         'backbone',
+        'gettext',
         'edx-ui-toolkit/js/utils/html-utils'
-    ], function($, _, Backbone, HtmlUtils) {
+    ], function($, _, Backbone, gettext, HtmlUtils) {
         'use strict';
 
         return Backbone.View.extend({
@@ -36,7 +37,7 @@
             renderOptions: function(options) {
                 return HtmlUtils.joinHtml.apply(this, _.map(options, function(option) {
                     var data = _.clone(option.attributes);
-                    data.name = this.termName(data.facet, data.term);
+                    data.name = gettext(this.termName(data.facet, data.term));
                     return this.facetOptionTpl(data);
                 }, this));
             },
@@ -44,7 +45,7 @@
             renderFacet: function(facetKey, options) {
                 return this.facetTpl({
                     name: facetKey,
-                    displayName: this.facetName(facetKey),
+                    displayName: gettext(this.facetName(facetKey)),
                     optionsHtml: this.renderOptions(options),
                     listIsHuge: (options.length > 9)
                 });
