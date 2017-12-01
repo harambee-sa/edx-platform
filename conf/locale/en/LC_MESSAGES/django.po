@@ -108,6 +108,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:50+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.384997\n"
 =======
@@ -130,6 +131,10 @@ msgstr ""
 "POT-Creation-Date: 2017-11-14 03:01-0500\n"
 "PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
 >>>>>>> master merge (#588)
+=======
+"POT-Creation-Date: 2017-11-14 03:01-0500\n"
+"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
+>>>>>>> Proversity/staging (#589)
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -11434,6 +11439,7 @@ msgstr ""
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: src/xblock-poll/poll/poll.py
 msgid "Whether or not to display results to the user."
 msgstr ""
@@ -11706,6 +11712,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: cms/djangoapps/contentstore/course_group_config.py
 msgid ""
 "The groups in this configuration can be mapped to cohorts in the Instructor "

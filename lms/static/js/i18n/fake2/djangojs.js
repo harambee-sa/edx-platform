@@ -194,12 +194,15 @@
     "Add Additional Signatory": "\u023add \u023add\u1d09\u0287\u1d09\u00f8n\u0250l S\u1d09\u0183n\u0250\u0287\u00f8\u0279\u028e", 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "Add Allowance": "\u023add \u023all\u00f8\u028d\u0250n\u0254\u01dd", 
     "Add Attachment": "\u023add \u023a\u0287\u0287\u0250\u0254\u0265\u026f\u01ddn\u0287", 
 =======
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
     "Add Cohort": "\u023add \u023b\u00f8\u0265\u00f8\u0279\u0287", 
     "Add Component:": "\u023add \u023b\u00f8\u026fd\u00f8n\u01ddn\u0287:", 
     "Add Country": "\u023add \u023b\u00f8nn\u0287\u0279\u028e", 
@@ -1114,6 +1117,7 @@
     "No tasks currently running.": "N\u00f8 \u0287\u0250s\u029es \u0254n\u0279\u0279\u01ddn\u0287l\u028e \u0279nnn\u1d09n\u0183.", 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "No transcript uploaded.": "N\u00f8 \u0287\u0279\u0250ns\u0254\u0279\u1d09d\u0287 ndl\u00f8\u0250d\u01ddd.", 
 =======
     "No threads matched your query.": "N\u00f8 \u0287\u0265\u0279\u01dd\u0250ds \u026f\u0250\u0287\u0254\u0265\u01ddd \u028e\u00f8n\u0279 bn\u01dd\u0279\u028e.", 
@@ -1121,6 +1125,9 @@
 =======
     "No threads matched your query.": "N\u00f8 \u0287\u0265\u0279\u01dd\u0250ds \u026f\u0250\u0287\u0254\u0265\u01ddd \u028e\u00f8n\u0279 bn\u01dd\u0279\u028e.", 
 >>>>>>> master merge (#588)
+=======
+    "No threads matched your query.": "N\u00f8 \u0287\u0265\u0279\u01dd\u0250ds \u026f\u0250\u0287\u0254\u0265\u01ddd \u028e\u00f8n\u0279 bn\u01dd\u0279\u028e.", 
+>>>>>>> Proversity/staging (#589)
     "No validation is performed on policy keys or value pairs. If you are having difficulties, check your formatting.": "N\u00f8 \u028c\u0250l\u1d09d\u0250\u0287\u1d09\u00f8n \u1d09s d\u01dd\u0279\u025f\u00f8\u0279\u026f\u01ddd \u00f8n d\u00f8l\u1d09\u0254\u028e \u029e\u01dd\u028es \u00f8\u0279 \u028c\u0250ln\u01dd d\u0250\u1d09\u0279s. \u0197\u025f \u028e\u00f8n \u0250\u0279\u01dd \u0265\u0250\u028c\u1d09n\u0183 d\u1d09\u025f\u025f\u1d09\u0254nl\u0287\u1d09\u01dds, \u0254\u0265\u01dd\u0254\u029e \u028e\u00f8n\u0279 \u025f\u00f8\u0279\u026f\u0250\u0287\u0287\u1d09n\u0183.", 
     "Nonbreaking space": "N\u00f8nb\u0279\u01dd\u0250\u029e\u1d09n\u0183 sd\u0250\u0254\u01dd", 
     "Noncommercial": "N\u00f8n\u0254\u00f8\u026f\u026f\u01dd\u0279\u0254\u1d09\u0250l", 
@@ -1491,6 +1498,7 @@
     "Something went wrong changing this enrollment. Please try again.": "S\u00f8\u026f\u01dd\u0287\u0265\u1d09n\u0183 \u028d\u01ddn\u0287 \u028d\u0279\u00f8n\u0183 \u0254\u0265\u0250n\u0183\u1d09n\u0183 \u0287\u0265\u1d09s \u01ddn\u0279\u00f8ll\u026f\u01ddn\u0287. \u2c63l\u01dd\u0250s\u01dd \u0287\u0279\u028e \u0250\u0183\u0250\u1d09n.", 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "Something went wrong. Please try again later.": "S\u00f8\u026f\u01dd\u0287\u0265\u1d09n\u0183 \u028d\u01ddn\u0287 \u028d\u0279\u00f8n\u0183. \u2c63l\u01dd\u0250s\u01dd \u0287\u0279\u028e \u0250\u0183\u0250\u1d09n l\u0250\u0287\u01dd\u0279.", 
 =======
     "Sorry": "S\u00f8\u0279\u0279\u028e", 
@@ -1498,6 +1506,9 @@
 =======
     "Sorry": "S\u00f8\u0279\u0279\u028e", 
 >>>>>>> master merge (#588)
+=======
+    "Sorry": "S\u00f8\u0279\u0279\u028e", 
+>>>>>>> Proversity/staging (#589)
     "Sorry, no results were found.": "S\u00f8\u0279\u0279\u028e, n\u00f8 \u0279\u01ddsnl\u0287s \u028d\u01dd\u0279\u01dd \u025f\u00f8nnd.", 
     "Sorry, there was an error parsing the subtitles that you uploaded. Please check the format and try again.": "S\u00f8\u0279\u0279\u028e, \u0287\u0265\u01dd\u0279\u01dd \u028d\u0250s \u0250n \u01dd\u0279\u0279\u00f8\u0279 d\u0250\u0279s\u1d09n\u0183 \u0287\u0265\u01dd snb\u0287\u1d09\u0287l\u01dds \u0287\u0265\u0250\u0287 \u028e\u00f8n ndl\u00f8\u0250d\u01ddd. \u2c63l\u01dd\u0250s\u01dd \u0254\u0265\u01dd\u0254\u029e \u0287\u0265\u01dd \u025f\u00f8\u0279\u026f\u0250\u0287 \u0250nd \u0287\u0279\u028e \u0250\u0183\u0250\u1d09n.", 
     "Sorted by": "S\u00f8\u0279\u0287\u01ddd b\u028e", 
@@ -2084,6 +2095,7 @@
     "You must enter a valid email address in order to add a new team member": "\u024e\u00f8n \u026fns\u0287 \u01ddn\u0287\u01dd\u0279 \u0250 \u028c\u0250l\u1d09d \u01dd\u026f\u0250\u1d09l \u0250dd\u0279\u01ddss \u1d09n \u00f8\u0279d\u01dd\u0279 \u0287\u00f8 \u0250dd \u0250 n\u01dd\u028d \u0287\u01dd\u0250\u026f \u026f\u01dd\u026fb\u01dd\u0279", 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "You must select a session by {expiration_date} to access the course.": "\u024e\u00f8n \u026fns\u0287 s\u01ddl\u01dd\u0254\u0287 \u0250 s\u01ddss\u1d09\u00f8n b\u028e {expiration_date} \u0287\u00f8 \u0250\u0254\u0254\u01ddss \u0287\u0265\u01dd \u0254\u00f8n\u0279s\u01dd.", 
     "You must select a session to access the course.": "\u024e\u00f8n \u026fns\u0287 s\u01ddl\u01dd\u0254\u0287 \u0250 s\u01ddss\u1d09\u00f8n \u0287\u00f8 \u0250\u0254\u0254\u01ddss \u0287\u0265\u01dd \u0254\u00f8n\u0279s\u01dd.", 
 =======
@@ -2092,6 +2104,9 @@
 =======
     "You must select a value other than 0 for the Verification Attempts field.": "\u024e\u00f8n \u026fns\u0287 s\u01ddl\u01dd\u0254\u0287 \u0250 \u028c\u0250ln\u01dd \u00f8\u0287\u0265\u01dd\u0279 \u0287\u0265\u0250n 0 \u025f\u00f8\u0279 \u0287\u0265\u01dd V\u01dd\u0279\u1d09\u025f\u1d09\u0254\u0250\u0287\u1d09\u00f8n \u023a\u0287\u0287\u01dd\u026fd\u0287s \u025f\u1d09\u01ddld.", 
 >>>>>>> master merge (#588)
+=======
+    "You must select a value other than 0 for the Verification Attempts field.": "\u024e\u00f8n \u026fns\u0287 s\u01ddl\u01dd\u0254\u0287 \u0250 \u028c\u0250ln\u01dd \u00f8\u0287\u0265\u01dd\u0279 \u0287\u0265\u0250n 0 \u025f\u00f8\u0279 \u0287\u0265\u01dd V\u01dd\u0279\u1d09\u025f\u1d09\u0254\u0250\u0287\u1d09\u00f8n \u023a\u0287\u0287\u01dd\u026fd\u0287s \u025f\u1d09\u01ddld.", 
+>>>>>>> Proversity/staging (#589)
     "You must sign out and sign back in before your language changes take effect.": "\u024e\u00f8n \u026fns\u0287 s\u1d09\u0183n \u00f8n\u0287 \u0250nd s\u1d09\u0183n b\u0250\u0254\u029e \u1d09n b\u01dd\u025f\u00f8\u0279\u01dd \u028e\u00f8n\u0279 l\u0250n\u0183n\u0250\u0183\u01dd \u0254\u0265\u0250n\u0183\u01dds \u0287\u0250\u029e\u01dd \u01dd\u025f\u025f\u01dd\u0254\u0287.", 
     "You must specify a name": "\u024e\u00f8n \u026fns\u0287 sd\u01dd\u0254\u1d09\u025f\u028e \u0250 n\u0250\u026f\u01dd", 
     "You must specify a name for the cohort": "\u024e\u00f8n \u026fns\u0287 sd\u01dd\u0254\u1d09\u025f\u028e \u0250 n\u0250\u026f\u01dd \u025f\u00f8\u0279 \u0287\u0265\u01dd \u0254\u00f8\u0265\u00f8\u0279\u0287", 

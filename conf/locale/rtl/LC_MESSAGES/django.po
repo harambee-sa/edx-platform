@@ -34,6 +34,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:50+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.384997\n"
 =======
@@ -44,6 +45,10 @@ msgstr ""
 "POT-Creation-Date: 2017-11-14 03:01-0500\n"
 "PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
 >>>>>>> master merge (#588)
+=======
+"POT-Creation-Date: 2017-11-14 03:01-0500\n"
+"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
+>>>>>>> Proversity/staging (#589)
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -3533,6 +3538,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/course_module.py
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 msgid "Highlights Enabled for Messaging"
 msgstr "اهلامهلافس ثرشزمثي بخق وثسسشلهرل"
 
@@ -3546,6 +3552,8 @@ msgstr ""
 =======
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 msgid "Minimum Age"
 msgstr "وهرهوعو شلث"
 
@@ -3559,9 +3567,12 @@ msgstr ""
 "لهدثر شلث صهمم زث شممخصثي فخ ثرقخمم.ش دشمعث خب 0 (ظثقخ) هريهذشفثس فاشف رخ "
 "شلث قثسفقهذفهخر شححمهثس."
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "General"
@@ -9911,6 +9922,7 @@ msgstr "حقثدهثص"
 #: lms/templates/signup_modal.html lms/templates/ccx/schedule.html
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 =======
 #: lms/templates/courseware/course_about.html
@@ -9918,6 +9930,9 @@ msgstr "حقثدهثص"
 =======
 #: lms/templates/courseware/course_about.html
 >>>>>>> master merge (#588)
+=======
+#: lms/templates/courseware/course_about.html
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -11629,6 +11644,7 @@ msgstr "{sign_in_link} خق {register_link} شري فاثر ثرقخمم هر ف
 #: openedx/features/course_experience/views/course_home_messages.py
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/header/navbar-not-authenticated.html
 =======
 #: lms/templates/navigation.html
@@ -11636,6 +11652,9 @@ msgstr "{sign_in_link} خق {register_link} شري فاثر ثرقخمم هر ف
 =======
 #: lms/templates/navigation.html
 >>>>>>> master merge (#588)
+=======
+#: lms/templates/navigation.html
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
 msgid "Sign in"
@@ -12089,6 +12108,360 @@ msgid ""
 msgstr ""
 "شمفثقرشفهدث فثطف يثسذقهزثس شر هوشلث شري شححثشقس هب فاث هوشلث هس عرشدشهمشزمث."
 >>>>>>> Proversity/development (#587)
+
+#: src/edx-jsme/edx_jsme/__init__.py
+msgid "Must provide an answer."
+msgstr "وعسف حقخدهيث شر شرسصثق."
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/reverification_block.py
+msgid ""
+"This verification checkpoint does not have a name.  To specify a name for "
+"this checkpoint, select Edit."
+msgstr ""
+"فاهس دثقهبهذشفهخر ذاثذنحخهرف يخثس رخف اشدث ش رشوث.  فخ سحثذهبغ ش رشوث بخق "
+"فاهس ذاثذنحخهرف, سثمثذف ثيهف."
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+msgid "Verification successful"
+msgstr "دثقهبهذشفهخر سعذذثسسبعم"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+msgid "You have successfully verified your identity."
+msgstr "غخع اشدث سعذذثسسبعممغ دثقهبهثي غخعق هيثرفهفغ."
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "See Also"
+msgstr "سثث شمسخ"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"Frequently asked questions about verification and earning academic credit"
+msgstr ""
+"بقثضعثرفمغ شسنثي ضعثسفهخرس شزخعف دثقهبهذشفهخر شري ثشقرهرل شذشيثوهذ ذقثيهف"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/checkpoint_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+#: lms/templates/problem.html lms/templates/word_cloud.html
+msgid "Save"
+msgstr "سشدث"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/closed.html
+msgid "Assessment closed"
+msgstr "شسسثسسوثرف ذمخسثي"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/closed.html
+msgid ""
+"Because you did not verify your identity before this assessment closed, you "
+"are no longer eligible for credit in this course. However, you can still "
+"work toward a verified certificate."
+msgstr ""
+"زثذشعسث غخع يهي رخف دثقهبغ غخعق هيثرفهفغ زثبخقث فاهس شسسثسسوثرف ذمخسثي, غخع "
+"شقث رخ مخرلثق ثمهلهزمث بخق ذقثيهف هر فاهس ذخعقسث. اخصثدثق, غخع ذشر سفهمم "
+"صخقن فخصشقي ش دثقهبهثي ذثقفهبهذشفث."
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+msgid "Verification Checkpoint"
+msgstr "دثقهبهذشفهخر ذاثذنحخهرف"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+#, python-format
+msgid ""
+"\n"
+"        <p>Some learners who are working toward a verified certificate have to verify their identity before they can access this content. You do not have to verify your identity, and you can proceed to the next unit.</p>\n"
+"\n"
+"        <p> To learn more about verified certificates, see %(link_start)sVerified Certificates%(link_end)s in the <i>EdX Guide for Students</i>.\n"
+"        "
+msgstr ""
+"\n"
+"        <p>سخوث مثشقرثقس صاخ شقث صخقنهرل فخصشقي ش دثقهبهثي ذثقفهبهذشفث اشدث فخ دثقهبغ فاثهق هيثرفهفغ زثبخقث فاثغ ذشر شذذثسس فاهس ذخرفثرف. غخع يخ رخف اشدث فخ دثقهبغ غخعق هيثرفهفغ, شري غخع ذشر حقخذثثي فخ فاث رثطف عرهف.</p>\n"
+"\n"
+"        <p> فخ مثشقر وخقث شزخعف دثقهبهثي ذثقفهبهذشفثس, سثث %(link_start)sدثقهبهثي ذثقفهبهذشفثس%(link_end)s هر فاث <i>ثيط لعهيث بخق سفعيثرفس</i>.\n"
+"        "
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+msgid "You are taking this exam as an honor student."
+msgstr "غخع شقث فشنهرل فاهس ثطشو شس شر اخرخق سفعيثرف."
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verification unsuccessful"
+msgstr "دثقهبهذشفهخر عرسعذذثسسبعم"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"        The attempt to verify your identity was unsuccessful. This assessment has closed and you are no longer eligible for credit in this course. If you feel that there has been a mistake, contact %(support_email)s.\n"
+"        "
+msgstr ""
+"\n"
+"        فاث شففثوحف فخ دثقهبغ غخعق هيثرفهفغ صشس عرسعذذثسسبعم. فاهس شسسثسسوثرف اشس ذمخسثي شري غخع شقث رخ مخرلثق ثمهلهزمث بخق ذقثيهف هر فاهس ذخعقسث. هب غخع بثثم فاشف فاثقث اشس زثثر ش وهسفشنث, ذخرفشذف %(support_email)s.\n"
+"        "
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Identity verification required"
+msgstr "هيثرفهفغ دثقهبهذشفهخر قثضعهقثي"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"\n"
+"        To receive credit for this course, you must verify your identity every time you receive a verification message.\n"
+"        If you do not want to verify your identity, you can opt out of verification.\n"
+"        However, you will no longer be eligible for credit in the course.\n"
+"        "
+msgstr ""
+"\n"
+"        فخ قثذثهدث ذقثيهف بخق فاهس ذخعقسث, غخع وعسف دثقهبغ غخعق هيثرفهفغ ثدثقغ فهوث غخع قثذثهدث ش دثقهبهذشفهخر وثسسشلث.\n"
+"        هب غخع يخ رخف صشرف فخ دثقهبغ غخعق هيثرفهفغ, غخع ذشر خحف خعف خب دثقهبهذشفهخر.\n"
+"        اخصثدثق, غخع صهمم رخ مخرلثق زث ثمهلهزمث بخق ذقثيهف هر فاث ذخعقسث.\n"
+"        "
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"        To receive credit in this course, you must try to verify your identity again. If you do not want to verify your identity, you can %(start_link)sopt out of verification%(end_link)s. However, you will no longer be eligible for credit in the course.\n"
+"        "
+msgstr ""
+"\n"
+"        فخ قثذثهدث ذقثيهف هر فاهس ذخعقسث, غخع وعسف فقغ فخ دثقهبغ غخعق هيثرفهفغ شلشهر. هب غخع يخ رخف صشرف فخ دثقهبغ غخعق هيثرفهفغ, غخع ذشر %(start_link)sخحف خعف خب دثقهبهذشفهخر%(end_link)s. اخصثدثق, غخع صهمم رخ مخرلثق زث ثمهلهزمث بخق ذقثيهف هر فاث ذخعقسث.\n"
+"        "
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verification error"
+msgstr "دثقهبهذشفهخر ثققخق"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"          An error occurred during the verification process.\n"
+"          Try to verify your identity again, or contact %(support_email)s for help.\n"
+"          "
+msgstr ""
+"\n"
+"          شر ثققخق خذذعققثي يعقهرل فاث دثقهبهذشفهخر حقخذثسس.\n"
+"          فقغ فخ دثقهبغ غخعق هيثرفهفغ شلشهر, خق ذخرفشذف %(support_email)s بخق اثمح.\n"
+"          "
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verify Your Identity"
+msgstr "دثقهبغ غخعق هيثرفهفغ"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Try Again"
+msgstr "فقغ شلشهر"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Are you sure you want to opt out of verification?"
+msgstr "شقث غخع سعقث غخع صشرف فخ خحف خعف خب دثقهبهذشفهخر?"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"\n"
+"      To receive credit for this course, you must verify your identity every time you receive a verification message.\n"
+"      If you opt out of identity verification, you are no longer eligible for course credit.\n"
+"      However, you can still work toward a verified certificate.\n"
+"      "
+msgstr ""
+"\n"
+"      فخ قثذثهدث ذقثيهف بخق فاهس ذخعقسث, غخع وعسف دثقهبغ غخعق هيثرفهفغ ثدثقغ فهوث غخع قثذثهدث ش دثقهبهذشفهخر وثسسشلث.\n"
+"      هب غخع خحف خعف خب هيثرفهفغ دثقهبهذشفهخر, غخع شقث رخ مخرلثق ثمهلهزمث بخق ذخعقسث ذقثيهف.\n"
+"      اخصثدثق, غخع ذشر سفهمم صخقن فخصشقي ش دثقهبهثي ذثقفهبهذشفث.\n"
+"      "
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Opt Out of Verification and Course Credit"
+msgstr "خحف خعف خب دثقهبهذشفهخر شري ذخعقسث ذقثيهف"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/skipped.html
+msgid "Verification not selected"
+msgstr "دثقهبهذشفهخر رخف سثمثذفثي"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/skipped.html
+msgid ""
+"Because you opted out of identity verification, you are no longer eligible "
+"for course credit. However, you can still work toward a verified "
+"certificate."
+msgstr ""
+"زثذشعسث غخع خحفثي خعف خب هيثرفهفغ دثقهبهذشفهخر, غخع شقث رخ مخرلثق ثمهلهزمث "
+"بخق ذخعقسث ذقثيهف. اخصثدثق, غخع ذشر سفهمم صخقن فخصشقي ش دثقهبهثي "
+"ذثقفهبهذشفث."
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/studio_preview.html
+msgid "To preview the checkpoint, select View Live Version or Preview."
+msgstr "فخ حقثدهثص فاث ذاثذنحخهرف, سثمثذف دهثص مهدث دثقسهخر خق حقثدهثص."
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/submitted.html
+msgid "Verification submitted"
+msgstr "دثقهبهذشفهخر سعزوهففثي"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/submitted.html
+msgid ""
+"You can now continue to this assessment. You will receive a message when the"
+" verification process is complete. If verification is not successful, you "
+"will have to verify your identity again."
+msgstr ""
+"غخع ذشر رخص ذخرفهرعث فخ فاهس شسسثسسوثرف. غخع صهمم قثذثهدث ش وثسسشلث صاثر فاث"
+" دثقهبهذشفهخر حقخذثسس هس ذخوحمثفث. هب دثقهبهذشفهخر هس رخف سعذذثسسبعم, غخع "
+"صهمم اشدث فخ دثقهبغ غخعق هيثرفهفغ شلشهر."
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "This assignment has not yet been graded."
+msgstr "فاهس شسسهلروثرف اشس رخف غثف زثثر لقشيثي."
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload a different file"
+msgstr "عحمخشي ش يهببثقثرف بهمث"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload your assignment"
+msgstr "عحمخشي غخعق شسسهلروثرف"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Awaiting instructor approval"
+msgstr "شصشهفهرل هرسفقعذفخق شححقخدشم"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Approve grade"
+msgstr "شححقخدث لقشيث"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Enter grade"
+msgstr "ثرفثق لقشيث"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Grade Submissions"
+msgstr "لقشيث سعزوهسسهخرس"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: lms/templates/staff_problem_info.html
+msgid "Staff Debug Info"
+msgstr "سفشبب يثزعل هربخ"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Graded Assignment"
+msgstr "سفشبب لقشيثي شسسهلروثرف"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Debug"
+msgstr "سفشبب يثزعل"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: lms/templates/staff_problem_info.html
+msgid "Module Fields"
+msgstr "وخيعمث بهثميس"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Enter Grade"
+msgstr "ثرفثق لقشيث"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Remove grade"
+msgstr "قثوخدث لقشيث"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Please provide us feedback on this section."
+msgstr "حمثشسث حقخدهيث عس بثثيزشذن خر فاهس سثذفهخر."
+
+#: src/rate-xblock/rate/rate.py
+msgid "Please rate your overall experience with this section."
+msgstr "حمثشسث قشفث غخعق خدثقشمم ثطحثقهثرذث صهفا فاهس سثذفهخر."
+
+#: src/rate-xblock/rate/rate.py
+msgid "Excellent"
+msgstr "ثطذثممثرف"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Average"
+msgstr "شدثقشلث"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Fair"
+msgstr "بشهق"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Poor"
+msgstr "حخخق"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Thank you for voting!"
+msgstr "فاشرن غخع بخق دخفهرل!"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Thank you!"
+msgstr "فاشرن غخع!"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Invalid Google Calendar"
+msgstr "هردشمهي لخخلمث ذشمثريشق"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Please correct the outlined fields."
+msgstr "حمثشسث ذخققثذف فاث خعفمهرثي بهثميس."
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr ""
+"فاهس رشوث شححثشقس هر فاث اخقهظخرفشم رشدهلشفهخر شف فاث فخح خب فاث حشلث."
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Public Calendar ID"
+msgstr "حعزمهذ ذشمثريشق هي"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field. You can "
+msgstr ""
+"لخخلمث حقخدهيثس شر هي بخق حعزمهذمغ شدشهمشزمث ذشمثريشقس. هر فاث لخخلمث "
+"ذشمثريشق, خحثر سثففهرلس شري ذخحغ فاث هي بقخو فاث ذشمثريشق شييقثسس سثذفهخر "
+"هرفخ فاهس بهثمي. غخع ذشر "
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Default View"
+msgstr "يثبشعمف دهثص"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"The calendar view that students see by default. A student can change this "
+"view."
+msgstr ""
+"فاث ذشمثريشق دهثص فاشف سفعيثرفس سثث زغ يثبشعمف. ش سفعيثرف ذشر ذاشرلث فاهس "
+"دهثص."
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Invalid Google Document"
+msgstr "هردشمهي لخخلمث يخذعوثرف"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Embed Code"
+msgstr "ثوزثي ذخيث"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Google provides an embed code for Drive documents. In the Google Drive "
+"document, from the File menu, select Publish to the Web. Modify settings as "
+"needed, click Publish, and copy the embed code into this field."
+msgstr ""
+"لخخلمث حقخدهيثس شر ثوزثي ذخيث بخق يقهدث يخذعوثرفس. هر فاث لخخلمث يقهدث "
+"يخذعوثرف, بقخو فاث بهمث وثرع, سثمثذف حعزمهسا فخ فاث صثز. وخيهبغ سثففهرلس شس "
+"رثثيثي, ذمهذن حعزمهسا, شري ذخحغ فاث ثوزثي ذخيث هرفخ فاهس بهثمي."
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Alternative text"
+msgstr "شمفثقرشفهدث فثطف"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Alternative text describes an image and appears if the image is unavailable."
+msgstr ""
+"شمفثقرشفهدث فثطف يثسذقهزثس شر هوشلث شري شححثشقس هب فاث هوشلث هس عرشدشهمشزمث."
 
 #: src/edx-jsme/edx_jsme/__init__.py
 msgid "Must provide an answer."
@@ -13330,6 +13703,7 @@ msgstr "مثلشم"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: cms/templates/widgets/header.html lms/templates/header/header.html
 =======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
@@ -13337,6 +13711,9 @@ msgstr "مثلشم"
 =======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
 >>>>>>> master merge (#588)
+=======
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -13349,6 +13726,7 @@ msgstr "شذذخعرف"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: cms/templates/widgets/header.html
 #: lms/templates/header/navbar-authenticated.html
 =======
@@ -13357,6 +13735,9 @@ msgstr "شذذخعرف"
 =======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
 >>>>>>> master merge (#588)
+=======
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
@@ -13592,6 +13973,7 @@ msgstr "غخع شقث رخف ثرقخممثي هر شرغ ذخعقسثس غثف.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/dashboard.html
 #: lms/templates/header/navbar-not-authenticated.html
 =======
@@ -13600,6 +13982,9 @@ msgstr "غخع شقث رخف ثرقخممثي هر شرغ ذخعقسثس غثف.
 =======
 #: lms/templates/dashboard.html lms/templates/navigation.html
 >>>>>>> master merge (#588)
+=======
+#: lms/templates/dashboard.html lms/templates/navigation.html
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -14489,6 +14874,7 @@ msgstr "ه شلقثث فخ فاث {link_start}اخرخق ذخيث{link_end}"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/register-form.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -14501,6 +14887,8 @@ msgstr "قثلهسفثق"
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/register-form.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Create My Account"
@@ -17570,9 +17958,12 @@ msgstr ""
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You can no longer access this course because payment has not yet been "
@@ -18804,6 +19195,7 @@ msgstr "شححمغ بخق بهرشرذهشم شسسهسفشرذث"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/header/brand.html
 #: lms/templates/header/navbar-logo-header.html
 #: lms/templates/navigation/navbar-logo-header.html
@@ -18876,6 +19268,8 @@ msgstr "سذاخخمس"
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Add Coupon Code"
@@ -20594,6 +20988,7 @@ msgstr "حقخلقشو يثفشهمس"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr "لثف فاث {platform_name} وخزهمث شحح!"
@@ -20614,6 +21009,8 @@ msgstr "سثري وث ش فثطف صهفا فاث مهرن"
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/modal/_modal-settings-language.html
 msgid "Change Preferred Language"
 msgstr "ذاشرلث حقثبثققثي مشرلعشلث"
@@ -20636,6 +21033,7 @@ msgstr ""
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Explore Courses"
 msgstr "ثطحمخقث ذخعقسثس"
@@ -20646,14 +21044,19 @@ msgstr "لمخزشم"
 =======
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: lms/templates/navigation/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header.html
 msgid "Profile"
 msgstr "حقخبهمث"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid ""

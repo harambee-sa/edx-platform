@@ -55,6 +55,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:44+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.873858\n"
 =======
@@ -77,6 +78,10 @@ msgstr ""
 "POT-Creation-Date: 2017-11-14 02:56-0500\n"
 "PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
 >>>>>>> master merge (#588)
+=======
+"POT-Creation-Date: 2017-11-14 02:56-0500\n"
+"PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
+>>>>>>> Proversity/staging (#589)
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -85,6 +90,7 @@ msgstr ""
 "Generated-By: Babel 1.3\n"
 "Language: en\n"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
@@ -109,6 +115,11 @@ msgstr ""
 #: cms/static/js/views/active_video_upload_list.js
 #: common/static/bundles/Import.js
 >>>>>>> master merge (#588)
+=======
+#: cms/static/cms/js/main.js cms/static/coffee/src/main.js
+#: cms/static/js/views/active_video_upload_list.js
+#: common/static/bundles/Import.js
+>>>>>>> Proversity/staging (#589)
 msgid ""
 "This may be happening because of an error with our server or your internet "
 "connection. Try refreshing the page or making sure you are online."
@@ -326,6 +337,7 @@ msgstr ""
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -361,6 +373,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: cms/static/js/views/course_video_settings.js
 #: cms/static/js/views/metadata.js
 #: cms/static/js/views/previous_video_upload.js
@@ -2124,6 +2138,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/AssetsPage.bace7aaf2adb48c51598.js
 msgid "end"
 msgstr ""
@@ -2141,10 +2156,13 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseGoals.js
 msgid "Thank you for setting your course goal to "
 msgstr ""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2163,6 +2181,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseGoals.js
 msgid ""
 "There was an error in setting your goal, please reload the page and try "
@@ -2174,6 +2194,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> upstream master merge
@@ -2187,6 +2208,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "You have successfully updated your goal."
@@ -2197,6 +2220,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
 =======
 >>>>>>> upstream master merge
@@ -2210,11 +2234,14 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "There was an error updating your goal."
 msgstr ""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2228,10 +2255,13 @@ msgstr ""
 >>>>>>> Returning work we wissed due to upgrade
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 msgid "Show more"
 msgstr ""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2409,11 +2439,14 @@ msgstr ""
 
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "Show less"
 msgstr ""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
@@ -2423,6 +2456,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/StudioIndex.js
 msgid "Organization:"
 msgstr ""
@@ -2432,6 +2467,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 =======
@@ -2447,6 +2483,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/StudioIndex.js
 msgid "Course Number:"
 msgstr ""
@@ -2456,6 +2494,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 =======
@@ -2471,6 +2510,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/StudioIndex.js
 msgid "Course Run:"
 msgstr ""
@@ -2480,6 +2521,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 =======
@@ -2495,6 +2537,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/StudioIndex.js
 msgid "(Read-only)"
 msgstr ""
@@ -2504,6 +2548,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 =======
@@ -2519,6 +2564,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/StudioIndex.js
 msgid "Re-run Course"
 msgstr ""
@@ -2528,6 +2575,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
 =======
 =======
@@ -2543,6 +2591,8 @@ msgstr ""
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
+=======
+>>>>>>> Proversity/staging (#589)
 #: common/static/bundles/StudioIndex.js
 #: cms/templates/js/show-textbook.underscore
 msgid "View Live"

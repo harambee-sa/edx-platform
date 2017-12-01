@@ -121,6 +121,10 @@ class HarambeeOAuth2(BaseOAuth2):
             user.is_new = out.get('is_new')
 
         return user
+<<<<<<< HEAD
+=======
+
+>>>>>>> Proversity/staging (#589)
         
     def revoke_token_params(self, token, uid):
         return {'access_token': token}

@@ -30,6 +30,10 @@ from student.roles import CourseStaffRole
 log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Proversity/staging (#589)
 def get_user_grades(grade_user, course, course_grade):
         
     courseware_summary = course_grade.chapter_grades.values()
@@ -68,6 +72,10 @@ def _build_emails(identifiers, email_extension):
             email_list.append("{id}{ext}".format(id=identifier.strip(), ext=email_extension))
     return email_list
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Proversity/staging (#589)
 @view_auth_classes()
 class GradeViewMixin(DeveloperErrorViewMixin):
     """

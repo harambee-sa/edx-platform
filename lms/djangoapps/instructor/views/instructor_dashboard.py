@@ -490,6 +490,7 @@ def _section_course_info(course, access):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'course_display_name': course.display_name,
 =======
         'course_display_name': course.display_name_with_default,
@@ -500,6 +501,9 @@ def _section_course_info(course, access):
 =======
         'course_display_name': course.display_name_with_default,
 >>>>>>> Proversity/development (#581) (#582)
+=======
+        'course_display_name': course.display_name_with_default,
+>>>>>>> Proversity/staging (#589)
         'has_started': course.has_started(),
         'has_ended': course.has_ended(),
         'start_date': course.start,
