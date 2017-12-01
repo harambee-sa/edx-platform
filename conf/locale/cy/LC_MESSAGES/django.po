@@ -16520,7 +16520,7 @@ msgstr "Cynhyrchu tystysgrif {name} enghreifftiol"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Error generating example {name} certificate: {error}"
-msgstr "Gwall wrth gynhyrchu tystysgrif {name} enghreifftiol: {gwall}"
+msgstr "Gwall wrth gynhyrchu tystysgrif {name} enghreifftiol: {error}"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "View {name} certificate"

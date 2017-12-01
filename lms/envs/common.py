@@ -3068,11 +3068,15 @@ DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
 =======
 # Set default course visibility in catalog
 DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
+<<<<<<< HEAD
 
 >>>>>>> upstream master merge
 =======
 DEFAULT_MOBILE_AVAILABLE = False
 >>>>>>> Returning work we wissed due to upgrade
+=======
+DEFAULT_MOBILE_AVAILABLE = False
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 # Enrollment API Cache Timeout
 ENROLLMENT_COURSE_DETAILS_CACHE_TIMEOUT = 60

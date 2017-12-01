@@ -87,6 +87,7 @@ def save_org_logo(url, org_short_name):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
        
     except Exception as e:
         log.error(e)
@@ -118,11 +119,15 @@ def save_org_logo(url, org_short_name):
 >>>>>>> Proversity/staging (#564)
 =======
 
+=======
+
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
     except Exception as e:
         log.error(e)
         raise
 
 
+<<<<<<< HEAD
 >>>>>>> dynamically update release dates (#567)
 =======
 
@@ -133,6 +138,8 @@ def save_org_logo(url, org_short_name):
 =======
 
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 def generate_error_response(string):
     """
     Generate Response with error message about missing request data
@@ -359,6 +366,7 @@ class MicrositesViewSet(ViewSet):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Proversity/development (#558)
@@ -368,6 +376,8 @@ class MicrositesViewSet(ViewSet):
 =======
 
 >>>>>>> Proversity/staging (#564)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 
 class MicrositesDetailView(ViewSet):
@@ -451,6 +461,7 @@ class MicrositesDetailView(ViewSet):
         site_name = request.data.get('domain_prefix', None)
         platform_name = request.data.get('platform_name', None)
         course_org_filter = request.data.get('course_org_filter', None)
+<<<<<<< HEAD
 
         if site_url is None:
             return generate_error_response('SITE_NAME')
@@ -461,6 +472,18 @@ class MicrositesDetailView(ViewSet):
         elif course_org_filter is None:
             return generate_error_response('course_org_filter')
 
+=======
+
+        if site_url is None:
+            return generate_error_response('SITE_NAME')
+        elif site_name is None:
+            return generate_error_response('domain_prefix')
+        elif platform_name is None:
+            return generate_error_response('platform_name')
+        elif course_org_filter is None:
+            return generate_error_response('course_org_filter')
+
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
         # Get the microsite
         microsite = Microsite.objects.get(pk=pk)
@@ -506,6 +529,7 @@ class MicrositesDetailView(ViewSet):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Proversity/development (#558)
@@ -518,6 +542,9 @@ class MicrositesDetailView(ViewSet):
 =======
 
 >>>>>>> dynamically update release dates (#567)
+=======
+
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
         if serializer.is_valid():
             serializer.save()
             messages['id'] = microsite.id

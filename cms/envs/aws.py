@@ -125,6 +125,7 @@ DEFAULT_COURSE_VISIBILITY_IN_CATALOG = ENV_TOKENS.get(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> add settings on cms aws
 =======
@@ -132,12 +133,17 @@ ANALYTICA_TOKEN = ENV_TOKENS.get('ANALYTICA_TOKEN', ANALYTICA_TOKEN)
 >>>>>>> ADD: setting
 =======
 =======
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 DEFAULT_MOBILE_AVAILABLE = ENV_TOKENS.get(
     'DEFAULT_MOBILE_AVAILABLE',
     DEFAULT_MOBILE_AVAILABLE
 )
 
+<<<<<<< HEAD
 >>>>>>> Returning work we wissed due to upgrade
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 # ANALYTICA settings
 ANALITICA_TRACK_URL = ENV_TOKENS.get('ANALITICA_TRACK_URL', ANALITICA_TRACK_URL)
 ANALITICA_ACTIVE = ENV_TOKENS.get('ANALITICA_ACTIVE', ANALITICA_ACTIVE)

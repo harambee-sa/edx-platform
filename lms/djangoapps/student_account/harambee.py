@@ -122,9 +122,12 @@ class HarambeeOAuth2(BaseOAuth2):
 
         return user
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
         
     def revoke_token_params(self, token, uid):
         return {'access_token': token}

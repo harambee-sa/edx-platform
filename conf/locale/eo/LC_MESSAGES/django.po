@@ -35,6 +35,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:50+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.384997\n"
 =======
@@ -49,6 +50,10 @@ msgstr ""
 "POT-Creation-Date: 2017-11-14 03:01-0500\n"
 "PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
 >>>>>>> Proversity/staging (#589)
+=======
+"POT-Creation-Date: 2017-11-14 03:01-0500\n"
+"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -4099,6 +4104,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 msgid "Highlights Enabled for Messaging"
 msgstr ""
 "Hïghlïghts Énäßléd för Méssägïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
@@ -4121,6 +4127,8 @@ msgstr ""
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 msgid "Minimum Age"
 msgstr "Mïnïmüm Àgé Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
@@ -4140,11 +4148,14 @@ msgstr ""
 "ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι#"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Proversity/development (#587)
 =======
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "General"
@@ -11441,6 +11452,7 @@ msgstr "Prévïéw Ⱡ'σяєм ιρѕυм #"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 =======
 #: lms/templates/courseware/course_about.html
@@ -11451,6 +11463,9 @@ msgstr "Prévïéw Ⱡ'σяєм ιρѕυм #"
 =======
 #: lms/templates/courseware/course_about.html
 >>>>>>> Proversity/staging (#589)
+=======
+#: lms/templates/courseware/course_about.html
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -13425,10 +13440,14 @@ msgstr ""
 
 #: openedx/features/course_experience/views/course_home_messages.py
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/header/navbar-not-authenticated.html
 =======
 #: lms/templates/navigation.html
 >>>>>>> Proversity/development (#587)
+=======
+#: lms/templates/navigation.html
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
 msgid "Sign in"
@@ -14295,6 +14314,406 @@ msgstr ""
 msgid "Sign in"
 msgstr "Sïgn ïn Ⱡ'σяєм ιρѕυм #"
 >>>>>>> Proversity/staging (#589)
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr ""
+"Thïs nämé äppéärs ïn thé hörïzöntäl nävïgätïön ät thé töp öf thé pägé. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Public Calendar ID"
+msgstr "Püßlïç Çäléndär ÌD Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"Google provides an ID for publicly available calendars. In the Google "
+"Calendar, open Settings and copy the ID from the Calendar Address section "
+"into this field. You can "
+msgstr ""
+"Gööglé prövïdés än ÌD för püßlïçlý äväïläßlé çäléndärs. Ìn thé Gööglé "
+"Çäléndär, öpén Séttïngs änd çöpý thé ÌD fröm thé Çäléndär Àddréss séçtïön "
+"ïntö thïs fïéld. Ýöü çän  Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя "
+"α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα"
+" αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ "
+"ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη "
+"яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα "
+"ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι "
+"σƒ#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Default View"
+msgstr "Défäült Vïéw Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid ""
+"The calendar view that students see by default. A student can change this "
+"view."
+msgstr ""
+"Thé çäléndär vïéw thät stüdénts séé ßý défäült. À stüdént çän çhängé thïs "
+"vïéw. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Invalid Google Document"
+msgstr "Ìnvälïd Gööglé Döçümént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Embed Code"
+msgstr "Émßéd Çödé Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Google provides an embed code for Drive documents. In the Google Drive "
+"document, from the File menu, select Publish to the Web. Modify settings as "
+"needed, click Publish, and copy the embed code into this field."
+msgstr ""
+"Gööglé prövïdés än émßéd çödé för Drïvé döçüménts. Ìn thé Gööglé Drïvé "
+"döçümént, fröm thé Fïlé ménü, séléçt Püßlïsh tö thé Wéß. Mödïfý séttïngs äs "
+"néédéd, çlïçk Püßlïsh, änd çöpý thé émßéd çödé ïntö thïs fïéld. Ⱡ'σяєм ιρѕυм"
+" ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя "
+"ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ "
+"ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ "
+"¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє "
+"¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтє#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Alternative text"
+msgstr "Àltérnätïvé téxt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid ""
+"Alternative text describes an image and appears if the image is unavailable."
+msgstr ""
+"Àltérnätïvé téxt désçrïßés än ïmägé änd äppéärs ïf thé ïmägé ïs ünäväïläßlé."
+" Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυ#"
+
+#: src/edx-jsme/edx_jsme/__init__.py
+msgid "Must provide an answer."
+msgstr "Müst prövïdé än änswér. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/reverification_block.py
+msgid ""
+"This verification checkpoint does not have a name.  To specify a name for "
+"this checkpoint, select Edit."
+msgstr ""
+"Thïs vérïfïçätïön çhéçkpöïnt döés nöt hävé ä nämé.  Tö spéçïfý ä nämé för "
+"thïs çhéçkpöïnt, séléçt Édït. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+msgid "Verification successful"
+msgstr "Vérïfïçätïön süççéssfül Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+msgid "You have successfully verified your identity."
+msgstr ""
+"Ýöü hävé süççéssfüllý vérïfïéd ýöür ïdéntïtý. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "See Also"
+msgstr "Séé Àlsö Ⱡ'σяєм ιρѕυм ∂#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/approved.html
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"Frequently asked questions about verification and earning academic credit"
+msgstr ""
+"Fréqüéntlý äskéd qüéstïöns äßöüt vérïfïçätïön änd éärnïng äçädémïç çrédït "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/checkpoint_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+#: lms/templates/problem.html lms/templates/word_cloud.html
+msgid "Save"
+msgstr "Sävé Ⱡ'σяєм ι#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/closed.html
+msgid "Assessment closed"
+msgstr "Àsséssmént çlöséd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/closed.html
+msgid ""
+"Because you did not verify your identity before this assessment closed, you "
+"are no longer eligible for credit in this course. However, you can still "
+"work toward a verified certificate."
+msgstr ""
+"Béçäüsé ýöü dïd nöt vérïfý ýöür ïdéntïtý ßéföré thïs ässéssmént çlöséd, ýöü "
+"äré nö löngér élïgïßlé för çrédït ïn thïs çöürsé. Höwévér, ýöü çän stïll "
+"wörk töwärd ä vérïfïéd çértïfïçäté. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя"
+" α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє "
+"мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ "
+"łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη "
+"яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα "
+"ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт ηση ρяσι∂єηт,#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+msgid "Verification Checkpoint"
+msgstr "Vérïfïçätïön Çhéçkpöïnt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+#, python-format
+msgid ""
+"\n"
+"        <p>Some learners who are working toward a verified certificate have to verify their identity before they can access this content. You do not have to verify your identity, and you can proceed to the next unit.</p>\n"
+"\n"
+"        <p> To learn more about verified certificates, see %(link_start)sVerified Certificates%(link_end)s in the <i>EdX Guide for Students</i>.\n"
+"        "
+msgstr ""
+"\n"
+"        <p>Sömé léärnérs whö äré wörkïng töwärd ä vérïfïéd çértïfïçäté hävé tö vérïfý théïr ïdéntïtý ßéföré théý çän äççéss thïs çöntént. Ýöü dö nöt hävé tö vérïfý ýöür ïdéntïtý, änd ýöü çän pröçééd tö thé néxt ünït.</p>\n"
+"\n"
+"        <p> Tö léärn möré äßöüt vérïfïéd çértïfïçätés, séé %(link_start)sVérïfïéd Çértïfïçätés%(link_end)s ïn thé <i>ÉdX Güïdé för Stüdénts</i>.\n"
+"         Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/not_verified.html
+msgid "You are taking this exam as an honor student."
+msgstr ""
+"Ýöü äré täkïng thïs éxäm äs än hönör stüdént. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verification unsuccessful"
+msgstr "Vérïfïçätïön ünsüççéssfül Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"        The attempt to verify your identity was unsuccessful. This assessment has closed and you are no longer eligible for credit in this course. If you feel that there has been a mistake, contact %(support_email)s.\n"
+"        "
+msgstr ""
+"\n"
+"        Thé ättémpt tö vérïfý ýöür ïdéntïtý wäs ünsüççéssfül. Thïs ässéssmént häs çlöséd änd ýöü äré nö löngér élïgïßlé för çrédït ïn thïs çöürsé. Ìf ýöü féél thät théré häs ßéén ä mïstäké, çöntäçt %(support_email)s.\n"
+"         Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢є#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Identity verification required"
+msgstr "Ìdéntïtý vérïfïçätïön réqüïréd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"\n"
+"        To receive credit for this course, you must verify your identity every time you receive a verification message.\n"
+"        If you do not want to verify your identity, you can opt out of verification.\n"
+"        However, you will no longer be eligible for credit in the course.\n"
+"        "
+msgstr ""
+"\n"
+"        Tö réçéïvé çrédït för thïs çöürsé, ýöü müst vérïfý ýöür ïdéntïtý évérý tïmé ýöü réçéïvé ä vérïfïçätïön méssägé.\n"
+"        Ìf ýöü dö nöt wänt tö vérïfý ýöür ïdéntïtý, ýöü çän öpt öüt öf vérïfïçätïön.\n"
+"        Höwévér, ýöü wïll nö löngér ßé élïgïßlé för çrédït ïn thé çöürsé.\n"
+"         Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι #"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"        To receive credit in this course, you must try to verify your identity again. If you do not want to verify your identity, you can %(start_link)sopt out of verification%(end_link)s. However, you will no longer be eligible for credit in the course.\n"
+"        "
+msgstr ""
+"\n"
+"        Tö réçéïvé çrédït ïn thïs çöürsé, ýöü müst trý tö vérïfý ýöür ïdéntïtý ägäïn. Ìf ýöü dö nöt wänt tö vérïfý ýöür ïdéntïtý, ýöü çän %(start_link)söpt öüt öf vérïfïçätïön%(end_link)s. Höwévér, ýöü wïll nö löngér ßé élïgïßlé för çrédït ïn thé çöürsé.\n"
+"         Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verification error"
+msgstr "Vérïfïçätïön érrör Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+#, python-format
+msgid ""
+"\n"
+"          An error occurred during the verification process.\n"
+"          Try to verify your identity again, or contact %(support_email)s for help.\n"
+"          "
+msgstr ""
+"\n"
+"          Àn érrör öççürréd dürïng thé vérïfïçätïön pröçéss.\n"
+"          Trý tö vérïfý ýöür ïdéntïtý ägäïn, ör çöntäçt %(support_email)s för hélp.\n"
+"           Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłιт αηιм ι∂ єѕт#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Verify Your Identity"
+msgstr "Vérïfý Ýöür Ìdéntïtý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Try Again"
+msgstr "Trý Àgäïn Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Are you sure you want to opt out of verification?"
+msgstr ""
+"Àré ýöü süré ýöü wänt tö öpt öüt öf vérïfïçätïön? Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя α#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid ""
+"\n"
+"      To receive credit for this course, you must verify your identity every time you receive a verification message.\n"
+"      If you opt out of identity verification, you are no longer eligible for course credit.\n"
+"      However, you can still work toward a verified certificate.\n"
+"      "
+msgstr ""
+"\n"
+"      Tö réçéïvé çrédït för thïs çöürsé, ýöü müst vérïfý ýöür ïdéntïtý évérý tïmé ýöü réçéïvé ä vérïfïçätïön méssägé.\n"
+"      Ìf ýöü öpt öüt öf ïdéntïtý vérïfïçätïön, ýöü äré nö löngér élïgïßlé för çöürsé çrédït.\n"
+"      Höwévér, ýöü çän stïll wörk töwärd ä vérïfïéd çértïfïçäté.\n"
+"       Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/reverification.html
+msgid "Opt Out of Verification and Course Credit"
+msgstr ""
+"Öpt Öüt öf Vérïfïçätïön änd Çöürsé Çrédït Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/skipped.html
+msgid "Verification not selected"
+msgstr "Vérïfïçätïön nöt séléçtéd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/skipped.html
+msgid ""
+"Because you opted out of identity verification, you are no longer eligible "
+"for course credit. However, you can still work toward a verified "
+"certificate."
+msgstr ""
+"Béçäüsé ýöü öptéd öüt öf ïdéntïtý vérïfïçätïön, ýöü äré nö löngér élïgïßlé "
+"för çöürsé çrédït. Höwévér, ýöü çän stïll wörk töwärd ä vérïfïéd "
+"çértïfïçäté. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ "
+"∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт ∂σłσяє мαgηα αłιqυα. υт єηιм α∂ "
+"мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ "
+"єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє ∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє "
+"νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт "
+"¢υρι∂αтαт ηση ρяσι∂єηт, ѕυηт ιη ¢υłρα qυι σƒƒι¢ια ∂єѕєяυηт мσłłιт#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/studio_preview.html
+msgid "To preview the checkpoint, select View Live Version or Preview."
+msgstr ""
+"Tö prévïéw thé çhéçkpöïnt, séléçt Vïéw Lïvé Vérsïön ör Prévïéw. Ⱡ'σяєм ιρѕυм"
+" ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/submitted.html
+msgid "Verification submitted"
+msgstr "Vérïfïçätïön süßmïttéd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: src/edx-reverification-block/edx_reverification_block/xblock/static/html/submitted.html
+msgid ""
+"You can now continue to this assessment. You will receive a message when the"
+" verification process is complete. If verification is not successful, you "
+"will have to verify your identity again."
+msgstr ""
+"Ýöü çän nöw çöntïnüé tö thïs ässéssmént. Ýöü wïll réçéïvé ä méssägé whén thé"
+" vérïfïçätïön pröçéss ïs çömplété. Ìf vérïfïçätïön ïs nöt süççéssfül, ýöü "
+"wïll hävé tö vérïfý ýöür ïdéntïtý ägäïn. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя α∂ιριѕι¢ιηg єłιт, ѕє∂ ∂σ єιυѕмσ∂ тємρσя ιη¢ι∂ι∂υηт υт łαвσяє єт "
+"∂σłσяє мαgηα αłιqυα. υт єηιм α∂ мιηιм νєηιαм, qυιѕ ησѕтяυ∂ єχєя¢ιтαтιση "
+"υłłαм¢σ łαвσяιѕ ηιѕι υт αłιqυιρ єχ єα ¢σммσ∂σ ¢σηѕєqυαт. ∂υιѕ αυтє ιяυяє "
+"∂σłσя ιη яєρяєнєη∂єяιт ιη νσłυρтαтє νєłιт єѕѕє ¢ιłłυм ∂σłσяє єυ ƒυgιαт ηυłłα"
+" ραяιαтυя. єχ¢єρтєυя ѕιηт σ¢¢αє¢αт ¢υρι∂αтαт ηση ρ#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "This assignment has not yet been graded."
+msgstr ""
+"Thïs ässïgnmént häs nöt ýét ßéén grädéd. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload a different file"
+msgstr "Ûplöäd ä dïfférént fïlé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload your assignment"
+msgstr "Ûplöäd ýöür ässïgnmént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Awaiting instructor approval"
+msgstr "Àwäïtïng ïnstrüçtör äppröväl Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Approve grade"
+msgstr "Àpprövé grädé Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Enter grade"
+msgstr "Éntér grädé Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Grade Submissions"
+msgstr "Grädé Süßmïssïöns Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмє#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: lms/templates/staff_problem_info.html
+msgid "Staff Debug Info"
+msgstr "Stäff Déßüg Ìnfö Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Graded Assignment"
+msgstr "Stäff Grädéd Àssïgnmént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Debug"
+msgstr "Stäff Déßüg Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+#: lms/templates/staff_problem_info.html
+msgid "Module Fields"
+msgstr "Mödülé Fïélds Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Enter Grade"
+msgstr "Éntér Grädé Ⱡ'σяєм ιρѕυм ∂σłσя #"
+
+#: src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Remove grade"
+msgstr "Rémövé grädé Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Please provide us feedback on this section."
+msgstr ""
+"Pléäsé prövïdé üs féédßäçk ön thïs séçtïön. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Please rate your overall experience with this section."
+msgstr ""
+"Pléäsé räté ýöür övéräll éxpérïénçé wïth thïs séçtïön. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Excellent"
+msgstr "Éxçéllént Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Average"
+msgstr "Àvérägé Ⱡ'σяєм ιρѕυм #"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Fair"
+msgstr "Fäïr Ⱡ'σяєм ι#"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Poor"
+msgstr "Pöör Ⱡ'σяєм ι#"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Thank you for voting!"
+msgstr "Thänk ýöü för vötïng! Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: src/rate-xblock/rate/rate.py
+msgid "Thank you!"
+msgstr "Thänk ýöü! Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+msgid "Invalid Google Calendar"
+msgstr "Ìnvälïd Gööglé Çäléndär Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
+#: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
+msgid "Please correct the outlined fields."
+msgstr ""
+"Pléäsé çörréçt thé öütlïnéd fïélds. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєт#"
 
 #: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
 #: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
@@ -15760,6 +16179,7 @@ msgstr "Légäl Ⱡ'σяєм ιρѕ#"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: cms/templates/widgets/header.html lms/templates/header/header.html
 =======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
@@ -15770,6 +16190,9 @@ msgstr "Légäl Ⱡ'σяєм ιρѕ#"
 =======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
 >>>>>>> Proversity/staging (#589)
+=======
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -15780,6 +16203,7 @@ msgstr "Çhöösé Längüägé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
 msgid "Account"
 msgstr "Àççöünt Ⱡ'σяєм ιρѕυм #"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15794,6 +16218,9 @@ msgstr "Àççöünt Ⱡ'σяєм ιρѕυм #"
 =======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
 >>>>>>> Proversity/staging (#589)
+=======
+#: cms/templates/widgets/header.html lms/templates/navigation.html
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
@@ -16045,6 +16472,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/dashboard.html
 #: lms/templates/header/navbar-not-authenticated.html
 =======
@@ -16056,6 +16484,9 @@ msgstr ""
 =======
 #: lms/templates/dashboard.html lms/templates/navigation.html
 >>>>>>> Proversity/staging (#589)
+=======
+#: lms/templates/dashboard.html lms/templates/navigation.html
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -16951,6 +17382,68 @@ msgstr ""
 "strönglý réçömménd üsïng {chrome_link} ör {ff_link}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
 "αмєт, ¢ση#"
 
+#: lms/templates/navigation.html lms/templates/navigation/navigation.html
+msgid "Global"
+msgstr "Glößäl Ⱡ'σяєм ιρѕυ#"
+
+#: lms/templates/navigation.html lms/templates/header/brand.html
+#: lms/templates/navigation/navbar-logo-header.html
+#: lms/templates/navigation/bootstrap/navbar-logo-header.html
+msgid "{platform_name} Home Page"
+msgstr "{platform_name} Hömé Pägé Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: lms/templates/navigation.html lms/templates/learner_dashboard/programs.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+msgid "Programs"
+msgstr "Prögräms Ⱡ'σяєм ιρѕυм ∂#"
+
+#. Translators: This is short for "System administration".
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-authenticated.html
+msgid "Sysadmin"
+msgstr "Sýsädmïn Ⱡ'σяєм ιρѕυм ∂#"
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/shoppingcart/shopping_cart.html
+#: themes/edx.org/lms/templates/header.html
+msgid "Shopping Cart"
+msgstr "Shöppïng Çärt Ⱡ'σяєм ιρѕυм ∂σłσя ѕι#"
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+msgid "How it Works"
+msgstr "Höw ït Wörks Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+msgid "Schools"
+msgstr "Sçhööls Ⱡ'σяєм ιρѕυм #"
+
+#: lms/templates/navigation.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+msgid "Explore Courses"
+msgstr "Éxplöré Çöürsés Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
+
+#: lms/templates/navigation.html lms/templates/register-form.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "Register"
+msgstr "Régïstér Ⱡ'σяєм ιρѕυм ∂#"
+
+#: lms/templates/navigation.html lms/templates/navigation/navigation.html
+#: themes/edx.org/lms/templates/header.html
+msgid ""
+"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
+"strongly recommend using {chrome_link} or {ff_link}."
+msgstr ""
+"{begin_strong}Wärnïng:{end_strong} Ýöür ßröwsér ïs nöt füllý süppörtéd. Wé "
+"strönglý réçömménd üsïng {chrome_link} ör {ff_link}. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢ση#"
+
 #: lms/templates/notes.html lms/templates/textannotation.html
 #: lms/templates/videoannotation.html
 msgid "You do not have any notes."
@@ -17211,6 +17704,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/register-form.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -17225,6 +17719,8 @@ msgstr "Régïstér Ⱡ'σяєм ιρѕυм ∂#"
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/register-form.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Create My Account"
@@ -20645,11 +21141,14 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
@@ -22177,6 +22676,7 @@ msgstr "Höw ït Wörks Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Schools"
@@ -22188,6 +22688,8 @@ msgstr "Sçhööls Ⱡ'σяєм ιρѕυм #"
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Add Coupon Code"
@@ -24205,6 +24707,7 @@ msgstr "Prögräm Détäïls Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr "Gét thé {platform_name} Mößïlé Àpp! Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
@@ -24229,6 +24732,8 @@ msgstr "Sénd mé ä téxt wïth thé lïnk Ⱡ'σяєм ιρѕυм ∂σłσя 
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/modal/_modal-settings-language.html
 msgid "Change Preferred Language"
 msgstr "Çhängé Préférréd Längüägé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
@@ -24254,6 +24759,7 @@ msgstr ""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Explore Courses"
 msgstr "Éxplöré Çöürsés Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт α#"
@@ -24266,10 +24772,13 @@ msgstr "Glößäl Ⱡ'σяєм ιρѕυ#"
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header.html
 msgid "Profile"
 msgstr "Pröfïlé Ⱡ'σяєм ιρѕυм #"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> Proversity/development (#587)
@@ -24277,6 +24786,8 @@ msgstr "Pröfïlé Ⱡ'σяєм ιρѕυм #"
 >>>>>>> master merge (#588)
 =======
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid ""

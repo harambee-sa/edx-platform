@@ -11,6 +11,7 @@ urlpatterns = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 =======
 =======
@@ -19,6 +20,8 @@ urlpatterns = [
 >>>>>>> Proversity/development (#558) (#559)
 =======
 >>>>>>> Proversity/staging (#564)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
     url(r'^bulk_register_enroll', BulkRegisterEnrollView.as_view(), name='bulk_register_enroll'),
 )
 >>>>>>> Proversity/harambee backend (#553)

@@ -170,6 +170,7 @@ REGISTRATION_UTM_CREATED_AT = 'registration_utm_created_at'
 REGISTER_USER = Signal(providing_args=["user", "registration"])
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # TODO: Remove Django 1.11 upgrade shim
 # SHIM: Compensate for behavior change of default authentication backend in 1.10
 if django.VERSION[0] == 1 and django.VERSION[1] < 10:
@@ -182,6 +183,11 @@ else:
 USER_COURSE_ENROLLMENTS_ORDER_BY =\
     getattr(settings, 'USER_COURSE_ENROLLMENTS_ORDER_BY', 'created_reverse')
 >>>>>>> prefer order by course enrollments in dashboard
+=======
+
+USER_COURSE_ENROLLMENTS_ORDER_BY =\
+    getattr(settings, 'USER_COURSE_ENROLLMENTS_ORDER_BY', 'created_reverse')
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 # Disable this warning because it doesn't make sense to completely refactor tests to appease Pylint
 # pylint: disable=logging-format-interpolation
@@ -946,10 +952,13 @@ def dashboard(request):
     display_sidebar_on_dashboard = len(order_history_list) or verification_status in valid_verification_statuses
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     # Filter out any course enrollment course cards that are associated with fulfilled entitlements
     for entitlement in [e for e in course_entitlements if e.enrollment_course_run is not None]:
         course_enrollments = [enr for enr in course_enrollments if entitlement.enrollment_course_run.course_id != enr.course_id]  # pylint: disable=line-too-long
 =======
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
     # sort the enrollment pairs by the flag USER_COURSE_ENROLLMENTS_ORDER_BY
     if USER_COURSE_ENROLLMENTS_ORDER_BY == 'created':
         course_enrollments.sort(key=lambda x: x.created, reverse=False)
@@ -965,7 +974,10 @@ def dashboard(request):
             key=lambda x: x.course.display_name,
             reverse=True
         )
+<<<<<<< HEAD
 >>>>>>> prefer order by course enrollments in dashboard
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
     context = {
         'urls': urls,

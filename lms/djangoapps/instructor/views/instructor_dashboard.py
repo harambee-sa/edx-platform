@@ -491,6 +491,7 @@ def _section_course_info(course, access):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'course_display_name': course.display_name,
 =======
         'course_display_name': course.display_name_with_default,
@@ -504,6 +505,9 @@ def _section_course_info(course, access):
 =======
         'course_display_name': course.display_name_with_default,
 >>>>>>> Proversity/staging (#589)
+=======
+        'course_display_name': course.display_name_with_default,
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
         'has_started': course.has_started(),
         'has_ended': course.has_ended(),
         'start_date': course.start,

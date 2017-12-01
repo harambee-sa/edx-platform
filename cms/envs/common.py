@@ -117,10 +117,14 @@ from lms.envs.common import (
 =======
     DEFAULT_COURSE_VISIBILITY_IN_CATALOG,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> change catalog visibility default to none
 =======
     DEFAULT_MOBILE_AVAILABLE,
 >>>>>>> Returning work we wissed due to upgrade
+=======
+    DEFAULT_MOBILE_AVAILABLE,
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
     CONTACT_EMAIL,
 

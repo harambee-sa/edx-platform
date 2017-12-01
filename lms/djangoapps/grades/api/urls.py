@@ -13,6 +13,10 @@ urlpatterns = [
         views.GradesBulkAPIView.as_view(), name='bulk_user_grades'
     ),
     url(
+        r'^v0/course_grade/bulk/$',
+        views.GradesBulkAPIView.as_view(), name='bulk_user_grades'
+    ),
+    url(
         r'^v0/course_grade/{course_id}/users/$'.format(
             course_id=settings.COURSE_ID_PATTERN,
         ),
@@ -25,7 +29,11 @@ urlpatterns = [
         views.CourseGradingPolicy.as_view(), name='course_grading_policy'
     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 =======
 )
 >>>>>>> Returning work we wissed due to upgrade
+=======
+)
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css

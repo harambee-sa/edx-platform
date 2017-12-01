@@ -31,9 +31,12 @@ log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Proversity/staging (#589)
+=======
+>>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 def get_user_grades(grade_user, course, course_grade):
         
     courseware_summary = course_grade.chapter_grades.values()
