@@ -18637,6 +18637,7 @@ msgid "Got it!"
 msgstr ""
 
 #: lms/templates/widgets/cookie-consent.html
+#: lms/templates/course.html
 msgid "Learn more"
 msgstr ""
 
@@ -22847,6 +22848,14 @@ msgstr ""
 msgid "Cookie Policy"
 msgstr ""
 
-#: lms/templates/course.html
-msgid "Learn more"
+#: lms/templates/courseware/course_about.html
+msgid "Enrol now"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Or explore other courses"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Enrolment in this course is by invitation only"
 msgstr ""
