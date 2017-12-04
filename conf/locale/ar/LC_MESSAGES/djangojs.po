@@ -8128,7 +8128,7 @@ msgstr ""
 
 #: lms/templates/student_account/login.underscore
 msgid "Create an Account."
-msgstr ""
+msgstr "إنشاء حساب"
 
 #: lms/templates/student_account/login.underscore
 msgid "Sign In"
@@ -8190,7 +8190,7 @@ msgstr ""
 
 #: lms/templates/student_account/register.underscore
 msgid "Create an Account"
-msgstr ""
+msgstr "إنشاء حساب"
 
 #: lms/templates/student_account/register.underscore
 msgid "Create an account using"

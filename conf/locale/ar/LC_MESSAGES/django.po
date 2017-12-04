@@ -10759,7 +10759,7 @@ msgstr "تذكُّر بياناتي"
 #. below a field meant to hold the user's email address.
 #: openedx/core/djangoapps/user_api/api.py
 msgid "This is what you will use to login."
-msgstr ""
+msgstr "هذا هو ما سوف تستخدمه لتسجيل الدخول"
 
 #. Translators: This label appears above a field on the registration form
 #. meant to confirm the user's email address.
@@ -10778,7 +10778,7 @@ msgstr ""
 #. below a field meant to hold the user's full name.
 #: openedx/core/djangoapps/user_api/api.py
 msgid "This name will be used on any certificates that you earn."
-msgstr ""
+msgstr "سيتم استخدام هذا الاسم في أي شهادات تحصل عليها"
 
 #: cms/templates/register.html lms/templates/register-form.html
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
@@ -10793,7 +10793,7 @@ msgstr "اسم المستخدم"
 #: openedx/core/djangoapps/user_api/api.py
 msgid ""
 "The name that will identify you in your courses. It cannot be changed later."
-msgstr ""
+msgstr "الاسم الذي سيتم تعريفك به في الدورات التدريبية. لا يمكن تغييره لاحقًا"
 
 #. Translators: This example username is used as a placeholder in
 #. a field on the registration form meant to hold the user's username.
@@ -10857,14 +10857,14 @@ msgstr "الشركة"
 #. form used to select the country in which the user lives.
 #: openedx/core/djangoapps/user_api/api.py
 msgid "Country or Region of Residence"
-msgstr ""
+msgstr "بلد أو منطقة الإقامة"
 
 #. Translators: These instructions appear on the registration form,
 #. immediately
 #. below a field meant to hold the user's country.
 #: openedx/core/djangoapps/user_api/api.py
 msgid "The country or region where you live."
-msgstr ""
+msgstr "حدد بلد أو منطقة إقامتك. البلد أو منطقة الإقامة هي المكان الذي تعيش فيه."
 
 #: openedx/core/djangoapps/user_api/api.py
 msgid "Review the Honor Code"
@@ -11058,6 +11058,8 @@ msgstr ""
 #: lms/templates/navigation/bootstrap/navbar-not-authenticated.html
 #: lms/templates/support/contact_us.html
 #: themes/edx.org/lms/templates/header.html
+#: lms/templates/login.html
+#: lms/templates/student_account/register.underscore
 msgid "Sign in"
 msgstr "تسجيل الدخول"
 
@@ -14771,6 +14773,7 @@ msgid "time"
 msgstr "الوقت"
 
 #: lms/templates/ccx/schedule.html lms/templates/support/contact_us.html
+#: lms/static/js/student_account/views/FormView.js
 msgid "(Optional)"
 msgstr "(اختياري)"
 
@@ -24627,3 +24630,33 @@ msgstr "طور مهاراتك"
 #: lms/templates/index.html
 msgid "Doroob's programs provide the skills you need to succeed"
 msgstr "يوفر دروب البرامج التي تحتاجها للنجاح"
+
+#: lms/templates/navigation/navbar-logo-header.html
+msgid "Menu"
+msgstr "قائمة طعام"
+
+#: lms/templates/login.html
+msgid "First time here? Create an account"
+msgstr "المرة الأولى هنا؟ إنشاء حساب"
+
+#: lms/templates/index.html
+msgid "Access courses on the go"
+msgstr "الوصول للدورات بالضغط على ‎الذهاب"
+
+#: lms/templates/index.html
+msgid ""
+"Download the app and access your courses wherever you are. Sync videos to "
+"your device and watch offline, at a time that suits you."
+msgstr "حمل التطبيق وتمتع بالوصول إلى الدورات الخاصة بك أينما كنت.‎‏ كما قم بمزامنة الفيديوهات بالجهاز الخاص بك لمشاهدة الفيديوهات دون الحاجة للاتصال بشبكة الإنترنت وفي أي وقت يناسبك."
+
+#: lms/templates/student_account/register.underscore
+msgid "Already have an %(platformName) account?"
+msgstr "لديك بالفعل حساب ‎على ‏%(platformName)؟ تسجيل الدخول"
+
+#: lms/templates/footer.html
+msgid "Cookie Policy"
+msgstr "سياسة ملفات تعريف الارتباط"
+
+#: lms/templates/course.html
+msgid "Learn more"
+msgstr "أعرف أكثر"

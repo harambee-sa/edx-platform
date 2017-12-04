@@ -10240,6 +10240,8 @@ msgstr ""
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/support/contact_us.html
 #: themes/edx.org/lms/templates/header.html
+#: lms/templates/login.html
+#: lms/templates/student_account/register.underscore
 msgid "Sign in"
 msgstr ""
 
@@ -22817,4 +22819,34 @@ msgstr ""
 msgid ""
 "A new revision was created: Merge between Revision #%(r1)d and Revision "
 "#%(r2)d"
+msgstr ""
+
+#: lms/templates/navigation/navbar-logo-header.html
+msgid "Menu"
+msgstr ""
+
+#: lms/templates/login.html
+msgid "First time here? Create an account"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Access courses on the go"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"Download the app and access your courses wherever you are. Sync videos to "
+"your device and watch offline, at a time that suits you."
+msgstr ""
+
+#: lms/templates/student_account/register.underscore
+msgid "Already have an %(platformName) account?"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "Cookie Policy"
+msgstr ""
+
+#: lms/templates/course.html
+msgid "Learn more"
 msgstr ""
