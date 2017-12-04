@@ -1,6 +1,7 @@
 <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
 </div>
 
+<<<<<<< HEAD
 <% if ( context.createAccountOption !== false && !context.syncLearnerProfileData && !context.enterpriseName) { %>
 <div class="toggle-form">
     <span class="text"><%- gettext("First time here?") %></span>
@@ -25,6 +26,9 @@
 <% } else { %>
     <h2><%- gettext("Sign In") %></h2>
 <% } %>
+=======
+<h2><%- gettext("Sign In") %></h2>
+>>>>>>> [ci skip] removing account creation from login
 
 <form id="login" class="login-form" tabindex="-1" method="POST">
 
