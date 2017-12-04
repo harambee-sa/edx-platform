@@ -22992,3 +22992,186 @@ msgstr ""
 #: lms/templates/static_templates/cookies.html
 msgid "Print Cookie Policy"
 msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "TERMS OF SERVICE"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "1. Description Of"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "2. Rules For Online Conduct"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "2.1. The following list of items is strictly prohibited on the site:"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "3. User Accounts and Authority"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "4. Your Right To Use Content On The Site"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5. User Postings"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.1. User Postings Representations and Warranties"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.2. License Grant to"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.3. License Grant to"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.4. Professional Certification and Application for Employer Roles"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "6. Trademarks"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "6.1. Use of  , Trademarks and Service Marks"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "6.2. Copyright Infringement"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "7. Disclaimers Of Warranty / Limitations Of Liabilities"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "7.1. User Postings Disclaimer"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "7.2. Links to Other Sites"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "8. Indemnification"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9. Miscellaneous"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.1. Termination Rights / Discontinuation of Courses and Content"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.2. Entire Agreement"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.3. Waiver and Severability of TOS"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.4. Choice of Law/Forum Selection"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "HONOR CODE"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "1. Collaboration Policy"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "2. Honor Pledge"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "3. Changing the Honor Code"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "PRIVACY POLICY"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "1. Usernames And Postings"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "2. Consent To Processing Outside Home Country"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "3. Personal Information"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "4. Information We Collect And How We Use It"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "5. Use And Disclosure To Third Parties"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "6. Use For Personalization And Pedagogical Improvements"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "7. Links To Other Websites"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "8. Security"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "9. Changing Our Policy"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "10. Minors"
+msgstr ""
+
+#: lms/templates/static_templates/privacy.html
+msgid "11. Privacy Concerns"
+msgstr ""

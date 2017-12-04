@@ -24803,3 +24803,186 @@ msgstr "نأمل أن يكون ذلك قد أوضح لك الأمور، وكما
 msgid "Print Cookie Policy"
 msgstr "طباعة سياسة ملفات تعريف الارتباط"
 
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "TERMS OF SERVICE"
+msgstr "شروط الخدمة"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "1. Description Of"
+msgstr "1. وصف"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "2. Rules For Online Conduct"
+msgstr "2. قواعد السلوك على الإنترنت"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "2.1. The following list of items is strictly prohibited on the site:"
+msgstr "2.1. قائمة العناصر التالية محظورة حظرًا صارمًا على 'الموقع':"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "3. User Accounts and Authority"
+msgstr "3. حسابات وصلاحيات المستخدمين"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "4. Your Right To Use Content On The Site"
+msgstr "4. حقك في استخدام المحتوى الموجود على الموقع"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5. User Postings"
+msgstr "5. منشورات المستخدم"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.1. User Postings Representations and Warranties"
+msgstr "5.1. بيانات وضمانات منشورات المستخدم"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.2. License Grant to"
+msgstr "5.2. منح الترخيص إلى"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.3. License Grant to"
+msgstr "5.3. منح الترخيص إلى"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "5.4. Professional Certification and Application for Employer Roles"
+msgstr "5.4. الشهادة المهنية والتقدم لأدوار أصحاب العمل"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "6. Trademarks"
+msgstr "6. العلامات التجارية"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "6.1. Use of  , Trademarks and Service Marks"
+msgstr "6.1. استخدام             للعلامات التجارية وعلامات الخدمات"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "6.2. Copyright Infringement"
+msgstr "6.2. انتهاك حقوق الطبع والنشر"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "7. Disclaimers Of Warranty / Limitations Of Liabilities"
+msgstr "7. إخلاء المسؤولية من الضمانات وحدود المسؤولية"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "7.1. User Postings Disclaimer"
+msgstr "7.1. إخلاء المسؤولية المتعلقة بمنشورات المستخدم"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "7.2. Links to Other Sites"
+msgstr "7.2. الارتباطات إلى المواقع الأخرى"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "8. Indemnification"
+msgstr "8. التعويض"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9. Miscellaneous"
+msgstr "9. شروط متنوعة"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.1. Termination Rights / Discontinuation of Courses and Content"
+msgstr "9.1. حقوق الإنهاء /  إيقاف الدورات (الكورسات) والمحتوى"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.2. Entire Agreement"
+msgstr "9.2. كامل الاتفاق"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.3. Waiver and Severability of TOS"
+msgstr "9.3. التنازل وانفصال شروط الخدمة"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "9.4. Choice of Law/Forum Selection"
+msgstr "9.4. اختيار القانون/ دائرة الاختصاص"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "HONOR CODE"
+msgstr "ميثاق الشرف"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "1. Collaboration Policy"
+msgstr "1. سياسة التعاون"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "2. Honor Pledge"
+msgstr "2. عهد الشرف"
+
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/tos.html
+msgid "3. Changing the Honor Code"
+msgstr "3. تغيير ميثاق الشرف"
+
+#: lms/templates/static_templates/privacy.html
+msgid "PRIVACY POLICY"
+msgstr "سياسة الخصوصية"
+
+#: lms/templates/static_templates/privacy.html
+msgid "1. Usernames And Postings"
+msgstr "1. أسماء المستخدم والمنشورات"
+
+#: lms/templates/static_templates/privacy.html
+msgid "2. Consent To Processing Outside Home Country"
+msgstr "2. الموافقة على المعالجة خارج البلد الأم"
+
+#: lms/templates/static_templates/privacy.html
+msgid "3. Personal Information"
+msgstr "3. المعلومات الشخصية"
+
+#: lms/templates/static_templates/privacy.html
+msgid "4. Information We Collect And How We Use It"
+msgstr "4. المعلومات التي نجمعها وكيف نستخدمها"
+
+#: lms/templates/static_templates/privacy.html
+msgid "5. Use And Disclosure To Third Parties"
+msgstr "5. الاستخدام والإفصاح لجهات خارجية"
+
+#: lms/templates/static_templates/privacy.html
+msgid "6. Use For Personalization And Pedagogical Improvements"
+msgstr "6. الاستخدام لإضفاء الطابع الشخصي والتحسينات التعليمية"
+
+#: lms/templates/static_templates/privacy.html
+msgid "7. Links To Other Websites"
+msgstr "7. الارتباطات إلى المواقع الإلكترونية الأخرى"
+
+#: lms/templates/static_templates/privacy.html
+msgid "8. Security"
+msgstr "8. الأمان"
+
+#: lms/templates/static_templates/privacy.html
+msgid "9. Changing Our Policy"
+msgstr "9. تغيير سياستنا"
+
+#: lms/templates/static_templates/privacy.html
+msgid "10. Minors"
+msgstr "10. الأطفال القُصَّر"
+
+#: lms/templates/static_templates/privacy.html
+msgid "11. Privacy Concerns"
+msgstr "11. شواغل الخصوصية"
+
