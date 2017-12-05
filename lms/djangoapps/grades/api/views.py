@@ -97,11 +97,11 @@ def generate_xblock_structure_url(course_str, block_key, user):
 
 	return xblock_structure_url
 
-def get_user_grades(user, course, course_str):
+def get_user_grades(user, course, course_str, course_grade):
 	"""
 	Get a user's grades for  course
 	"""
-	course_grade = CourseGradeFactory().update(user, course)    
+	  
 	course_structure = get_course_in_cache(course.id)
 	courseware_summary = course_grade.chapter_grades.values()
 	courseware_summary_keys = course_grade.chapter_grades.keys()
@@ -121,7 +121,6 @@ def get_user_grades(user, course, course_str):
 			verticals = course_structure.get_children(section.location)
 			vertical_schema = {}
 			for vertical_key in verticals:
-
 				sections_scores  = {}
 				problem_keys = course_structure.get_children(vertical_key)
 				for problem_key in problem_keys:
@@ -143,28 +142,44 @@ def get_user_grades(user, course, course_str):
 						sections_scores[str(problem_key)] = "This block has no grades"
 				vertical_structure_url = generate_xblock_structure_url(course_str, vertical_key, user)
 				vertical_schema[str(vertical_key)] = {'problem_blocks': sections_scores, "vertical_structure_url": vertical_structure_url}
-			subsection_schema[str(section.location)] =  {"verticals": vertical_schema, "section_score": course_grade.score_for_module(section.location)}
-		chapter_schema[str(key)] = subsection_schema
-	chapter_schema['passed'] = course_grade.passed,
-	chapter_schema['percent'] =  course_grade.percent,
-	chapter_schema['all_grades'] = grades_schema
+			subsection_structure_url = generate_xblock_structure_url(course_str, section.location, user)
+			subsection_schema[str(section.location)] =  {
+				"verticals": vertical_schema,
+				"section_score": course_grade.score_for_module(section.location),
+				"subsection_structure_url": subsection_structure_url
+			}
+		chapter_structure_url = generate_xblock_structure_url(course_str, key, user)
+		chapter_schema[str(key)] = {
+			"sections": subsection_schema,
+			"chapter_structure_url": chapter_structure_url
+		}
+	# chapter_schema['passed'] = course_grade.passed,
+	# chapter_schema['percent'] =  course_grade.percent,
+	
 	return chapter_schema
 
-def get_user_course_response(course, users, course_str):
+def get_user_course_response(course, users, course_str, depth):
 	"""
 	Get all users' grades for a course
 	"""
 	user_grades = {}
 	grades_schema = {}
+
 	for user in users:
-	   grades_schema = get_user_grades(user, course, course_str)
-	   user_grades[user.username] = {
+		course_grade = CourseGradeFactory().update(user, course)
+		if depth=="all":
+	  		grades_schema = get_user_grades(user, course, course_str, course_grade)
+	  	else:
+	  		grades_schema = "Showing course grade summary, specify depth=all in query params."
+	   	user_grades[user.username] = {
 		   'name': "{} {}".format(user.first_name, user.last_name),
 		   'email': user.email,
-		   'start':course.start,
-		   'end': course.end if not None else "This course has no end date.",
-		   'all_grades': grades_schema
-	   }
+		   'start_date':course.start,
+		   'end_date': course.end if not None else "This course has no end date.",
+		   'all_grades': grades_schema,
+		   "passed": course_grade.passed,
+		   "percent": course_grade.percent
+	   	}
 	return user_grades
 >>>>>>> make all cases work
 
@@ -491,7 +506,7 @@ class GradesBulkAPIView(ListAPIView):
 				course_str = str(course_enrollment.course_id)
 				course = get_course(course_enrollment.course_id)
 				course_key = CourseKey.from_string(str(course_str))
-				user_grades = get_user_course_response(course, user_list, course_str)
+				user_grades = get_user_course_response(course, user_list, course_str, depth)
 				course_success[course_str] = user_grades
 
 		elif course_ids is not None:
@@ -510,11 +525,11 @@ class GradesBulkAPIView(ListAPIView):
 				try:
 					course_key = CourseKey.from_string(str(course_str))
 					course = courses.get_course(course_key)
-					user_grades = get_user_course_response(course, user_list, course_str)
+					user_grades = get_user_course_response(course, user_list, course_str, depth)
+					course_success[course_str] = user_grades
 				except Exception as e:
 					log.error(e)
 					pass
-					course_success[course_str] = user_grades
 					user_grades = {}                    
 				except InvalidKeyError:
 					log.error('Invalid key, {} does not exist'.format(course_str))
