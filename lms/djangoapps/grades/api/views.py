@@ -87,7 +87,9 @@ def generate_error_response(string):
 	)
 
 def generate_xblock_structure_url(course_str, block_key, user):
-
+	"""
+	Generate url/link to JSON representation of xblock
+	"""
 	xblock_structure_url = '{}/api/courses/v1/blocks/?course_id={}&block_id={}&username={}'.format(
 		settings.LMS_ROOT_URL,
 		urllib.quote_plus(str(course_str)),
@@ -100,8 +102,7 @@ def generate_xblock_structure_url(course_str, block_key, user):
 def get_user_grades(user, course, course_str, course_grade):
 	"""
 	Get a user's grades for  course
-	"""
-	  
+	""" 
 	course_structure = get_course_in_cache(course.id)
 	courseware_summary = course_grade.chapter_grades.values()
 	courseware_summary_keys = course_grade.chapter_grades.keys()
@@ -153,8 +154,6 @@ def get_user_grades(user, course, course_str, course_grade):
 			"sections": subsection_schema,
 			"chapter_structure_url": chapter_structure_url
 		}
-	# chapter_schema['passed'] = course_grade.passed,
-	# chapter_schema['percent'] =  course_grade.percent,
 	
 	return chapter_schema
 
@@ -464,21 +463,6 @@ class GradesBulkAPIView(ListAPIView):
 
 		if course_ids is None and email_extension is None:
 			return generate_error_response('email_extention')
-
-		case_one = course_ids is not None and usernames is not None
-
-		case_two = course_ids is None and usernames is not None
-
-		case_three = course_ids is not None and usernames is None
-
-		if case_one:
-			pass
-		elif case_two:
-			pass
-		elif case_three:
-			pass
-		else:
-			return Response('This was an invalid request')
 
 		# Set up a dictionaries/list to contain the user grades and course grades
 		# catching the incorrect courses in a "course_failure" list
