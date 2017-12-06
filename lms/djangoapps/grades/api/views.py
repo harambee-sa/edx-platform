@@ -1,12 +1,9 @@
 import logging
 import urllib
-
-
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
-
 from django.http import Http404
 from django.db.models import Q
 from edx_rest_framework_extensions.authentication import JwtAuthentication
@@ -22,7 +19,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import exception_handler
 from courseware.access import has_access
-#from lms.djangoapps.ccx.utils import prep_course_for_grading
 from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
 from lms.djangoapps.courseware import courses
 from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
