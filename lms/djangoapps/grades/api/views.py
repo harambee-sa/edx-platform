@@ -1,12 +1,12 @@
 import logging
 import urllib
-import branding
-from opaque_keys.edx.keys import CourseKey, UsageKey
 
-from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+
+from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
-from student.models import CourseEnrollment
+
 from django.http import Http404
 from django.db.models import Q
 from edx_rest_framework_extensions.authentication import JwtAuthentication
@@ -23,23 +23,20 @@ from rest_framework.response import Response
 from rest_framework.views import exception_handler
 from courseware.access import has_access
 #from lms.djangoapps.ccx.utils import prep_course_for_grading
-from django.conf import settings
-from django.core.urlresolvers import reverse
-
+from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
 from lms.djangoapps.courseware import courses
 from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
 from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer
 from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin, view_auth_classes
 from openedx.core.lib.api.permissions import IsStaffOrOwner
+from student.models import CourseEnrollment
 from student.roles import CourseStaffRole
-from lms.djangoapps.courseware.courses import (
-	get_course_overview_with_access,
-	get_courses,
-	get_course
-)
+
+from lms.djangoapps.courseware.courses import get_course
 log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -74,8 +71,9 @@ def get_user_grades(grade_user, course, course_grade):
     return grades_schema
 =======
 from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
+=======
+>>>>>>> clean code
 
-from lms.djangoapps.course_api.blocks.api import get_blocks
 
 def generate_error_response(string):
 	"""
