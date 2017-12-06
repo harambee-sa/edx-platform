@@ -142,7 +142,7 @@ def get_user_grades(user, course, course_str, course_grade):
             "sections": subsection_schema,
             "chapter_structure_url": chapter_structure_url
         }
-    
+
     return chapter_schema
 
 def get_user_course_response(course, users, course_str, depth):
