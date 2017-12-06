@@ -203,6 +203,21 @@ def calculate_problem_grade_report(entry_id, xmodule_instance_args):
     task_fn = partial(ProblemGradeReport.generate, xmodule_instance_args)
     return run_main_task(entry_id, task_fn, action_name)
 
+@task(base=BaseInstructorTask, routing_key=settings.GRADES_DOWNLOAD_ROUTING_KEY)  # pylint: disable=not-callable
+def calculate_bulk_grades_report(entry_id, xmodule_instance_args):
+    """
+    Generate a JSON object for a course containing all students' problem
+    grades and push the results to a callback URL
+    """
+    # Translators: This is a past-tense phrase that is inserted into task progress messages as {action}.
+    action_name = ugettext_noop('bulk grades report created')
+    TASK_LOG.info(
+        u"Task: %s, InstructorTask ID: %s, Task type: %s, Preparing for task execution",
+        xmodule_instance_args.get('task_id'), entry_id, action_name
+    )
+
+    task_fn = partial(BulkGradesReport.generate, xmodule_instance_args)
+    return run_main_task(entry_id, task_fn, action_name)
 
 @task(base=BaseInstructorTask)  # pylint: disable=not-callable
 def calculate_students_features_csv(entry_id, xmodule_instance_args):

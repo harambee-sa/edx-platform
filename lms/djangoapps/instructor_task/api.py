@@ -542,3 +542,14 @@ def regenerate_certificates(request, course_key, statuses_to_regenerate):
     )
 
     return instructor_task
+
+def submit_bulk_grades_report(request, course_key):
+    """
+    Submits a task to generate a JSON bulk grade report containing problem
+    values.
+    """
+    task_type = 'grade_problems'
+    task_class = calculate_bulk_grades_report
+    task_input = {}
+    task_key = ""
+    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
