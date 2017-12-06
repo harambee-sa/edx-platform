@@ -101,12 +101,10 @@ def generate_xblock_structure_url(course_str, block_key, user):
 
 def get_user_grades(user, course, course_str, course_grade):
 	"""
-	Get a user's grades for  course
+	Get a single user's grades for  course. 
 	""" 
 	course_structure = get_course_in_cache(course.id)
 	courseware_summary = course_grade.chapter_grades.values()
-	courseware_summary_keys = course_grade.chapter_grades.keys()
-	platform_name = configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME)
 	grade_summary = course_grade.summary
 	grades_schema = {}
 	courseware_summary = course_grade.chapter_grades.items()
@@ -115,10 +113,6 @@ def get_user_grades(user, course, course_str, course_grade):
 		subsection_schema = {}
 		for section in chapter['sections']:
 			section_children = course_structure.get_children(section.location)
-			earned = section.all_total.earned
-			total = section.all_total.possible
-			name = section.display_name
-			section_id = str(section.location)
 			verticals = course_structure.get_children(section.location)
 			vertical_schema = {}
 			for vertical_key in verticals:
@@ -159,7 +153,7 @@ def get_user_grades(user, course, course_str, course_grade):
 
 def get_user_course_response(course, users, course_str, depth):
 	"""
-	Get all users' grades for a course
+	Get a list of users grades' for a course
 	"""
 	user_grades = {}
 	grades_schema = {}
@@ -470,14 +464,6 @@ class GradesBulkAPIView(ListAPIView):
 		course_success = {}
 		course_failure = []
 		user_grades = {}
-
-		# both course list and usernames list given
-
-		# only course list givem
-
-		# only usernames list given
-		#course_ids and usernames is not None
-
 
 		if course_ids is None:
 			user_list = USER_MODEL.objects.filter(
