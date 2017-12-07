@@ -27,6 +27,9 @@ from django.conf import settings
 from django.utils.translation import ugettext_noop
 
 from bulk_email.tasks import perform_delegate_email_batches
+
+from lms.djangoapps.grades.tasks import perform_bulk_grades_report
+
 from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
 from lms.djangoapps.instructor_task.tasks_helper.certs import generate_students_certificates
 from lms.djangoapps.instructor_task.tasks_helper.enrollments import (
