@@ -517,7 +517,7 @@ class GradesBulkAPIView(ListAPIView):
                     #result = compute_grades_for_course.apply_async(course_str)
                     course = courses.get_course(course_key)
                     user_grades = get_user_course_response_task.delay(course, user_list, course_str, None)
-                    print "TTTTTTASK", user_grades, type(user_grades)
+                    print "TTTTTTASK", user_grades, type(user_grades), user_grades.id
         #             course_success[course_str] = user_grades
                 except Exception as e:
                     log.error(e)
@@ -535,7 +535,7 @@ class GradesBulkAPIView(ListAPIView):
         # course_results["successes"] = course_success
         # course_results["failures"] = course_failure
             
-        return Response(course_results)
+        return Response({"task_id": user_grades.id})
 
 
 class CourseGradingPolicy(GradeViewMixin, ListAPIView):

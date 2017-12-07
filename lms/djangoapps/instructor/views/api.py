@@ -2579,26 +2579,6 @@ def problem_grade_report(request, course_id):
 
     return JsonResponse({"status": success_status})
 
-@transaction.non_atomic_requests
-@require_POST
-@ensure_csrf_cookie
-@cache_control(no_cache=True, no_store=True, must_revalidate=True)
-@require_level('staff')
-@common_exceptions_400
-def bulk_grades_report(request, course_id):
-    """
-    Request a JSON showing students' grades for all problems in the
-    course.
-
-    AlreadyRunningError is raised if the course's grades are already being
-    updated.
-    """
-    course_key = CourseKey.from_string(course_id)
-    report_type = _('bulk grades report')
-    lms.djangoapps.instructor_task.api.submit_bulk_grades_report(request, course_key)
-    success_status = SUCCESS_MESSAGE_TEMPLATE.format(report_type=report_type)
-
-    return JsonResponse({"status": success_status})
 
 @require_POST
 @ensure_csrf_cookie
