@@ -59,13 +59,34 @@ def get_students(identifiers):
             list_of_students.append(user)
         except User.DoesNotExist:
             has_errors = True
-            error_message = 'User does not exist'
+            error_message = _("User does not exist")
             errors.update({identifier: error_message})
 
     return (list_of_students, has_errors, errors)
 
 
 class BulkResetStudentAttemptsView(APIView):
+    """
+    **Use Case**
+        Reset the attempts of a user in a problem. It can also reset the full
+        state of the problem.
+
+        Receives a course id, a list of identifiers (users), list of
+        problems. Optionally add an email extension.
+
+        If reset_state is true the state of the problem will be resetted not
+        only the attempts (if a user had a score it will be lost).
+
+    **Example Request**
+        - api/bulk_reset_attempts/v1/bulk_reset_student_attempts
+        - {
+            course_id: "course-v1:edX+DemoX+Demo_Course",
+            email_extension: "@example.com",
+            identifiers: "staff, verified",
+            problems: "block-v1:edX+DemoX+Demo_Course+type@problem+block@0d759dee4f9d459c8956136dbde55f02"
+            reset_state: true
+        }
+    """
     authentication_classes = JwtAuthentication, OAuth2Authentication
     permission_classes = IsStaff,
     
@@ -77,99 +98,88 @@ class BulkResetStudentAttemptsView(APIView):
             results["course"] = course_id
             try:
                 course_key = CourseKey.from_string(course_id)
-                try:
-                    course = CourseOverview.get_from_id(course_key)
-                    identifiers = serializer.data.get('identifiers')
-                    problems = serializer.data.get('problems')
-                    reset_state = serializer.data.get('reset_state')
-                    email_extension = serializer.data.get('email_extension')
+                email_extension = serializer.data.get('email_extension')
+                identifiers = serializer.data.get('identifiers')
+                problems = serializer.data.get('problems')
+                reset_state = serializer.data.get('reset_state')
 
-                    all_students, list_of_identifiers =\
-                        get_identifiers(identifiers, email_extension)
+                all_students, list_of_identifiers =\
+                    get_identifiers(identifiers, email_extension)
 
-                    list_of_students = []
-                    if not all_students:
-                        list_of_students, has_errors, get_students_errors =\
-                            get_students(list_of_identifiers)
+                list_of_students = []
+                if not all_students:
+                    list_of_students, has_errors, get_students_errors =\
+                        get_students(list_of_identifiers)
 
-                        if has_errors:
-                            results["errors"].update(get_students_errors)
+                    if has_errors:
+                        results["errors"].update(get_students_errors)
 
-                    for problem in problems:
-                        problem = problem.replace(" ", "")
-                        try:
-                            module_state_key =\
-                                UsageKey.from_string(
-                                    problem
-                                ).map_into_course(
-                                    course_key
-                                )
+                for problem in problems:
+                    problem = problem.replace(" ", "")
+                    try:
+                        module_state_key =\
+                            UsageKey.from_string(
+                                problem
+                            ).map_into_course(
+                                course_key
+                            )
 
-                            results["problems"].update({problem: {}})
-                            if all_students:
-                                results['problems'].update({
-                                    problem: {
-                                        "message": "Reset attempts for 'all' students is in development. Nothing has been resetted."
-                                    }
-                                })
-                                # submit_reset_problem_attempts_for_all_students(
-                                #     request, module_state_key
-                                # )
+                        results["problems"].update({problem: {}})
+                        if all_students:
+                            message = "Reset attempts for 'all' students is "
+                            "in development. Nothing has been resetted."
 
-                                # results['problems'].update(
-                                #     {
-                                #         problem: {
-                                #             "students": "all",
-                                #             "task": "created"
-                                #         }
-                                #     }
-                                # )
-                            else:
-                                for student in list_of_students:
-                                    try:
-                                        enrollment.reset_student_attempts(
-                                            course_key,
-                                            student,
-                                            module_state_key,
-                                            requesting_user=request.user,
-                                            delete_module=reset_state
-                                        )
+                            results['problems'].update({
+                                problem: {"message": message}
+                            })
+                            # submit_reset_problem_attempts_for_all_students(
+                            #     request, module_state_key
+                            # )
 
-                                        message = "Problem resetted"
-                                        results["problems"][problem].update({
-                                            student.username: message
-                                        })
-                                    except StudentModule.DoesNotExist:
-                                        error_message =\
-                                            _("Module does not exist.")
+                            # results['problems'].update(
+                            #     {
+                            #         problem: {
+                            #             "students": "all",
+                            #             "task": "created"
+                            #         }
+                            #     }
+                            # )
+                        else:
+                            for student in list_of_students:
+                                try:
+                                    enrollment.reset_student_attempts(
+                                        course_key,
+                                        student,
+                                        module_state_key,
+                                        requesting_user=request.user,
+                                        delete_module=reset_state
+                                    )
 
-                                        results["problems"][problem].update({
-                                            student.username: error_message
-                                        })
-                                    except sub_api.SubmissionError:
-                                        error_message =\
-                                            _("An error occurred while "
-                                            "deleting the score.")
+                                    message = "Problem resetted"
+                                    results["problems"][problem].update({
+                                        student.username: message
+                                    })
+                                except StudentModule.DoesNotExist:
+                                    error_message =\
+                                        _("Module does not exist.")
 
-                                        results["problems"][problem].update({
-                                            student.username: error_message
-                                        })
+                                    results["problems"][problem].update({
+                                        student.username: error_message
+                                    })
+                                except sub_api.SubmissionError:
+                                    error_message =\
+                                        _("An error occurred while "
+                                        "deleting the score.")
 
-                        except InvalidKeyError:
-                            error_message = _("The problem does not exist")
-                            results["errors"].update({problem: error_message})
+                                    results["problems"][problem].update({
+                                        student.username: error_message
+                                    })
 
-                    return Response(results, status=status.HTTP_200_OK)
-                                
-                except CourseOverview.DoesNotExist:
-                    error_message =\
-                        _("Course '{}' does not exist".format(course_id))
+                    except InvalidKeyError:
+                        error_message = _("The problem does not exist")
+                        results["errors"].update({problem: error_message})
 
-                    return\
-                        Response(
-                            {"error": error_message},
-                            status=status.HTTP_400_BAD_REQUEST
-                        )
+                return Response(results, status=status.HTTP_200_OK)
 
             except InvalidKeyError:
                 error_message = _("Invalid course id: '{}'".format(course_id))
