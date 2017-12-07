@@ -850,6 +850,10 @@ if configuration_helpers.get_value('ENABLE_BULK_ENROLLMENT_VIEW', settings.FEATU
         url(r'^api/bulk_enroll/v1/', include('bulk_enroll.urls')),
     ]
 
+urlpatterns += (
+    url(r'^api/bulk_reset_attempts/v1/', include('bulk_reset_attempts.urls')),
+)
+
 
 # Shopping cart
 urlpatterns += [
