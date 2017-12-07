@@ -542,4 +542,3 @@ def regenerate_certificates(request, course_key, statuses_to_regenerate):
     )
 
     return instructor_task
-
