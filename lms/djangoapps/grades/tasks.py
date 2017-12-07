@@ -45,7 +45,61 @@ RETRY_DELAY_SECONDS = 30
 SUBSECTION_GRADE_TIMEOUT_SECONDS = 300
 
 
+<<<<<<< HEAD
 @task(base=LoggedPersistOnFailureTask, routing_key=settings.POLICY_CHANGE_GRADES_ROUTING_KEY)
+=======
+
+
+
+####################################
+
+import logging
+import urllib
+from django.conf import settings
+from django.core.urlresolvers import reverse
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+from django.http import Http404
+from django.db.models import Q
+from edx_rest_framework_extensions.authentication import JwtAuthentication
+from opaque_keys import InvalidKeyError
+from opaque_keys.edx.keys import CourseKey
+from rest_framework_oauth.authentication import OAuth2Authentication
+from rest_framework import status
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.decorators import api_view
+from rest_framework.exceptions import AuthenticationFailed
+from rest_framework.generics import GenericAPIView, ListAPIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import exception_handler
+from courseware.access import has_access
+from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
+from lms.djangoapps.courseware import courses
+from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
+from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer
+from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
+from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin, view_auth_classes
+from openedx.core.lib.api.permissions import IsStaffOrOwner
+from student.models import CourseEnrollment
+from student.roles import CourseStaffRole
+
+from lms.djangoapps.courseware.courses import get_course
+log = logging.getLogger(__name__)
+USER_MODEL = get_user_model()
+
+#################################################
+
+
+class _BaseTask(PersistOnFailureTask, LoggedTask):  # pylint: disable=abstract-method
+    """
+    Include persistence features, as well as logging of task invocation.
+    """
+    abstract = True
+
+
+@task(base=_BaseTask, routing_key=settings.POLICY_CHANGE_GRADES_ROUTING_KEY)
+>>>>>>> figuring out tasks
 def compute_all_grades_for_course(**kwargs):
     """
     Compute grades for all students in the specified course.
@@ -112,6 +166,100 @@ def compute_grades_for_course(course_key, offset, batch_size, **kwargs):  # pyli
     for result in CourseGradeFactory().iter(users=student_iter, course_key=course_key, force_update=True):
         if result.error is not None:
             raise result.error
+
+
+def generate_xblock_structure_url(course_str, block_key, user):
+    """
+    Generate url/link to JSON representation of xblock
+    """
+    xblock_structure_url = '{}/api/courses/v1/blocks/?course_id={}&block_id={}&username={}'.format(
+        settings.LMS_ROOT_URL,
+        urllib.quote_plus(str(course_str)),
+        block_key,
+        user.username
+    )
+
+    return xblock_structure_url
+
+
+
+def get_user_grades_task(user, course, course_str, course_grade):
+    """
+    Get a single user's grades for  course. 
+    """ 
+    course_structure = get_course_in_cache(course.id)
+    courseware_summary = course_grade.chapter_grades.values()
+    grade_summary = course_grade.summary
+    grades_schema = {}
+    courseware_summary = course_grade.chapter_grades.items()
+    chapter_schema = {}
+    for key, chapter in courseware_summary:
+        subsection_schema = {}
+        for section in chapter['sections']:
+            section_children = course_structure.get_children(section.location)
+            verticals = course_structure.get_children(section.location)
+            vertical_schema = {}
+            for vertical_key in verticals:
+                sections_scores  = {}
+                problem_keys = course_structure.get_children(vertical_key)
+                for problem_key in problem_keys:
+                    if problem_key in section.problem_scores:
+                        problem_score = section.problem_scores[problem_key]
+                        xblock_content_url = reverse(
+                            'courseware.views.views.render_xblock',
+                            kwargs={'usage_key_string': unicode(problem_key)},
+                        )
+                        xblock_structure_url = generate_xblock_structure_url(course_str, problem_key, user)
+                        sections_scores[str(problem_key)] = {
+                           "date" : problem_score.first_attempted if problem_score.first_attempted is not None else "Not attempted",
+                           "earned" :problem_score.earned,
+                           "possible" :problem_score.possible,
+                           "xblock_content_url": "{}{}".format(settings.LMS_ROOT_URL, xblock_content_url),
+                           "xblock_structure_url": "{}{}".format(settings.LMS_ROOT_URL,xblock_structure_url)
+                        }
+                    else:
+                        sections_scores[str(problem_key)] = "This block has no grades"
+                vertical_structure_url = generate_xblock_structure_url(course_str, vertical_key, user)
+                vertical_schema[str(vertical_key)] = {'problem_blocks': sections_scores, "vertical_structure_url": vertical_structure_url}
+            subsection_structure_url = generate_xblock_structure_url(course_str, section.location, user)
+            subsection_schema[str(section.location)] =  {
+                "verticals": vertical_schema,
+                "section_score": course_grade.score_for_module(section.location),
+                "subsection_structure_url": subsection_structure_url
+            }
+        chapter_structure_url = generate_xblock_structure_url(course_str, key, user)
+        chapter_schema[str(key)] = {
+            "sections": subsection_schema,
+            "chapter_structure_url": chapter_structure_url
+        }
+
+    return chapter_schema
+
+
+@task(base=_BaseTask)
+def get_user_course_response_task(course, users, course_str, depth, **kwargs):
+    """
+    Get a list of users grades' for a course
+    """
+    user_grades = {}
+    grades_schema = {}
+
+    for user in users:
+        course_grade = CourseGradeFactory().update(user, course)
+        if depth=="all":
+            grades_schema = get_user_grades(user, course, course_str, course_grade)
+        else:
+            grades_schema = "Showing course grade summary, specify depth=all in query params."
+        user_grades[user.username] = {
+           'name': "{} {}".format(user.first_name, user.last_name),
+           'email': user.email,
+           'start_date':course.start,
+           'end_date': course.end if not None else "This course has no end date.",
+           'all_grades': grades_schema,
+           "passed": course_grade.passed,
+           "percent": course_grade.percent
+        }
+    return user_grades
 
 
 @task(

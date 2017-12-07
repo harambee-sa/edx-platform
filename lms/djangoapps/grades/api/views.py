@@ -71,6 +71,9 @@ from openedx.core.djangoapps.content.block_structure.api import get_course_in_ca
 >>>>>>> clean code
 
 
+
+from lms.djangoapps.grades.tasks import compute_grades_for_course, get_user_course_response_task
+
 def generate_error_response(string):
     """
     Generate Response with error message about missing request data
@@ -484,21 +487,21 @@ class GradesBulkAPIView(ListAPIView):
         course_failure = []
         user_grades = {}
 
-        if course_ids is None:
-            user_list = USER_MODEL.objects.filter(
-                Q(username__in=usernames) |
-                Q(email__in=list_of_emails_or_usernames),
-            )
+        # if course_ids is None:
+        #     user_list = USER_MODEL.objects.filter(
+        #         Q(username__in=usernames) |
+        #         Q(email__in=list_of_emails_or_usernames),
+        #     )
     
-            user_courses = CourseEnrollment.objects.filter(user__in=user_list)
-            for course_enrollment in user_courses:
-                course_str = str(course_enrollment.course_id)
-                course = get_course(course_enrollment.course_id)
-                course_key = CourseKey.from_string(str(course_str))
-                user_grades = get_user_course_response(course, user_list, course_str, depth)
-                course_success[course_str] = user_grades
+        #     user_courses = CourseEnrollment.objects.filter(user__in=user_list)
+        #     for course_enrollment in user_courses:
+        #         course_str = str(course_enrollment.course_id)
+        #         course = get_course(course_enrollment.course_id)
+        #         course_key = CourseKey.from_string(str(course_str))
+        #         user_grades = get_user_course_response(course, user_list, course_str, depth)
+        #         course_success[course_str] = user_grades
 
-        elif course_ids is not None:
+        if course_ids is not None:
             for course_str in course_ids:
                 if usernames is not None:
                     user_list = USER_MODEL.objects.filter(
@@ -513,24 +516,29 @@ class GradesBulkAPIView(ListAPIView):
                     ).order_by('username').select_related('profile')
                 try:
                     course_key = CourseKey.from_string(str(course_str))
+                    #result = compute_grades_for_course.apply_async(course_str)
+                    
+
+
                     course = courses.get_course(course_key)
-                    user_grades = get_user_course_response(course, user_list, course_str, depth)
-                    course_success[course_str] = user_grades
+                    user_grades = get_user_course_response_task.delay(course, user_list, course_str, depth)
+                    print "TTTTTTASK", user_grades
+        #             course_success[course_str] = user_grades
                 except Exception as e:
                     log.error(e)
-                    pass
-                    user_grades = {}                    
-                except InvalidKeyError:
-                    log.error('Invalid key, {} does not exist'.format(course_str))
-                    course_failure.append("{} does not exist".format(course_str))
-                    pass
-                except ValueError:
-                    log.error('Value error, {} could not be found.'.format(course_str))
-                    course_failure.append("{} does not exist".format(course_str))
+        #             pass
+        #             user_grades = {}                    
+        #         except InvalidKeyError:
+        #             log.error('Invalid key, {} does not exist'.format(course_str))
+        #             course_failure.append("{} does not exist".format(course_str))
+        #             pass
+        #         except ValueError:
+        #             log.error('Value error, {} could not be found.'.format(course_str))
+        #             course_failure.append("{} does not exist".format(course_str))
 
 
-        course_results["successes"] = course_success
-        course_results["failures"] = course_failure
+        # course_results["successes"] = course_success
+        # course_results["failures"] = course_failure
             
         return Response(course_results)
 
