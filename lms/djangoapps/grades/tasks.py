@@ -240,9 +240,11 @@ def get_user_grades_task(user, course, course_str, course_grade):
 
     return chapter_schema
 
+def perform_bulk_grades_report(**kwargs):
+    pass
 
 @task(base=_BaseTask)
-def get_user_course_response_task(course, users, course_str, callback_url, depth, **kwargs):
+def get_user_course_response_task(course, users, course_str, depth, **kwargs):
     """
     Get a list of users grades' for a course
     """
@@ -265,7 +267,7 @@ def get_user_course_response_task(course, users, course_str, callback_url, depth
            "percent": course_grade.percent
         }
 
-        requests.post(callback_url, data=json.dumps(user_grades))
+        #requests.post(callback_url, data=json.dumps(user_grades))
 
     return user_grades
 

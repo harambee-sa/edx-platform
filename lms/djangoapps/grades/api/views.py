@@ -511,13 +511,13 @@ class GradesBulkAPIView(ListAPIView):
                     ).order_by('username').select_related('profile')
                 else:
                     # Get all users enrolled given a course key
-                user_list = USER_MODEL.objects.filter(courseenrollment__course_id=CourseKey.from_string(course_str)).order_by('username').select_related('profile')
+                    user_list = USER_MODEL.objects.filter(courseenrollment__course_id=CourseKey.from_string(course_str)).order_by('username').select_related('profile')
                 try:
                     course_key = CourseKey.from_string(str(course_str))
                     #result = compute_grades_for_course.apply_async(course_str)
                     course = courses.get_course(course_key)
-                    user_grades = get_user_course_response_task.delay(course, user_list, course_str, callback_url, None)
-                    print "TTTTTTASK", user_grades
+                    user_grades = get_user_course_response_task.delay(course, user_list, course_str, None)
+                    print "TTTTTTASK", user_grades, type(user_grades)
         #             course_success[course_str] = user_grades
                 except Exception as e:
                     log.error(e)
