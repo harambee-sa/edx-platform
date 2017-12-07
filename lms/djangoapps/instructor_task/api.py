@@ -27,7 +27,6 @@ from lms.djangoapps.instructor_task.tasks import (
     calculate_grades_csv,
     calculate_may_enroll_csv,
     calculate_problem_grade_report,
-    calculate_bulk_grades_report,
     calculate_problem_responses_csv,
     calculate_students_features_csv,
     cohort_students,
@@ -319,18 +318,6 @@ def submit_bulk_course_email(request, course_key, email_id):
     task_key_stub = str(email_id)
     # create the key value by using MD5 hash:
     task_key = hashlib.md5(task_key_stub).hexdigest()
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
-
-
-def submit_bulk_grades_report(request, course_list, user_list, depth, callback_url):
-    """
-    Submits a task to generate a JSON bulk grade report containing problem
-    values.
-    """
-    task_type = 'bulk_grade_problems'
-    task_class = calculate_bulk_grades_report
-    task_input = {'course_list': course_list, 'user_list': user_list, 'depth': depth, 'callback_url': callback_url }
-    task_key = ""
     return submit_task(request, task_type, task_class, course_key, task_input, task_key)
 
 

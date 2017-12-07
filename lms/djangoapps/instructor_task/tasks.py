@@ -27,9 +27,6 @@ from django.conf import settings
 from django.utils.translation import ugettext_noop
 
 from bulk_email.tasks import perform_delegate_email_batches
-
-from lms.djangoapps.grades.tasks import perform_bulk_grades_report
-
 from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
 from lms.djangoapps.instructor_task.tasks_helper.certs import generate_students_certificates
 from lms.djangoapps.instructor_task.tasks_helper.enrollments import (
@@ -160,23 +157,6 @@ def send_bulk_course_email(entry_id, _xmodule_instance_args):
     action_name = ugettext_noop('emailed')
     visit_fcn = perform_delegate_email_batches
     return run_main_task(entry_id, visit_fcn, action_name)
-
-
-@task(base=BaseInstructorTask)
-def calculate_bulk_grades_report(entry_id, _xmodule_instance_args):
-    """
-    Generate a JSON object for a course containing all students' problem
-    grades and push the results to a callback URL
-    """
-    # Translators: This is a past-tense phrase that is inserted into task progress messages as {action}.
-    action_name = ugettext_noop('bulk grades report created')
-    TASK_LOG.info(
-        u"Task: %s, InstructorTask ID: %s, Task type: %s, Preparing for task execution",
-        xmodule_instance_args.get('task_id'), entry_id, action_name
-    )
-
-    visit_fn = perform_bulk_grades_report
-    return run_main_task(entry_id, visit_fn, action_name)
 
 
 @task(base=BaseInstructorTask, routing_key=settings.GRADES_DOWNLOAD_ROUTING_KEY)  # pylint: disable=not-callable
