@@ -339,7 +339,12 @@ git+https://github.com/proversity-org/badger-xblock.git@0.2.3#egg=badger-xblock=
 >>>>>>> Proversity/staging (#589)
 =======
 git+https://github.com/proversity-org/badger-xblock.git@0.2.3#egg=badger-xblock==0.2.3
+<<<<<<< HEAD
 >>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 -e git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
 git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
 >>>>>>> upstream master merge
+=======
+-e git+https://github.com/mitodl/edx-sga.git@v0.7.0#egg=edx-sga==v0.7.0
+git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
+>>>>>>> set edx-sga version to 0.7.0
