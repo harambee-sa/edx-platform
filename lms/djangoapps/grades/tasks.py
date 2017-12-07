@@ -55,6 +55,9 @@ SUBSECTION_GRADE_TIMEOUT_SECONDS = 300
 
 import logging
 import urllib
+
+import requests 
+
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.contrib.auth import get_user_model
@@ -87,6 +90,8 @@ from student.roles import CourseStaffRole
 from lms.djangoapps.courseware.courses import get_course
 log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
+from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
+
 
 #################################################
 
@@ -237,7 +242,7 @@ def get_user_grades_task(user, course, course_str, course_grade):
 
 
 @task(base=_BaseTask)
-def get_user_course_response_task(course, users, course_str, depth, **kwargs):
+def get_user_course_response_task(course, users, course_str, callback_url, depth, **kwargs):
     """
     Get a list of users grades' for a course
     """
@@ -259,6 +264,9 @@ def get_user_course_response_task(course, users, course_str, depth, **kwargs):
            "passed": course_grade.passed,
            "percent": course_grade.percent
         }
+
+        requests.post(callback_url, data=json.dumps(user_grades))
+
     return user_grades
 
 
