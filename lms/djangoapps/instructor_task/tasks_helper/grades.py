@@ -546,62 +546,6 @@ class ProblemGradeReport(object):
                                                                     header_name + " (Possible)"]
         return scorable_blocks_map
 
-class BulkGradesReport(object):
-    @classmethod
-    def generate(cls, _xmodule_instance_args, _entry_id, course_id, _task_input, action_name):
-        """
-        Generate a JSON object containing all students' problem grades within a given
-        `course_id`.
-        """
-        start_time = time()
-        start_date = datetime.now(UTC)
-
-        for course_id in course_ids:
-            enrolled_students = CourseEnrollment.objects.users_enrolled_in(course_id, include_inactive=True)
-            task_progress = TaskProgress(action_name, enrolled_students.count(), start_time)
-
-            # This struct encapsulates both the display names of each static item in the
-            # header row as values as well as the django User field names of those items
-            # as the keys.  It is structured in this way to keep the values related.
-
-            course = get_course_by_id(course_id)
-            graded_scorable_blocks = cls._graded_scorable_blocks_to_header(course)
-
-            # Bulk fetch and cache enrollment states so we can efficiently determine
-            # whether each user is currently enrolled in the course.
-            CourseEnrollment.bulk_fetch_enrollment_states(enrolled_students, course_id)
-
-            for student, course_grade, error in CourseGradeFactory().iter(enrolled_students, course):
-               
-                task_progress.attempted += 1
-                if not course_grade:
-                    err_msg = error.message
-                    # There was an error grading this student.
-                    if not err_msg:
-                        err_msg = u'Unknown error'
-                    error_rows.append(student_fields + [err_msg])
-                    task_progress.failed += 1
-                    continue
-                enrollment_status = _user_enrollment_status(student, course_id)
-                earned_possible_values = []
-                for block_location in graded_scorable_blocks:
-                    try:
-                        problem_score = course_grade.problem_scores[block_location]
-                    except KeyError:
-                        earned_possible_values.append([u'Not Available', u'Not Available'])
-                    else:
-                        if problem_score.first_attempted:
-                            earned_possible_values.append([problem_score.earned, problem_score.possible])
-                        else:
-                            earned_possible_values.append([u'Not Attempted', problem_score.possible])
-                
-                task_progress.succeeded += 1
-                if task_progress.attempted % status_interval == 0:
-                    current_step = {'step': 'Calculating students answers to problem'}
-                    task_progress.update_task_state(extra_meta=current_step)
-
-
-        return {}
 
 class ProblemResponses(object):
     @classmethod
