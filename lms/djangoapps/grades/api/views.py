@@ -22,7 +22,7 @@ from courseware.access import has_access
 from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
 from lms.djangoapps.courseware import courses
 from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
-from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer, GradeBulkTaskAPIViewSerializer
+from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer
 from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin, view_auth_classes
 from openedx.core.lib.api.permissions import IsStaffOrOwner
@@ -515,7 +515,9 @@ class GradesBulkAPIView(ListAPIView):
                 try:
                     course_key = CourseKey.from_string(str(course_str))
                     course = courses.get_course(course_key)
-                    user_grades = get_user_course_response(course, user_list, course_str, depth)   
+                    user_grades = get_user_course_response(course, user_list, course_str, depth)
+                    course_success[course_str] = user_grades
+                    user_grades = {}
                 except Exception as e:
                     log.error(e)
                     pass
@@ -532,7 +534,7 @@ class GradesBulkAPIView(ListAPIView):
         course_results["successes"] = course_success
         course_results["failures"] = course_failure
             
-        return Response({"message": "The task was submitted"})
+        return Response(course_results)
 
 
 class CourseGradingPolicy(GradeViewMixin, ListAPIView):
