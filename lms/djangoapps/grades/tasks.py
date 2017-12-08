@@ -3,8 +3,10 @@ This module contains tasks for asynchronous execution of grade updates.
 """
 
 from logging import getLogger
-
 import six
+import urllib
+import requests 
+
 from celery import task
 from celery_utils.persist_on_failure import LoggedPersistOnFailureTask
 from courseware.model_data import get_score
@@ -12,6 +14,18 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db.utils import DatabaseError
+from django.core.urlresolvers import reverse
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+from opaque_keys import InvalidKeyError
+from opaque_keys.edx.keys import CourseKey
+from courseware.access import has_access
+from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
+from lms.djangoapps.courseware import courses
+from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
+from student.models import CourseEnrollment
+from lms.djangoapps.courseware import courses
+
 from lms.djangoapps.course_blocks.api import get_course_blocks
 from lms.djangoapps.grades.config.models import ComputeGradesSetting
 from opaque_keys.edx.keys import CourseKey, UsageKey
@@ -45,6 +59,7 @@ RETRY_DELAY_SECONDS = 30
 SUBSECTION_GRADE_TIMEOUT_SECONDS = 300
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 @task(base=LoggedPersistOnFailureTask, routing_key=settings.POLICY_CHANGE_GRADES_ROUTING_KEY)
 =======
@@ -89,9 +104,9 @@ from student.roles import CourseStaffRole
 
 from lms.djangoapps.courseware.courses import get_course
 log = logging.getLogger(__name__)
+=======
+>>>>>>> clean up tasks, still not working
 USER_MODEL = get_user_model()
-from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
-from django.apps import apps
 
 #################################################
 
@@ -253,7 +268,6 @@ def get_user_course_response_task(users, course_str, depth, **kwargs):
     user_grades = {}
     grades_schema = {}
     course_key = CourseKey.from_string(str(course_str))
-    print "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHh"
     course = courses.get_course(course_key)
     for user in users:
         course_grade = CourseGradeFactory().update(user, course)
