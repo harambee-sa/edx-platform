@@ -244,7 +244,7 @@ def perform_bulk_grades_report(**kwargs):
     pass
 
 @task(base=_BaseTask)
-def get_user_course_response_task(course, users, course_str, depth, **kwargs):
+def get_user_course_response_task(course, users, course_str, callback_url, **kwargs):
     """
     Get a list of users grades' for a course
     """

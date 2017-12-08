@@ -27,7 +27,7 @@ from request_cache import get_cache
 import events
 
 from jsonfield.fields import JSONField
-
+import collections
 log = logging.getLogger(__name__)
 
 
@@ -629,4 +629,4 @@ from model_utils.models import TimeStampedModel
 
 class BulkGradesReport(models.Model):
 
-    values = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})
+    jsons_report = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})

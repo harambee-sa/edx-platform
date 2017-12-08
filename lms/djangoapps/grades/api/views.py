@@ -516,7 +516,7 @@ class GradesBulkAPIView(ListAPIView):
                     course_key = CourseKey.from_string(str(course_str))
                     #result = compute_grades_for_course.apply_async(course_str)
                     course = courses.get_course(course_key)
-                    user_grades = get_user_course_response_task.delay(course, user_list, course_str, None)
+                    user_grades = get_user_course_response_task.delay(course, user_list, course_str, callback_url)
                     print "TTTTTTASK", user_grades, type(user_grades), user_grades.id
         #             course_success[course_str] = user_grades
                 except Exception as e:
