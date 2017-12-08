@@ -91,7 +91,7 @@ from lms.djangoapps.courseware.courses import get_course
 log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
 from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
-
+from django.apps import apps
 
 #################################################
 
@@ -188,11 +188,14 @@ def generate_xblock_structure_url(course_str, block_key, user):
 
 
 
-def get_user_grades_task(user, course, course_str, course_grade):
+def get_user_grades_task(user_id, course_str):
     """
     Get a single user's grades for  course. 
     """ 
-    print "IM IN HERE", course_str, course, course_grade
+    user = USER_MODEL.objects.get(id=user_id)
+    course_key = CourseKey.from_string(str(course_str))
+    course = courses.get_course(course_key)
+    course_grade = CourseGradeFactory().update(user, course)
     course_structure = get_course_in_cache(course.id)
     courseware_summary = course_grade.chapter_grades.values()
     grade_summary = course_grade.summary
@@ -250,11 +253,12 @@ def get_user_course_response_task(users, course_str, depth, **kwargs):
     user_grades = {}
     grades_schema = {}
     course_key = CourseKey.from_string(str(course_str))
+    print "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHh"
     course = courses.get_course(course_key)
     for user in users:
         course_grade = CourseGradeFactory().update(user, course)
         if depth=="all":
-            grades_schema = get_user_grades(user, course, course_str, course_grade)
+            grades_schema = get_user_grades(user.id, course_str)
         else:
             grades_schema = "Showing course grade summary, specify depth=all in query params."
         user_grades[user.username] = {

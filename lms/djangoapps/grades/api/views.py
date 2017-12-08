@@ -70,7 +70,7 @@ from openedx.core.djangoapps.content.block_structure.api import get_course_in_ca
 =======
 >>>>>>> clean code
 
-
+from django.apps import apps
 
 from lms.djangoapps.grades.tasks import compute_grades_for_course, get_user_course_response_task
 
