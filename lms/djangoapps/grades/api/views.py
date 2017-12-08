@@ -487,19 +487,19 @@ class GradesBulkAPIView(ListAPIView):
         course_failure = []
         user_grades = {}
 
-        # if course_ids is None:
-        #     user_list = USER_MODEL.objects.filter(
-        #         Q(username__in=usernames) |
-        #         Q(email__in=list_of_emails_or_usernames),
-        #     )
+        if course_ids is None:
+            user_list = USER_MODEL.objects.filter(
+                Q(username__in=usernames) |
+                Q(email__in=list_of_emails_or_usernames),
+            )
     
-        #     user_courses = CourseEnrollment.objects.filter(user__in=user_list)
-        #     for course_enrollment in user_courses:
-        #         course_str = str(course_enrollment.course_id)
-        #         course = get_course(course_enrollment.course_id)
-        #         course_key = CourseKey.from_string(str(course_str))
-        #         user_grades = get_user_course_response(course, user_list, course_str, depth)
-        #         course_success[course_str] = user_grades
+            user_courses = CourseEnrollment.objects.filter(user__in=user_list)
+            for course_enrollment in user_courses:
+                course_str = str(course_enrollment.course_id)
+                course = get_course(course_enrollment.course_id)
+                course_key = CourseKey.from_string(str(course_str))
+                user_grades = get_user_course_response(course, user_list, course_str, depth)
+                course_success[course_str] = user_grades
 
         if course_ids is not None:
             for course_str in course_ids:
@@ -536,6 +536,23 @@ class GradesBulkAPIView(ListAPIView):
         # course_results["failures"] = course_failure
             
         return Response({"task_id": user_grades.id})
+
+
+class GradesBulkTaskAPIView(ListAPIView):
+
+     def post(self,  request):
+
+        serializer = GradeBulkTaskAPIViewSerializer(data=request.data)
+        # BulkGradesReport.objects.create(**validated_data)
+        # BulkGradesReport.save()
+
+        if serializer.is_valid():
+           serializer.save()
+        
+           return Response({'messages': "hi"}, status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)        
+
 
 
 class CourseGradingPolicy(GradeViewMixin, ListAPIView):

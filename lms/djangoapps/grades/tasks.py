@@ -253,10 +253,9 @@ def get_user_course_response_task(course, users, course_str, depth, **kwargs):
 
     for user in users:
         course_grade = CourseGradeFactory().update(user, course)
-        if depth=="all":
-            grades_schema = get_user_grades(user, course, course_str, course_grade)
-        else:
-            grades_schema = "Showing course grade summary, specify depth=all in query params."
+        grades_schema = get_user_grades(user, course, course_str, course_grade)
+        # else:
+        #     grades_schema = "Showing course grade summary, specify depth=all in query params."
         user_grades[user.username] = {
            'name': "{} {}".format(user.first_name, user.last_name),
            'email': user.email,
@@ -267,7 +266,7 @@ def get_user_course_response_task(course, users, course_str, depth, **kwargs):
            "percent": course_grade.percent
         }
 
-        #requests.post(callback_url, data=json.dumps(user_grades))
+        requests.post(reverse(callback_url), data=json.dumps(user_grades))
 
     return user_grades
 

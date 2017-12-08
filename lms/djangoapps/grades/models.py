@@ -26,6 +26,7 @@ from request_cache import get_cache
 
 import events
 
+from jsonfield.fields import JSONField
 
 log = logging.getLogger(__name__)
 
@@ -620,3 +621,12 @@ class PersistentSubsectionGradeOverride(models.Model):
 def prefetch(user, course_key):
     PersistentSubsectionGradeOverride.prefetch(user.id, course_key)
     VisibleBlocks.bulk_read(course_key)
+
+
+from jsonfield.fields import JSONField
+from model_utils.models import TimeStampedModel
+
+
+class BulkGradesReport(models.Model):
+
+    values = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})

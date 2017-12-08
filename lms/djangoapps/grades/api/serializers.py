@@ -4,7 +4,7 @@ API Serializers
 from collections import defaultdict
 
 from rest_framework import serializers
-
+from lms.djangoapps.grades import models
 
 # pylint: disable=abstract-method
 class GradingPolicySerializer(serializers.Serializer):
@@ -36,3 +36,10 @@ class GradeBulkAPIViewSerializer(serializers.Serializer):
     """
     usernames = serializers.ListField(child=serializers.CharField())
     course_ids = serializers.ListField(child=serializers.CharField())
+
+
+class MicrositeSerializer(serializers.ModelSerializer):
+    """ Serializes the BasicMicrosite object."""
+    class Meta:
+        model = models.BulkGradesReport
+        fields = '__all__'
