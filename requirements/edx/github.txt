@@ -305,6 +305,7 @@ git+https://github.com/proversity-org/recap-xblock.git@0.2.1#egg=recap-xblock==0
 git+https://github.com/proversity-org/badger-xblock.git@0.2.1#egg=badger-xblock==0.2.1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git+https://github.com/mitodl/edx-sga.git#egg=edx-sga
 >>>>>>> Correct xblock update
 <<<<<<< HEAD
@@ -348,3 +349,7 @@ git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xbloc
 -e git+https://github.com/mitodl/edx-sga.git@v0.7.0#egg=edx-sga==v0.7.0
 git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
 >>>>>>> set edx-sga version to 0.7.0
+=======
+-e git+https://github.com/mitodl/edx-sga.git@0.7.0#egg=edx-sga==0.7.0
+git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
+>>>>>>> lock edx-sga at version 0.7.0
