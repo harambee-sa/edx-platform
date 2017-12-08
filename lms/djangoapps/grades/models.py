@@ -26,8 +26,6 @@ from request_cache import get_cache
 
 import events
 
-from jsonfield.fields import JSONField
-import collections
 log = logging.getLogger(__name__)
 
 
