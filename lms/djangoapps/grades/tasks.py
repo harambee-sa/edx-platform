@@ -203,7 +203,7 @@ def generate_xblock_structure_url(course_str, block_key, user):
 
 
 
-def get_user_grades_task(user_id, course_str):
+def get_user_grades(user_id, course_str):
     """
     Get a single user's grades for  course. 
     """ 
@@ -261,7 +261,7 @@ def get_user_grades_task(user_id, course_str):
 
 
 @task(base=_BaseTask)
-def get_user_course_response_task(users, course_str, depth, **kwargs):
+def get_user_course_response_task(users, course_str, depth, callback_url):
     """
     Get a list of users grades' for a course
     """
@@ -285,7 +285,7 @@ def get_user_course_response_task(users, course_str, depth, **kwargs):
            "percent": course_grade.percent
         }
 
-
+    #requests.post(str(callback_url), data=user_grades)
     return user_grades
 
 @task(
