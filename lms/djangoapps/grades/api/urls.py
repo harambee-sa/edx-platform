@@ -17,10 +17,6 @@ urlpatterns = [
         views.GradesBulkAPIView.as_view(), name='bulk_user_grades'
     ),
     url(
-        r'^v0/course_grade/bulk_task_est/$',
-        views.GradesBulkTaskAPIView.as_view(), name='bulk_task_test'
-    ),
-    url(
         r'^v0/course_grade/{course_id}/users/$'.format(
             course_id=settings.COURSE_ID_PATTERN,
         ),

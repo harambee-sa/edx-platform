@@ -192,6 +192,7 @@ def get_user_grades_task(user, course, course_str, course_grade):
     """
     Get a single user's grades for  course. 
     """ 
+    print "IM IN HERE", course_str, course, course_grade
     course_structure = get_course_in_cache(course.id)
     courseware_summary = course_grade.chapter_grades.values()
     grade_summary = course_grade.summary
@@ -240,22 +241,22 @@ def get_user_grades_task(user, course, course_str, course_grade):
 
     return chapter_schema
 
-def perform_bulk_grades_report(**kwargs):
-    pass
 
 @task(base=_BaseTask)
-def get_user_course_response_task(course, users, course_str, callback_url, **kwargs):
+def get_user_course_response_task(users, course_str, depth, **kwargs):
     """
     Get a list of users grades' for a course
     """
     user_grades = {}
     grades_schema = {}
-
+    course_key = CourseKey.from_string(str(course_str))
+    course = courses.get_course(course_key)
     for user in users:
         course_grade = CourseGradeFactory().update(user, course)
-        grades_schema = get_user_grades(user, course, course_str, course_grade)
-        # else:
-        #     grades_schema = "Showing course grade summary, specify depth=all in query params."
+        if depth=="all":
+            grades_schema = get_user_grades(user, course, course_str, course_grade)
+        else:
+            grades_schema = "Showing course grade summary, specify depth=all in query params."
         user_grades[user.username] = {
            'name': "{} {}".format(user.first_name, user.last_name),
            'email': user.email,
@@ -266,10 +267,8 @@ def get_user_course_response_task(course, users, course_str, callback_url, **kwa
            "percent": course_grade.percent
         }
 
-        requests.post(reverse(callback_url), data=json.dumps(user_grades))
 
     return user_grades
-
 
 @task(
     bind=True,

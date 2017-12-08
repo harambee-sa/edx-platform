@@ -22,7 +22,7 @@ from courseware.access import has_access
 from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
 from lms.djangoapps.courseware import courses
 from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
-from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer
+from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer, GradeBulkTaskAPIViewSerializer
 from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin, view_auth_classes
 from openedx.core.lib.api.permissions import IsStaffOrOwner
@@ -514,45 +514,25 @@ class GradesBulkAPIView(ListAPIView):
                     user_list = USER_MODEL.objects.filter(courseenrollment__course_id=CourseKey.from_string(course_str)).order_by('username').select_related('profile')
                 try:
                     course_key = CourseKey.from_string(str(course_str))
-                    #result = compute_grades_for_course.apply_async(course_str)
                     course = courses.get_course(course_key)
-                    user_grades = get_user_course_response_task.delay(course, user_list, course_str, callback_url)
-                    print "TTTTTTASK", user_grades, type(user_grades), user_grades.id
-        #             course_success[course_str] = user_grades
+                    user_grades = get_user_course_response(course, user_list, course_str, depth)   
                 except Exception as e:
                     log.error(e)
-        #             pass
-        #             user_grades = {}                    
-        #         except InvalidKeyError:
-        #             log.error('Invalid key, {} does not exist'.format(course_str))
-        #             course_failure.append("{} does not exist".format(course_str))
-        #             pass
-        #         except ValueError:
-        #             log.error('Value error, {} could not be found.'.format(course_str))
-        #             course_failure.append("{} does not exist".format(course_str))
+                    pass
+                    user_grades = {}                    
+                except InvalidKeyError:
+                    log.error('Invalid key, {} does not exist'.format(course_str))
+                    course_failure.append("{} does not exist".format(course_str))
+                    pass
+                except ValueError:
+                    log.error('Value error, {} could not be found.'.format(course_str))
+                    course_failure.append("{} does not exist".format(course_str))
 
 
-        # course_results["successes"] = course_success
-        # course_results["failures"] = course_failure
+        course_results["successes"] = course_success
+        course_results["failures"] = course_failure
             
-        return Response({"task_id": user_grades.id})
-
-
-class GradesBulkTaskAPIView(ListAPIView):
-
-     def post(self,  request):
-
-        serializer = GradeBulkTaskAPIViewSerializer(data=request.data)
-        # BulkGradesReport.objects.create(**validated_data)
-        # BulkGradesReport.save()
-
-        if serializer.is_valid():
-           serializer.save()
-        
-           return Response({'messages': "hi"}, status=status.HTTP_201_CREATED)
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)        
-
+        return Response({"message": "The task was submitted"})
 
 
 class CourseGradingPolicy(GradeViewMixin, ListAPIView):
