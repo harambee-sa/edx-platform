@@ -622,11 +622,3 @@ def prefetch(user, course_key):
     PersistentSubsectionGradeOverride.prefetch(user.id, course_key)
     VisibleBlocks.bulk_read(course_key)
 
-
-from jsonfield.fields import JSONField
-from model_utils.models import TimeStampedModel
-
-
-class BulkGradesReport(models.Model):
-
-    json_report = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})
