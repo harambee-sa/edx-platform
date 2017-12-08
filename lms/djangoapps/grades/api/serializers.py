@@ -37,9 +37,3 @@ class GradeBulkAPIViewSerializer(serializers.Serializer):
     usernames = serializers.ListField(child=serializers.CharField())
     course_ids = serializers.ListField(child=serializers.CharField())
 
-
-class GradeBulkTaskAPIViewSerializer(serializers.ModelSerializer):
-    """ Serializes the BasicMicrosite object."""
-    class Meta:
-        model = models.BulkGradesReport
-        fields = '__all__'

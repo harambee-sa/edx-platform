@@ -629,4 +629,4 @@ from model_utils.models import TimeStampedModel
 
 class BulkGradesReport(models.Model):
 
-    jsons_report = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})
+    json_report = JSONField(null=False, blank=True, load_kwargs={'object_pairs_hook': collections.OrderedDict})
