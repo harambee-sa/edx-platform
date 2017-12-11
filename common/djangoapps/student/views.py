@@ -2904,7 +2904,8 @@ def password_reset_confirm_wrapper(request, uidb36=None, token=None):
             user.is_active = True
             user.save()
 
-    return render_to_response('registration/password_reset_confirm.html', response.context_data)
+    return render_to_response('registration/password_reset_confirm.html',
+        response.context_data if hasattr(response, 'context_data') else None)
 
 
 def reactivation_email_for_user(user):
