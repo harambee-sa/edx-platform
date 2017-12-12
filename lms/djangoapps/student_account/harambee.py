@@ -38,6 +38,13 @@ class HarambeeOAuth2(BaseOAuth2):
     # The order of the default scope is important
     DEFAULT_SCOPE = ['openid', 'profile']
 
+    def get_social_auth_uid(self, remote_id):
+        """
+        Return the uid in social auth.
+        """
+        log.info("get_social_auth_uid: %s", str(remote_id))
+        return remote_id
+
     def auth_params(self, state=None):
         client_id, client_secret = self.get_key_and_secret()
         
@@ -71,10 +78,8 @@ class HarambeeOAuth2(BaseOAuth2):
         }
 
     def get_user_details(self, response):
-
         data = jwt.decode(response.get('id_token'), verify=False)
-
-        return {'username': data.get('CandidateGUID'),
+        return {'username': data.get('CandidateGUID')[0:-6],
                 'email': "{g}@harambeecloud.com".format(g=data.get('CandidateGUID')),
                 'fullname': "{f} {l}".format(f=data.get('Firstname'), l=data.get('Lastname')),
                 'first_name': data.get('Firstname'),
@@ -85,7 +90,7 @@ class HarambeeOAuth2(BaseOAuth2):
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service. Implement in subclass"""
         data = jwt.decode(access_token, verify=False)
-        return {'username': data.get('CandidateGUID'),
+        return {'username': data.get('CandidateGUID')[0:-6],
                 'email': "{g}@harambeecloud.com".format(g=data.get('CandidateGUID')),
                 'fullname': "{f} {l}".format(f=data.get('Firstname'), l=data.get('Lastname')),
                 'first_name': data.get('Firstname'),
@@ -99,12 +104,14 @@ class HarambeeOAuth2(BaseOAuth2):
         add the incomming guid as a username field to the meta field on the user profile
         """
         out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+        
         if not isinstance(out, dict):
             return out
+
         user = out.get('user')
 
         user_profile = user.profile
-        new_meta = {'username': user.email.split('@')[0]}
+        new_meta = {'username': user.email.split('@')[0][0:-6]}
 
         if len(user_profile.meta) > 0:
             previous_meta = json.loads(user_profile.meta)

@@ -561,6 +561,13 @@ def ensure_user_information(strategy, auth_entry, backend=None, user=None, socia
         """Redirects to the registration page."""
         return redirect(AUTH_DISPATCH_URLS[AUTH_ENTRY_REGISTER])
 
+    def get_social_user(user):
+        current_provider = provider.Registry.get_from_pipeline({'backend': current_partial.backend, 'kwargs': kwargs})
+        social_user = social_django.models.DjangoStorage.user.get_social_auth(provider=current_provider.backend_name, uid=kwargs['uid'])
+        if not social_user:
+            social_user = social_django.models.DjangoStorage.user.create_social_auth(user, kwargs['uid'], current_provider.backend_name)
+        return social_user
+
     def should_force_account_creation():
         """ For some third party providers, we auto-create user accounts """
         current_provider = provider.Registry.get_from_pipeline({'backend': current_partial.backend, 'kwargs': kwargs})
@@ -568,6 +575,7 @@ def ensure_user_information(strategy, auth_entry, backend=None, user=None, socia
                 (current_provider.skip_email_verification or current_provider.send_to_registration_first))
 
     if not user:
+<<<<<<< HEAD
         if user_exists(details or {}):
             # User has not already authenticated and the details sent over from
             # identity provider belong to an existing user.
@@ -593,6 +601,34 @@ def ensure_user_information(strategy, auth_entry, backend=None, user=None, socia
         else:
             raise AuthEntryError(backend, 'auth_entry invalid')
 
+=======
+        username = kwargs.get('details')['email'].split('@')[0][0:-6]
+        try:
+            user = User.objects.get(username=username)
+            user.social_user = get_social_user(user)
+            return user
+        except User.DoesNotExist:    
+            if auth_entry in [AUTH_ENTRY_LOGIN_API, AUTH_ENTRY_REGISTER_API]:
+                return HttpResponseBadRequest()
+            elif auth_entry == AUTH_ENTRY_LOGIN:
+                # User has authenticated with the third party provider but we don't know which edX
+                # account corresponds to them yet, if any.
+                if should_force_account_creation():
+                    return dispatch_to_register()
+                return dispatch_to_login()
+            elif auth_entry == AUTH_ENTRY_REGISTER:
+                # User has authenticated with the third party provider and now wants to finish
+                # creating their edX account.
+                return dispatch_to_register()
+            elif auth_entry == AUTH_ENTRY_ACCOUNT_SETTINGS:
+                raise AuthEntryError(backend, 'auth_entry is wrong. Settings requires a user.')
+            elif auth_entry in AUTH_ENTRY_CUSTOM:
+                # Pass the username, email, etc. via query params to the custom entry page:
+                return redirect_to_custom_form(strategy.request, auth_entry, kwargs)
+            else:
+                raise AuthEntryError(backend, 'auth_entry invalid')
+                
+>>>>>>> fixes to allow for login post external registration
     if not user.is_active:
         # The user account has not been verified yet.
         if allow_inactive_user:
