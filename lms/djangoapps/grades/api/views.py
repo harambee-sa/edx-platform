@@ -106,11 +106,7 @@ def get_user_grades(user, course, course_str, course_grade):
     grades_schema = {}
     courseware_summary = course_grade.chapter_grades.items()
     chapter_schema = {}
-    # course_earned = 0
-    # course_total = 0
     for key, chapter in courseware_summary:
-        # chapter_earned = course_grade.score_for_chapter(key)[0],
-        # chapter_total = course_grade.score_for_chapter(key)[1]
         subsection_schema = {}
         for section in chapter['sections']:
             section_children = course_structure.get_children(section.location)
@@ -131,8 +127,6 @@ def get_user_grades(user, course, course_str, course_grade):
                         xblock_structure_url = generate_xblock_structure_url(course_str, problem_key, user)
                         sections_scores[str(problem_key)] = {
                            "date" : problem_score.first_attempted if problem_score.first_attempted is not None else "Not attempted",
-                           # "section_earned" :problem_score.earned,
-                           # "section_possible" :problem_score.possible,
                            "xblock_content_url": "{}{}".format(settings.LMS_ROOT_URL, xblock_content_url),
                            "xblock_structure_url": "{}{}".format(settings.LMS_ROOT_URL,xblock_structure_url)
                         }
@@ -147,13 +141,9 @@ def get_user_grades(user, course, course_str, course_grade):
                 "subsection_structure_url": subsection_structure_url
             }
         chapter_structure_url = generate_xblock_structure_url(course_str, key, user)
-        # course_earned += chapter_earned
-        # course_total += chapter_total
         chapter_schema[str(key)] = {
             "sections": subsection_schema,
             "chapter_structure_url": chapter_structure_url,
-            # "chapter_earned": chapter_earned,
-            # "chapter_total": chapter_total,
             "chapter_score": course_grade.score_for_module(key)
         }
 
@@ -205,7 +195,9 @@ def get_user_course_response(course, users, course_str, depth):
            'all_grades': grades_schema,
            "passed": course_grade.passed,
            "percent": course_grade.percent,
-           "total_course_grade_raw": course_grade._compute_course_grade_total_raw()
+           "total_course_grade_raw": course_grade._compute_course_grade_total_raw(),
+           "enrollment_date": str(CourseEnrollment.get_enrollment(user, course.id).created)
+
         }
     return user_grades
 >>>>>>> indentation
