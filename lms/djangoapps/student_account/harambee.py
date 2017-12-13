@@ -5,6 +5,7 @@ from social_core.backends.oauth import BaseOAuth2
 from django.contrib.auth.models import User
 import uuid
 import logging
+import social_django
 
 log = logging.getLogger(__name__)
 class HarambeeOAuth2(BaseOAuth2):
@@ -38,6 +39,10 @@ class HarambeeOAuth2(BaseOAuth2):
     # The order of the default scope is important
     DEFAULT_SCOPE = ['openid', 'profile']
 
+    EXTRA_DATA = [
+        ('id_token', 'id_token'),
+    ]
+
     def get_social_auth_uid(self, remote_id):
         """
         Return the uid in social auth.
@@ -50,7 +55,7 @@ class HarambeeOAuth2(BaseOAuth2):
         
         uri = self.get_redirect_uri(state)
         if self.REDIRECT_IS_HTTPS:
-          uri = uri.replace('http://', 'https://')
+            uri = uri.replace('http://', 'https://')
         
         params = {
             'client_id': client_id,
@@ -68,7 +73,7 @@ class HarambeeOAuth2(BaseOAuth2):
         client_id, client_secret = self.get_key_and_secret()
         uri = self.get_redirect_uri(state)
         if self.REDIRECT_IS_HTTPS:
-          uri = uri.replace('http://', 'https://')
+            uri = uri.replace('http://', 'https://')
         return {
             'grant_type': 'authorization_code',  # request auth code
             'code': self.data.get('code', ''),  # server response code
@@ -136,5 +141,11 @@ class HarambeeOAuth2(BaseOAuth2):
 =======
 >>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
         
+
     def revoke_token_params(self, token, uid):
-        return {'id_token_hint': token, 'state': self.get_session_state(), 'post_logout_redirect_uri': 'https://learn.harambeecloud.com'}
+        social_user = social_django.models.DjangoStorage.user.get_social_auth(provider=self.name, uid=uid)
+        return {
+            'id_token_hint': social_user.extra_data['id_token'],
+            'state': self.get_session_state(),
+            'post_logout_redirect_uri': 'https://learn.harambeecloud.com'
+        }
