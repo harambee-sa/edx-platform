@@ -111,8 +111,6 @@ def get_user_grades(user, course, course_str, course_grade):
         for section in chapter['sections']:
             section_children = course_structure.get_children(section.location)
             verticals = course_structure.get_children(section.location)
-            section_earned = section.all_total.earned
-            section_total = section.all_total.possible
             vertical_schema = {}
             for vertical_key in verticals:
                 sections_scores  = {}
