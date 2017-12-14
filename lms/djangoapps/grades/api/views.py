@@ -125,8 +125,8 @@ def get_user_grades(user, course, course_str, course_grade):
                         xblock_structure_url = generate_xblock_structure_url(course_str, problem_key, user)
                         sections_scores[str(problem_key)] = {
                             "date" : problem_score.first_attempted if problem_score.first_attempted is not None else "Not attempted",
-                            "section_earned" :problem_score.earned,
-                            "section_possible" :problem_score.possible,
+                            "earned" :problem_score.earned,
+                            "possible" :problem_score.possible,
                             "xblock_content_url": "{}{}".format(settings.LMS_ROOT_URL, xblock_content_url),
                             "xblock_structure_url": "{}{}".format(settings.LMS_ROOT_URL,xblock_structure_url)
                         }
