@@ -8,6 +8,7 @@ import logging
 import social_django
 
 log = logging.getLogger(__name__)
+
 class HarambeeOAuth2(BaseOAuth2):
     """
     Harambee OAuth2 authentication backend
@@ -39,16 +40,15 @@ class HarambeeOAuth2(BaseOAuth2):
     # The order of the default scope is important
     DEFAULT_SCOPE = ['openid', 'profile']
 
-    EXTRA_DATA = [
-        ('id_token', 'id_token'),
-    ]
 
-    def get_social_auth_uid(self, remote_id):
+    def extra_data(self, user, uid, response, details=None, *args, **kwargs):
         """
-        Return the uid in social auth.
+        Return access_token and extra defined names to store in extra_data field
         """
-        log.info("get_social_auth_uid: %s", str(remote_id))
-        return remote_id
+        data = super(HarambeeOAuth2, self).extra_data(user, uid, response, details, *args, **kwargs)
+        data['id_token'] = kwargs['request_id_token']
+        return data
+
 
     def auth_params(self, state=None):
         client_id, client_secret = self.get_key_and_secret()
@@ -68,6 +68,7 @@ class HarambeeOAuth2(BaseOAuth2):
         params['nonce'] = str(uuid.uuid4().hex) + str(uuid.uuid4().hex)
         params['response_mode'] = 'form_post'
         return params
+
 
     def auth_complete_params(self, state=None):
         client_id, client_secret = self.get_key_and_secret()

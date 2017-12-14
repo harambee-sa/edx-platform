@@ -64,6 +64,7 @@ import json
 import random
 import string
 import urllib
+from urlparse import parse_qs
 from collections import OrderedDict
 from logging import getLogger
 from smtplib import SMTPException
@@ -461,6 +462,12 @@ def running(request):
 # TypeError on dispatch to the auth backend's authenticate().
 # pylint: disable=unused-argument
 
+
+def get_id_token(strategy, response, *args, **kwargs):
+    """Reads whitelisted query params, transforms them into pipeline args."""
+    body = parse_qs(strategy.request.body.decode('utf-8'))
+    return { 'request_id_token': body['id_token'] }
+    
 
 def parse_query_params(strategy, response, *args, **kwargs):
     """Reads whitelisted query params, transforms them into pipeline args."""
