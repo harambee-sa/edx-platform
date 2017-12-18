@@ -147,6 +147,5 @@ class HarambeeOAuth2(BaseOAuth2):
         social_user = social_django.models.DjangoStorage.user.get_social_auth(provider=self.name, uid=uid)
         return {
             'id_token_hint': social_user.extra_data['id_token'],
-            'state': self.get_session_state(),
-            'post_logout_redirect_uri': 'https://learn.harambeecloud.com'
+            'state': self.get_session_state()
         }
