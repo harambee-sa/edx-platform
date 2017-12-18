@@ -2,13 +2,18 @@
 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <% if ( context.createAccountOption !== false && !context.syncLearnerProfileData && !context.enterpriseName) { %>
+=======
+<% if ( context.createAccountOption !== false ) { %>
+>>>>>>> Returning create account <was removed as result of merge from harambee>
 <div class="toggle-form">
     <span class="text"><%- gettext("First time here?") %></span>
     <a href="#login" class="form-toggle" data-type="register"><%- gettext("Create an Account.") %></a>
 </div>
 <% } %>
 
+<<<<<<< HEAD
 <% if (context.enterpriseName) { %>
     <% if (context.pipelineUserDetails.email) { %>
         <h2><%- gettext("Sign in to continue learning as {email}").replace("{email}", context.pipelineUserDetails.email) %></h2>
@@ -27,6 +32,8 @@
     <h2><%- gettext("Sign In") %></h2>
 <% } %>
 =======
+=======
+>>>>>>> Returning create account <was removed as result of merge from harambee>
 <h2><%- gettext("Sign In") %></h2>
 >>>>>>> [ci skip] removing account creation from login
 
