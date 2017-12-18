@@ -139,7 +139,6 @@ def get_user_course_response(course, users, course_str, depth):
         }
     return user_grades
 
-
 def _build_emails(identifiers, email_extension):
     """
     Itterates over a given list of indetifiers and adds the email extension
@@ -412,7 +411,6 @@ class GradesBulkAPIView(ListAPIView):
             list_of_emails_or_usernames =_build_emails(usernames, email_extension)
         else:
             list_of_emails_or_usernames = usernames
-
 
         if course_ids is None and email_extension is None:
             return generate_error_response('email_extention')
