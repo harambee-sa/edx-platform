@@ -65,9 +65,13 @@ edx-django-sites-extensions==2.3.0
 edx-enterprise==0.61.2
 edx-oauth2-provider==1.2.2
 <<<<<<< HEAD
+<<<<<<< HEAD
 edx-organizations==0.4.9
 =======
 edx-opaque-keys==0.4.0
+=======
+git+https://github.com/proversity-org/opaque-keys.git#egg=opaque-keys
+>>>>>>> add proversity opaque keys repo to requirements
 git+https://github.com/proversity-org/edx-organizations.git#egg=edx-organizations
 <<<<<<< HEAD
 >>>>>>> force and lock organization for org users in studio
