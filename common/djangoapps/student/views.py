@@ -151,7 +151,6 @@ from util.milestones_helpers import get_pre_requisite_courses_not_completed
 from util.password_policy_validators import validate_password_length, validate_password_strength
 from xmodule.modulestore.django import modulestore
 
-
 log = logging.getLogger("edx.student")
 AUDIT_LOG = logging.getLogger("audit")
 ReverifyInfo = namedtuple('ReverifyInfo', 'course_id course_name course_number date status display')  # pylint: disable=invalid-name
@@ -979,6 +978,12 @@ def dashboard(request):
 =======
 >>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
+
+    subscription_courses = frozenset(
+        enrollment.course_id for enrollment in course_enrollments
+        if modulestore().get_course(enrollment.course_id).subscription_catalog_id
+    )
+
     context = {
         'urls': urls,
         'program_data': program_data,
@@ -1023,6 +1028,7 @@ def dashboard(request):
         'disable_courseware_js': True,
         'display_course_modes_on_dashboard': enable_verified_certificates and display_course_modes_on_dashboard,
         'display_sidebar_on_dashboard': display_sidebar_on_dashboard,
+        'subscription_courses': subscription_courses
     }
 
     if ecommerce_service.is_enabled(request.user):

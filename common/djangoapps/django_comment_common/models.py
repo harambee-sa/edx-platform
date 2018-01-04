@@ -141,7 +141,9 @@ def all_permissions_for_user_in_course(user, course_id):  # pylint: disable=inva
 
     course = modulestore().get_course(course_id)
     if course is None:
-        raise ItemNotFoundError(course_id)
+        course = modulestore().get_library(course_id)
+        if course is None:
+            raise ItemNotFoundError(course_id)
 
     all_roles = {role.name for role in Role.objects.filter(users=user, course_id=course_id)}
 
