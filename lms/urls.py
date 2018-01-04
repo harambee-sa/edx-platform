@@ -41,7 +41,7 @@ urlpatterns = (
 
 	# Submissions api
     url(r'^api/submissions/', include('submissions.urls')),
-	
+
     # Event tracking endpoints
     url(r'', include('track.urls')),
 
@@ -1060,3 +1060,7 @@ if settings.FEATURES.get('ENABLE_FINANCIAL_ASSISTANCE_FORM'):
             name='submit_financial_assistance_request'
         )
     )
+
+urlpatterns += (
+    url(r'^subscription/', include('subscription_content.urls')),
+)
