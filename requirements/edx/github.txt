@@ -358,6 +358,7 @@ git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xbloc
 git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> lock edx-sga at version 0.7.0
 =======
 git+https://github.com/proversity-org/xblock-pdf.git@v1.0.0#egg=xblock-pdf
@@ -365,3 +366,7 @@ git+https://github.com/proversity-org/xblock-pdf.git@v1.0.0#egg=xblock-pdf
 =======
 git+https://github.com/proversity-org/xblock-pdf.git@v1.0.0#egg=xblock-pdf==1.0.0
 >>>>>>> FIX: correcting pdf xblock version
+=======
+git+https://github.com/proversity-org/xblock-pdf.git@v1.0.0#egg=xblock-pdf==1.0.0
+git+https://github.com/proversity-org/agnostic-content-xblock.git#egg=agnostic-content-xblock
+>>>>>>> ADD: agnostic xblock requirement
