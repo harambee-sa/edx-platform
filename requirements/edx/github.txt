@@ -357,7 +357,11 @@ git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xbloc
 >>>>>>> fix bad edx-sga version code
 git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> lock edx-sga at version 0.7.0
 =======
 git+https://github.com/proversity-org/xblock-pdf.git@v1.0.0#egg=xblock-pdf
 >>>>>>> add our forked PDF xblock to requirements
+=======
+git+https://github.com/proversity-org/xblock-pdf.git@v1.0.0#egg=xblock-pdf==1.0.0
+>>>>>>> FIX: correcting pdf xblock version
