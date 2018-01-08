@@ -233,9 +233,12 @@
 =======
                 submitForm: function(event) {
                     var data = this.getFormData();
+<<<<<<< HEAD
                     
                     console.log(data)
 >>>>>>> Finale fixes
+=======
+>>>>>>> remove second commit from ficus merge
 
                 if (!_.isUndefined(event)) {
                     event.preventDefault();
