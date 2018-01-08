@@ -215,8 +215,6 @@
 
                 submitForm: function(event) {
                     var data = this.getFormData();
-                    
-                    console.log(data)
 
                     if (!_.isUndefined(event)) {
                         event.preventDefault();
