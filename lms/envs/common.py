@@ -62,7 +62,7 @@ DISCUSSION_SETTINGS = {
 LMS_ROOT_URL = "http://localhost:8000"
 LMS_ENROLLMENT_API_PATH = "/api/enrollment/v1/"
 
-CUSTOM_FRAGMENTS = false
+CUSTOM_FRAGMENTS = False
 
 # Features
 FEATURES = {
