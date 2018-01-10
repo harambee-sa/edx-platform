@@ -18,65 +18,59 @@ from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import UNIFIED_COURSE_TAB_FLAG, SHOW_REVIEWS_TOOL_FLAG
 %>
 
-<%block name="content">
 <section role="courseware">
 
-    <div class="section-media"></div>
-
   <div class="container">
-    <div class="row">
-        <div class="col-md-12 col-xs-12">
-            <h1><span class="glyphicon glyphicon-book"></span> ${course.display_name_with_default}</h1>
 
-            <div class="btn-center">
-                <!-- <ul>
-                    <li>
-                        <a href="${reverse('openedx.course_bookmarks.home', args=[course_key])}">
-                            <i class="fa fa-2x fa-bookmark" aria-hidden="true"></i>
-                            ${_("Bookmarks")}
-                        </a>
-                    </li>
-                    <li>
-                        % if update_message_fragment and UNIFIED_COURSE_TAB_FLAG.is_enabled(course.id):
-                            <a href="${reverse('openedx.course_experience.course_updates', args=[course.id])}">
-                                <i class="fa fa-2x fa-bell" aria-hidden="true"></i>
-                                ${_("Updates")}
-                            </a>
-                        % endif
-                    </li>
-                </ul> -->
+    <h1>${course.display_name_with_default}</h1>
 
-                % if resume_course_url:
-                    <a href="${resume_course_url}" class="btn btn-lg btn-default">
-                        % if has_visited_course:
-                            ${_("Resume Course")}
-                        % else:
-                            ${_("Start Course")}
-                        % endif
+    <div class="btn-center">
+        <!-- <ul>
+            <li>
+                <a href="${reverse('openedx.course_bookmarks.home', args=[course_key])}">
+                    <i class="fa fa-2x fa-bookmark" aria-hidden="true"></i>
+                    ${_("Bookmarks")}
+                </a>
+            </li>
+            <li>
+                % if update_message_fragment and UNIFIED_COURSE_TAB_FLAG.is_enabled(course.id):
+                    <a href="${reverse('openedx.course_experience.course_updates', args=[course.id])}">
+                        <i class="fa fa-2x fa-bell" aria-hidden="true"></i>
+                        ${_("Updates")}
                     </a>
                 % endif
-            </div>
+            </li>
+        </ul> -->
 
-            <div class="grid">
-                <div class="items dates">
-                    ${HTML(dates_fragment.body_html())}
-                </div>
-                <div class="items handouts">
-                    % if handouts_html:
-                        <h3>${_("Course Handouts")}</h3>
-                        ${HTML(handouts_html)}
-                    % endif
-                </div>
-            </div>
+        % if resume_course_url:
+            <a href="${resume_course_url}" class="btn btn-lg btn-default">
+                % if has_visited_course:
+                    ${_("Resume Course")}
+                % else:
+                    ${_("Start Course")}
+                % endif
+            </a>
+        % endif
+    </div>
 
-            <h2>${_("Summary")}</h2>
-
-            ${HTML(outline_fragment.body_html())}
+    <div class="grid">
+        <div class="items dates">
+            ${HTML(dates_fragment.body_html())}
+        </div>
+        <div class="items handouts">
+            % if handouts_html:
+                <h3>${_("Course Handouts")}</h3>
+                ${HTML(handouts_html)}
+            % endif
         </div>
     </div>
+
+    <h2>${_("Summary")}</h2>
+
+    ${HTML(outline_fragment.body_html())}
+
   </div>
 </section>
-</%block>
 
 <script>
   $(document).ready(function () {
