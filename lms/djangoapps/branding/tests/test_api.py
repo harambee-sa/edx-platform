@@ -1,4 +1,4 @@
-# encoding: utf-8
+#-*- coding: utf-8 -*-
 """Tests of Branding API """
 from __future__ import unicode_literals
 

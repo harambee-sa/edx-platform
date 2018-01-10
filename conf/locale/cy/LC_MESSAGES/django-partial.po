@@ -1,7 +1,7 @@
 # edX community translations have been downloaded from Welsh (http://www.transifex.com/open-edx/edx-platform/language/cy/).
 # Copyright (C) 2017 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
+#
 # Translators:
 # ianto <transifex@cgriff.co.uk>, 2015
 # ciaran, 2015
@@ -5801,7 +5801,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 msgid "Language"
-msgstr ""
+msgstr "Iaith"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Location"

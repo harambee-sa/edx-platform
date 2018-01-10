@@ -2,18 +2,23 @@
 API views for Bulk Enrollment
 """
 import json
+from django.contrib.auth import get_user_model
+
 from edx_rest_framework_extensions.authentication import JwtAuthentication
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from bulk_enroll.serializers import BulkEnrollmentSerializer
+from bulk_enroll.serializers import BulkEnrollmentSerializer, BulkRegisterEnrollSerializer
 from enrollment.views import EnrollmentUserThrottle
-from instructor.views.api import students_update_enrollment
+from instructor.views.api import students_update_enrollment, create_and_register_users_without_email
+from opaque_keys.edx.keys import CourseKey
 from openedx.core.lib.api.authentication import OAuth2Authentication
 from openedx.core.lib.api.permissions import IsStaff
+from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from util.disable_rate_limit import can_disable_rate_limit
 
+USER_MODEL = get_user_model()
 
 @can_disable_rate_limit
 class BulkEnrollView(APIView):
@@ -78,3 +83,61 @@ class BulkEnrollView(APIView):
             return Response(data=response_dict, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class BulkRegisterEnrollView(APIView):
+    """
+    **Use Case**
+
+        Register and enroll multiple users in one or more courses.
+
+    **Example Request**
+    """
+    authentication_classes = JwtAuthentication, OAuth2Authentication
+    permission_classes = IsStaff,
+    throttle_classes = EnrollmentUserThrottle,
+
+    def post(self, request):
+        serializer = BulkRegisterEnrollSerializer(data=request.data)
+        results = {}
+        if serializer.is_valid():
+            metadata = request._request.META  # pylint: disable=protected-access        
+            metadata['CONTENT_TYPE'] = 'application/x-www-form-urlencoded'
+
+            response_dict = {
+                'auto_enroll': serializer.data.get('auto_enroll'),
+                'email_students': serializer.data.get('email_students'),
+                'action': serializer.data.get('action'),
+                'courses': {},
+                'errors': {}
+            }
+            registration_response = \
+                create_and_register_users_without_email(self.request)
+
+            results['registration-info'] =\
+                json.loads(registration_response.content) 
+                
+            for course_id in serializer.data.get('courses'):
+                course_key = CourseKey.from_string(course_id)
+                try:
+                    course = CourseOverview.get_from_id(course_key)
+                    enrollment_response = \
+                        students_update_enrollment(
+                            self.request,
+                            course_id=course_id
+                        )
+                    response_dict['courses'][course_id] = \
+                        json.loads(enrollment_response.content)
+
+                    results['enrollments'] = response_dict
+                except CourseOverview.DoesNotExist:
+                    response_dict['errors'][course_id] =\
+                        "Course does not exists"
+
+                    results['enrollments'] = response_dict
+
+                
+            return Response(results, status=status.HTTP_200_OK)
+        else:
+            return\
+                Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

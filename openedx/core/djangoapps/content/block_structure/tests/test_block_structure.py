@@ -51,15 +51,15 @@ class TestBlockStuctureAPI(APITestCase):
         self.auth, self.auth_header_oauth2_provider =\
             self.prepare_auth_token(app_user)
 
-        self.url = reverse('clear-course-cache')
+        self.url = reverse('clear-courses-cache')
 
     @ddt.data(
-        ({'course_id': 'course-v1:edX+DemoX+Demo_Course'}, status.HTTP_200_OK),
-        ({'course_id': ''}, status.HTTP_400_BAD_REQUEST),
-        ({}, status.HTTP_400_BAD_REQUEST),
+        ({'courses_id': ['course-v1:edX+DemoX+Demo_Course']}, status.HTTP_200_OK),
+        ({'courses_id': []}, status.HTTP_200_OK),
+        ({}, status.HTTP_200_OK),
     )
     @ddt.unpack
-    def test_course_clear_cache(self, post_params, expected_status):
+    def test_courses_clear_cache(self, post_params, expected_status):
         response = self.client.post(
             self.url,
             data=post_params,

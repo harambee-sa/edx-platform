@@ -23,6 +23,7 @@ from django.core.mail.message import EmailMessage
 from django.core.urlresolvers import reverse
 from django.core.validators import validate_email
 from django.db import IntegrityError, transaction
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.utils.html import strip_tags
@@ -146,6 +147,9 @@ SUCCESS_MESSAGE_TEMPLATE = _("The {report_type} report is being created. "
 
 from django.template import Context
 from django.template.loader import get_template
+
+from django.contrib.auth import get_user_model
+USER_MODEL = get_user_model()
 
 def common_exceptions_400(func):
     """
@@ -588,6 +592,99 @@ def create_and_enroll_user(email, username, name, country, password, course_id, 
     return errors
 
 
+    
+def _build_emails(identifiers, email_extension):
+    """
+    Itterates over a given list of indetifiers and adds the email extension
+    returns completed email list.
+    """
+    email_list = []
+    for identifier in identifiers:
+        if "@" in identifier:
+            email_list.append(identifier)
+        else:
+            email_list.append("{id}{ext}".format(id=identifier.strip(), ext=email_extension))
+    return email_list
+    
+@require_POST
+@ensure_csrf_cookie
+def create_and_register_users_without_email(request):
+    """
+    Create and Enroll.
+    Requires staff access.
+    
+    NB: The email extention in this API must match with the email extention in the 
+    lms/djangoapps/student_account/harambee.py file.
+    
+    The reason for this is harambee sends only a identifier when registering/logging in with SSO
+    'harambee-oauth2' if these emails does not match the user accounts will go out of sync and harambee
+    will lose a lot of user information.    
+    
+    """
+
+    enrollment_result = {}
+    identifiers_raw = request.POST.get('identifiers')
+    identifiers = identifiers_raw.split(',')
+    email_extension = request.POST.get('email_extension', None)
+    country = request.POST.get('country')
+    course_mode = request.POST.get('course_mode')
+    enrolled_by = request.user
+
+    # compile list of email adresses
+    
+    if email_extension is not None:
+        list_of_emails_or_usernames =\
+            _build_emails(identifiers, email_extension)
+    else:
+      list_of_emails_or_usernames = identifiers
+
+    # query database for all users holding these emails
+    user_list = USER_MODEL.objects.filter(
+        Q(username__in=list_of_emails_or_usernames) | 
+        Q(email__in=list_of_emails_or_usernames)
+    )
+
+    # Only create_and_enroll_users which do not exist, get complament of user list
+    new_users_to_register =\
+        set(list_of_emails_or_usernames) - set([user.email for user in user_list])
+    
+    
+    for email in list(new_users_to_register):
+        identifier = email.split('@')[0]
+        email = email
+        name = '{}'.format(identifier)
+        password = '{}12345'.format(identifier)
+        user_exists =\
+            User.objects.filter(Q(username=identifier)|Q(email=email)).exists()
+
+        if not user_exists:
+            with transaction.atomic():
+                user = create_user_and_user_profile(
+                    email,
+                    identifier,
+                    name,
+                    country,
+                    password
+                )
+                enrollment_result[user.username] =\
+                "{} newly registered.".format(identifier)
+        else:
+            user =\
+                User.objects.filter(Q(username=identifier)|Q(email=email))[0]
+
+            enrollment_result[identifier] =\
+                "already exists with this email {}.".format(user.email)
+
+            log.warning("This user already exists: {}".format(user.email))
+
+    # take note of the existing users
+    for user in user_list:
+        enrollment_result[user.username] =\
+            "already exists with this email {}.".format(user.email)
+
+    return JsonResponse(enrollment_result)
+
+
 @require_POST
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
@@ -633,11 +730,26 @@ def students_update_enrollment(request, course_id):
     course_id = CourseKey.from_string(course_id)
     action = request.POST.get('action')
     identifiers_raw = request.POST.get('identifiers')
-    identifiers = _split_input_list(identifiers_raw)
+    identifiers_raw = _split_input_list(identifiers_raw)
     auto_enroll = _get_boolean_param(request, 'auto_enroll')
     email_students = _get_boolean_param(request, 'email_students')
     is_white_label = CourseMode.is_white_label(course_id)
     reason = request.POST.get('reason')
+    
+    """
+    NB: when the request contains the email_extension field, we assume this to be the 'master identifier'
+    and will build the list of emails and pass that on for enrollment.
+    Reason: the incomming username from harambee is too long for the username field in edx, so it cuts off.
+    """
+    if request.POST.get('email_extension'):
+        identifiers =\
+            _build_emails(
+                identifiers_raw,
+                request.POST.get('email_extension')
+            )
+    else:
+        identifiers = identifiers_raw
+    
     if is_white_label:
         if not reason:
             return JsonResponse(
@@ -652,10 +764,11 @@ def students_update_enrollment(request, course_id):
     email_params = {}
     if email_students:
         course = get_course_by_id(course_id)
-        email_params = get_email_params(course, auto_enroll, secure=request.is_secure())
+        email_params =\
+            get_email_params(course, auto_enroll, secure=request.is_secure())
 
     results = []
-    for identifier in identifiers:
+    for index, identifier in enumerate(identifiers):
         # First try to get a user object from the identifer
         user = None
         email = None
@@ -675,7 +788,12 @@ def students_update_enrollment(request, course_id):
             validate_email(email)  # Raises ValidationError if invalid
             if action == 'enroll':
                 before, after, enrollment_obj = enroll_email(
-                    course_id, email, auto_enroll, email_students, email_params, language=language
+                    course_id,
+                    email,
+                    auto_enroll,
+                    email_students,
+                    email_params,
+                    language=language
                 )
                 before_enrollment = before.to_dict()['enrollment']
                 before_user_registered = before.to_dict()['user']
@@ -721,7 +839,7 @@ def students_update_enrollment(request, course_id):
             # Flag this email as an error if invalid, but continue checking
             # the remaining in the list
             results.append({
-                'identifier': identifier,
+                'identifier': identifiers_raw[index],
                 'invalidIdentifier': True,
             })
 
@@ -731,7 +849,7 @@ def students_update_enrollment(request, course_id):
             log.exception(u"Error while #{}ing student")
             log.exception(exc)
             results.append({
-                'identifier': identifier,
+                'identifier': identifiers_raw[index],
                 'error': True,
             })
 
@@ -740,7 +858,7 @@ def students_update_enrollment(request, course_id):
                 request.user, email, state_transition, reason, enrollment_obj
             )
             results.append({
-                'identifier': identifier,
+                'identifier': identifiers_raw[index],
                 'before': before.to_dict(),
                 'after': after.to_dict(),
             })

@@ -577,8 +577,29 @@ def _save_xblock(user, xblock, data=None, children_strings=None, metadata=None, 
         # update the xblock and call any xblock callbacks
         xblock = _update_with_callback(xblock, user, old_metadata, old_content)
 
-        # for static tabs, their containing course also records their display name
+        # get course
         course = store.get_course(xblock.location.course_key)
+
+        # ensure child release dates are kept in line with parent
+        def _update_child_start_dates(block):
+            if block.has_children:
+                children = block.get_children()
+                for child in children:
+                    if child.start == DEFAULT_START_DATE or child.start < block.start:
+                        child.start = block.start
+                        child.release_date = _get_release_date(child, user)
+                        child.released_to_students = datetime.now(UTC) > child.start
+                        has_changes = is_unit(child, block) and modulestore().has_changes(child)
+                        child.visibility_state = _compute_visibility_state(child, None, has_changes, is_self_paced(course))
+                        if child.due and child.due < child.start:
+                            child.due_date = get_default_time_display(None)
+                            child.due = child.fields['due'].to_json(None)
+                        _update_with_callback(child, user)
+                    if child.has_children:
+                        _update_child_start_dates(child)
+        _update_child_start_dates(xblock)
+
+        # for static tabs, their containing course also records their display name
         if xblock.location.category == 'static_tab':
             # find the course's reference to this tab and update the name.
             static_tab = CourseTabList.get_tab_by_slug(course.tabs, xblock.location.name)
@@ -1095,7 +1116,7 @@ def create_xblock_info(xblock, data=None, metadata=None, include_ancestor_info=F
         course = modulestore().get_course(xblock.location.course_key)
 
     # Compute the child info first so it can be included in aggregate information for the parent
-    should_visit_children = include_child_info and (course_outline and not is_xblock_unit or not course_outline)
+    should_visit_children = include_child_info and ((course_outline and not is_xblock_unit) or not course_outline)
     if should_visit_children and xblock.has_children:
         child_info = _create_xblock_child_info(
             xblock,

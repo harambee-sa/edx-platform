@@ -166,7 +166,6 @@ class CourseGradeFactory(object):
 
         course_grade = CourseGrade(user, course_data, force_update_subsections=force_update_subsections)
         course_grade = course_grade.update()
-
         should_persist = should_persist and course_grade.attempted
         if should_persist:
             course_grade._subsection_grade_factory.bulk_create_unsaved()

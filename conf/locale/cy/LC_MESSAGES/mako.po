@@ -1,7 +1,7 @@
 # edX community translations have been downloaded from Welsh (http://www.transifex.com/open-edx/edx-platform/language/cy/)
 # Copyright (C) 2017 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
+#
 # Translators:
 # Huw Waters <huwwaters@gmail.com>, 2013
 # Huw Waters <huwwaters@gmail.com>, 2013,2015
@@ -9021,3 +9021,257 @@ msgstr "Rhowch eich côd anrhydedd yma!"
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Copyright Text here!"
 msgstr "Rhowch eich testun hawlfraint yma!"
+
+msgid "Already have an Proversity.io account? Sign in."
+msgstr "Oes gennych gyfrif Proversity.io eisoes? Mewngofnodi."
+
+msgid "Create an Account"
+msgstr "Creu cyfrif"
+
+msgid "This is what you will use to login."
+msgstr "Here's what you'll use to log in."
+
+msgid "This name will be used on any certificates that you earn."
+msgstr ""
+"Bydd yr enw hwn yn cael ei ddefnyddio ar unrhyw dystysgrifau rydych chi'n eu "
+"hennill."
+
+msgid ""
+"The name that will identify you in your courses. It cannot be changed later."
+msgstr ""
+"Yr enw a fydd yn eich adnabod yn eich cyrsiau. Ni ellir ei newid yn nes "
+"ymlaen."
+
+msgid "Country or Region of Residence"
+msgstr "Gwlad neu Ranbarth Preswyl"
+
+msgctxt "custom translation"
+msgid "The country or region where you live."
+msgstr "Y wlad neu'r rhanbarth lle rydych chi'n byw."
+
+msgid "Highest level of education completed"
+msgstr "Lefel uchaf o addysg wedi' gwblhau"
+
+msgid "Tell us why you're interested in {platform_name} (optional)"
+msgstr ""
+"Dywedwch wrthym pam fod gennych ddiddordeb mewn {platform_name} (dewisol)"
+
+msgid "Review the Terms of Service and Honor Code"
+msgstr "Adolygu'r Telerau Gwasanaeth a Chod Honor"
+
+msgid "I agree to the {platform_name} Terms of Service and Honor Code"
+msgstr "Rwy'n cytuno i Amodau Gwasanaeth {platform_name} a Honor Cod"
+
+msgid "CREATE ACCOUNT"
+msgstr "Creu cyfrif"
+
+msgid "E-mail (required)"
+msgstr "E-bost (gofynnol)"
+
+msgid "Enter a valid email address that contains at least 3 characters."
+msgstr "Rhowch gyfeiriad e-bost dilys sy'n cynnwys o leiaf 3 nod."
+
+msgid "\"{email}\"\" is not a valid email address.\""
+msgstr "Nid yw \"{email}\"\" yn gyfeiriad e-bost dilys.\""
+
+msgid ""
+"It looks like {email_address} belongs to an existing account. Try again with "
+"a different email address."
+msgstr ""
+"Mae'n edrych fel {email_address} yn perthyn i gyfrif sy'n bodoli eisoes. "
+"Rhowch gynnig eto gyda chyfeiriad e-bost gwahanol."
+
+msgid "Full Name (required)"
+msgstr "Enw llawn (gofynnol)"
+
+msgid "Enter your full name."
+msgstr "Rhowch eich enw llawn."
+
+msgid "Enw defnyddiwr cyhoeddus (required)"
+msgstr "Enw defnyddiwr cyhoeddus (gofynnol)"
+
+msgid "Username must be between 2 and 30 characters long."
+msgstr "Rhaid i enw defnyddiwr fod rhwng 2 a 30 o gymeriadau o hyd."
+
+msgid ""
+"It looks like mariushuman belongs to an existing account. Try again with a "
+"different username."
+msgstr ""
+"Mae'n edrych fel mariushuman yn perthyn i gyfrif sy'n bodoli eisoes. Rhowch "
+"gynnig eto gydag enw defnyddiwr gwahanol."
+
+msgid "Password (required)"
+msgstr "Cyfrinair (gofynnol)"
+
+msgid "Enter a password."
+msgstr "Rhowch gyfrinair."
+
+msgid "Country or Region of Residence (required)"
+msgstr "Gwlad neu Ranbarth Preswyl (gofynnol)"
+
+msgid "Select your country or region of residence."
+msgstr "Dewiswch eich gwlad neu ranbarth preswylio."
+
+msgid "Gender (required)"
+msgstr "Rhyw (gofynnol)"
+
+msgid "Year of Birth (required)"
+msgstr "Blwyddyn geni (gofynnol)"
+
+msgid "Highest level of education completed (required)"
+msgstr "Lefel uchaf o addysg wedi'i gwblhau (yn ofynnol)"
+
+msgid "Select the highest level of education you have completed."
+msgstr "Dewiswch y lefel uchaf o addysg yr ydych wedi'i gwblhau."
+
+msgid ""
+"I agree to the {platform_name} Terms of Service and Honor Code (required)"
+msgstr ""
+"Rwy'n cytuno i Amodau Gwasanaeth {platform_name} a Chod Honor (yn ofynnol)"
+
+msgid "Account Information"
+msgstr "Gwybodaeth Cyfrif"
+
+msgid "Basic Account Information"
+msgstr "Gwybodaeth Gyfrif Sylfaenol"
+
+msgid "These settings include basic information about your account."
+msgstr "Mae'r lleoliadau hyn yn cynnwys gwybodaeth sylfaenol am eich cyfrif."
+
+msgid ""
+"The name that identifies you throughout {platform_name}. You cannot change "
+"your username."
+msgstr ""
+"Yr enw sy'n eich adnabod trwy {platform_name}. Ni allwch newid eich enw "
+"defnyddiwr."
+
+msgid ""
+"The name that is used for ID verification and that appears on your "
+"certificates. Other learners see your full name if you have selected Full "
+"Profile for profile visibility. Make sure to enter your name exactly as it "
+"appears on your photo ID, including any non-Roman characters."
+msgstr ""
+"Yr enw a ddefnyddir ar gyfer dilysu ID ac sy'n ymddangos ar eich "
+"tystysgrifau. Mae dysgwyr eraill yn gweld eich enw llawn os ydych chi wedi "
+"dewis Proffil Llawn ar gyfer gwelededd proffil. Gwnewch yn siĹľr eich bod yn "
+"cofnodi'ch enw yn union fel y mae'n ymddangos ar eich ID llun, gan gynnwys "
+"unrhyw gymeriadau nad ydynt yn Rhufeinig."
+
+msgid ""
+"The email address you use to sign in. Communications from {platform_name} "
+"and your courses are sent to this address."
+msgstr ""
+"Y cyfeiriad e-bost rydych chi'n ei ddefnyddio i arwyddo. Mae cyfathrebu gan "
+"{platform_name} a'ch cyrsiau yn cael eu hanfon at y cyfeiriad hwn."
+
+msgid ""
+"When you select \"Reset Your Password\", a message will be sent to the email "
+"address for your {platform_name} account. Click the link in the message to "
+"reset your password."
+msgstr ""
+"Pan ddewiswch 'Ailosod Eich Cyfrinair', anfonir neges at y cyfeiriad e-bost "
+"ar gyfer eich cyfrif {platform_name}. Cliciwch ar y ddolen yn y neges i "
+"ailosod eich cyfrinair."
+
+msgid "RESET YOUR PASSWORD"
+msgstr "Ailosod eich cyfrinair"
+
+msgid "Language"
+msgstr "Iaith"
+
+msgid ""
+"The language used throughout this site. This site is currently available in "
+"a limited number of languages."
+msgstr ""
+"Yr iaith a ddefnyddir drwy'r wefan hon. Mae'r wefan hon ar gael ar hyn o "
+"bryd mewn nifer cyfyngedig o ieithoedd."
+
+msgid "Time Zone"
+msgstr "Parth Amser"
+
+msgid ""
+"Select the time zone for displaying course dates. If you do not specify a "
+"time zone, course dates, including assignment deadlines, will be displayed "
+"in your browser's local time zone."
+msgstr ""
+"Dewiswch y parth amser ar gyfer arddangos dyddiadau cwrs. Os na fyddwch yn "
+"pennu parth amser, bydd dyddiadau'r cwrs, gan gynnwys dyddiadau cau "
+"aseiniadau, yn cael eu harddangos ym mharth amser lleol eich porwr."
+
+msgid "Additional Information"
+msgstr "Gwybodaeth Ychwanegol"
+
+msgid "Education Completed"
+msgstr "Addysg wedi'i gwblhau"
+
+msgid "Preferred Language"
+msgstr "Yr Iaith a Ffafrir"
+
+msgid "Social Media Links"
+msgstr "Cysylltiadau Cyfryngau Cymdeithasol"
+
+msgid ""
+"Optionally, link your personal accounts to the social media icons on your "
+"edX profile."
+msgstr ""
+"Yn ddewisol, cysylltwch eich cyfrifon personol i'r eiconau cyfryngau "
+"cymdeithasol ar eich proffil edX."
+
+msgid "Twitter Link"
+msgstr "Cysylltiad Twitter"
+
+msgid ""
+"Enter your Twitter username or the URL to your Twitter page. Delete the URL "
+"to remove the link."
+msgstr ""
+"Rhowch eich enw defnyddiwr Twitter neu'r URL i'ch tudalen Twitter. Dileu'r "
+"URL i gael gwared ar y ddolen."
+
+msgid "Facebook Link"
+msgstr "Cysylltiad Facebook"
+
+msgid ""
+"Enter your Facebook username or the URL to your Facebook page. Delete the "
+"URL to remove the link."
+msgstr ""
+"Rhowch eich enw defnyddiwr Facebook neu'r URL i'ch tudalen Facebook. Dileu'r "
+"URL i gael gwared ar y ddolen."
+
+msgid "LinkedIn Link"
+msgstr "Cysylltiad LinkedIn"
+
+msgid ""
+"Enter your LinkedIn username or the URL to your LinkedIn page. Delete the "
+"URL to remove the link."
+msgstr ""
+"Rhowch eich enw defnyddiwr LinkedIn neu'r URL i'ch tudalen LinkedIn. Dileu'r "
+"URL i gael gwared ar y ddolen."
+
+msgid "Linked Accounts"
+msgstr "Cyfrifon Cysylltiedig"
+
+msgid ""
+"You can link your social media accounts to simplify signing in to "
+"{platform_name}."
+msgstr ""
+"Gallwch gysylltu eich cyfrifon cyfryngau cymdeithasol i symleiddio llofnodi "
+"i {platform_name}."
+
+msgid "My Orders"
+msgstr "Fy Gorchmynion"
+
+msgid ""
+"This page contains information about orders that you have placed with "
+"{platform_name}."
+msgstr ""
+"Mae'r dudalen hon yn cynnwys gwybodaeth am orchmynion yr ydych wedi'u gosod "
+"gyda {platform_name}."
+
+msgid "ORDER NUMBER"
+msgstr "Rhif archeb"
+
+msgid "ORDERS PALCED"
+msgstr "Gorchmynion wedi'u gosod"
+
+msgid "TOTAL"
+msgstr "CYFANSWM"

@@ -43,3 +43,44 @@ class BulkEnrollmentSerializer(serializers.Serializer):
             except InvalidKeyError:
                 raise serializers.ValidationError("Course key not valid: {}".format(course))
         return value
+
+
+class BulkRegisterEnrollSerializer(serializers.Serializer):
+    """Serializes enrollment information for a collection of students/emails.
+
+    This is mainly useful for implementing validation when performing bulk enrollment operations.
+    """
+    identifiers = serializers.CharField(required=True)
+    courses = StringListField(required=True)
+    action = serializers.ChoiceField(
+        choices=(
+            ('enroll', 'enroll'),
+            ('unenroll', 'unenroll')
+        ),
+        required=True
+    )
+    auto_enroll = serializers.BooleanField(default=False)
+    email_students = serializers.BooleanField(default=False)
+    country = serializers.CharField()
+    course_mode = serializers.CharField()
+    email_extension = serializers.CharField(required=False)
+
+    def validate_courses(self, value):
+        """
+        Check that each course key in list is valid.
+        """
+        course_keys = value
+        new_values = []
+        for course in course_keys:
+            course = course.replace(" ", "")
+            try:
+                CourseKey.from_string(course)
+                new_values.append(course)
+            except Exception as e:
+                raise \
+                    serializers.ValidationError("Course key not valid: {}".format(course))
+            except InvalidKeyError:
+                raise \
+                    serializers.ValidationError("Course key not valid: {}".format(course))
+                    
+        return new_values

@@ -1,7 +1,7 @@
 # edX translation file
 # Copyright (C) 2017 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
@@ -389,7 +389,7 @@ msgstr ""
 #: cms/templates/js/course-instructor-details.underscore
 #: cms/templates/js/signatory-details.underscore
 msgid "Organization"
-msgstr ""
+msgstr "Sefydliad"
 
 #: cms/templates/js/course-instructor-details.underscore
 msgid "Organization Name"

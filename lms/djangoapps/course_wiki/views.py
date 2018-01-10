@@ -77,13 +77,13 @@ def course_wiki_redirect(request, course_id, wiki_path=""):  # pylint: disable=u
             # Translators: this string includes wiki markup.  Leave the ** and the _ alone.
             _("This is the wiki for **{organization}**'s _{course_name}_.").format(
                 organization=course.display_org_with_default,
-                course_name=course.display_name_with_default_escaped,
+                course_name=course.display_name_with_default,
             )
         )
         urlpath = URLPath.create_article(
             root,
             course_slug,
-            title=course_slug,
+            title=course.display_name_with_default,
             content=content,
             user_message=_("Course page automatically created."),
             user=None,

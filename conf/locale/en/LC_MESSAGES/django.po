@@ -32,8 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2017-10-31 05:35-0400\n"
-"PO-Revision-Date: 2017-10-31 09:35:17.857828\n"
+"POT-Creation-Date: 2017-11-14 03:01-0500\n"
+"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -195,7 +195,6 @@ msgstr ""
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 #: common/lib/xmodule/xmodule/x_module.py
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion.py
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
 #: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
 #: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
 #: cms/templates/container.html cms/templates/library.html
@@ -734,7 +733,7 @@ msgid ""
 "In order to sign in, you need to activate your account.<br /><br />We just "
 "sent an activation link to <strong>{email}</strong>.  If you do not receive "
 "an email, check your spam folders or <a href=\"{support_url}\">contact "
-"{platform} Support</a>."
+"{platform_name} Support</a>."
 msgstr ""
 
 #: common/djangoapps/student/views.py
@@ -1647,7 +1646,7 @@ msgstr ""
 msgid "Incorrect:"
 msgstr ""
 
-#: common/lib/capa/capa/responsetypes.py src/xblock-poll/poll/poll.py
+#: common/lib/capa/capa/responsetypes.py
 msgid "Answer"
 msgstr ""
 
@@ -3534,7 +3533,6 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/lti_module.py
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
 msgid "Weight"
 msgstr ""
 
@@ -10546,145 +10544,6 @@ msgstr ""
 msgid "Thank you!"
 msgstr ""
 
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Display Correctness?"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid ""
-"This is a flag that indicates if the indicator icon should be displayed "
-"after a student enters their response"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "This is the title for this question type"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Free-text Response"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Full-Credit Key Phrases"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid ""
-"This is a list of words or phrases, one of which must be present in order "
-"for the student's answer to receive full credit"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Half-Credit Key Phrases"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid ""
-"This is a list of words or phrases, one of which must be present in order "
-"for the student's answer to receive half credit"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Maximum Number of Attempts"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid ""
-"This is the maximum number of times a student is allowed to attempt the "
-"problem"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Maximum Word Count"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "This is the maximum number of words allowed for this question"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Minimum Word Count"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "This is the minimum number of words required for this question"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Prompt"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid ""
-"This is the prompt students will see when asked to enter their response"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Please enter your response within this text area"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Submission Received Message"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "This is the message students will see upon submitting their response"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Your submission has been received"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "This assigns an integer value representing the weight of this problem"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "Draft Received Message"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid "This is the message students will see upon submitting a draft response"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-msgid ""
-"Your answers have been saved but not graded. Click \"Submit\" to grade them."
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-#, python-brace-format
-msgid "Your response must be between {min} and {max} word."
-msgid_plural "Your response must be between {min} and {max} words."
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-#, python-brace-format
-msgid "Invalid Word Count. {word_count_message}"
-msgstr ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-#, python-brace-format
-msgid "{weight} point possible"
-msgid_plural "{weight} points possible"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-#, python-brace-format
-msgid "{score_string}/{weight} point"
-msgid_plural "{score_string}/{weight} points"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/xblock-free-text-response/freetextresponse/freetextresponse.py
-#, python-brace-format
-msgid "You have used {count_attempts} of {max_attempts} submission"
-msgid_plural "You have used {count_attempts} of {max_attempts} submissions"
-msgstr[0] ""
-msgstr[1] ""
-
 #: src/xblock-google-drive/google_drive/templates/html/google_calendar_edit.html
 msgid "Invalid Google Calendar"
 msgstr ""
@@ -10742,201 +10601,6 @@ msgstr ""
 #: src/xblock-google-drive/google_drive/templates/html/google_docs_edit.html
 msgid ""
 "Alternative text describes an image and appears if the image is unavailable."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Whether or not to display results to the user."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "The maximum number of times a user may send a submission."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Number of times the user has sent a submission."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Text to display after the user votes."
-msgstr ""
-
-#. Translators: {field} is either "answers" or "questions".
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid "'{field}' is not present, or not a JSON array."
-msgstr ""
-
-#. Translators: {noun} is either "Answer" or "Question". {item} identifies the
-#. answer or question.
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid "{noun} {item} not a javascript object!"
-msgstr ""
-
-#. Translators: {noun} is either "Answer" or "Question". {item} identifies the
-#. answer or question.
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid "{noun} {item} contains no key."
-msgstr ""
-
-#. Translators: {noun} is either "Answer" or "Question".
-#. {noun_lower} is the lowercase version of {noun}.
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid ""
-"{noun} has no text or img. Please make sure all {noun_lower}s have one or "
-"the other, or both."
-msgstr ""
-
-#. Translators: {noun} is either "Answer" or "Question".
-#. {noun_lower} is the lowercase version of {noun}.
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid ""
-"{noun} was added with no label. All {noun_lower}s must have labels. Please "
-"check the form. Check the form and explicitly delete {noun_lower}s if not "
-"needed."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid ""
-"All images must have an alternative text describing the image in a way that "
-"would allow someone to answer the poll if the image did not load."
-msgstr ""
-
-#. Translators: "{noun_lower} is either "answer" or "question".
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid "You must include at least one {noun_lower}."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Maximum Submissions missing or not an integer."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Private results may not be False when Maximum Submissions is not 1."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Poll"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "What is your favorite color?"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Red"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Blue"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Green"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py lms/templates/dashboard/_reason_survey.html
-msgid "Other"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "The answer options on this poll."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Total tally of answers from students."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "The student's answer"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "You have already voted in this poll."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Answer not included with request."
-msgstr ""
-
-#. Translators: {choice} uniquely identifies a specific answer belonging to a
-#. poll or survey.
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid "No key \"{choice}\" in answers table."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "You have already voted as many times as you are allowed."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "You must specify a question."
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Survey"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py lms/templates/courseware/course_about.html
-#: lms/templates/instructor/instructor_dashboard_2/course_info.html
-msgid "Yes"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py lms/templates/courseware/course_about.html
-#: lms/templates/instructor/instructor_dashboard_2/course_info.html
-msgid "No"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Maybe"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Answer choices for this Survey"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Are you enjoying the course?"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Would you recommend this course to your friends?"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Do you think you will learn a lot?"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Questions for this Survey"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "The user's answers"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid ""
-"Not all questions were included, or unknown questions were included. Try "
-"refreshing and trying again."
-msgstr ""
-
-#. Translators: {answer_key} uniquely identifies a specific answer belonging
-#. to a poll or survey.
-#. {question_key} uniquely identifies a specific question belonging to a poll
-#. or survey.
-#: src/xblock-poll/poll/poll.py
-#, python-brace-format
-msgid "Found unknown answer '{answer_key}' for question key '{question_key}'"
-msgstr ""
-
-#: src/xblock-poll/poll/poll.py
-msgid "Question"
 msgstr ""
 
 #: cms/djangoapps/contentstore/course_group_config.py
@@ -14554,6 +14218,16 @@ msgid "Are you {min_age} years or older?"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Yes"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "No"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
 msgid "You are enrolled in this course"
 msgstr ""
 
@@ -15527,6 +15201,10 @@ msgstr ""
 
 #: lms/templates/dashboard/_reason_survey.html
 msgid "Something was broken"
+msgstr ""
+
+#: lms/templates/dashboard/_reason_survey.html
+msgid "Other"
 msgstr ""
 
 #: lms/templates/dashboard/_reason_survey.html

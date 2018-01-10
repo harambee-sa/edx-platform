@@ -1,4 +1,4 @@
-# encoding: utf-8
+#-*- coding: utf-8 -*-
 """Tests of Branding API views. """
 import json
 import urllib
