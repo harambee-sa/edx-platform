@@ -135,6 +135,7 @@ def container_handler(request, usage_key_string):
             parent = get_parent_xblock(parent)
         ancestor_xblocks.reverse()
 
+
         # Fetch the XBlock info for use by the container page. Note that it includes information
         # about the block's ancestors and siblings for use by the Unit Outline.
         xblock_info = create_xblock_info(xblock, include_ancestor_info=is_unit_page)
@@ -143,7 +144,6 @@ def container_handler(request, usage_key_string):
         # need to figure out where this item is in the list of children as the
         # preview will need this
         index = 1
-
 
         return render_to_response('library_advanced_component.html', {
             #'context_course': course,  # Needed only for display of menus at top of page.
