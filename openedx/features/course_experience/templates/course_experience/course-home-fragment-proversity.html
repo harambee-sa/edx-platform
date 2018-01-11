@@ -46,6 +46,7 @@ from openedx.features.course_experience import UNIFIED_COURSE_TAB_FLAG, SHOW_REV
             <a href="${resume_course_url}" class="btn btn-lg btn-default">
                 % if has_visited_course:
                     ${_("Resume Course")}
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 % else:
                     ${_("Start Course")}
                 % endif
@@ -55,13 +56,17 @@ from openedx.features.course_experience import UNIFIED_COURSE_TAB_FLAG, SHOW_REV
 
     <div class="grid">
         <div class="items dates">
-            ${HTML(dates_fragment.body_html())}
+            <div>
+                ${HTML(dates_fragment.body_html())}
+            </div>
         </div>
         <div class="items handouts">
-            % if handouts_html:
-                <h3>${_("Course Handouts")}</h3>
-                ${HTML(handouts_html)}
-            % endif
+            <div>
+                % if handouts_html:
+                    <h3>${_("Course Handouts")}</h3>
+                    ${HTML(handouts_html)}
+                % endif
+            </div>
         </div>
     </div>
 
