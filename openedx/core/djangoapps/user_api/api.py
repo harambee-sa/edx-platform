@@ -799,19 +799,14 @@ class RegistrationFormFactory(object):
 
         # Translators: "Terms of Service" is a legal document users must agree to
         # in order to register a new account.
-<<<<<<< HEAD
         label = Text(_(
             u"I agree to the {platform_name} {terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}"
         )).format(
-            platform_name=configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME),
+            platform_name=configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME),
             terms_of_service=terms_label,
             terms_of_service_link_start=HTML("<a href='{terms_link}' target='_blank'>").format(terms_link=terms_link),
             terms_of_service_link_end=HTML("</a>"),
-=======
-        label = _(u"I agree to the {platform_name} {terms_of_service}").format(
-            platform_name=configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME),
-            terms_of_service=terms_label
->>>>>>> FIX: changing to use lowercase platform_name from configurations, this will respect microsites
+
         )
 
         # Translators: "Terms of Service" is a legal document users must agree to
@@ -846,17 +841,11 @@ class RegistrationFormFactory(object):
 
         # Translators: "Terms of service" is a legal document users must agree to
         # in order to register a new account.
-<<<<<<< HEAD
         label = Text(_(u"I agree to the {platform_name} {tos_link_start}{terms_of_service}{tos_link_end}")).format(
-            platform_name=configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME),
+            platform_name=configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME),
             terms_of_service=terms_label,
             tos_link_start=HTML("<a href='{terms_link}' target='_blank'>").format(terms_link=terms_link),
             tos_link_end=HTML("</a>"),
-=======
-        label = _(u"I agree to the {platform_name} {terms_of_service}").format(
-            platform_name=configuration_helpers.get_value("platform_name", settings.PLATFORM_NAME),
-            terms_of_service=terms_label
->>>>>>> FIX: changing to use lowercase platform_name from configurations, this will respect microsites
         )
 
         # Translators: "Terms of service" is a legal document users must agree to

@@ -421,39 +421,17 @@ FEATURES = {
 
     # Whether course goals is enabled.
     'ENABLE_COURSE_GOALS': True,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     # Set to enable Enterprise integration
     'ENABLE_ENTERPRISE_INTEGRATION': False,
 
     # Whether HTML XBlocks/XModules return HTML content with the Course Blocks API student_view_data
     'ENABLE_HTML_XBLOCK_STUDENT_VIEW_DATA': False,
-=======
-=======
-=======
-    # Enable footer banner for cookie consent.
-    # See https://cookieconsent.insites.com/ for more.
-    'ENABLE_COOKIE_CONSENT': False,
->>>>>>> add cookie consent popup banner feature
->>>>>>> add cookie consent popup banner feature
-<<<<<<< HEAD
->>>>>>> add cookie consent popup banner feature
-=======
-=======
     
     # Enable footer banner for cookie consent.
     # See https://cookieconsent.insites.com/ for more.
     'ENABLE_COOKIE_CONSENT': False,
->>>>>>> merge fixes
->>>>>>> merge fixes
-=======
-
-    # Enable footer banner for cookie consent.
-    # See https://cookieconsent.insites.com/ for more.
-    'ENABLE_COOKIE_CONSENT': False,
-
->>>>>>> upstream master merge
+    
 }
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
@@ -1163,19 +1141,18 @@ WIKI_LINK_DEFAULT_LEVEL = 2
 ##### Feedback submission mechanism #####
 FEEDBACK_SUBMISSION_EMAIL = None
 
-<<<<<<< HEAD
 ##### Zendesk #####
 ZENDESK_URL = None
 ZENDESK_USER = None
 ZENDESK_API_KEY = None
 ZENDESK_OAUTH_ACCESS_TOKEN = None
-=======
+
 ##### Helpdesk #####
 HELPDESK = None
 HELPDESK_URL = None
 HELPDESK_USER = None
 HELPDESK_API_KEY = None
->>>>>>> Freshdesk support in production
+
 ZENDESK_CUSTOM_FIELDS = {}
 
 ##### EMBARGO #####
@@ -3044,42 +3021,11 @@ COURSE_CATALOG_VISIBILITY_PERMISSION = 'see_in_catalog'
 # visible. We default this to the legacy permission 'see_exists'.
 COURSE_ABOUT_VISIBILITY_PERMISSION = 'see_about_page'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 DEFAULT_MOBILE_AVAILABLE = True
-=======
-DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "none"
-=======
-=======
->>>>>>> set default course visibility in catalog
-DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "none"
-=======
-DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
->>>>>>> change catalog visibility default to none
-<<<<<<< HEAD
->>>>>>> change catalog visibility default to none
-=======
-=======
-# Set default course visibility in catalog
-DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
-<<<<<<< HEAD
 
->>>>>>> set default course visibility in catalog
->>>>>>> set default course visibility in catalog
-=======
-# Set default course visibility in catalog
-DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
-<<<<<<< HEAD
+DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "none"
 
->>>>>>> upstream master merge
-=======
 DEFAULT_MOBILE_AVAILABLE = False
->>>>>>> Returning work we wissed due to upgrade
-=======
-DEFAULT_MOBILE_AVAILABLE = False
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 # Enrollment API Cache Timeout
 ENROLLMENT_COURSE_DETAILS_CACHE_TIMEOUT = 60
@@ -3547,7 +3493,10 @@ ACE_CHANNEL_SAILTHRU_API_SECRET = None
 ACE_ROUTING_KEY = LOW_PRIORITY_QUEUE
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Proversity/subscription (#614)
+=======
+>>>>>>> UPGRADE
 # Initialize to 'unknown', but read from JSON in aws.py
 EDX_PLATFORM_REVISION = 'unknown'
 
@@ -3561,6 +3510,7 @@ COMPLETION_VIDEO_COMPLETE_PERCENTAGE = 0.95
 RATELIMIT_ENABLE = True
 RATELIMIT_RATE = '30/m'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ############## Plugin Django Apps #########################
 
@@ -3569,11 +3519,14 @@ INSTALLED_APPS.extend(DjangoAppRegistry.get_plugin_apps(ProjectType.LMS))
 DjangoAppRegistry.add_plugin_settings(__name__, ProjectType.LMS, SettingsType.COMMON)
 =======
 =======
+=======
+>>>>>>> UPGRADE
 ############## Settings for Bibblio ####################################
 
 BIBBLIO_CLIENT_ID = 'bibblio_client_id'
 BIBBLIO_CLIENT_SECRET = 'bibblio_client_secret'
 
+<<<<<<< HEAD
 EDX_PLATFORM_REVISION = os.environ.get('EDX_PLATFORM_REVISION')
 if not EDX_PLATFORM_REVISION:
     try:
@@ -3584,3 +3537,14 @@ if not EDX_PLATFORM_REVISION:
         EDX_PLATFORM_REVISION = 'unknown'
 >>>>>>> Proversity/subscription (#614)
 >>>>>>> Proversity/subscription (#614)
+=======
+############### Settings for Django Rate limit #####################
+RATELIMIT_ENABLE = True
+RATELIMIT_RATE = '30/m'
+
+############## Plugin Django Apps #########################
+
+from openedx.core.djangolib.django_plugins import DjangoAppRegistry, ProjectType, SettingsType
+INSTALLED_APPS.extend(DjangoAppRegistry.get_plugin_apps(ProjectType.LMS))
+DjangoAppRegistry.add_plugin_settings(__name__, ProjectType.LMS, SettingsType.COMMON)
+>>>>>>> UPGRADE

@@ -583,13 +583,11 @@ def render_html_view(request, user_id, course_id):
         # Append course info
         _update_course_context(request, context, course, course_key, platform_name)
 
-<<<<<<< HEAD
         # Append course run info from discovery
         context.update(catalog_data)
-=======
-    # Append badge info
-    _update_badge_context(context, course, user, preview_mode)
->>>>>>> allow staff to preview certificates independent of course mode
+
+        # Append badge info
+        _update_badge_context(context, course, user, preview_mode)
 
         # Append user info
         _update_context_with_user_info(context, user, user_certificate)

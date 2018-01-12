@@ -208,15 +208,13 @@ def video_summary(video_profiles, course_id, video_descriptor, request, local_ca
     else:
         video_url = video_descriptor.source
 
-<<<<<<< HEAD
     if video_descriptor.source:
         all_sources.append(video_descriptor.source)
-=======
+
     video_alternatives = []
     for source in video_descriptor.html5_sources:
         if source != video_url:
             video_alternatives.append(source)
->>>>>>> add video list alternatives
 
     # Get duration/size, else default
     duration = video_data.get('duration', None)

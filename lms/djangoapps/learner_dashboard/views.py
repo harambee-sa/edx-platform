@@ -44,26 +44,12 @@ def program_details(request, program_uuid):
         'show_dashboard_tabs': True,
         'nav_hidden': True,
         'disable_courseware_js': True,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'uses_pattern_library': True,
-<<<<<<< HEAD
-=======
-=======
         'uses_pattern_library': False,
->>>>>>> merge fixes
+
         'user_preferences': get_user_preferences(request.user),
         'program_data': program_data,
         'course_data': course_data,
         'certificate_data': certificate_data
-<<<<<<< HEAD
-=======
-        'uses_pattern_library': False,
-        'user_preferences': get_user_preferences(request.user)
->>>>>>> never use edx pattern library
->>>>>>> never use edx pattern library
-=======
->>>>>>> merge fixes
     }
 
     return render_to_response('learner_dashboard/program_details.html', context)

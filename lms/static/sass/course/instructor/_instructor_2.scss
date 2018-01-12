@@ -283,12 +283,7 @@
   .instructor-nav {
     @extend %ui-no-list;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     border-top: 1px solid $gray-l3;
->>>>>>> remove all the css importants
     border-bottom: 1px solid $gray-l3;
 
     .nav-item {
@@ -311,9 +306,6 @@
         &.active-section {
           border-bottom: 3px solid theme-color("primary");
           color: $black;
-=======
-=======
->>>>>>> upstream master merge
         .nav-item {
             @extend %t-copy-base;
             display: inline-block;
@@ -1121,8 +1113,6 @@
 
   // CSV-based file upload for auto cohort assigning and
   // cohort the discussion topics.
-<<<<<<< HEAD
-<<<<<<< HEAD
   .toggle-cohort-management-secondary,
   .toggle-cohort-management-discussions {
     @extend %t-copy-sub1;
@@ -1137,9 +1127,6 @@
     &:hover,
     &:focus {
       text-decoration: underline;
-=======
-=======
->>>>>>> upstream master merge
     .toggle-cohort-management-secondary,
     .toggle-cohort-management-discussions {
         @extend %t-copy-sub1;
@@ -1828,29 +1815,13 @@ input[name="subject"] {
   .coupons-table {
     width: 100%;
 
-<<<<<<< HEAD
-    tr:nth-child(even) {
-=======
     tr:nth-child(even){
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> remove all the css importants
       background-color: $gray-l6;
       border-bottom: 1px solid #f3f3f3;
     }
 
-    tr.always-gray {
-      background: #eee !important;
-      border-top: 2px solid $white;
-    }
-
-    tr.always-white {
-      background: #fff !important;
 
       td {
-=======
-=======
->>>>>>> upstream master merge
         background-color: $gray-l6;
         border-bottom: 1px solid #f3f3f3;
       }
@@ -1916,22 +1887,8 @@ input[name="subject"] {
     }
 
     // in_active coupon rows style
-<<<<<<< HEAD
-<<<<<<< HEAD
-    .inactive_coupon {
-<<<<<<< HEAD
-      background: #fff0f0 !important;
-=======
-      background:  #fff0f0 !important;
-=======
     .inactive_coupon{
       background:  #FFF0F0;
->>>>>>> remove all the css importants
->>>>>>> remove all the css importants
-=======
-    .inactive_coupon{
-      background:  #FFF0F0;
->>>>>>> upstream master merge
       text-decoration: line-through;
       color: rgba(51, 51, 51, 0.2);
       border-bottom: 1px solid #fff;
@@ -2076,32 +2033,18 @@ input[name="subject"] {
         }
       }
 
-<<<<<<< HEAD
-      li:nth-child(even) {
-        @include margin-left(30px !important);
-=======
+
       li:nth-child(even){
         @include margin-left(30px);
->>>>>>> remove all the css importants
       }
 
       li:nth-child(3),
       li:nth-child(4) {
         width: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        @include margin-left(0 !important);
-=======
-        @include margin-left(0px !important);
-=======
+        @include margin-left(0);
         @include margin-left(0px);
->>>>>>> remove all the css importants
->>>>>>> remove all the css importants
-=======
         @include margin-left(0px);
->>>>>>> upstream master merge
+        @include margin-left(0px);
       }
 
       li:nth-child(3) {
@@ -2170,13 +2113,8 @@ input[name="subject"] {
         margin-bottom: $baseline;
       }
 
-<<<<<<< HEAD
-      li:nth-child(even) {
-        @include margin-left(0 !important);
-=======
       li:nth-child(even){
         @include margin-left(0px);
->>>>>>> remove all the css importants
       }
 
       li:nth-child(3n) {
@@ -2198,14 +2136,7 @@ input[name="subject"] {
         }
 
         min-height: 5px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        @include margin-left(0 !important);
-
-=======
-=======
->>>>>>> upstream master merge
+<
         @include margin-left(0px);
         input[type='checkbox'] {
           width: auto;
@@ -2213,17 +2144,11 @@ input[name="subject"] {
         }
       }
 
-<<<<<<< HEAD
-      li#generate-registration-modal-field-country ~ li#generate-registration-modal-field-unit-price,
-      li#generate-registration-modal-field-country ~ li#generate-registration-modal-field-internal-reference {
-        @include margin-left(0 !important);
-        @include margin-right(15px !important);
-=======
+
       li#generate-registration-modal-field-country ~  li#generate-registration-modal-field-unit-price,
       li#generate-registration-modal-field-country ~  li#generate-registration-modal-field-internal-reference {
         @include margin-left(0px);
         @include margin-right(15px);
->>>>>>> remove all the css importants
       }
 
       li#generate-registration-modal-field-custom-reference-number {
@@ -2239,15 +2164,7 @@ input[name="subject"] {
         margin-left: ($baseline/4);
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    li#set-course-mode-modal-field-currency {
-      @include margin-left(0 !important);
-
-=======
-=======
->>>>>>> upstream master merge
     li#set-course-mode-modal-field-currency{
       @include margin-left(0px);
       select {

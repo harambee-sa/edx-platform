@@ -28,12 +28,6 @@ urlpatterns = [
         ),
         views.CourseGradingPolicy.as_view(), name='course_grading_policy'
     ),
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ]
-=======
-)
->>>>>>> Returning work we wissed due to upgrade
-=======
-)
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
+

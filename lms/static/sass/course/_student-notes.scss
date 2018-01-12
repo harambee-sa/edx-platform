@@ -372,13 +372,8 @@ $divider-visual-tertiary: ($baseline/20) solid $gray-l4;
 
         @include padding-right($baseline);
 
-<<<<<<< HEAD
-        color: $lightest-base-font-color;
-        font-weight: $font-semibold !important; // needed for poor base LMS styling scope
-=======
         color: $gray-l2;
         font-weight: $font-semibold; // needed for poor base LMS styling scope
->>>>>>> remove all the css importants
       }
 
       .tabs {

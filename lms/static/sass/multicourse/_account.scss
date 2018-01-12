@@ -44,12 +44,8 @@
   %heading-4 {
     font-size: 14px;
     font-weight: 600;
-<<<<<<< HEAD
-    letter-spacing: 0 !important;
-=======
     text-transform: uppercase;
     letter-spacing: 0;
->>>>>>> remove all the css importants
     color: $m-gray-d2;
   }
 
@@ -86,14 +82,9 @@
     text-align: center;
     border: none;
     text-shadow: none;
-<<<<<<< HEAD
-    font-size: $font-size-base;
-    box-shadow: none !important;
-=======
     letter-spacing: 0;
     font-size: 16px;
     box-shadow: none;
->>>>>>> remove all the css importants
   }
 
   %button-secondary {
@@ -223,17 +214,6 @@
     &:focus {
       color: $link-color;
       font-weight: 400;
-<<<<<<< HEAD
-      text-decoration: none !important; // needed but nasty
-      font-family: $font-family-sans-serif;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none !important; // needed but nasty
-      border-bottom: 1px dotted $link-color;
-=======
       text-decoration: none; // needed but nasty
       font-family: $sans-serif;
     }
@@ -241,7 +221,6 @@
     &:hover, &:active, &:focus {
       text-decoration: none; // needed but nasty
       border-bottom: 1px dotted $link-color-d1;
->>>>>>> remove all the css importants
     }
   }
 
@@ -266,18 +245,9 @@
 
   aside {
     @include float(left);
-
     width: 280px;
-
-<<<<<<< HEAD
-    p,
-    ol,
-    ul {
-      font-size: $font-size-sm !important;
-=======
     p, ol, ul {
       font-size: 14px;
->>>>>>> remove all the css importants
     }
   }
 
@@ -685,11 +655,7 @@
     background: tint($danger, 95%);
 
     .message-title {
-<<<<<<< HEAD
-      color: shade($danger, 10%) !important;
-=======
       color: shade($red, 10%);
->>>>>>> remove all the css importants
     }
   }
 

@@ -72,12 +72,7 @@ class Command(TrackedCommand):
         # user's preferred language.  This line ensures that the result will
         # match this installation's default locale.  Otherwise, inside a
         # management command, it will always return "en-us".
-<<<<<<< HEAD
-        translation.activate(settings.LANGUAGE_CODE)
-
-=======
         translation.activate(configuration_helpers.get_value('LANGUAGE_CODE'))
->>>>>>> get LANGUAGE_CODE from configuration helper
         try:
             user, _, reg = _do_create_account(form)
             if options['staff']:

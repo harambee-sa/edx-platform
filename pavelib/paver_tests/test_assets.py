@@ -175,13 +175,8 @@ class TestUpdateAssetsTask(PaverTestCase):
     """
 
     @ddt.data(
-<<<<<<< HEAD
-        [{"expected_substring": "> /dev/null"}],  # go to /dev/null by default
-        [{"cmd_args": ["--debug"], "expected_substring": "collectstatic"}]  # TODO: make this regex
-=======
         [{"expected_substring": ""}],  # go to /dev/null by default
         [{"cmd_args": ["--debug"], "expected_substring": "collectstatic --noinput "}]  # TODO: make this regex
->>>>>>> ADD: flow-control-xblock
     )
     @ddt.unpack
     def test_update_assets_task_collectstatic_log_arg(self, options):

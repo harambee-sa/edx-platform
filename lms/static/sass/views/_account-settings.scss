@@ -72,8 +72,6 @@
         background: transparent none;
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       button {
         @extend %ui-clear-button;
         @extend %btn-no-style;
@@ -90,7 +88,6 @@
         }
 
         &.active {
-<<<<<<< HEAD
           border-bottom-color: theme-color("dark");
         }
       }
@@ -105,11 +102,6 @@
 
         .account-nav-link {
           border-bottom: 4px solid theme-color("light");
-=======
-          border-bottom: 4px solid $black-t3 !important;
-=======
-=======
->>>>>>> upstream master merge
             button {
                 @extend %ui-clear-button;
                 @extend %btn-no-style;
@@ -126,11 +118,6 @@
                     border-bottom: 4px solid $black-t3;
                 }
             }
-<<<<<<< HEAD
->>>>>>> remove all the css importants
->>>>>>> remove all the css importants
-=======
->>>>>>> upstream master merge
         }
       }
     }

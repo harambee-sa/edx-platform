@@ -28,18 +28,12 @@ class CourseDatesFragmentView(EdxFragmentView):
         context = {
             'course_date_blocks': course_date_blocks
         }
-<<<<<<< HEAD
+
         html = render_to_string(self.template_name, context)
         dates_fragment = Fragment(html)
         self.add_fragment_resource_urls(dates_fragment)
 
         return dates_fragment
-=======
-        
-        html = render_to_string('course_experience/course-dates-fragment.html', context)
-
-        return Fragment(html)
->>>>>>> ENH: template setting switch and badgr xblock update
 
 
 class CourseDatesFragmentMobileView(CourseDatesFragmentView):

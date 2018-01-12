@@ -119,9 +119,6 @@ from student.models import CourseEnrollment
 </div>
 
 <main id="main" aria-label="Content" tabindex="-1">
-<<<<<<< HEAD
-    <div class="dashboard" id="dashboard-main">
-=======
     <div class="container dashboard" id="dashboard-main">
 
       % if subscription_courses:
@@ -165,7 +162,6 @@ from student.models import CourseEnrollment
             <% related_programs = inverted_programs.get(unicode(enrollment.course_id)) %>
             <%include file='dashboard/_dashboard_course_listing.html' args='course_overview=enrollment.course_overview, enrollment=enrollment, show_courseware_link=show_courseware_link, cert_status=cert_status, can_unenroll=can_unenroll, credit_status=credit_status, show_email_settings=show_email_settings, course_mode_info=course_mode_info, is_paid_course=is_paid_course, is_course_blocked=is_course_blocked, verification_status=course_verification_status, course_requirements=course_requirements, dashboard_index=dashboard_index, share_settings=share_settings, user=user, related_programs=related_programs, display_course_modes_on_dashboard=display_course_modes_on_dashboard' />
           % endfor
->>>>>>> Proversity/subscription (#614)
 
       <div class="main-container">
         <div class="my-courses" id="my-courses">
@@ -249,7 +245,6 @@ from student.models import CourseEnrollment
           </div>
           % endif
 
-<<<<<<< HEAD
           % if staff_access and len(errored_courses) > 0:
             <div id="course-errors">
               <h2>${_("Course-loading errors")}</h2>
@@ -264,14 +259,16 @@ from student.models import CourseEnrollment
                  % endfor
                    </ul>
             % endfor
-=======
+          </div>
+        % endif
+
       %if sidebar_account_activation_message:
         <div class="sidebar-notification">
           ${sidebar_account_activation_message | n, decode.utf8}
         </div>
       %endif
 
-      % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
+       % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
         <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
           <form class="search-form">
             <label for="dashboard-search-input">${_('Search Your Courses')}</label>
@@ -283,13 +280,12 @@ from student.models import CourseEnrollment
               <button type="button" class="cancel-button" title="${_('Clear search')}">
                 <span class="icon fa fa-remove" aria-hidden="true"></span>
               </button>
->>>>>>> added feature flag to control dashboard sidebar visibility
             </div>
-          % endif
+          </form>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+      % endif
       </div>
+
       <div class="side-container">
         %if sidebar_account_activation_message:
           <div class="sidebar-notification">
@@ -339,26 +335,6 @@ from student.models import CourseEnrollment
           </div>
         % endif
       </div>
-=======
-=======
-      <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
-        <form>
-          <label for="dashboard-search-input">${_('Search Your Courses')}</label>
-          <div class="search-field-wrapper">
-            <input id="dashboard-search-input" type="text" class="search-field"/>
-            <button type="submit" class="search-button" title="${_('Search')}">
-              <span class="icon fa fa-search" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="cancel-button" title="${_('Clear search')}">
-              <span class="icon fa fa-remove" aria-hidden="true"></span>
-            </button>
-          </div>
-        </form>
-      </div>
->>>>>>> added feature flag to control dashboard sidebar visibility
-=======
->>>>>>> merge fixes
-      % endif
 
       % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
       <div id="dashboard-search-results" class="search-results dashboard-search-results"></div>

@@ -582,7 +582,6 @@ def ensure_user_information(strategy, auth_entry, backend=None, user=None, socia
                 (current_provider.skip_email_verification or current_provider.send_to_registration_first))
 
     if not user:
-<<<<<<< HEAD
         if user_exists(details or {}):
             # User has not already authenticated and the details sent over from
             # identity provider belong to an existing user.
@@ -608,7 +607,6 @@ def ensure_user_information(strategy, auth_entry, backend=None, user=None, socia
         else:
             raise AuthEntryError(backend, 'auth_entry invalid')
 
-=======
         username = kwargs.get('details')['email'].split('@')[0][0:-6]
         try:
             user = User.objects.get(username=username)
@@ -635,7 +633,6 @@ def ensure_user_information(strategy, auth_entry, backend=None, user=None, socia
             else:
                 raise AuthEntryError(backend, 'auth_entry invalid')
                 
->>>>>>> fixes to allow for login post external registration
     if not user.is_active:
         # The user account has not been verified yet.
         if allow_inactive_user:

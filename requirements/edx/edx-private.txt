@@ -7,18 +7,8 @@
 
 
 # For Harvard courses:
-<<<<<<< HEAD
-=======
+
 -e git+https://github.com/gsehub/xblock-mentoring.git@4d1cce78dc232d5da6ffd73817b5c490e87a6eee#egg=xblock-mentoring
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> add cookie consent popup banner feature
-=======
-<<<<<<< HEAD
->>>>>>> merge fixes
-=======
->>>>>>> upstream master merge
 git+https://github.com/open-craft/problem-builder.git@v2.7.7#egg=xblock-problem-builder==2.7.7
 
 # Oppia XBlock

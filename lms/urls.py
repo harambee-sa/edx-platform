@@ -424,7 +424,7 @@ urlpatterns += [
     url(
         r'^courses/{}/htmlbook/(?P<book_index>\d+)/chapter/(?P<chapter>\d+)/$'.format(
             settings.COURSE_ID_PATTERN,
-        ),
+            ),
         staticbook_views.html_index,
         name='html_book',
     ),
@@ -1080,7 +1080,6 @@ if settings.FEATURES.get('ENABLE_FINANCIAL_ASSISTANCE_FORM'):
             courseware_views.financial_assistance_request,
             name='submit_financial_assistance_request'
         )
-<<<<<<< HEAD
     ]
 
 # Branch.io Text Me The App
@@ -1089,6 +1088,7 @@ if settings.BRANCH_IO_KEY:
         url(r'^text-me-the-app', 'student.views.text_me_the_app', name='text_me_the_app'),
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 from openedx.core.djangolib.django_plugins import DjangoAppRegistry, ProjectType
@@ -1096,9 +1096,15 @@ urlpatterns.extend(DjangoAppRegistry.get_plugin_url_patterns(ProjectType.LMS))
 =======
 =======
     )
+=======
+>>>>>>> UPGRADE
 
 urlpatterns += (
     url(r'^subscription/', include('subscription_content.urls')),
 )
+<<<<<<< HEAD
 >>>>>>> Proversity/subscription (#614)
 >>>>>>> Proversity/subscription (#614)
+=======
+
+>>>>>>> UPGRADE

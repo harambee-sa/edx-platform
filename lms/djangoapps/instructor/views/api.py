@@ -2794,22 +2794,12 @@ def send_email(request, course_id):
         # Submit the task, so that the correct InstructorTask object gets created (for monitoring purposes)
         lms.djangoapps.instructor_task.api.submit_bulk_course_email(request, course_id, email.id)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     response_payload = {
         'course_id': text_type(course_id),
         'success': True,
     }
 
     return JsonResponse(response_payload)
-=======
-=======
->>>>>>> merge fixes
-        response_payload = {
-            'course_id': course_id.to_deprecated_string(),
-            'success': True,
-        }
-        return JsonResponse(response_payload)
 
 
 @require_POST

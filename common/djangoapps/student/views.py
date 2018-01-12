@@ -95,15 +95,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.theming import helpers as theming_helpers
 from openedx.core.djangoapps.user_api import accounts as accounts_settings
 from openedx.core.djangoapps.user_api.preferences import api as preferences_api
-<<<<<<< HEAD
-<<<<<<< HEAD
 from openedx.core.djangoapps.waffle_utils import WaffleFlagNamespace, WaffleFlag
-=======
-<<<<<<< HEAD
->>>>>>> Added logic for new microsite themes (#417)
-=======
-
->>>>>>> merge fixes
 from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_url_name
 from openedx.features.enterprise_support.api import get_dashboard_consent_notification
@@ -168,8 +160,6 @@ REGISTRATION_UTM_CREATED_AT = 'registration_utm_created_at'
 # used to announce a registration
 REGISTER_USER = Signal(providing_args=["user", "registration"])
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # TODO: Remove Django 1.11 upgrade shim
 # SHIM: Compensate for behavior change of default authentication backend in 1.10
 if django.VERSION[0] == 1 and django.VERSION[1] < 10:
@@ -177,16 +167,9 @@ if django.VERSION[0] == 1 and django.VERSION[1] < 10:
 else:
     # We want to allow inactive users to log in only when their account is first created
     NEW_USER_AUTH_BACKEND = 'django.contrib.auth.backends.AllowAllUsersModelBackend'
-=======
 
 USER_COURSE_ENROLLMENTS_ORDER_BY =\
     getattr(settings, 'USER_COURSE_ENROLLMENTS_ORDER_BY', 'created_reverse')
->>>>>>> prefer order by course enrollments in dashboard
-=======
-
-USER_COURSE_ENROLLMENTS_ORDER_BY =\
-    getattr(settings, 'USER_COURSE_ENROLLMENTS_ORDER_BY', 'created_reverse')
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 # Disable this warning because it doesn't make sense to completely refactor tests to appease Pylint
 # pylint: disable=logging-format-interpolation
@@ -950,14 +933,10 @@ def dashboard(request):
     valid_verification_statuses = ['approved', 'must_reverify', 'pending', 'expired']
     display_sidebar_on_dashboard = len(order_history_list) or verification_status in valid_verification_statuses
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     # Filter out any course enrollment course cards that are associated with fulfilled entitlements
     for entitlement in [e for e in course_entitlements if e.enrollment_course_run is not None]:
         course_enrollments = [enr for enr in course_enrollments if entitlement.enrollment_course_run.course_id != enr.course_id]  # pylint: disable=line-too-long
-=======
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
+
     # sort the enrollment pairs by the flag USER_COURSE_ENROLLMENTS_ORDER_BY
     if USER_COURSE_ENROLLMENTS_ORDER_BY == 'created':
         course_enrollments.sort(key=lambda x: x.created, reverse=False)
@@ -973,11 +952,6 @@ def dashboard(request):
             key=lambda x: x.course.display_name,
             reverse=True
         )
-<<<<<<< HEAD
->>>>>>> prefer order by course enrollments in dashboard
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
-
 
     subscription_courses = frozenset(
         enrollment.course_id for enrollment in course_enrollments
@@ -2216,11 +2190,11 @@ def create_account_with_params(request, params):
 
     create_comments_service_user(user)
 
-<<<<<<< HEAD
+
     # Check if we system is configured to skip activation email for the current user.
     skip_email = skip_activation_email(
         user, do_external_auth, running_pipeline, third_party_provider,
-=======
+
     is_user_api_registration = False
     if 'is_user_api_registration' in request.session:
         is_user_api_registration = request.session['is_user_api_registration']
@@ -2246,7 +2220,6 @@ def create_account_with_params(request, params):
             third_party_provider and third_party_provider.skip_email_verification and
             user.email == running_pipeline['kwargs'].get('details', {}).get('email')
         )
->>>>>>> bypass activation for user api registration feature
     )
 
     if skip_email:

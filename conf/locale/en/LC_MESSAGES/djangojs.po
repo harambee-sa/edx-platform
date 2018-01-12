@@ -1,6 +1,5 @@
 # #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 # edX translation file.
-<<<<<<< HEAD
 # Copyright (C) 2018 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2018.
@@ -21,72 +20,14 @@
 # edX translation file
 # Copyright (C) 2018 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
-=======
-# Copyright (C) 2017 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2017.
-# 
-# #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2017 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2017.
-# 
-# #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2017 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2017.
-# 
-# #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2017 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2017.
->>>>>>> [ci skip] reverting conftest
+# EdX Team <info@edx.org>, 2018
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"POT-Creation-Date: 2018-01-10 10:44+0000\n"
-"PO-Revision-Date: 2018-01-10 10:50:56.873858\n"
-=======
-"POT-Creation-Date: 2017-10-23 12:10-0400\n"
-"PO-Revision-Date: 2017-10-23 16:14:33.677054\n"
->>>>>>> upstream master merge
-=======
-"POT-Creation-Date: 2017-10-31 05:31-0400\n"
-"PO-Revision-Date: 2017-10-31 09:35:18.511480\n"
->>>>>>> Returning work we wissed due to upgrade
-=======
-"POT-Creation-Date: 2017-10-31 05:31-0400\n"
-"PO-Revision-Date: 2017-10-31 09:35:18.511480\n"
->>>>>>> [ci skip] reverting conftest
-=======
 "POT-Creation-Date: 2017-11-14 02:56-0500\n"
 "PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
->>>>>>> Proversity/development (#587)
-=======
-"POT-Creation-Date: 2017-11-14 02:56-0500\n"
-"PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
->>>>>>> master merge (#588)
-=======
-"POT-Creation-Date: 2017-11-14 02:56-0500\n"
-"PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
->>>>>>> Proversity/staging (#589)
-=======
-"POT-Creation-Date: 2017-11-14 02:56-0500\n"
-"PO-Revision-Date: 2017-11-14 08:01:09.055399\n"
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -95,42 +36,13 @@ msgstr ""
 "Generated-By: Babel 1.3\n"
 "Language: en\n"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: cms/static/js/views/video_transcripts.js common/static/bundles/Import.js
-=======
 #: common/static/bundles/Import.js
 #: src/recap-xblock/recap/static/js/src/recap_edit.js
->>>>>>> upstream master merge
-=======
-#: common/static/bundles/Import.js
-#: src/recap-xblock/recap/static/js/src/recap_edit.js
->>>>>>> [ci skip] reverting conftest
-=======
 #: cms/static/cms/js/main.js cms/static/coffee/src/main.js
 #: cms/static/js/views/active_video_upload_list.js
-#: common/static/bundles/Import.js
->>>>>>> Proversity/development (#587)
-=======
-#: cms/static/cms/js/main.js cms/static/coffee/src/main.js
-#: cms/static/js/views/active_video_upload_list.js
-#: common/static/bundles/Import.js
->>>>>>> master merge (#588)
-=======
-#: cms/static/cms/js/main.js cms/static/coffee/src/main.js
-#: cms/static/js/views/active_video_upload_list.js
-#: common/static/bundles/Import.js
->>>>>>> Proversity/staging (#589)
-=======
-#: cms/static/cms/js/main.js cms/static/coffee/src/main.js
-#: cms/static/js/views/active_video_upload_list.js
-#: common/static/bundles/Import.js
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
+
 msgid ""
 "This may be happening because of an error with our server or your internet "
 "connection. Try refreshing the page or making sure you are online."
@@ -201,8 +113,6 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/learner_dashboard/verification_popover.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/response-comment-edit.underscore
@@ -215,10 +125,6 @@ msgstr ""
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-edit.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-edit.underscore
-=======
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "Cancel"
 msgstr ""
 
@@ -313,10 +219,7 @@ msgstr ""
 #. browser when a user needs to edit HTML
 #: cms/static/js/views/active_video_upload.js
 #: cms/static/js/views/modals/edit_xblock.js
-<<<<<<< HEAD
 #: cms/static/js/views/video_transcripts.js
-=======
->>>>>>> [ci skip] reverting conftest
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/js/student_account/tos_modal.js
 #: cms/templates/js/course-video-settings.underscore
@@ -346,10 +249,6 @@ msgstr ""
 msgid "Choose File"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -357,13 +256,9 @@ msgstr ""
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/js/Markdown.Editor.js
 #: common/static/common/templates/discussion/alert-popup.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/learner_dashboard/verification_popover.underscore
 #: test_root/staticfiles/common/templates/discussion/alert-popup.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/alert-popup.underscore
-=======
->>>>>>> upstream master merge
 msgid "OK"
 msgstr ""
 
@@ -376,19 +271,9 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-=======
 msgid "OK"
 msgstr ""
 
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: cms/static/js/views/course_video_settings.js
 #: cms/static/js/views/metadata.js
 #: cms/static/js/views/previous_video_upload.js
@@ -419,10 +304,7 @@ msgstr ""
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: cms/static/js/views/modals/base_modal.js
-<<<<<<< HEAD
 #: cms/static/js/views/modals/course_outline_modals.js
-=======
->>>>>>> [ci skip] reverting conftest
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/content-group-editor.underscore
@@ -432,10 +314,7 @@ msgstr ""
 #: cms/templates/js/section-name-edit.underscore
 #: cms/templates/js/signatory-actions.underscore
 #: cms/templates/js/xblock-string-field-editor.underscore
-<<<<<<< HEAD
 #: lms/templates/fields/field_dropdown.underscore
-=======
->>>>>>> [ci skip] reverting conftest
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 #: lms/templates/instructor/instructor_dashboard_2/divided-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/divided-discussions-inline.underscore
@@ -1418,8 +1297,6 @@ msgstr ""
 msgid "Nonbreaking space"
 msgstr ""
 
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1428,7 +1305,6 @@ msgstr ""
 msgid "None"
 msgstr ""
 
->>>>>>> [ci skip] reverting conftest
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -1541,10 +1417,7 @@ msgstr ""
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/metadata-file-uploader-item.underscore
-<<<<<<< HEAD
 #: cms/templates/js/video-transcripts.underscore
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/video/metadata-translations-item.underscore
 msgid "Replace"
 msgstr ""
@@ -1960,14 +1833,11 @@ msgid "Speed"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
-<<<<<<< HEAD
 #: common/lib/xmodule/xmodule/js/src/video/08_video_auto_advance_control.js
 msgid "Auto-advance"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
-=======
->>>>>>> [ci skip] reverting conftest
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 msgid "Volume"
 msgstr ""
@@ -2147,150 +2017,50 @@ msgstr ""
 msgid "Turn off transcripts"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/AssetsPage.bace7aaf2adb48c51598.js
 msgid "end"
 msgstr ""
 
 #: common/static/bundles/CourseGoals.c4996c40fda9d3059c82.js
-=======
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/CourseGoals.b56f05f27734759a3a6a.js
->>>>>>> Returning work we wissed due to upgrade
-=======
-#: common/static/bundles/CourseGoals.b56f05f27734759a3a6a.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseGoals.js
 msgid "Thank you for setting your course goal to "
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/CourseGoals.c4996c40fda9d3059c82.js
-=======
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/CourseGoals.b56f05f27734759a3a6a.js
->>>>>>> Returning work we wissed due to upgrade
-=======
-#: common/static/bundles/CourseGoals.b56f05f27734759a3a6a.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseGoals.js
 msgid ""
 "There was an error in setting your goal, please reload the page and try "
 "again."
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
-=======
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
->>>>>>> Returning work we wissed due to upgrade
-=======
-#: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "You have successfully updated your goal."
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
-=======
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
->>>>>>> Returning work we wissed due to upgrade
-=======
-#: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "There was an error updating your goal."
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
-=======
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
->>>>>>> Returning work we wissed due to upgrade
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 msgid "Show more"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/CourseHome.8f43ec4ffa54018648ac.js
-=======
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
->>>>>>> Returning work we wissed due to upgrade
 #: common/static/bundles/CourseHome.js
 msgid "Show less"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/SingleSupportForm.24c3e19077ebd20ce989.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "Please fix the following errors:"
@@ -2436,195 +2206,59 @@ msgid "Cancel upload"
 msgstr ""
 
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
-=======
-=======
+
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
->>>>>>> Returning work we wissed due to upgrade
-#: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/CourseHome.a5e2414bdecbf3f88196.js
-=======
->>>>>>> Proversity/development (#587)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "Show more"
 msgstr ""
 
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "Show less"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: common/static/bundles/StudioIndex.js
 msgid "Organization:"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
-=======
-=======
-#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
->>>>>>> Returning work we wissed due to upgrade
-#: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: common/static/bundles/StudioIndex.js
 msgid "Course Number:"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
-=======
-=======
-#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
->>>>>>> Returning work we wissed due to upgrade
-#: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: common/static/bundles/StudioIndex.js
 msgid "Course Run:"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
-=======
-=======
-#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
->>>>>>> Returning work we wissed due to upgrade
-#: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: common/static/bundles/StudioIndex.js
 msgid "(Read-only)"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
-=======
-=======
-#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
->>>>>>> Returning work we wissed due to upgrade
-#: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: common/static/bundles/StudioIndex.js
 msgid "Re-run Course"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: common/static/bundles/StudioIndex.06cf9a104f002c871bbd.js
-=======
-=======
-#: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
->>>>>>> Returning work we wissed due to upgrade
-#: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> upstream master merge
-=======
 #: common/static/bundles/StudioIndex.ae56ffd9f272143aaf03.js
 #: common/static/bundles/StudioIndex.ea0f4fe6177806c1c647.js
->>>>>>> [ci skip] reverting conftest
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: common/static/bundles/StudioIndex.js
 #: cms/templates/js/show-textbook.underscore
 msgid "View Live"
@@ -3675,14 +3309,13 @@ msgid "HTML preview of post"
 msgstr ""
 
 #: lms/static/coffee/src/customwmd.js
-<<<<<<< HEAD
 #: common/static/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Your question or idea (required)"
-=======
+msgstr ""
+
 msgid "Post body"
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/static/js/Markdown.Editor.js
@@ -4444,10 +4077,7 @@ msgstr ""
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
-<<<<<<< HEAD
 #: cms/templates/js/transcript-organization-credentials.underscore
-=======
->>>>>>> [ci skip] reverting conftest
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
 msgid "Username"
 msgstr ""
@@ -4932,13 +4562,10 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-<<<<<<< HEAD
-=======
 msgid "Subject"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
->>>>>>> [ci skip] reverting conftest
 msgid "Sent By"
 msgstr ""
 
@@ -4992,7 +4619,6 @@ msgid ""
 "sensitive nature of student information."
 msgstr ""
 
-<<<<<<< HEAD
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Starts {start}"
 msgstr ""
@@ -5070,8 +4696,6 @@ msgid ""
 "will be refunded the amount you paid."
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
 msgid "{type} Progress"
 msgstr ""
@@ -5244,7 +4868,6 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-<<<<<<< HEAD
 msgid ""
 "Your profile settings are managed by {enterprise_name}. Contact your "
 "administrator or {link_start}edX Support{link_end} for help."
@@ -5252,29 +4875,22 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address (Sign In)"
-=======
-msgid "Email Address"
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
-<<<<<<< HEAD
 "You receive messages from {platform_name} and course teams at this address."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Full Name"
-=======
 "The email address you use to sign in. Communications from {platform_name} "
 "and your courses are sent to this address."
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
-<<<<<<< HEAD
 "The name that is used for ID verification and that appears on your "
 "certificates."
 msgstr ""
@@ -5293,7 +4909,6 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "These settings include basic information about your account."
-=======
 "The email address you use to sign in. Communications from {platform_name} "
 "and your courses are sent to this address.  To change the email address, "
 "please contact {contact_email}."
@@ -5316,21 +4931,12 @@ msgstr ""
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Full Name"
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
-<<<<<<< HEAD
 "The name that identifies you on {platform_name}. You cannot change your "
 "username."
-=======
-"The name that is used for ID verification and that appears on your "
-"certificates. Other learners see your full name if you have selected "
-"{bold_start}Full Profile{bold_end} for profile visibility. Make sure to "
-"enter your name exactly as it appears on your photo ID, including any non-"
-"Roman characters."
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
@@ -5343,14 +4949,13 @@ msgid "Reset Your Password"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-<<<<<<< HEAD
 msgid "Check your email account for instructions to reset your password."
-=======
+msgstr ""
+
 msgid ""
 "When you select \"Reset Your Password\", a message will be sent to the email"
 " address for your {platform_name} account. Click the link in the message to "
 "reset your password."
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
@@ -5360,8 +4965,6 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-<<<<<<< HEAD
-=======
 msgid "Country or Region of Residence"
 msgstr ""
 
@@ -5370,7 +4973,6 @@ msgid "The country or region where you live."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
->>>>>>> [ci skip] reverting conftest
 msgid "Time Zone"
 msgstr ""
 
@@ -6302,20 +5904,14 @@ msgid "Processing Re-run Request"
 msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
-<<<<<<< HEAD
-<<<<<<< HEAD
 msgid "An error has occurred. Wait a few minutes, and then try again."
-=======
-#: lms/djangoapps/support/static/support/templates/enrollment.underscore
-#: lms/templates/ccx/schedule.underscore
-msgid "N/A"
->>>>>>> upstream master merge
-=======
-#: lms/djangoapps/support/static/support/templates/enrollment.underscore
-#: lms/templates/ccx/schedule.underscore
-msgid "N/A"
->>>>>>> [ci skip] reverting conftest
 msgstr ""
+
+#: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: lms/templates/ccx/schedule.underscore
+msgid "N/A"
+msgstr ""
+
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Select turnaround"
@@ -6334,20 +5930,16 @@ msgid "Press Remove to remove language"
 msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
-<<<<<<< HEAD
 msgid "Settings updated"
 msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
 #: cms/templates/js/course-video-settings-update-settings-footer.underscore
-=======
 #: cms/templates/js/course-video-settings.underscore
->>>>>>> [ci skip] reverting conftest
 msgid "Last updated"
 msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
-<<<<<<< HEAD
 msgid "Required"
 msgstr ""
 
@@ -6357,7 +5949,6 @@ msgstr ""
 
 #: cms/static/js/views/course_video_settings.js
 msgid "{selectedProvider} credentials saved"
-=======
 msgid "Settings updated"
 msgstr ""
 
@@ -6365,10 +5956,6 @@ msgstr ""
 msgid "Error saving data"
 msgstr ""
 
-#: cms/static/js/views/course_video_settings.js
-msgid "Required"
->>>>>>> [ci skip] reverting conftest
-msgstr ""
 
 #: cms/static/js/views/edit_chapter.js
 msgid "Upload a new PDF to “<%= name %>”"
@@ -6612,7 +6199,6 @@ msgid "Publish"
 msgstr ""
 
 #: cms/static/js/views/modals/course_outline_modals.js
-<<<<<<< HEAD
 msgid "Highlights for {display_name}"
 msgstr ""
 
@@ -6629,8 +6215,6 @@ msgid "Not yet"
 msgstr ""
 
 #: cms/static/js/views/modals/course_outline_modals.js
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "All Learners and Staff"
 msgstr ""
 
@@ -6726,11 +6310,8 @@ msgid "Publishing"
 msgstr ""
 
 #: cms/static/js/views/pages/container_subviews.js
-<<<<<<< HEAD
 #: cms/templates/js/course-video-settings-update-org-credentials-footer.underscore
 #: cms/templates/js/course-video-settings-update-settings-footer.underscore
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/publish-xblock.underscore
 msgid "Discard Changes"
 msgstr ""
@@ -7181,7 +6762,6 @@ msgstr ""
 msgid "Image upload failed. "
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/static/js/views/video_transcripts.js
 msgid "The file could not be uploaded."
 msgstr ""
@@ -7209,8 +6789,6 @@ msgstr ""
 msgid "{transcriptClientTitle}_{transcriptLanguageCode}.{fileExtension}"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/static/js/views/xblock_editor.js
 msgid "Editor"
 msgstr ""
@@ -7356,27 +6934,15 @@ msgid "Error posting your message."
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post-visibility.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: test_root/staticfiles/common/templates/discussion/new-post-visibility.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post-visibility.underscore
-=======
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 #, python-format
 msgid "This post will be visible only to %(group_name)s."
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post-visibility.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: test_root/staticfiles/common/templates/discussion/new-post-visibility.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post-visibility.underscore
-=======
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "This post will be visible to everyone."
 msgstr ""
 
@@ -7405,21 +6971,12 @@ msgid ""
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
-=======
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "Your question or idea (required)"
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post.underscore
-<<<<<<< HEAD
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "follow this post"
 msgstr ""
 
@@ -7431,11 +6988,6 @@ msgstr ""
 msgid "post anonymously to classmates"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> [ci skip] reverting conftest
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "post privately to staff"
 msgstr ""
@@ -7447,10 +6999,6 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-<<<<<<< HEAD
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 #: common/static/common/templates/discussion/post-user-display.underscore
 msgid "(Community TA)"
 msgstr ""
@@ -7829,8 +7377,6 @@ msgid "Last modified by"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/support/templates/enrollment.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
@@ -7839,10 +7385,6 @@ msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 #: test_root/staticfiles/support/templates/enrollment.underscore
-=======
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "Change Enrollment"
 msgstr ""
 
@@ -8105,14 +7647,11 @@ msgstr ""
 msgid "End My Exam"
 msgstr ""
 
-<<<<<<< HEAD
 #: lms/templates/courseware/proctored-exam-status.underscore
 #: test_root/staticfiles/templates/courseware/proctored-exam-status.underscore
 msgid "Hide Timer"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: lms/templates/discovery/course_card.underscore
 msgid "LEARN MORE"
 msgstr ""
@@ -8551,7 +8090,6 @@ msgstr ""
 msgid "Certificate Purchased"
 msgstr ""
 
-<<<<<<< HEAD
 #: lms/templates/learner_dashboard/course_card.underscore
 msgid "Change or Leave Session"
 msgstr ""
@@ -8578,8 +8116,6 @@ msgstr ""
 msgid "for {courseName}"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "View Archived Course"
 msgstr ""
@@ -8589,15 +8125,10 @@ msgid "View Course"
 msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 msgid "Select a session:"
-=======
+msgstr ""
+
 msgid "Choose a course run:"
->>>>>>> upstream master merge
-=======
-msgid "Choose a course run:"
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
@@ -8616,7 +8147,6 @@ msgstr ""
 msgid "Not Currently Available"
 msgstr ""
 
-<<<<<<< HEAD
 #: lms/templates/learner_dashboard/course_entitlement.underscore
 msgid "More sessions coming soon."
 msgstr ""
@@ -8649,8 +8179,6 @@ msgstr ""
 msgid "Leave the current session and decide later"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: lms/templates/learner_dashboard/empty_programs_list.underscore
 msgid "You are not enrolled in any programs yet."
 msgstr ""
@@ -8782,21 +8310,11 @@ msgid "Forgot password?"
 msgstr ""
 
 #: lms/templates/student_account/hinted_login.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: test_root/staticfiles/templates/student_account/hinted_login.underscore
-=======
-=======
->>>>>>> [ci skip] reverting conftest
-#: lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr ""
 
 #: lms/templates/student_account/hinted_login.underscore
-<<<<<<< HEAD
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 #, python-format
 msgid "Would you like to sign in using your %(providerName)s credentials?"
 msgstr ""
@@ -8840,8 +8358,6 @@ msgid "Create an Account."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 msgid "Sign in to continue learning as {email}"
 msgstr ""
 
@@ -8872,10 +8388,6 @@ msgstr ""
 
 #: lms/templates/student_account/login.underscore
 #: test_root/staticfiles/templates/student_account/login.underscore
-=======
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "Sign In"
 msgstr ""
 
@@ -8930,20 +8442,11 @@ msgid "Sign in."
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: test_root/staticfiles/templates/student_account/register.underscore
-=======
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "Create an Account"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-<<<<<<< HEAD
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "Create an account using"
 msgstr ""
 
@@ -8956,7 +8459,6 @@ msgstr ""
 msgid "or create a new one here"
 msgstr ""
 
-<<<<<<< HEAD
 #: lms/templates/student_account/register.underscore
 msgid "Create an Account"
 msgstr ""
@@ -8966,8 +8468,6 @@ msgstr ""
 msgid "Support education research by providing additional information"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 #, python-format
 msgid "Congratulations! You are now verified on %(platformName)s!"
@@ -9485,19 +8985,10 @@ msgstr[1] ""
 msgid "Sorry, no results were found."
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> [ci skip] reverting conftest
 #: openedx/features/course_search/static/course_search/templates/dashboard_search_results.underscore
 msgid "Back to Dashboard"
 msgstr ""
 
-<<<<<<< HEAD
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 #: openedx/features/learner_profile/static/learner_profile/templates/badge.underscore
 #, python-format
 msgid "Share your \"%(display_name)s\" award"
@@ -9558,8 +9049,6 @@ msgid ""
 "your backpack.</li>"
 msgstr ""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
 msgid "Add a New Allowance"
 msgstr ""
@@ -9633,10 +9122,6 @@ msgstr ""
 msgid "Choose a course run:"
 msgstr ""
 
-=======
->>>>>>> upstream master merge
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/access-editor.underscore
 msgid "Limit Access"
 msgstr ""
@@ -9965,7 +9450,6 @@ msgid ""
 "hidden."
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/course-highlights-enable.underscore
 msgid "Weekly Highlight Emails"
 msgstr ""
@@ -9978,8 +9462,6 @@ msgstr ""
 msgid "Enable Now"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/course-instructor-details.underscore
 msgid "Instructor Name"
 msgstr ""
@@ -10128,14 +9610,11 @@ msgid "Scheduled:"
 msgstr ""
 
 #: cms/templates/js/course-outline.underscore
-<<<<<<< HEAD
 #: cms/templates/js/highlights-editor.underscore
 msgid "Section Highlights"
 msgstr ""
 
 #: cms/templates/js/course-outline.underscore
-=======
->>>>>>> [ci skip] reverting conftest
 msgid "Graded as:"
 msgstr ""
 
@@ -10170,7 +9649,6 @@ msgstr ""
 msgid "Add a learning outcome here"
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/course-video-settings-update-org-credentials-footer.underscore
 msgid "Press discard changes to discard your changes."
 msgstr ""
@@ -10192,8 +9670,6 @@ msgstr ""
 msgid "Press update settings to update course video settings"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/course-video-settings.underscore
 msgid "Press close to hide course video settings"
 msgstr ""
@@ -10202,7 +9678,6 @@ msgstr ""
 msgid "Course Video Settings"
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/course-video-transcript-preferences.underscore
 msgid "Transcript Turnaround"
 msgstr ""
@@ -10220,7 +9695,6 @@ msgid "Transcript Languages"
 msgstr ""
 
 #: cms/templates/js/course-video-transcript-preferences.underscore
-=======
 #: cms/templates/js/course-video-settings.underscore
 msgid "Transcript Provider"
 msgstr ""
@@ -10242,14 +9716,12 @@ msgid "Transcript Languages"
 msgstr ""
 
 #: cms/templates/js/course-video-settings.underscore
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/metadata-dict-entry.underscore
 #: cms/templates/js/metadata-list-entry.underscore
 #: cms/templates/js/video/metadata-translations-entry.underscore
 msgid "Add"
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/course-video-transcript-preferences.underscore
 msgid "Press Add to language"
 msgstr ""
@@ -10268,7 +9740,8 @@ msgstr ""
 
 #: cms/templates/js/course-video-transcript-provider-selected.underscore
 msgid "Press change to change selected transcript provider."
-=======
+msgstr ""
+
 #: cms/templates/js/course-video-settings.underscore
 msgid "Press Add to language"
 msgstr ""
@@ -10279,7 +9752,6 @@ msgstr ""
 
 #: cms/templates/js/course-video-settings.underscore
 msgid "Press update settings to update course video settings"
->>>>>>> [ci skip] reverting conftest
 msgstr ""
 
 #: cms/templates/js/course_grade_policy.underscore
@@ -10507,7 +9979,6 @@ msgstr ""
 msgid "delete group"
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/highlights-editor.underscore
 msgid ""
 "This feature is currently in testing. Course teams can enter highlights, but"
@@ -10528,8 +9999,6 @@ msgstr ""
 msgid "A highlight to look forward to this week."
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/license-selector.underscore
 msgid "License Type"
 msgstr ""
@@ -10589,10 +10058,7 @@ msgid "Component Location ID"
 msgstr ""
 
 #: cms/templates/js/metadata-file-uploader-item.underscore
-<<<<<<< HEAD
 #: cms/templates/js/video-transcripts.underscore
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/video/metadata-translations-item.underscore
 msgid "Download"
 msgstr ""
@@ -10647,13 +10113,10 @@ msgstr ""
 msgid "Video ID"
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Transcripts"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/previous-video-upload.underscore
 msgid "Remove this video"
 msgstr ""
@@ -11015,7 +10478,6 @@ msgid ""
 "before the learners start the exam."
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/transcript-organization-credentials.underscore
 msgid "Account"
 msgstr ""
@@ -11037,8 +10499,6 @@ msgstr ""
 msgid "API Secret"
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/unit-access-editor.underscore
 msgid "Unit Access"
 msgstr ""
@@ -11100,7 +10560,6 @@ msgid ""
 "should be {maxFileSize} and format must be one of {supportedImageFormats}."
 msgstr ""
 
-<<<<<<< HEAD
 #: cms/templates/js/video-transcript-upload-status.underscore
 msgid "Read more"
 msgstr ""
@@ -11113,8 +10572,6 @@ msgstr ""
 msgid "No transcript uploaded."
 msgstr ""
 
-=======
->>>>>>> [ci skip] reverting conftest
 #: cms/templates/js/xblock-access-editor.underscore
 msgid "Set Access"
 msgstr ""

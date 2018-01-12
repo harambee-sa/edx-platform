@@ -327,12 +327,8 @@
       margin: 0 $baseline+1 0 0;
       font-size: em(14);
       font-weight: 600;
-<<<<<<< HEAD
-      letter-spacing: 0 !important;
-=======
       text-transform: uppercase;
       letter-spacing: 0;
->>>>>>> remove all the css importants
 
       &:last-child {
         margin-right: 0;
@@ -708,8 +704,6 @@
     }
   }
 
-<<<<<<< HEAD
-=======
   %default-header-nav {
     margin-top: ($baseline/4);
     list-style: none;
@@ -745,7 +739,6 @@
     @extend %default-header-nav;
   }
 
->>>>>>> remove all the css importants
   .nav-courseware {
     @include float(right);
 

@@ -12,17 +12,7 @@ from .views import (
     EnrollmentCoursePassedView
 )
 
-<<<<<<< HEAD
->>>>>>> get student progress in a course
 
-urlpatterns = [
-    url(r'^enrollment/{username},{course_key}$'.format(
-        username=settings.USERNAME_PATTERN,
-        course_key=settings.COURSE_ID_PATTERN),
-        EnrollmentView.as_view(), name='courseenrollment'),
-    url(r'^enrollment/{course_key}$'.format(course_key=settings.COURSE_ID_PATTERN),
-        EnrollmentView.as_view(), name='courseenrollment'),
-=======
 urlpatterns = patterns(
     'enrollment.views',
     url(
@@ -37,13 +27,9 @@ urlpatterns = patterns(
         EnrollmentView.as_view(),
         name='courseenrollment'
     ),
->>>>>>> merge fixes
+
     url(r'^enrollment$', EnrollmentListView.as_view(), name='courseenrollments'),
-<<<<<<< HEAD
-    url(r'^course/{course_key}$'.format(course_key=settings.COURSE_ID_PATTERN),
-        EnrollmentCourseDetailView.as_view(), name='courseenrollmentdetails'),
-]
-=======
+
     url(
         r'^course/{course_key}$'.format(course_key=settings.COURSE_ID_PATTERN),
         EnrollmentCourseDetailView.as_view(),
@@ -55,4 +41,4 @@ urlpatterns = patterns(
         name='courseenrollmentpassed'
     ),
 )
->>>>>>> get student progress in a course
+

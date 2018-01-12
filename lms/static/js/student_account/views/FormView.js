@@ -157,18 +157,6 @@
                         $el.val($el.val().trim());
                     }
 
-<<<<<<< HEAD
-                    if (key) {
-                        validation = this.validate(elements[i]);
-                        if (validation.isValid) {
-                            obj[key] = $el.attr('type') === 'checkbox' ? $el.is(':checked') : $el.val();
-                            $el.removeClass('error');
-                            $label.removeClass('error');
-                        } else {
-                            errors.push(validation.message);
-                            $el.addClass('error');
-                            $label.addClass('error');
-=======
                         if (key) {
                             var test = this.validate(elements[i]);
                             if (test.isValid || $el.attr('id') == 'login-email') {
@@ -180,7 +168,7 @@
                                 $el.addClass('error');
                                 $label.addClass('error');
                             }
->>>>>>> Login with username (#420)
+
                         }
                     }
                 }
@@ -227,18 +215,8 @@
                 return data;
             },
 
-<<<<<<< HEAD
             submitForm: function(event) {
                 var data = this.getFormData();
-=======
-                submitForm: function(event) {
-                    var data = this.getFormData();
-<<<<<<< HEAD
-                    
-                    console.log(data)
->>>>>>> Finale fixes
-=======
->>>>>>> remove second commit from ficus merge
 
                 if (!_.isUndefined(event)) {
                     event.preventDefault();

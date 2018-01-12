@@ -32,28 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 "POT-Creation-Date: 2018-01-10 10:50+0000\n"
 "PO-Revision-Date: 2018-01-10 10:50:56.384997\n"
-=======
-"POT-Creation-Date: 2017-11-14 03:01-0500\n"
-"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
->>>>>>> Proversity/development (#587)
-=======
-"POT-Creation-Date: 2017-11-14 03:01-0500\n"
-"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
->>>>>>> master merge (#588)
-=======
-"POT-Creation-Date: 2017-11-14 03:01-0500\n"
-"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
->>>>>>> Proversity/staging (#589)
-=======
-"POT-Creation-Date: 2017-11-14 03:01-0500\n"
-"PO-Revision-Date: 2017-11-14 08:01:07.831389\n"
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -3541,10 +3521,6 @@ msgstr ""
 "يخذعوثرفشفهخر."
 
 #: common/lib/xmodule/xmodule/course_module.py
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 msgid "Highlights Enabled for Messaging"
 msgstr "اهلامهلافس ثرشزمثي بخق وثسسشلهرل"
 
@@ -3555,13 +3531,7 @@ msgid ""
 msgstr ""
 "ثرفثق فقعث خق بشمسث. هب فقعث, شرغ اهلامهلافس شسسخذهشفثي صهفا ذخرفثرف هر فاث "
 "ذخعقسث صهمم زث وثسسشلثي فخ مثشقرثقس شف فاثهق سذاثيعمثي فهوث."
-=======
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
+
 msgid "Minimum Age"
 msgstr "وهرهوعو شلث"
 
@@ -3574,16 +3544,6 @@ msgstr ""
 "ثرفثق ش رعوزثق خب غثشقس. هب سحثذهبهثي خرمغ سفعيثرفس خب خق خميثق فاشر فاث "
 "لهدثر شلث صهمم زث شممخصثي فخ ثرقخمم.ش دشمعث خب 0 (ظثقخ) هريهذشفثس فاشف رخ "
 "شلث قثسفقهذفهخر شححمهثس."
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "General"
@@ -9931,23 +9891,8 @@ msgstr "حقثدهثص"
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
 #: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
 #: lms/templates/signup_modal.html lms/templates/ccx/schedule.html
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-=======
 #: lms/templates/courseware/course_about.html
->>>>>>> Proversity/development (#587)
-=======
-#: lms/templates/courseware/course_about.html
->>>>>>> master merge (#588)
-=======
-#: lms/templates/courseware/course_about.html
->>>>>>> Proversity/staging (#589)
-=======
-#: lms/templates/courseware/course_about.html
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -11657,23 +11602,8 @@ msgid "{sign_in_link} or {register_link} and then enroll in this course."
 msgstr "{sign_in_link} خق {register_link} شري فاثر ثرقخمم هر فاهس ذخعقسث."
 
 #: openedx/features/course_experience/views/course_home_messages.py
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/header/navbar-not-authenticated.html
-=======
 #: lms/templates/navigation.html
->>>>>>> Proversity/development (#587)
-=======
-#: lms/templates/navigation.html
->>>>>>> master merge (#588)
-=======
-#: lms/templates/navigation.html
->>>>>>> Proversity/staging (#589)
-=======
-#: lms/templates/navigation.html
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
 msgid "Sign in"
@@ -11754,7 +11684,6 @@ msgstr ""
 " هربخقوشفهخر فخ خفاثق مثشقرثقس. غخع ذشر هرسفثشي ذاخخسث فخ يهسحمشغ ش مهوهفثي "
 "حقخبهمث. {learn_more_link_start}مثشقر وخقث{learn_more_link_end}"
 
-<<<<<<< HEAD
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
 #, python-format
 msgid ""
@@ -11772,7 +11701,7 @@ msgid ""
 msgstr ""
 "قثوثوزثق صاثر غخع ثرقخممثي هر %(course_name)s خر ثيط.خقل? صث يخ, شري صث’قث "
 "لمشي فخ اشدث غخع! ذخوث سثث صاشف ثدثقغخرث هس مثشقرهرل."
-=======
+
 #: src/edx-jsme/edx_jsme/__init__.py
 msgid "Must provide an answer."
 msgstr "وعسف حقخدهيث شر شرسصثق."
@@ -12126,7 +12055,6 @@ msgid ""
 "Alternative text describes an image and appears if the image is unavailable."
 msgstr ""
 "شمفثقرشفهدث فثطف يثسذقهزثس شر هوشلث شري شححثشقس هب فاث هوشلث هس عرشدشهمشزمث."
->>>>>>> Proversity/development (#587)
 
 #: src/edx-jsme/edx_jsme/__init__.py
 msgid "Must provide an answer."
@@ -14074,23 +14002,8 @@ msgstr "قثسثف"
 msgid "Legal"
 msgstr "مثلشم"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-=======
+
 #: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> Proversity/development (#587)
-=======
-#: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> master merge (#588)
-=======
-#: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> Proversity/staging (#589)
-=======
-#: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -14101,24 +14014,7 @@ msgstr "ذاخخسث مشرلعشلث"
 msgid "Account"
 msgstr "شذذخعرف"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: cms/templates/widgets/header.html
-#: lms/templates/header/navbar-authenticated.html
-=======
 #: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> Proversity/development (#587)
-=======
-#: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> master merge (#588)
-=======
-#: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> Proversity/staging (#589)
-=======
-#: cms/templates/widgets/header.html lms/templates/navigation.html
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
@@ -14352,24 +14248,8 @@ msgstr "يشسازخشقي"
 msgid "You are not enrolled in any courses yet."
 msgstr "غخع شقث رخف ثرقخممثي هر شرغ ذخعقسثس غثف."
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: lms/templates/dashboard.html
-#: lms/templates/header/navbar-not-authenticated.html
-=======
+
 #: lms/templates/dashboard.html lms/templates/navigation.html
->>>>>>> Proversity/development (#587)
-=======
-#: lms/templates/dashboard.html lms/templates/navigation.html
->>>>>>> master merge (#588)
-=======
-#: lms/templates/dashboard.html lms/templates/navigation.html
->>>>>>> Proversity/staging (#589)
-=======
-#: lms/templates/dashboard.html lms/templates/navigation.html
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -15257,10 +15137,6 @@ msgstr "ه شلقثث فخ فاث {link_start}فثقوس خب سثقدهذث{lin
 msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr "ه شلقثث فخ فاث {link_start}اخرخق ذخيث{link_end}"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/register-form.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -15269,14 +15145,6 @@ msgstr "ه شلقثث فخ فاث {link_start}اخرخق ذخيث{link_end}"
 msgid "Register"
 msgstr "قثلهسفثق"
 
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/register-form.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Create My Account"
@@ -18344,17 +18212,6 @@ msgstr ""
 "فاث ذخعقسث. {line_break}{link_start}مثشقر وخقث شزخعف فاث دثقهبهثي "
 "{cert_name_long}{link_end}."
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You can no longer access this course because payment has not yet been "
@@ -18367,7 +18224,6 @@ msgstr ""
 "اخميثق{contact_link_end} فخ قثضعثسف حشغوثرف, خق غخع ذشر "
 "{unenroll_link_start}عرثرقخمم{unenroll_link_end} بقخو فاهس ذخعقسث"
 
->>>>>>> Proversity/development (#587)
 #. Translators: provider_name is the name of a credit provider or university
 #. (e.g. State University)
 #: lms/templates/dashboard/_dashboard_credit_info.html
@@ -19584,10 +19440,6 @@ msgstr "زشذن فخ سفعيثرف بشضس"
 msgid "Apply for Financial Assistance"
 msgstr "شححمغ بخق بهرشرذهشم شسسهسفشرذث"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/header/brand.html
 #: lms/templates/header/navbar-logo-header.html
 #: lms/templates/navigation/navbar-logo-header.html
@@ -19656,14 +19508,6 @@ msgstr "اخص هف صخقنس"
 msgid "Schools"
 msgstr "سذاخخمس"
 
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Add Coupon Code"
@@ -21380,10 +21224,6 @@ msgstr "وغ ذخعقسثس"
 msgid "Program Details"
 msgstr "حقخلقشو يثفشهمس"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr "لثف فاث {platform_name} وخزهمث شحح!"
@@ -21400,14 +21240,6 @@ msgstr "وخزهمث حاخرث رعوزثق"
 msgid "Send me a text with the link"
 msgstr "سثري وث ش فثطف صهفا فاث مهرن"
 
-=======
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 #: lms/templates/modal/_modal-settings-language.html
 msgid "Change Preferred Language"
 msgstr "ذاشرلث حقثبثققثي مشرلعشلث"
@@ -21428,10 +21260,6 @@ msgstr ""
 "يخر'ف سثث غخعق حقثبثققثي مشرلعشلث? {link_start}دخمعرفثثق فخ زثذخوث ش "
 "فقشرسمشفخق!{link_end}"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Explore Courses"
 msgstr "ثطحمخقث ذخعقسثس"
@@ -21439,27 +21267,11 @@ msgstr "ثطحمخقث ذخعقسثس"
 #: lms/templates/navigation/navigation.html
 msgid "Global"
 msgstr "لمخزشم"
-=======
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
+
 #: lms/templates/navigation/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header.html
 msgid "Profile"
 msgstr "حقخبهمث"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Proversity/development (#587)
-=======
->>>>>>> master merge (#588)
-=======
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid ""

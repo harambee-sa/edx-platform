@@ -7,11 +7,8 @@ from opaque_keys.edx.keys import CourseKey
 from pytz import UTC, timezone
 
 from course_modes.models import CourseMode, CourseModeExpirationConfig
-<<<<<<< HEAD
-=======
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 
->>>>>>> Feature course mode selectable
 # Technically, we shouldn't be doing this, since verify_student is defined
 # in LMS, and course_modes is defined in common.
 #
@@ -145,7 +142,7 @@ class CourseModeForm(forms.ModelForm):
             if upgrade_deadline is not None and verification_deadline < upgrade_deadline:
                 raise forms.ValidationError("Verification deadline must be after the upgrade deadline.")
 
-        return cleaned_data
+return cleaned_data
 
     def save(self, commit=True):
         """
@@ -209,9 +206,6 @@ class CourseModeAdmin(admin.ModelAdmin):
     expiration_datetime_custom.short_description = "Upgrade Deadline"
 
 
-<<<<<<< HEAD
-admin.site.register(CourseModeExpirationConfig)
-=======
 class CourseModeExpirationConfigAdmin(admin.ModelAdmin):
     """Admin interface for the course mode auto expiration configuration. """
 
@@ -220,4 +214,3 @@ class CourseModeExpirationConfigAdmin(admin.ModelAdmin):
 
 admin.site.register(CourseMode, CourseModeAdmin)
 admin.site.register(CourseModeExpirationConfig, CourseModeExpirationConfigAdmin)
->>>>>>> remove overwrite of course id

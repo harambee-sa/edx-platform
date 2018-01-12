@@ -257,7 +257,6 @@ td { vertical-align: top; }
 }
 
 .ir br { display: none; }
-<<<<<<< HEAD
 
 .hidden {
   display: none !important;
@@ -285,11 +284,10 @@ td { vertical-align: top; }
   width: auto;
 }
 
-=======
+
 .hidden { display: none; visibility: hidden; }
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
->>>>>>> remove all the css importants
 .invisible { visibility: hidden; }
 
 .clearfix::before,
@@ -302,31 +300,8 @@ td { vertical-align: top; }
 .clearfix { *zoom: 1; }
 
 @media print {
-<<<<<<< HEAD
-  * {
-    background: transparent;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  html,
-  body {
-    background: transparent !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-=======
   * { background: transparent; color: black; box-shadow:none; text-shadow: none; filter:none; -ms-filter: none; }
   html, body { background: transparent; }
-  a, a:visited { text-decoration: underline; }
->>>>>>> remove all the css importants
   abbr[title]::after { content: " (" attr(title) ")"; }
   .ir a::after { content: ""; }
 
@@ -337,23 +312,15 @@ td { vertical-align: top; }
   }
 
   thead { display: table-header-group; }
-<<<<<<< HEAD
 
   tr,
   img {
     page-break-inside: avoid;
   }
 
-=======
-  tr, img { page-break-inside: avoid; }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> remove all the css importants
-  img { max-width: 100% !important; }
 
-=======
-=======
->>>>>>> upstream master merge
+  tr, img { page-break-inside: avoid; }
+
   img { max-width: 100%; }
   @page { margin: 1cm 1.2cm 2cm; }
 

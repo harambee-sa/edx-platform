@@ -105,8 +105,6 @@
       margin: 0;
       justify-content: center;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       .tab-nav-link {
         font-size: font-size(base);
         font-weight: font-weight(semi-bold);
@@ -117,13 +115,7 @@
         &:active,
         &:focus,
         &:hover {
-<<<<<<< HEAD
-          border-bottom: 4px solid $border-color;
-=======
-          border-bottom: 4px solid $lms-border-color;
-=======
-=======
->>>>>>> upstream master merge
+        border-bottom: 4px solid $border-color;
         .tab-nav-item{
             @include float(left);
             display: flex;
@@ -147,11 +139,6 @@
             .active{
                 border-bottom: 4px solid $black-t3;
             }
-<<<<<<< HEAD
->>>>>>> remove all the css importants
->>>>>>> remove all the css importants
-=======
->>>>>>> upstream master merge
         }
       }
 

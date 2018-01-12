@@ -147,12 +147,8 @@ define(['js/views/validation', 'codemirror', 'tinymce', 'underscore', 'jquery', 
                    DateUtils.setupDatePicker('enrollment_start', this);
                    DateUtils.setupDatePicker('enrollment_end', this);
 
-<<<<<<< HEAD
                    this.$el.find('#' + this.fieldToSelectorMap.overview).val(this.model.get('overview'));
                    this.codeMirrorize(null, $('#course-overview')[0]);
-=======
-                   this.$el.find('#' + this.fieldToSelectorMap['overview']).val(this.model.get('overview'));
->>>>>>> adding wysiwyg, need to clean code
 
                    if (this.model.get('title') !== '') {
                        this.$el.find('#' + this.fieldToSelectorMap.title).val(this.model.get('title'));
@@ -289,7 +285,7 @@ define(['js/views/validation', 'codemirror', 'tinymce', 'underscore', 'jquery', 
                    var index = event.currentTarget.getAttribute('data-index');
                    switch (event.currentTarget.id) {
                    case 'course-learning-info-' + index:
-                       value = $(event.currentTarget).val();
+                   value = $(event.currentTarget).val();
                        var learningInfo = this.model.get('learning_info');
                        learningInfo[index] = value;
                        this.showNotificationBar();
@@ -400,7 +396,7 @@ define(['js/views/validation', 'codemirror', 'tinymce', 'underscore', 'jquery', 
                        this.$el.find('.remove-course-introduction-video').hide();
                    }
                },
-<<<<<<< HEAD
+
                codeMirrors: {},
                codeMirrorize: function(e, forcedTarget) {
                    var thisTarget, cachethis, field, cmTextArea;
@@ -454,9 +450,7 @@ define(['js/views/validation', 'codemirror', 'tinymce', 'underscore', 'jquery', 
                        reset: true,
                        silent: true});
                },
-=======
-               
->>>>>>> adding wysiwyg, need to clean code
+
                setAndValidate: function(attr, value) {
         // If we call model.set() with {validate: true}, model fields
         // will not be set if validation fails. This puts the UI and

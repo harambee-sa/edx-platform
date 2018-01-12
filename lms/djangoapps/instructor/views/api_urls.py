@@ -48,24 +48,17 @@ urlpatterns = [
     url(r'^get_proctored_exam_results$', api.get_proctored_exam_results, name='get_proctored_exam_results'),
 
     # Grade downloads...
-<<<<<<< HEAD
-    url(r'^list_report_downloads$', api.list_report_downloads, name='list_report_downloads'),
-    url(r'calculate_grades_csv$', api.calculate_grades_csv, name='calculate_grades_csv'),
-    url(r'problem_grade_report$', api.problem_grade_report, name='problem_grade_report'),
-=======
     url(r'^list_report_downloads$',
         'lms.djangoapps.instructor.views.api.list_report_downloads', name="list_report_downloads"),
     url(r'calculate_grades_csv$',
         'lms.djangoapps.instructor.views.api.calculate_grades_csv', name="calculate_grades_csv"),
     url(r'problem_grade_report$',
         'lms.djangoapps.instructor.views.api.problem_grade_report', name="problem_grade_report"),
-<<<<<<< HEAD
+
     # Bulk Grades API Task
     url(r'bulk_grades_report$',
         'lms.djangoapps.instructor.views.api.bulk_grades_report', name="bulk_grades_report"),
->>>>>>> attempt adding celery task
-=======
->>>>>>> remove changes from api_urls
+
 
     # Financial Report downloads..
     url(r'^list_financial_report_downloads$', api.list_financial_report_downloads,
@@ -104,13 +97,8 @@ urlpatterns = [
         name='generate_certificate_exceptions'),
     url(r'^generate_bulk_certificate_exceptions', api.generate_bulk_certificate_exceptions,
         name='generate_bulk_certificate_exceptions'),
-<<<<<<< HEAD
-    url(r'^certificate_invalidation_view/$', api.certificate_invalidation_view, name='certificate_invalidation_view'),
-]
-=======
-
     url(r'^certificate_invalidation_view/$',
         'lms.djangoapps.instructor.views.api.certificate_invalidation_view',
         name='certificate_invalidation_view'),
 )
->>>>>>> xhtml2pdf working, need to show pdf in view, successfully created though
+

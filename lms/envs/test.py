@@ -95,17 +95,8 @@ FEATURES['ENABLE_ENROLLMENT_TRACK_USER_PARTITION'] = True
 
 FEATURES['ENABLE_BULK_ENROLLMENT_VIEW'] = True
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-DEFAULT_MOBILE_AVAILABLE = True
-=======
 DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
 DEFAULT_MOBILE_AVAILABLE = False
->>>>>>> Returning work we wissed due to upgrade
-=======
-DEFAULT_COURSE_VISIBILITY_IN_CATALOG = "both"
-DEFAULT_MOBILE_AVAILABLE = False
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
 # Need wiki for courseware views to work. TODO (vshnayder): shouldn't need it.
 WIKI_ENABLED = True

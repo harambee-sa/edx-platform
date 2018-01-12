@@ -112,19 +112,9 @@ from lms.envs.common import (
     PASSWORD_RESET_SUPPORT_LINK,
     ACTIVATION_EMAIL_SUPPORT_LINK,
 
-<<<<<<< HEAD
     DEFAULT_MOBILE_AVAILABLE,
-=======
+
     DEFAULT_COURSE_VISIBILITY_IN_CATALOG,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> change catalog visibility default to none
-=======
-    DEFAULT_MOBILE_AVAILABLE,
->>>>>>> Returning work we wissed due to upgrade
-=======
-    DEFAULT_MOBILE_AVAILABLE,
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
 
     CONTACT_EMAIL,
 
@@ -133,43 +123,16 @@ from lms.envs.common import (
     VIDEO_IMAGE_SETTINGS,
 
     VIDEO_TRANSCRIPTS_SETTINGS,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     # Methods to derive settings
     _make_mako_template_dirs,
     _make_locale_paths,
-=======
-=======
-=======
-    # Setting for PAID_COURSE_REGISTRATION, DOES NOT AFFECT VERIFIED STUDENTS
-<<<<<<< HEAD
-    PAID_COURSE_REGISTRATION_CURRENCY
->>>>>>> display default checkout currency correctly
-<<<<<<< HEAD
->>>>>>> display default checkout currency correctly
-<<<<<<< HEAD
->>>>>>> display default checkout currency correctly
-=======
-=======
-=======
-    PAID_COURSE_REGISTRATION_CURRENCY,
-	ENABLE_DOG
->>>>>>> ENH: adding setting for datadog and removing log suppresion
->>>>>>> ENH: adding setting for datadog and removing log suppresion
-<<<<<<< HEAD
->>>>>>> ENH: adding setting for datadog and removing log suppresion
-=======
-=======
-=======
-
->>>>>>> upstream master merge
 
     # Setting for PAID_COURSE_REGISTRATION, DOES NOT AFFECT VERIFIED STUDENTS
     PAID_COURSE_REGISTRATION_CURRENCY,
 
     # Setting fro ENABLE_DOG, turns on the log sync to datadog
-	ENABLE_DOG,
+	  ENABLE_DOG,
 
     # Settings for ANALYTICA_TOKEN
     ANALITICA_TRACK_URL,
@@ -179,12 +142,7 @@ from lms.envs.common import (
     # Pipeline Assets
     PIPELINE_JS,
     PIPELINE_CSS
-
-<<<<<<< HEAD
->>>>>>> merge fixes
->>>>>>> merge fixes
-=======
->>>>>>> upstream master merge
+    
 )
 
 from path import Path as path

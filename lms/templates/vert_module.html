@@ -10,21 +10,10 @@
 
 <div class="vert-mod">
 % for idx, item in enumerate(items):
-<<<<<<< HEAD
-  <div class="vert vert-${idx}" data-id="${item['id']}" \
-    % if item['id'] in watched_completable_blocks:
-      data-completable-by-viewing \
-    % endif
-      >
-=======
   <div class="vert vert-${idx}" data-id="${item['id']}">
-<<<<<<< HEAD
     % if item['display_name']:
         <h3 class="hd hd-2">${item['display_name']}</h3>
     % endif
->>>>>>> add display name to html components
-=======
->>>>>>> add html module setting to inject display name
     ${HTML(item['content'])}
   </div>
 % endfor

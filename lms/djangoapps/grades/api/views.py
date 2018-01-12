@@ -32,43 +32,6 @@ from student.roles import CourseStaffRole
 from lms.djangoapps.courseware.courses import get_course
 log = logging.getLogger(__name__)
 USER_MODEL = get_user_model()
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> Proversity/staging (#589)
-=======
->>>>>>> ENH: bulk grades api to be granularENH: course order byADD: harambee custom backend SSOFIX: show correct course info on instructor dashboardFIX: course re-runFIX: course date settings in studio. section release dates are no reflected and updated from the ADD: missing welsh translationsFIX: invalid gettext call for translating jsUPD: FIX: badgr xblock css
-def get_user_grades(grade_user, course, course_grade):
-        
-    courseware_summary = course_grade.chapter_grades.values()
-    grade_summary = course_grade.summary
-    grades_schema = {}
-    subsection_schema = {}
-    for chapter in courseware_summary: 
-        for section in chapter['sections']: 
-            earned = section.all_total.earned
-            total = section.all_total.possible
-            name = section.display_name
-            section_id = str(section.location)
-            sections_scores  = {}
-            i = 0
-            problem_scores_dictionary_keys = section.problem_scores_with_keys.items()
-            if len(section.problem_scores_with_keys.values()) > 0:
-                for score in section.problem_scores_with_keys.values():
-                    sections_scores[problem_scores_dictionary_keys[i][0]] = \
-                        [float(score.earned),float(score.possible)]
-                    i += 1
-                if total > 0:
-                    grades_schema[section_id] = sections_scores
-    return grades_schema
-=======
-from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
-=======
->>>>>>> clean code
 
 from django.apps import apps
 
@@ -150,31 +113,6 @@ def get_user_grades(user, course, course_str, course_grade):
     return chapter_schema
 
 def get_user_course_response(course, users, course_str, depth):
-<<<<<<< HEAD
-	"""
-	Get a list of users grades' for a course
-	"""
-	user_grades = {}
-	grades_schema = {}
-
-	for user in users:
-		course_grade = CourseGradeFactory().update(user, course)
-		if depth=="all":
-	  		grades_schema = get_user_grades(user, course, course_str, course_grade)
-	  	else:
-	  		grades_schema = "Showing course grade summary, specify depth=all in query params."
-	   	user_grades[user.username] = {
-		   'name': "{} {}".format(user.first_name, user.last_name),
-		   'email': user.email,
-		   'start_date':course.start,
-		   'end_date': course.end if not None else "This course has no end date.",
-		   'all_grades': grades_schema,
-		   "passed": course_grade.passed,
-		   "percent": course_grade.percent
-	   	}
-	return user_grades
->>>>>>> make all cases work
-=======
     """
     Get a list of users grades' for a course
     """
@@ -200,7 +138,6 @@ def get_user_course_response(course, users, course_str, depth):
 
         }
     return user_grades
->>>>>>> indentation
 
 
 def _build_emails(identifiers, email_extension):
@@ -216,10 +153,7 @@ def _build_emails(identifiers, email_extension):
             email_list.append("{id}{ext}".format(id=identifier.strip(), ext=email_extension))
     return email_list
 
-<<<<<<< HEAD
-=======
 
->>>>>>> Proversity/staging (#589)
 @view_auth_classes()
 class GradeViewMixin(DeveloperErrorViewMixin):
     """

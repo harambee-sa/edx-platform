@@ -58,15 +58,7 @@ RECALCULATE_GRADE_DELAY_SECONDS = 2  # to prevent excessive _has_db_updated fail
 RETRY_DELAY_SECONDS = 30
 SUBSECTION_GRADE_TIMEOUT_SECONDS = 300
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 @task(base=LoggedPersistOnFailureTask, routing_key=settings.POLICY_CHANGE_GRADES_ROUTING_KEY)
-=======
-
-
-
-####################################
 
 import logging
 import urllib
@@ -104,8 +96,7 @@ from student.roles import CourseStaffRole
 
 from lms.djangoapps.courseware.courses import get_course
 log = logging.getLogger(__name__)
-=======
->>>>>>> clean up tasks, still not working
+
 USER_MODEL = get_user_model()
 
 #################################################
@@ -119,7 +110,6 @@ class _BaseTask(PersistOnFailureTask, LoggedTask):  # pylint: disable=abstract-m
 
 
 @task(base=_BaseTask, routing_key=settings.POLICY_CHANGE_GRADES_ROUTING_KEY)
->>>>>>> figuring out tasks
 def compute_all_grades_for_course(**kwargs):
     """
     Compute grades for all students in the specified course.
