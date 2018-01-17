@@ -7,6 +7,9 @@ import urllib
 from collections import OrderedDict, namedtuple
 from datetime import datetime, timedelta
 
+
+from openedx.core.djangoapps.user_api.preferences.api import get_user_preferences
+
 import analytics
 import shoppingcart
 import survey.views
@@ -84,7 +87,6 @@ from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 from openedx.core.djangoapps.programs.utils import ProgramMarketingDataExtender
 from openedx.core.djangoapps.self_paced.models import SelfPacedConfiguration
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
-from openedx.core.djangoapps.user_api.preferences.api import get_user_preferences
 from openedx.core.djangoapps.util.user_messages import PageLevelMessages
 from openedx.core.djangolib.markup import HTML, Text
 from openedx.features.course_experience import UNIFIED_COURSE_TAB_FLAG, course_home_url_name
@@ -207,6 +209,7 @@ def courses(request):
     """
     courses_list = []
     course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', {})
+    print "SETTTTTT", settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
     if not settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
         courses_list = get_courses(request.user)
 
@@ -214,15 +217,17 @@ def courses(request):
                                            settings.FEATURES["ENABLE_COURSE_SORTING_BY_START_DATE"]):
             courses_list = sort_by_start_date(courses_list)
         else:
-            courses_list = sort_by_announcement(courses_list)
+            courses_list = sort_by_announcement(courses_list)   
 
-    # Add marketable programs to the context.
-    programs_list = get_programs_with_type(request.site, include_hidden=False)
-
-    if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
+        # MAKE THIS A SETTING/FLAG
+    filter_courses_by_user_preferences = True
+    if filter_courses_by_user_preferences:
         user_prefered_lang = get_user_preferences(request.user)['pref-lang']
+        print "HAAAI", courses_list
         courses_list = filter(lambda x: x.language == user_prefered_lang, courses_list)
 
+
+    programs_list = get_programs_with_type(request.site, include_hidden=False)
     return render_to_response(
         "courseware/courses.html",
         {
