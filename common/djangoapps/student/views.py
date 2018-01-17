@@ -132,6 +132,8 @@ from util.milestones_helpers import get_pre_requisite_courses_not_completed
 from util.password_policy_validators import validate_password_length, validate_password_strength
 from xmodule.modulestore.django import modulestore
 
+
+import json 
 log = logging.getLogger("edx.student")
 AUDIT_LOG = logging.getLogger("audit")
 ReverifyInfo = namedtuple('ReverifyInfo', 'course_id course_name course_number date status display')  # pylint: disable=invalid-name
@@ -183,6 +185,11 @@ def index(request, extra_context=None, user=AnonymousUser()):
     programs_list = []
     courses = get_courses(user)
 
+    if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
+        user_prefered_lang = request.LANGUAGE_CODE
+        courses = filter(lambda x: x.language == user_prefered_lang, courses)
+
+    #print language
     if configuration_helpers.get_value(
             "ENABLE_COURSE_SORTING_BY_START_DATE",
             settings.FEATURES["ENABLE_COURSE_SORTING_BY_START_DATE"],
