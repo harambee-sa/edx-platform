@@ -142,7 +142,7 @@ class CourseModeForm(forms.ModelForm):
             if upgrade_deadline is not None and verification_deadline < upgrade_deadline:
                 raise forms.ValidationError("Verification deadline must be after the upgrade deadline.")
 
-return cleaned_data
+        return cleaned_data
 
     def save(self, commit=True):
         """
@@ -212,5 +212,4 @@ class CourseModeExpirationConfigAdmin(admin.ModelAdmin):
     class Meta(object):
         model = CourseModeExpirationConfig
 
-admin.site.register(CourseMode, CourseModeAdmin)
 admin.site.register(CourseModeExpirationConfig, CourseModeExpirationConfigAdmin)

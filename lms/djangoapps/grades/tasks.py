@@ -8,7 +8,8 @@ import urllib
 import requests 
 
 from celery import task
-from celery_utils.persist_on_failure import LoggedPersistOnFailureTask
+from celery_utils.logged_task import LoggedTask
+from celery_utils.persist_on_failure import LoggedPersistOnFailureTask, PersistOnFailureTask
 from courseware.model_data import get_score
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -16,22 +17,18 @@ from django.core.exceptions import ValidationError
 from django.db.utils import DatabaseError
 from django.core.urlresolvers import reverse
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
 from opaque_keys import InvalidKeyError
-from opaque_keys.edx.keys import CourseKey
 from courseware.access import has_access
 from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
 from lms.djangoapps.courseware import courses
 from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 from student.models import CourseEnrollment
-from lms.djangoapps.courseware import courses
 
 from lms.djangoapps.course_blocks.api import get_course_blocks
 from lms.djangoapps.grades.config.models import ComputeGradesSetting
 from opaque_keys.edx.keys import CourseKey, UsageKey
 from opaque_keys.edx.locator import CourseLocator
 from openedx.core.djangoapps.monitoring_utils import set_custom_metric, set_custom_metrics_for_course_key
-from student.models import CourseEnrollment
 from submissions import api as sub_api
 from track.event_transaction_utils import set_event_transaction_id, set_event_transaction_type
 from util.date_utils import from_timestamp
@@ -46,6 +43,26 @@ from .signals.signals import SUBSECTION_SCORE_CHANGED
 from .subsection_grade_factory import SubsectionGradeFactory
 from .transformer import GradesTransformer
 
+from django.http import Http404
+from django.db.models import Q
+from edx_rest_framework_extensions.authentication import JwtAuthentication
+from rest_framework_oauth.authentication import OAuth2Authentication
+from rest_framework import status
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.decorators import api_view
+from rest_framework.exceptions import AuthenticationFailed
+from rest_framework.generics import GenericAPIView, ListAPIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import exception_handler
+from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
+from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer
+from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
+from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin, view_auth_classes
+from openedx.core.lib.api.permissions import IsStaffOrOwner
+
+from lms.djangoapps.courseware.courses import get_course
+
 log = getLogger(__name__)
 
 COURSE_GRADE_TIMEOUT_SECONDS = 1200
@@ -58,46 +75,9 @@ RECALCULATE_GRADE_DELAY_SECONDS = 2  # to prevent excessive _has_db_updated fail
 RETRY_DELAY_SECONDS = 30
 SUBSECTION_GRADE_TIMEOUT_SECONDS = 300
 
-@task(base=LoggedPersistOnFailureTask, routing_key=settings.POLICY_CHANGE_GRADES_ROUTING_KEY)
-
-import logging
-import urllib
-
-import requests 
-
-from django.conf import settings
-from django.core.urlresolvers import reverse
-from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
-from django.http import Http404
-from django.db.models import Q
-from edx_rest_framework_extensions.authentication import JwtAuthentication
-from opaque_keys import InvalidKeyError
-from opaque_keys.edx.keys import CourseKey
-from rest_framework_oauth.authentication import OAuth2Authentication
-from rest_framework import status
-from rest_framework.authentication import SessionAuthentication
-from rest_framework.decorators import api_view
-from rest_framework.exceptions import AuthenticationFailed
-from rest_framework.generics import GenericAPIView, ListAPIView
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.views import exception_handler
-from courseware.access import has_access
-from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
-from lms.djangoapps.courseware import courses
-from lms.djangoapps.courseware.exceptions import CourseAccessRedirect
-from lms.djangoapps.grades.api.serializers import GradingPolicySerializer, GradeBulkAPIViewSerializer
-from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
-from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin, view_auth_classes
-from openedx.core.lib.api.permissions import IsStaffOrOwner
-from student.models import CourseEnrollment
-from student.roles import CourseStaffRole
-
-from lms.djangoapps.courseware.courses import get_course
-log = logging.getLogger(__name__)
-
 USER_MODEL = get_user_model()
+
+@task(base=LoggedPersistOnFailureTask, routing_key=settings.POLICY_CHANGE_GRADES_ROUTING_KEY)
 
 #################################################
 

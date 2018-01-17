@@ -95,10 +95,8 @@ urlpatterns = [
     url(r'^certificate_exception_view/$', api.certificate_exception_view, name='certificate_exception_view'),
     url(r'^generate_certificate_exceptions/(?P<generate_for>[^/]*)', api.generate_certificate_exceptions,
         name='generate_certificate_exceptions'),
-    url(r'^generate_bulk_certificate_exceptions', api.generate_bulk_certificate_exceptions,
-        name='generate_bulk_certificate_exceptions'),
+    url(r'^generate_bulk_certificate_exceptions', api.generate_bulk_certificate_exceptions, name='generate_bulk_certificate_exceptions'),
     url(r'^certificate_invalidation_view/$',
-        'lms.djangoapps.instructor.views.api.certificate_invalidation_view',
-        name='certificate_invalidation_view'),
-)
+        'lms.djangoapps.instructor.views.api.certificate_invalidation_view', name='certificate_invalidation_view'),
+]
 

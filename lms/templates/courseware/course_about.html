@@ -1,6 +1,6 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
-from django.utils.translation import ugettext as _
+  from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
 from courseware.courses import get_course_about_section
 from django.conf import settings
@@ -165,13 +165,9 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
 
-<<<<<<< HEAD
 <section class="course-info">
 
   <%block name="course_about_header">
-=======
-<section class="course-info" >
->>>>>>> add age verification pop up
   <header class="course-profile">
 
     <div class="intro-inner-wrapper">

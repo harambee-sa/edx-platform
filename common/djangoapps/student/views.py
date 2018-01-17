@@ -2194,6 +2194,7 @@ def create_account_with_params(request, params):
     # Check if we system is configured to skip activation email for the current user.
     skip_email = skip_activation_email(
         user, do_external_auth, running_pipeline, third_party_provider,
+    )
 
     is_user_api_registration = False
     if 'is_user_api_registration' in request.session:

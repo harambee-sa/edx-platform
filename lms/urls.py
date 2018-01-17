@@ -1087,24 +1087,12 @@ if settings.BRANCH_IO_KEY:
     urlpatterns += [
         url(r'^text-me-the-app', 'student.views.text_me_the_app', name='text_me_the_app'),
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 from openedx.core.djangolib.django_plugins import DjangoAppRegistry, ProjectType
 urlpatterns.extend(DjangoAppRegistry.get_plugin_url_patterns(ProjectType.LMS))
-=======
-=======
-    )
-=======
->>>>>>> UPGRADE
+
 
 urlpatterns += (
     url(r'^subscription/', include('subscription_content.urls')),
 )
-<<<<<<< HEAD
->>>>>>> Proversity/subscription (#614)
->>>>>>> Proversity/subscription (#614)
-=======
-
->>>>>>> UPGRADE
