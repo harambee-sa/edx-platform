@@ -436,11 +436,12 @@ def get_courses(user, org=None, filter_=None):
     filtered by org code (case-insensitive).
     """
     courses = branding.get_visible_courses(org=org, filter_=filter_)
-
+    log.error("courses.py this is courses before permissions {}".format(courses))
     permission_name = configuration_helpers.get_value(
         'COURSE_CATALOG_VISIBILITY_PERMISSION',
         settings.COURSE_CATALOG_VISIBILITY_PERMISSION
     )
+    log.error("permission name {}".format(permission_name))
 
     courses = [c for c in courses if has_access(user, permission_name, c)]
 

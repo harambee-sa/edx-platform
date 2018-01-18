@@ -226,6 +226,7 @@ def courses(request):
     courses_list = []
     course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', {})
     if not settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+        log.error("first this is the course list from courses {}".format(courses_list))
         courses_list = get_courses(request.user)
 
         if configuration_helpers.get_value("ENABLE_COURSE_SORTING_BY_START_DATE",
@@ -237,6 +238,8 @@ def courses(request):
     # Add marketable programs to the context.
     programs_list = get_programs_with_type(request.site, include_hidden=False)
 
+    log.error("2 this is the course list from courses {}".format(courses_list))
+    
     return render_to_response(
         "courseware/courses.html",
         {

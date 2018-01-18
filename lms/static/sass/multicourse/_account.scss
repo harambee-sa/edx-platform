@@ -215,12 +215,12 @@
       color: $link-color;
       font-weight: 400;
       text-decoration: none; // needed but nasty
-      font-family: $sans-serif;
+      font-family: $font-family-sans-serif;
     }
 
     &:hover, &:active, &:focus {
       text-decoration: none; // needed but nasty
-      border-bottom: 1px dotted $link-color-d1;
+      border-bottom: 1px dotted $link-color;
     }
   }
 
@@ -246,8 +246,11 @@
   aside {
     @include float(left);
     width: 280px;
-    p, ol, ul {
-      font-size: 14px;
+
+    p,
+    ol,
+    ul {
+      font-size: $font-size-sm !important;
     }
   }
 

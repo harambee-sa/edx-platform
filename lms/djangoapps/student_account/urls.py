@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls import patterns, url
 
-from .views import RecoverPasswordView
+from .views import RecoverPasswordView, LinkedInProfile
 
 from student_account import views
 

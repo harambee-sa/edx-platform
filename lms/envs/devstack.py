@@ -169,12 +169,12 @@ FEATURES['LICENSING'] = True
 
 
 ########################## Courseware Search #######################
-FEATURES['ENABLE_COURSEWARE_SEARCH'] = True
+FEATURES['ENABLE_COURSEWARE_SEARCH'] = False
 SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 
 
 ########################## Dashboard #######################
-FEATURES['ENABLE_DASHBOARD_SEARCH'] = True
+FEATURES['ENABLE_DASHBOARD_SEARCH'] = False
 FEATURES['ENABLE_DASHBOARD_SIDEBAR'] = True
 
 
@@ -198,11 +198,19 @@ COURSE_DISCOVERY_MEANINGS = {
     'language': LANGUAGE_MAP,
 }
 
-FEATURES['ENABLE_COURSE_DISCOVERY'] = True
+FEATURES['ENABLE_COURSE_DISCOVERY'] = False
 # Setting for overriding default filtering facets for Course discovery
 # COURSE_DISCOVERY_FILTERS = ["org", "language", "modes"]
 FEATURES['COURSES_ARE_BROWSEABLE'] = True
 HOMEPAGE_COURSE_MAX = 9
+
+# which access.py permission name to check in order to determine if a course is visible in
+# the course catalog. We default this to the legacy permission 'see_exists'.
+COURSE_CATALOG_VISIBILITY_PERMISSION = 'see_in_catalog'
+
+# which access.py permission name to check in order to determine if a course about page is
+# visible. We default this to the legacy permission 'see_exists'.
+COURSE_ABOUT_VISIBILITY_PERMISSION = 'see_about_page'
 
 # Software secure fake page feature flag
 FEATURES['ENABLE_SOFTWARE_SECURE_FAKE'] = True

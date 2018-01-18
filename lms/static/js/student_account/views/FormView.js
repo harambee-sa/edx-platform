@@ -157,18 +157,16 @@
                         $el.val($el.val().trim());
                     }
 
-                        if (key) {
-                            var test = this.validate(elements[i]);
-                            if (test.isValid || $el.attr('id') == 'login-email') {
-                                obj[key] = $el.attr('type') === 'checkbox' ? $el.is(':checked') : $el.val();
-                                $el.removeClass('error');
-                                $label.removeClass('error');
-                            } else {
-                                errors.push(validation.message);
-                                $el.addClass('error');
-                                $label.addClass('error');
-                            }
-
+                    if (key) {
+                        var test = this.validate(elements[i]);
+                        if (test.isValid || $el.attr('id') == 'login-email') {
+                            obj[key] = $el.attr('type') === 'checkbox' ? $el.is(':checked') : $el.val();
+                            $el.removeClass('error');
+                            $label.removeClass('error');
+                        } else {
+                            errors.push(validation.message);
+                            $el.addClass('error');
+                            $label.addClass('error');
                         }
                     }
                 }

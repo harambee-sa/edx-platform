@@ -92,6 +92,7 @@ def login_and_registration_form(request, initial_mode="login"):
 
     # Retrieve the form descriptions from the user API
     form_descriptions = _get_form_descriptions(request)
+    
 
     # Our ?next= URL may itself contain a parameter 'tpa_hint=x' that we need to check.
     # If present, we display a login page focused on third-party auth with that provider.
@@ -179,6 +180,8 @@ def login_and_registration_form(request, initial_mode="login"):
     update_logistration_context_for_enterprise(request, context, enterprise_customer)
 
     response = render_to_response('student_account/login_and_register.html', context)
+    
+    log.error("rendering respone {}".format(response))
     handle_enterprise_cookies_for_logistration(request, response, context)
 
     return response

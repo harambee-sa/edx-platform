@@ -549,10 +549,10 @@ NOTES_DISABLED_TABS = []
 FEATURES['ENABLE_EDXNOTES'] = True
 
 # Enable courseware search for tests
-FEATURES['ENABLE_COURSEWARE_SEARCH'] = True
+FEATURES['ENABLE_COURSEWARE_SEARCH'] = False
 
 # Enable dashboard search for tests
-FEATURES['ENABLE_DASHBOARD_SEARCH'] = True
+FEATURES['ENABLE_DASHBOARD_SEARCH'] = False
 FEATURES['ENABLE_DASHBOARD_SIDEBAR'] = True
 
 # Use MockSearchEngine as the search engine for test scenario
