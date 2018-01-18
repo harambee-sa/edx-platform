@@ -86,6 +86,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.theming import helpers as theming_helpers
 from openedx.core.djangoapps.user_api.preferences import api as preferences_api
 
+
 from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_url_name
 from openedx.features.enterprise_support.api import get_dashboard_consent_notification
@@ -186,7 +187,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
     courses = get_courses(user)
 
     if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
-        user_prefered_lang = get_user_preferences(request.user)['pref-lang']
+        user_prefered_lang = request.LANGUAGE_CODE
         courses = filter(lambda x: x.language == user_prefered_lang, courses)
 
     #print language
@@ -717,10 +718,6 @@ def dashboard(request):
     # sort the enrollment pairs by the enrollment date
     course_enrollments.sort(key=lambda x: x.created, reverse=True)
 
-    if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
-        user_prefered_lang = request.LANGUAGE_CODE
-        course_enrollments = filter(lambda x: x.language == user_prefered_lang, course_enrollments)
-
     # Retrieve the course modes for each course
     enrolled_course_ids = [enrollment.course_id for enrollment in course_enrollments]
     __, unexpired_course_modes = CourseMode.all_and_unexpired_modes_for_courses(enrolled_course_ids)
@@ -898,6 +895,14 @@ def dashboard(request):
             reverse=True
         )
 
+    if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
+        user_prefered_lang = preferences_api.get_user_preferences(request.user)['pref-lang']
+        for enrollment in course_enrollments[:]:
+            course_language = modulestore().get_course(enrollment.course_id).language
+            if course_language == user_prefered_lang:
+                course_enrollment.remove(enrollment)
+
+        #course_enrollments = filter(lambda x: x.language == user_prefered_lang, course_enrollments)
 
     subscription_courses = frozenset(
         enrollment.course_id for enrollment in course_enrollments
