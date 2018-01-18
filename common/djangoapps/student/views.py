@@ -186,11 +186,6 @@ def index(request, extra_context=None, user=AnonymousUser()):
     programs_list = []
     courses = get_courses(user)
 
-    if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
-        user_prefered_lang = request.LANGUAGE_CODE
-        courses = filter(lambda x: x.language == user_prefered_lang, courses)
-
-    #print language
     if configuration_helpers.get_value(
             "ENABLE_COURSE_SORTING_BY_START_DATE",
             settings.FEATURES["ENABLE_COURSE_SORTING_BY_START_DATE"],
@@ -198,6 +193,11 @@ def index(request, extra_context=None, user=AnonymousUser()):
         courses = sort_by_start_date(courses)
     else:
         courses = sort_by_announcement(courses)
+
+    if configuration_helpers.get_value("ENABLE_FILTER_COURSES_BY_USER_LANG",
+                                       settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG')):
+        user_prefered_lang = request.LANGUAGE_CODE
+        courses = filter(lambda x: x.language == user_prefered_lang, courses)
 
     context = {'courses': courses}
 
@@ -895,14 +895,13 @@ def dashboard(request):
             reverse=True
         )
 
-    if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
+    if configuration_helpers.get_value("ENABLE_FILTER_COURSES_BY_USER_LANG",
+                                       settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG')):
         user_prefered_lang = preferences_api.get_user_preferences(request.user)['pref-lang']
         for enrollment in course_enrollments[:]:
             course_language = modulestore().get_course(enrollment.course_id).language
-            if course_language == user_prefered_lang:
-                course_enrollment.remove(enrollment)
-
-        #course_enrollments = filter(lambda x: x.language == user_prefered_lang, course_enrollments)
+            if course_language != user_prefered_lang:
+                course_enrollments.remove(enrollment)
 
     subscription_courses = frozenset(
         enrollment.course_id for enrollment in course_enrollments
