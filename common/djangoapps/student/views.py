@@ -186,7 +186,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
     courses = get_courses(user)
 
     if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
-        user_prefered_lang = request.LANGUAGE_CODE
+        user_prefered_lang = get_user_preferences(request.user)['pref-lang']
         courses = filter(lambda x: x.language == user_prefered_lang, courses)
 
     #print language
@@ -716,6 +716,10 @@ def dashboard(request):
 
     # sort the enrollment pairs by the enrollment date
     course_enrollments.sort(key=lambda x: x.created, reverse=True)
+
+    if settings.FEATURES.get('ENABLE_FILTER_COURSES_BY_USER_LANG'):
+        user_prefered_lang = request.LANGUAGE_CODE
+        course_enrollments = filter(lambda x: x.language == user_prefered_lang, course_enrollments)
 
     # Retrieve the course modes for each course
     enrolled_course_ids = [enrollment.course_id for enrollment in course_enrollments]
