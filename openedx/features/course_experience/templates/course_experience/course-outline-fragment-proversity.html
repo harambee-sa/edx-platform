@@ -10,6 +10,14 @@ from datetime import date
 from django.utils.translation import ugettext as _
 
 from openedx.core.djangolib.markup import HTML, Text
+
+from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
+%>
+
+<%
+self.real_user = getattr(user, 'real_user', user)
+username = self.real_user.username
+profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
 %>
 
 <main role="main" class="course-outline hidden" id="main" tabindex="-1">
@@ -132,7 +140,12 @@ from openedx.core.djangolib.markup import HTML, Text
         % for section in blocks.get('children'):
 
             <li class="course-section">
-                <span class="section-id">${loop.index + 1}</span>
+                % if section['last_accessed']:
+                    <span class="section-id"><img class="user-image-frame" src="${profile_image_url}" alt="${username}" /></span>
+                % else:
+                    <span class="section-id">${loop.index + 1}</span>
+                % endif
+                
 
                 % if section['last_accessed']:
                     <div class="${loop.cycle('section-content section-content-left section-current-left', 'section-content section-content-opposite section-content-right section-current-right')}">
