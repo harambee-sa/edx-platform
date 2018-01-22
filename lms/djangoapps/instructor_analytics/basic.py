@@ -262,6 +262,10 @@ def enrolled_students_features(course_key, features):
         if profile is not None:
             profile_dict = dict((feature, extract_attr(profile, feature))
                                 for feature in profile_features)
+								
+		    if profile.level_of_education_display:
+				profile_dict['level_of_education'] = profile.level_of_education_display
+
             student_dict.update(profile_dict)
 
             # now fetch the requested meta fields
@@ -283,6 +287,7 @@ def enrolled_students_features(course_key, features):
                 (team.name for team in student.teams.all() if team.course_id == course_key),
                 UNAVAILABLE
             )
+			
 
         if include_enrollment_mode or include_verification_status:
             enrollment_mode = CourseEnrollment.enrollment_mode_for_user(student, course_key)[0]
