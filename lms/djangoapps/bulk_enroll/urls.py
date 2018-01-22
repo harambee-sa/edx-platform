@@ -1,7 +1,7 @@
 """
 URLs for the Bulk Enrollment API
 """
-from django.conf.urls import url
+from django.conf.urls import url, patterns
 
 from bulk_enroll.views import BulkEnrollView,  BulkRegisterEnrollView
 
