@@ -141,7 +141,7 @@ profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
 
             <li class="course-section">
                 % if section['last_accessed']:
-                    <span class="section-id"><img class="user-image-frame" src="${profile_image_url}" alt="${username}" /></span>
+                    <span class="section-id-img"><img class="img-responsive" src="${profile_image_url}" alt="${username}" /></span>
                 % else:
                     <span class="section-id">${loop.index + 1}</span>
                 % endif
