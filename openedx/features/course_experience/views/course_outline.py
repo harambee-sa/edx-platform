@@ -34,6 +34,9 @@ class CourseOutlineFragmentView(EdxFragmentView):
             'blocks': course_block_tree,
         }
         
-        html = render_to_string('course_experience/course-outline-fragment.html', context)
+        if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
+            html = render_to_string('course_experience/course-outline-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/course-outline-fragment.html', context)
 
         return Fragment(html)

@@ -11,6 +11,9 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from opaque_keys.edx.keys import CourseKey
 from web_fragments.fragment import Fragment
 
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
+
 from course_modes.models import get_cosmetic_verified_display_price
 from courseware.access import has_access
 from courseware.courses import can_self_enroll_in_course, get_course_info_section, get_course_with_access
@@ -212,7 +215,10 @@ class CourseHomeFragmentView(EdxFragmentView):
             'upgrade_price': upgrade_price,
             'upgrade_url': upgrade_url,
         }
-        
-        html = render_to_string('course_experience/course-home-fragment.html', context)
+
+        if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
+            html = render_to_string('course_experience/course-home-fragment-proversity.html', context)
+        else:
+            html = render_to_string('course_experience/course-home-fragment.html', context)
 
         return Fragment(html)

@@ -67,6 +67,8 @@ LMS_ROOT_URL = "http://localhost:8000"
 LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
 LMS_ENROLLMENT_API_PATH = "/api/enrollment/v1/"
 
+CUSTOM_FRAGMENTS = False
+
 # Features
 FEATURES = {
     'EXTEND_PROFILE_WITH_LINKEDIN': True,
