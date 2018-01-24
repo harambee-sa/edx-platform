@@ -84,6 +84,7 @@ from django.views.generic import View
 from edxmako.shortcuts import marketing_link, render_to_response, render_to_string
 from enrollment.api import add_enrollment
 from lms.djangoapps.ccx.custom_exception import CCXLocatorValidationException
+from openedx.core.djangoapps.user_api.preferences.api import get_user_preferences
 from lms.djangoapps.commerce.utils import EcommerceService
 from lms.djangoapps.courseware.exceptions import CourseAccessRedirect, Redirect
 from lms.djangoapps.experiments.utils import get_experiment_user_metadata_context
