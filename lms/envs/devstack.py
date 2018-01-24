@@ -199,6 +199,7 @@ COURSE_DISCOVERY_MEANINGS = {
 }
 
 FEATURES['ENABLE_COURSE_DISCOVERY'] = False
+FEATURES['ENABLE_FILTER_COURSES_BY_USER_LANG'] = False
 # Setting for overriding default filtering facets for Course discovery
 # COURSE_DISCOVERY_FILTERS = ["org", "language", "modes"]
 FEATURES['COURSES_ARE_BROWSEABLE'] = True
