@@ -169,31 +169,6 @@ class CoursesTest(ModuleStoreTestCase):
                 "testing get_courses with language filter_={}".format(filter_),
             )
 
-
-    def test_get_courses_with_languague_filter(self):
-        """
-        Verify that filtering performs as expected.
-        """
-        user = UserFactory.create()
-        non_mobile_course = CourseFactory.create(emit_signals=True)
-        mobile_course = CourseFactory.create(mobile_available=True, emit_signals=True)
-
-        test_cases = (
-            (None, {non_mobile_course.id, mobile_course.id}),
-            (dict(mobile_available=True), {mobile_course.id}),
-            (dict(mobile_available=False), {non_mobile_course.id}),
-        )
-        for filter_, expected_courses in test_cases:
-            self.assertEqual(
-                {
-                    course.id
-                    for course in
-                    get_courses(user, filter_=filter_)
-                },
-                expected_courses,
-                "testing get_courses with filter_={}".format(filter_),
-            )
-
     def test_get_current_child(self):
         mock_xmodule = mock.MagicMock()
         self.assertIsNone(get_current_child(mock_xmodule))
