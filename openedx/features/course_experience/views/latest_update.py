@@ -39,7 +39,7 @@ class LatestUpdateFragmentView(EdxFragmentView):
 
         if configuration_helpers.get_value('custom_fragments', settings.CUSTOM_FRAGMENTS):
             html = render_to_string('course_experience/latest-update-fragment-proversity.html', context)
-         else:
+        else:
             html = render_to_string('course_experience/latest-update-fragment.html', context)
 
         return Fragment(html)
