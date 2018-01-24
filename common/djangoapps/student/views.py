@@ -888,6 +888,11 @@ def dashboard(request):
             reverse=True
         )
 
+    # Add archiving flag here
+    if settings.FEATURES.get('ENABLE_COMPLETED_COURSES_TAB'):
+        time_threshold = datetime.datetime.now(UTC) - datetime.timedelta(hours=30)
+        courses_older_than_24_hours = CourseEnrollment.objects.filter(created__gt=time_threshold, user=user)
+
     context = {
         'enterprise_message': enterprise_message,
         'enrollment_message': enrollment_message,
@@ -941,7 +946,7 @@ def dashboard(request):
 
 @login_required
 @ensure_csrf_cookie
-def dashboard(request):
+def completed_courses(request):
     return HttpResponse('Hi')
 
 @login_required
