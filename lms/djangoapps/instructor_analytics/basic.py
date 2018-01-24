@@ -262,9 +262,9 @@ def enrolled_students_features(course_key, features):
         if profile is not None:
             profile_dict = dict((feature, extract_attr(profile, feature))
                                 for feature in profile_features)
-								
-		    if profile.level_of_education_display:
-				profile_dict['level_of_education'] = profile.level_of_education_display
+
+            if profile.level_of_education_display:
+                profile_dict['level_of_education'] = profile.level_of_education_display
 
             student_dict.update(profile_dict)
 
