@@ -940,6 +940,11 @@ def dashboard(request):
 
 
 @login_required
+@ensure_csrf_cookie
+def dashboard(request):
+    return HttpResponse('Hi')
+
+@login_required
 def course_run_refund_status(request, course_id):
     """
     Get Refundable status for a course.

@@ -195,6 +195,8 @@ FEATURES['ENABLE_COURSE_DISCOVERY'] = True
 # Setting for overriding default filtering facets for Course discovery
 # COURSE_DISCOVERY_FILTERS = ["org", "language", "modes"]
 FEATURES['COURSES_ARE_BROWSEABLE'] = True
+# Set to True to filter courses that appear on dashboard, and show completed courses in separate tab.
+FEATURES['ENABLE_COMPLETED_COURSES_TAB'] = True
 HOMEPAGE_COURSE_MAX = 9
 
 # Software secure fake page feature flag

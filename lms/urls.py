@@ -37,6 +37,7 @@ urlpatterns = (
     url(r'', include('student.urls')),
     # TODO: Move lms specific student views out of common code
     url(r'^dashboard$', 'student.views.dashboard', name="dashboard"),
+    url(r'^completed_courses$', 'student.views.completed_courses', name="completed_courses"),
     url(r'^change_enrollment$', 'student.views.change_enrollment', name='change_enrollment'),
 
 	# Submissions api

@@ -22,6 +22,13 @@ from django.utils.translation import ugettext as _
           ${_("Courses")}
         </a>
       </li>
+      % if show_dashboard_tabs:
+      <li class="tab-nav-item">
+        <a class="$tab-nav-link" href="${reverse('completed_courses')}">
+          ${_("Completed Courses")}
+        </a>
+      </li>
+      % endif
       % if show_program_listing:
         <li class="tab-nav-item">
           <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">

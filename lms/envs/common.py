@@ -257,6 +257,9 @@ FEATURES = {
     # Set to True to change the course sorting behavior by their start dates, latest first.
     'ENABLE_COURSE_SORTING_BY_START_DATE': True,
 
+    # Set to True to filter courses that appear on dashboard, and show completed courses in separate tab.
+    'ENABLE_COMPLETED_COURSES_TAB': True,
+
     # Expose Mobile REST API. Note that if you use this, you must also set
     # ENABLE_OAUTH2_PROVIDER to True
     'ENABLE_MOBILE_REST_API': False,
