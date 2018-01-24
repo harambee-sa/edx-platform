@@ -3,8 +3,56 @@
 from django.utils.translation import ugettext as _
 %>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+    $("ul.archived-tabs a").click(function() {
+        $(".my-courses div").hide();
+        $($(this).attr("href")).show();
+    });
+})
+</script>
+
+
+
+<style type="text/css">
+ul.archived-tabs {
+          display: table;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+      }
+
+      ul.archived-tabs>li {
+          float: left;
+          padding: 10px;
+          background-color: lightgray;
+      }
+
+      ul.tabs>li:hover {
+          background-color: lightgray;
+      }
+
+      ul.tabs>li.selected {
+          background-color: lightgray;
+      }
+
+      div.content {
+          border: 1px solid black;
+      }
+
+      ul { overflow: auto; }
+
+      div.content { clear: both; }
+
+</style>
+
 <header class="wrapper-header-courses">
-  <h2 class="header-courses">${_("My Courses")}</h2>
+<ul class="archived-tabs">
+ <li class="courses-tab active"><a>${_("My Courses")}</a></li> 
+ <li class="archived-courses-tab"><a>${_("Past Courses")}</a></li>
+</ul>
 </header>
+
+
 
 <h2 class="hd hd-2 sr" id="courses-tab">${_('My Courses')}</h2>
