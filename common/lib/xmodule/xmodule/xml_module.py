@@ -437,6 +437,7 @@ class XmlParserMixin(object):
         return True
 
     def add_xml_to_node(self, node):
+        print("add_xml_to_node")
         """
         For exporting, set data on `node` from ourselves.
         """

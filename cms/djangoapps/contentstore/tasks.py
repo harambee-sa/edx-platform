@@ -265,6 +265,7 @@ def export_olx(self, user_id, course_key_string, language):
 
 
 def create_export_tarball(course_module, course_key, context, status=None):
+    print("create_export_tarball")
     """
     Generates the export tarball, or returns None if there was an error.
 

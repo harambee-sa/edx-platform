@@ -287,6 +287,7 @@ def send_tarball(tarball, size):
 @require_http_methods(('GET', 'POST'))
 @ensure_valid_course_key
 def export_handler(request, course_key_string):
+    print("export_handler")
     """
     The restful handler for exporting a course.
 

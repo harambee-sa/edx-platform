@@ -149,6 +149,7 @@ class ExportManager(object):
         """
 
     def export(self):
+        print("export")
         """
         Perform the export given the parameters handed to this class at init.
         """
