@@ -5,6 +5,8 @@ from django.template.context_processors import csrf
 from django.template.loader import render_to_string
 from opaque_keys.edx.keys import CourseKey
 from web_fragments.fragment import Fragment
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
 
 from courseware.courses import get_course_overview_with_access
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
