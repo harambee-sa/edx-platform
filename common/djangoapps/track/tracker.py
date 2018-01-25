@@ -97,25 +97,25 @@ def send(event):
         with dog_stats_api.timer('track.send.backend.{0}'.format(name)):
             backend.send(event)
             
-     if settings.ANALITICA_ACTIVE:
-        event['time'] = time.time()
-        event['event']['created_at'] = time.time()
-        event['event']['submitted_at'] = time.time()
+    if settings.ANALITICA_ACTIVE:
+       event['time'] = time.time()
+       event['event']['created_at'] = time.time()
+       event['event']['submitted_at'] = time.time()
 
-        try:
-            r =\
-               requests.post(
-                   settings.ANALITICA_TRACK_URL,
-                   headers={'Authorization': settings.ANALITICA_TOKEN},
-                   json=event
-               )
-           if r.status_code != 200:
-                log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
+       try:
+           r =\
+              requests.post(
+                  settings.ANALITICA_TRACK_URL,
+                  headers={'Authorization': settings.ANALITICA_TOKEN},
+                  json=event
+              )
+          if r.status_code != 200:
+              log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
 
-        except (Exception):
-            log.error("TRACK FAIL: Message could not be posted message = {}".format(e=event))
-            log.error("TRACK FAIL: Message could not be posted message = {e}".format(e=event))
-            pass
+       except (Exception):
+           log.error("TRACK FAIL: Message could not be posted message = {}".format(e=event))
+           log.error("TRACK FAIL: Message could not be posted message = {e}".format(e=event))
+           pass
 
 
 _initialize_backends_from_django_settings()
