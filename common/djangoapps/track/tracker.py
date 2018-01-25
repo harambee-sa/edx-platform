@@ -109,8 +109,8 @@ def send(event):
                   headers={'Authorization': settings.ANALITICA_TOKEN},
                   json=event
               )
-          if r.status_code != 200:
-              log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
+           if r.status_code != 200:
+               log.error("Failed to post to the tracking backend with error {e}".format(e=r.json()))
 
        except (Exception):
            log.error("TRACK FAIL: Message could not be posted message = {}".format(e=event))
