@@ -109,4 +109,4 @@ git+https://github.com/proversity-org/recap-xblock.git@0.2.1#egg=recap-xblock==0
 git+https://github.com/proversity-org/badger-xblock.git@0.2.3#egg=badger-xblock==0.2.3
 -e git+https://github.com/mitodl/edx-sga.git@v0.7.0#egg=edx-sga==v0.7.0
 git+https://github.com/eduNEXT/flow-control-xblock@v0.2.0#egg=flow-control-xblock==0.2.0
-git+https://github.com/harambee-sa/genesys-xblock.git@0.1.0#egg=genesys-xblock==0.1
+git+https://github.com/harambee-sa/genesys-xblock.git@0.2#egg=genesys-xblock==0.1
