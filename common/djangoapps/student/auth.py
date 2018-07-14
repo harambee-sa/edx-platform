@@ -9,7 +9,7 @@ from django.conf import settings
 from django.core.exceptions import PermissionDenied
 from opaque_keys.edx.locator import LibraryLocator
 
-from organizations.models import Organization, OrganizationUser
+# from organizations.models import Organization, OrganizationUser
 from student.roles import GlobalStaff, CourseCreatorRole, CourseStaffRole, CourseInstructorRole, CourseRole, \
     CourseBetaTesterRole, OrgInstructorRole, OrgStaffRole, LibraryUserRole, OrgLibraryUserRole
 
@@ -101,15 +101,15 @@ def get_user_permissions(user, course_key, org=None):
         if OrgLibraryUserRole(org=org).has_user(user) or user_has_role(user, LibraryUserRole(course_key)):
             return STUDIO_VIEW_USERS | STUDIO_VIEW_CONTENT
     # Finally, check if user is linked directly to the organization:
-    user_org = OrganizationUser.objects.filter(
-        active=True,
-        organization__short_name=org,
-        user_id=user.id).values().first()
-    if user_org:
-        if user_org['is_staff']:
-            return all_perms
-        else:
-            return STUDIO_EDIT_CONTENT | STUDIO_VIEW_CONTENT
+#    user_org = OrganizationUser.objects.filter(
+#        active=True,
+#        organization__short_name=org,
+#        user_id=user.id).values().first()
+#    if user_org:
+#        if user_org['is_staff']:
+#            return all_perms
+#        else:
+#            return STUDIO_EDIT_CONTENT | STUDIO_VIEW_CONTENT
     return STUDIO_NO_PERMISSIONS
 
 

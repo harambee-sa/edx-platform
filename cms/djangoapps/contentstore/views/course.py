@@ -78,7 +78,7 @@ from util.milestones_helpers import (
     set_prerequisite_courses
 )
 from util.organizations_helpers import add_organization_course, get_organization_by_short_name, organizations_enabled
-from organizations.models import Organization, OrganizationUser
+from organizations.models import Organization
 from util.string_utils import _has_non_ascii_characters
 from xblock_django.api import deprecated_xblocks
 from xmodule.contentstore.content import StaticContent
@@ -398,25 +398,27 @@ def _get_user_org(user):
     """
     Gets the organization associated with this user.
     """
-    user_org = Organization.objects.filter(
-        organizationuser__active=True,
-        organizationuser__user_id_id=user.id).values().first()
-    return user_org
+#    user_org = Organization.objects.filter(
+#        organizationuser__active=True,
+#        organizationuser__user_id_id=user.id).values().first()
+#    return user_org
+    return False
 
 def _user_in_same_org(user, course_id):
     """
     Checks if user ORG matches course ORG
     """
-    user_org = _get_user_org(user)
-
-    course_org = Organization.objects.filter(
-        organizationcourse__course_id=course_id).values().first()
-
-    # either user or course has no org
-    if not user_org or not course_org:
-        return False
-
-    return user_org['id'] == course_org['id']
+#    user_org = _get_user_org(user)
+#
+#    course_org = Organization.objects.filter(
+#        organizationcourse__course_id=course_id).values().first()
+#
+#    # either user or course has no org
+#    if not user_org or not course_org:
+#        return False
+#
+#    return user_org['id'] == course_org['id']
+    return False
 
 
 def _accessible_courses_list(request):
@@ -1780,20 +1782,22 @@ def _get_user_org(user):
     """
     Gets the organization associated with this user.
     """
-    user_org = Organization.objects.filter(
-        organizationuser__active=True,
-        organizationuser__user_id_id=user.id).values().first()
-    return user_org
+#    user_org = Organization.objects.filter(
+#        organizationuser__active=True,
+#        organizationuser__user_id_id=user.id).values().first()
+#    return user_org
+    return False
 
 
 def _user_is_org_staff(user):
     """
     Helper to determine if user is an organizational staff member
     """
-    org_user = OrganizationUser.objects.filter(
-        active=True,
-        user_id_id=user.id).values().first()
-    return org_user['is_staff'] if org_user else False
+#    org_user = OrganizationUser.objects.filter(
+#        active=True,
+#        user_id_id=user.id).values().first()
+#    return org_user['is_staff'] if org_user else False
+    return False
 
 
 def _get_course_creator_status(user):
