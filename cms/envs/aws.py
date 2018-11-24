@@ -553,3 +553,7 @@ PARENTAL_CONSENT_AGE_LIMIT = ENV_TOKENS.get(
 
 # Allow extra middleware classes to be added to the app through configuration.
 MIDDLEWARE_CLASSES.extend(ENV_TOKENS.get('EXTRA_MIDDLEWARE_CLASSES', []))
+
+if os.environ.get('GOOGLE_APPLICATION_CREDENTIALS', False):
+  GOOGLE_STACKDRIVER_ENABLED = True
+  from google.cloud import logging as google_cloud_logging

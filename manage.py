@@ -11,6 +11,8 @@ by passing the --settings flag, you can specify what environment specific settin
 Any arguments not understood by this manage.py will be passed to django-admin.py
 """
 
+import warnings
+
 # Patch the xml libs before anything else.
 from safe_lxml import defuse_xml_libs
 defuse_xml_libs()
@@ -21,6 +23,8 @@ import importlib
 from argparse import ArgumentParser
 import contracts
 
+warnings.filterwarnings("ignore")
+warnings.simplefilter("ignore")
 
 def parse_args():
     """Parse edx specific arguments to manage.py"""

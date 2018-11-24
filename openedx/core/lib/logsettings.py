@@ -160,4 +160,21 @@ def get_logger_config(log_dir,
             },
         })
 
+    if os.environ.get('GOOGLE_APPLICATION_CREDENTIALS', False):
+        from google.cloud import logging as google_cloud_logging
+        log_client = google_cloud_logging.Client()
+
+        logger_config['handlers'].update({
+            'stackdriver_logging': {
+	        'class': 'google.cloud.logging.handlers.CloudLoggingHandler',
+	        'client': log_client
+	    },
+	    'stackdriver_error_reporting': {
+	        'level': 'ERROR',
+	        'class': 'gcp_utils.stackdriver_logging.StackdriverErrorHandler',
+	    },
+        })
+        logger_config['loggers']['']['handlers'].append('stackdriver_logging')
+        logger_config['loggers']['django.request']['handlers'].append('stackdriver_logging')
+
     return logger_config
