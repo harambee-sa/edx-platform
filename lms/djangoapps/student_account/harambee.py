@@ -3,6 +3,7 @@ import json
 from student.models import Registration, UserProfile
 from social_core.backends.oauth import BaseOAuth2
 from django.contrib.auth.models import User
+from django.conf import settings
 import uuid
 import logging
 import social_django
@@ -26,15 +27,12 @@ class HarambeeOAuth2(BaseOAuth2):
     REDIRECT_STATE = False
     ID_KEY = 'username'
     STATE_PARAMETER = True
-    AUTHORIZATION_URL = \
-        'https://prod.harambeecloud.com/identityserver/connect/authorize'
-    ACCESS_TOKEN_URL = \
-        'https://prod.harambeecloud.com/identityserver/connect/token'
+    AUTHORIZATION_URL = settings.AUTHORIZATION_URL
+    ACCESS_TOKEN_URL = settings.ACCESS_TOKEN_URL
     ACCESS_TOKEN_METHOD = 'POST'
     RESPONSE_TYPE = 'code id_token'
     REDIRECT_IS_HTTPS = True
-    REVOKE_TOKEN_URL = \
-        'https://prod.harambeecloud.com/identityserver/connect/endsession'
+    REVOKE_TOKEN_URL = settings.REVOKE_TOKEN_URL
     REVOKE_TOKEN_METHOD = 'GET'
 
     # The order of the default scope is important
@@ -87,8 +85,8 @@ class HarambeeOAuth2(BaseOAuth2):
     def get_user_details(self, response):
         data = jwt.decode(response.get('id_token'), verify=False)
         return {'username': data.get('CandidateGUID')[0:-6],
-                'email': "{g}@harambeecloud.com".format(g=data.get('CandidateGUID')),
-                'fullname': "{f} {l}".format(f=data.get('Firstname'), l=data.get('Lastname')),
+                'email': u"{g}@harambeecloud.com".format(g=data.get('CandidateGUID')),
+                'fullname': u"{f} {l}".format(f=data.get('Firstname'), l=data.get('Lastname')),
                 'first_name': data.get('Firstname'),
                 'meta': {'hallo':'hallo'},
                 'last_name': data.get('Lastname')}
@@ -98,8 +96,8 @@ class HarambeeOAuth2(BaseOAuth2):
         """Loads user data from service. Implement in subclass"""
         data = jwt.decode(access_token, verify=False)
         return {'username': data.get('CandidateGUID')[0:-6],
-                'email': "{g}@harambeecloud.com".format(g=data.get('CandidateGUID')),
-                'fullname': "{f} {l}".format(f=data.get('Firstname'), l=data.get('Lastname')),
+                'email': u"{g}@harambeecloud.com".format(g=data.get('CandidateGUID')),
+                'fullname': u"{f} {l}".format(f=data.get('Firstname'), l=data.get('Lastname')),
                 'first_name': data.get('Firstname'),
                 'last_name': data.get('Lastname')}
 
