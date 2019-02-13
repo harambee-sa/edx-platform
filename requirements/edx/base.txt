@@ -206,3 +206,5 @@ xblock==1.0.0
 
 # Third Party XBlocks
 edx-sga==0.6.4
+
+ddtrace
