@@ -27,14 +27,14 @@ class HarambeeOAuth2(BaseOAuth2):
     ID_KEY = 'username'
     STATE_PARAMETER = True
     AUTHORIZATION_URL = \
-        'https://prod.harambeecloud.com/identityserver/connect/authorize'
+        'https://auth.harambee.co.za/connect/authorize'
     ACCESS_TOKEN_URL = \
-        'https://prod.harambeecloud.com/identityserver/connect/token'
+        'https://auth.harambee.co.za/connect/token'
     ACCESS_TOKEN_METHOD = 'POST'
     RESPONSE_TYPE = 'code id_token'
     REDIRECT_IS_HTTPS = True
     REVOKE_TOKEN_URL = \
-        'https://prod.harambeecloud.com/identityserver/connect/endsession'
+        'https://auth.harambee.co.za/connect/endsession'
     REVOKE_TOKEN_METHOD = 'GET'
 
     # The order of the default scope is important
